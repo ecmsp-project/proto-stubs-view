@@ -1,1 +1,0 @@
-Proto-stubs-view repository.
