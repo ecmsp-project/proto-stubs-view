@@ -1,5 +1,14 @@
+example/Message$HelloResponse$Builder.class
 com/ecmsp/protos/product/v1/ProductProto.class
-com/ecmsp/protos/product/v1/Product$1.class
-com/ecmsp/protos/product/v1/Product.class
+example/Message$HelloResponseOrBuilder.class
+example/Message$HelloRequest$Builder.class
+example/Message$HelloRequestOrBuilder.class
+example/Message$HelloResponse$1.class
+example/Message$HelloRequest$1.class
+example/Message.class
+example/Message$HelloResponse.class
 com/ecmsp/protos/product/v1/Product$Builder.class
 com/ecmsp/protos/product/v1/ProductOrBuilder.class
+com/ecmsp/protos/product/v1/Product$1.class
+com/ecmsp/protos/product/v1/Product.class
+example/Message$HelloRequest.class

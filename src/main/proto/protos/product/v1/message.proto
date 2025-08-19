@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package example;
+
+// Wiadomość żądania
+message HelloRequest {
+  string name = 1;
+}
+
+// Wiadomość odpowiedzi
+message HelloResponse {
+  string message = 1;
+}
+
+// Definicja serwisu
+service HelloService {
+  // Metoda RPC
+  rpc SayHello(HelloRequest) returns (HelloResponse);
+}
