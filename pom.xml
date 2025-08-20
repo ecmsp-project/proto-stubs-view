@@ -53,11 +53,11 @@
     <distributionManagement>
         <snapshotRepository>
             <id>nexus-snapshots</id>
-            <url>http://nexus.ecmsp.pl/repository/maven-snapshots/</url>
+            <url>https://nexus.ecmsp.pl/repository/maven-snapshots/</url>
         </snapshotRepository>
         <repository>
             <id>nexus-releases</id>
-            <url>http://nexus.ecmsp.pl/repository/maven-releases/</url>
+            <url>https://nexus.ecmsp.pl/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
 
