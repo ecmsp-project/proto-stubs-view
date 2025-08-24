@@ -4,11 +4,11 @@
 package com.ecmsp.protos.example.v1;
 
 /**
- * Protobuf type {@code product.v1.Example}
+ * Protobuf type {@code example.v1.Example}
  */
 public final class Example extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:product.v1.Example)
+    // @@protoc_insertion_point(message_implements:example.v1.Example)
     ExampleOrBuilder {
 private static final long serialVersionUID = 0L;
   // Use Example.newBuilder() to construct.
@@ -29,13 +29,13 @@ private static final long serialVersionUID = 0L;
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.ecmsp.protos.example.v1.ExampleProto.internal_static_product_v1_Example_descriptor;
+    return com.ecmsp.protos.example.v1.ExampleProto.internal_static_example_v1_Example_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.ecmsp.protos.example.v1.ExampleProto.internal_static_product_v1_Example_fieldAccessorTable
+    return com.ecmsp.protos.example.v1.ExampleProto.internal_static_example_v1_Example_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.ecmsp.protos.example.v1.Example.class, com.ecmsp.protos.example.v1.Example.Builder.class);
   }
@@ -309,21 +309,21 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code product.v1.Example}
+   * Protobuf type {@code example.v1.Example}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:product.v1.Example)
+      // @@protoc_insertion_point(builder_implements:example.v1.Example)
       com.ecmsp.protos.example.v1.ExampleOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.ecmsp.protos.example.v1.ExampleProto.internal_static_product_v1_Example_descriptor;
+      return com.ecmsp.protos.example.v1.ExampleProto.internal_static_example_v1_Example_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.ecmsp.protos.example.v1.ExampleProto.internal_static_product_v1_Example_fieldAccessorTable
+      return com.ecmsp.protos.example.v1.ExampleProto.internal_static_example_v1_Example_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.ecmsp.protos.example.v1.Example.class, com.ecmsp.protos.example.v1.Example.Builder.class);
     }
@@ -351,7 +351,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.ecmsp.protos.example.v1.ExampleProto.internal_static_product_v1_Example_descriptor;
+      return com.ecmsp.protos.example.v1.ExampleProto.internal_static_example_v1_Example_descriptor;
     }
 
     @java.lang.Override
@@ -692,10 +692,10 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:product.v1.Example)
+    // @@protoc_insertion_point(builder_scope:example.v1.Example)
   }
 
-  // @@protoc_insertion_point(class_scope:product.v1.Example)
+  // @@protoc_insertion_point(class_scope:example.v1.Example)
   private static final com.ecmsp.protos.example.v1.Example DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.ecmsp.protos.example.v1.Example();

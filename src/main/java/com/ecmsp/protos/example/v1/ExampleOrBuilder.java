@@ -4,7 +4,7 @@
 package com.ecmsp.protos.example.v1;
 
 public interface ExampleOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:product.v1.Example)
+    // @@protoc_insertion_point(interface_extends:example.v1.Example)
     com.google.protobuf.MessageOrBuilder {
 
   /**

@@ -15,10 +15,10 @@ public final class ExampleProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_product_v1_Example_descriptor;
+    internal_static_example_v1_Example_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_product_v1_Example_fieldAccessorTable;
+      internal_static_example_v1_Example_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -28,8 +28,8 @@ public final class ExampleProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\037protos/example/v1/example.proto\022\nprodu" +
-      "ct.v1\"2\n\007Example\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001" +
+      "\n\037protos/example/v1/example.proto\022\nexamp" +
+      "le.v1\"2\n\007Example\022\n\n\002id\030\001 \001(\t\022\014\n\004name\030\002 \001" +
       "(\t\022\r\n\005price\030\003 \001(\001B-\n\033com.ecmsp.protos.ex" +
       "ample.v1B\014ExampleProtoP\001b\006proto3"
     };
@@ -37,11 +37,11 @@ public final class ExampleProto {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         });
-    internal_static_product_v1_Example_descriptor =
+    internal_static_example_v1_Example_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_product_v1_Example_fieldAccessorTable = new
+    internal_static_example_v1_Example_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_product_v1_Example_descriptor,
+        internal_static_example_v1_Example_descriptor,
         new java.lang.String[] { "Id", "Name", "Price", });
   }
 
