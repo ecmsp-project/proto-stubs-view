@@ -8,26 +8,26 @@ public interface GetVariantsReservationResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+   * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
    */
-  java.util.List<com.ecmsp.product.v1.reservation.v1.Variant> 
+  java.util.List<com.ecmsp.product.v1.reservation.v1.ReservedVariant> 
       getItemsList();
   /**
-   * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+   * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
    */
-  com.ecmsp.product.v1.reservation.v1.Variant getItems(int index);
+  com.ecmsp.product.v1.reservation.v1.ReservedVariant getItems(int index);
   /**
-   * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+   * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
    */
   int getItemsCount();
   /**
-   * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+   * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
    */
-  java.util.List<? extends com.ecmsp.product.v1.reservation.v1.VariantOrBuilder> 
+  java.util.List<? extends com.ecmsp.product.v1.reservation.v1.ReservedVariantOrBuilder> 
       getItemsOrBuilderList();
   /**
-   * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+   * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
    */
-  com.ecmsp.product.v1.reservation.v1.VariantOrBuilder getItemsOrBuilder(
+  com.ecmsp.product.v1.reservation.v1.ReservedVariantOrBuilder getItemsOrBuilder(
       int index);
 }

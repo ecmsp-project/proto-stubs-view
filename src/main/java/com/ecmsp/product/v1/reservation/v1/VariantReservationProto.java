@@ -50,10 +50,10 @@ public final class VariantReservationProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_product_v1_reservation_v1_GetVariantsReservationResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_product_v1_reservation_v1_Variant_descriptor;
+    internal_static_product_v1_reservation_v1_ReservedVariant_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_product_v1_reservation_v1_Variant_fieldAccessorTable;
+      internal_static_product_v1_reservation_v1_ReservedVariant_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -65,25 +65,26 @@ public final class VariantReservationProto {
     java.lang.String[] descriptorData = {
       "\n3product/v1/reservation/v1/variant_rese" +
       "rvation.proto\022\031product.v1.reservation.v1" +
-      "\"U\n CreateVariantsReservationRequest\0221\n\005" +
-      "items\030\001 \003(\0132\".product.v1.reservation.v1." +
-      "Variant\"\247\001\n!CreateVariantsReservationRes" +
-      "ponse\022\026\n\016reservation_id\030\001 \001(\t\022\034\n\024reserve" +
-      "d_variant_ids\030\003 \003(\t\022L\n\017failed_variants\030\004" +
-      " \003(\01323.product.v1.reservation.v1.FailedR" +
-      "eservationVariant\"f\n\030FailedReservationVa" +
-      "riant\022\022\n\nvariant_id\030\001 \001(\t\022\032\n\022requested_q" +
-      "uantity\030\002 \001(\005\022\032\n\022available_quantity\030\003 \001(" +
-      "\005\":\n RemoveVariantsReservationRequest\022\026\n" +
-      "\016reservation_id\030\001 \001(\t\"4\n!RemoveVariantsR" +
-      "eservationResponse\022\017\n\007message\030\002 \001(\t\"7\n\035G" +
-      "etVariantsReservationRequest\022\026\n\016reservat" +
-      "ion_id\030\001 \001(\t\"S\n\036GetVariantsReservationRe" +
-      "sponse\0221\n\005items\030\001 \003(\0132\".product.v1.reser" +
-      "vation.v1.Variant\"/\n\007Variant\022\022\n\nvariant_" +
-      "id\030\001 \001(\t\022\020\n\010quantity\030\002 \001(\005B@\n#com.ecmsp." +
-      "product.v1.reservation.v1B\027VariantReserv" +
-      "ationProtoP\001b\006proto3"
+      "\"]\n CreateVariantsReservationRequest\0229\n\005" +
+      "items\030\001 \003(\0132*.product.v1.reservation.v1." +
+      "ReservedVariant\"\247\001\n!CreateVariantsReserv" +
+      "ationResponse\022\026\n\016reservation_id\030\001 \001(\t\022\034\n" +
+      "\024reserved_variant_ids\030\003 \003(\t\022L\n\017failed_va" +
+      "riants\030\004 \003(\01323.product.v1.reservation.v1" +
+      ".FailedReservationVariant\"f\n\030FailedReser" +
+      "vationVariant\022\022\n\nvariant_id\030\001 \001(\t\022\032\n\022req" +
+      "uested_quantity\030\002 \001(\005\022\032\n\022available_quant" +
+      "ity\030\003 \001(\005\":\n RemoveVariantsReservationRe" +
+      "quest\022\026\n\016reservation_id\030\001 \001(\t\"4\n!RemoveV" +
+      "ariantsReservationResponse\022\017\n\007message\030\002 " +
+      "\001(\t\"7\n\035GetVariantsReservationRequest\022\026\n\016" +
+      "reservation_id\030\001 \001(\t\"[\n\036GetVariantsReser" +
+      "vationResponse\0229\n\005items\030\001 \003(\0132*.product." +
+      "v1.reservation.v1.ReservedVariant\"7\n\017Res" +
+      "ervedVariant\022\022\n\nvariant_id\030\001 \001(\t\022\020\n\010quan" +
+      "tity\030\002 \001(\005B@\n#com.ecmsp.product.v1.reser" +
+      "vation.v1B\027VariantReservationProtoP\001b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -131,11 +132,11 @@ public final class VariantReservationProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_product_v1_reservation_v1_GetVariantsReservationResponse_descriptor,
         new java.lang.String[] { "Items", });
-    internal_static_product_v1_reservation_v1_Variant_descriptor =
+    internal_static_product_v1_reservation_v1_ReservedVariant_descriptor =
       getDescriptor().getMessageTypes().get(7);
-    internal_static_product_v1_reservation_v1_Variant_fieldAccessorTable = new
+    internal_static_product_v1_reservation_v1_ReservedVariant_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_product_v1_reservation_v1_Variant_descriptor,
+        internal_static_product_v1_reservation_v1_ReservedVariant_descriptor,
         new java.lang.String[] { "VariantId", "Quantity", });
   }
 

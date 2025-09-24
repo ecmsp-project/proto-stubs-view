@@ -4,18 +4,18 @@
 package com.ecmsp.product.v1;
 
 /**
- * Protobuf type {@code product.v1.Variant}
+ * Protobuf type {@code product.v1.VariantDetail}
  */
-public final class Variant extends
+public final class VariantDetail extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:product.v1.Variant)
-    VariantOrBuilder {
+    // @@protoc_insertion_point(message_implements:product.v1.VariantDetail)
+    VariantDetailOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use Variant.newBuilder() to construct.
-  private Variant(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use VariantDetail.newBuilder() to construct.
+  private VariantDetail(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private Variant() {
+  private VariantDetail() {
     variantId_ = "";
     imageUrl_ = "";
     description_ = "";
@@ -25,20 +25,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new Variant();
+    return new VariantDetail();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.ecmsp.product.v1.ProductProto.internal_static_product_v1_Variant_descriptor;
+    return com.ecmsp.product.v1.ProductProto.internal_static_product_v1_VariantDetail_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.ecmsp.product.v1.ProductProto.internal_static_product_v1_Variant_fieldAccessorTable
+    return com.ecmsp.product.v1.ProductProto.internal_static_product_v1_VariantDetail_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.ecmsp.product.v1.Variant.class, com.ecmsp.product.v1.Variant.Builder.class);
+            com.ecmsp.product.v1.VariantDetail.class, com.ecmsp.product.v1.VariantDetail.Builder.class);
   }
 
   public static final int VARIANT_ID_FIELD_NUMBER = 1;
@@ -278,10 +278,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.ecmsp.product.v1.Variant)) {
+    if (!(obj instanceof com.ecmsp.product.v1.VariantDetail)) {
       return super.equals(obj);
     }
-    com.ecmsp.product.v1.Variant other = (com.ecmsp.product.v1.Variant) obj;
+    com.ecmsp.product.v1.VariantDetail other = (com.ecmsp.product.v1.VariantDetail) obj;
 
     if (!getVariantId()
         .equals(other.getVariantId())) return false;
@@ -330,44 +330,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.ecmsp.product.v1.Variant parseFrom(
+  public static com.ecmsp.product.v1.VariantDetail parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.ecmsp.product.v1.Variant parseFrom(
+  public static com.ecmsp.product.v1.VariantDetail parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.ecmsp.product.v1.Variant parseFrom(
+  public static com.ecmsp.product.v1.VariantDetail parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.ecmsp.product.v1.Variant parseFrom(
+  public static com.ecmsp.product.v1.VariantDetail parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.ecmsp.product.v1.Variant parseFrom(byte[] data)
+  public static com.ecmsp.product.v1.VariantDetail parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.ecmsp.product.v1.Variant parseFrom(
+  public static com.ecmsp.product.v1.VariantDetail parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.ecmsp.product.v1.Variant parseFrom(java.io.InputStream input)
+  public static com.ecmsp.product.v1.VariantDetail parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.ecmsp.product.v1.Variant parseFrom(
+  public static com.ecmsp.product.v1.VariantDetail parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -375,26 +375,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.ecmsp.product.v1.Variant parseDelimitedFrom(java.io.InputStream input)
+  public static com.ecmsp.product.v1.VariantDetail parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.ecmsp.product.v1.Variant parseDelimitedFrom(
+  public static com.ecmsp.product.v1.VariantDetail parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.ecmsp.product.v1.Variant parseFrom(
+  public static com.ecmsp.product.v1.VariantDetail parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.ecmsp.product.v1.Variant parseFrom(
+  public static com.ecmsp.product.v1.VariantDetail parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -407,7 +407,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.ecmsp.product.v1.Variant prototype) {
+  public static Builder newBuilder(com.ecmsp.product.v1.VariantDetail prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -423,26 +423,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code product.v1.Variant}
+   * Protobuf type {@code product.v1.VariantDetail}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:product.v1.Variant)
-      com.ecmsp.product.v1.VariantOrBuilder {
+      // @@protoc_insertion_point(builder_implements:product.v1.VariantDetail)
+      com.ecmsp.product.v1.VariantDetailOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.ecmsp.product.v1.ProductProto.internal_static_product_v1_Variant_descriptor;
+      return com.ecmsp.product.v1.ProductProto.internal_static_product_v1_VariantDetail_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.ecmsp.product.v1.ProductProto.internal_static_product_v1_Variant_fieldAccessorTable
+      return com.ecmsp.product.v1.ProductProto.internal_static_product_v1_VariantDetail_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.ecmsp.product.v1.Variant.class, com.ecmsp.product.v1.Variant.Builder.class);
+              com.ecmsp.product.v1.VariantDetail.class, com.ecmsp.product.v1.VariantDetail.Builder.class);
     }
 
-    // Construct using com.ecmsp.product.v1.Variant.newBuilder()
+    // Construct using com.ecmsp.product.v1.VariantDetail.newBuilder()
     private Builder() {
 
     }
@@ -472,17 +472,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.ecmsp.product.v1.ProductProto.internal_static_product_v1_Variant_descriptor;
+      return com.ecmsp.product.v1.ProductProto.internal_static_product_v1_VariantDetail_descriptor;
     }
 
     @java.lang.Override
-    public com.ecmsp.product.v1.Variant getDefaultInstanceForType() {
-      return com.ecmsp.product.v1.Variant.getDefaultInstance();
+    public com.ecmsp.product.v1.VariantDetail getDefaultInstanceForType() {
+      return com.ecmsp.product.v1.VariantDetail.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.ecmsp.product.v1.Variant build() {
-      com.ecmsp.product.v1.Variant result = buildPartial();
+    public com.ecmsp.product.v1.VariantDetail build() {
+      com.ecmsp.product.v1.VariantDetail result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -490,14 +490,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.ecmsp.product.v1.Variant buildPartial() {
-      com.ecmsp.product.v1.Variant result = new com.ecmsp.product.v1.Variant(this);
+    public com.ecmsp.product.v1.VariantDetail buildPartial() {
+      com.ecmsp.product.v1.VariantDetail result = new com.ecmsp.product.v1.VariantDetail(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.ecmsp.product.v1.Variant result) {
+    private void buildPartial0(com.ecmsp.product.v1.VariantDetail result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.variantId_ = variantId_;
@@ -555,16 +555,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.ecmsp.product.v1.Variant) {
-        return mergeFrom((com.ecmsp.product.v1.Variant)other);
+      if (other instanceof com.ecmsp.product.v1.VariantDetail) {
+        return mergeFrom((com.ecmsp.product.v1.VariantDetail)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.ecmsp.product.v1.Variant other) {
-      if (other == com.ecmsp.product.v1.Variant.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.ecmsp.product.v1.VariantDetail other) {
+      if (other == com.ecmsp.product.v1.VariantDetail.getDefaultInstance()) return this;
       if (!other.getVariantId().isEmpty()) {
         variantId_ = other.variantId_;
         bitField0_ |= 0x00000001;
@@ -1075,23 +1075,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:product.v1.Variant)
+    // @@protoc_insertion_point(builder_scope:product.v1.VariantDetail)
   }
 
-  // @@protoc_insertion_point(class_scope:product.v1.Variant)
-  private static final com.ecmsp.product.v1.Variant DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:product.v1.VariantDetail)
+  private static final com.ecmsp.product.v1.VariantDetail DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.ecmsp.product.v1.Variant();
+    DEFAULT_INSTANCE = new com.ecmsp.product.v1.VariantDetail();
   }
 
-  public static com.ecmsp.product.v1.Variant getDefaultInstance() {
+  public static com.ecmsp.product.v1.VariantDetail getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<Variant>
-      PARSER = new com.google.protobuf.AbstractParser<Variant>() {
+  private static final com.google.protobuf.Parser<VariantDetail>
+      PARSER = new com.google.protobuf.AbstractParser<VariantDetail>() {
     @java.lang.Override
-    public Variant parsePartialFrom(
+    public VariantDetail parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1110,17 +1110,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<Variant> parser() {
+  public static com.google.protobuf.Parser<VariantDetail> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<Variant> getParserForType() {
+  public com.google.protobuf.Parser<VariantDetail> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.ecmsp.product.v1.Variant getDefaultInstanceForType() {
+  public com.ecmsp.product.v1.VariantDetail getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

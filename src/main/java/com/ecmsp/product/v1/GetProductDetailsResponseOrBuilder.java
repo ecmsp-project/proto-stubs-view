@@ -8,26 +8,26 @@ public interface GetProductDetailsResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .product.v1.Variant variants = 1;</code>
+   * <code>repeated .product.v1.VariantDetail variants = 1;</code>
    */
-  java.util.List<com.ecmsp.product.v1.Variant> 
+  java.util.List<com.ecmsp.product.v1.VariantDetail> 
       getVariantsList();
   /**
-   * <code>repeated .product.v1.Variant variants = 1;</code>
+   * <code>repeated .product.v1.VariantDetail variants = 1;</code>
    */
-  com.ecmsp.product.v1.Variant getVariants(int index);
+  com.ecmsp.product.v1.VariantDetail getVariants(int index);
   /**
-   * <code>repeated .product.v1.Variant variants = 1;</code>
+   * <code>repeated .product.v1.VariantDetail variants = 1;</code>
    */
   int getVariantsCount();
   /**
-   * <code>repeated .product.v1.Variant variants = 1;</code>
+   * <code>repeated .product.v1.VariantDetail variants = 1;</code>
    */
-  java.util.List<? extends com.ecmsp.product.v1.VariantOrBuilder> 
+  java.util.List<? extends com.ecmsp.product.v1.VariantDetailOrBuilder> 
       getVariantsOrBuilderList();
   /**
-   * <code>repeated .product.v1.Variant variants = 1;</code>
+   * <code>repeated .product.v1.VariantDetail variants = 1;</code>
    */
-  com.ecmsp.product.v1.VariantOrBuilder getVariantsOrBuilder(
+  com.ecmsp.product.v1.VariantDetailOrBuilder getVariantsOrBuilder(
       int index);
 }

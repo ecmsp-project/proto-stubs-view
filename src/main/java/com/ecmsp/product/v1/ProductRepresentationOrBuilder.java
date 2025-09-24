@@ -20,17 +20,17 @@ public interface ProductRepresentationOrBuilder extends
       getProductIdBytes();
 
   /**
-   * <code>.product.v1.Variant variant = 2;</code>
+   * <code>.product.v1.VariantDetail variant = 2;</code>
    * @return Whether the variant field is set.
    */
   boolean hasVariant();
   /**
-   * <code>.product.v1.Variant variant = 2;</code>
+   * <code>.product.v1.VariantDetail variant = 2;</code>
    * @return The variant.
    */
-  com.ecmsp.product.v1.Variant getVariant();
+  com.ecmsp.product.v1.VariantDetail getVariant();
   /**
-   * <code>.product.v1.Variant variant = 2;</code>
+   * <code>.product.v1.VariantDetail variant = 2;</code>
    */
-  com.ecmsp.product.v1.VariantOrBuilder getVariantOrBuilder();
+  com.ecmsp.product.v1.VariantDetailOrBuilder getVariantOrBuilder();
 }

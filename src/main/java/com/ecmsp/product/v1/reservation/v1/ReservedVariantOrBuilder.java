@@ -3,8 +3,8 @@
 
 package com.ecmsp.product.v1.reservation.v1;
 
-public interface VariantOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:product.v1.reservation.v1.Variant)
+public interface ReservedVariantOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:product.v1.reservation.v1.ReservedVariant)
     com.google.protobuf.MessageOrBuilder {
 
   /**

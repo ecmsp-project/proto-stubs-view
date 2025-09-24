@@ -41,41 +41,41 @@ private static final long serialVersionUID = 0L;
 
   public static final int ITEMS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private java.util.List<com.ecmsp.product.v1.reservation.v1.Variant> items_;
+  private java.util.List<com.ecmsp.product.v1.reservation.v1.ReservedVariant> items_;
   /**
-   * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+   * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<com.ecmsp.product.v1.reservation.v1.Variant> getItemsList() {
+  public java.util.List<com.ecmsp.product.v1.reservation.v1.ReservedVariant> getItemsList() {
     return items_;
   }
   /**
-   * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+   * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.ecmsp.product.v1.reservation.v1.VariantOrBuilder> 
+  public java.util.List<? extends com.ecmsp.product.v1.reservation.v1.ReservedVariantOrBuilder> 
       getItemsOrBuilderList() {
     return items_;
   }
   /**
-   * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+   * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
    */
   @java.lang.Override
   public int getItemsCount() {
     return items_.size();
   }
   /**
-   * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+   * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
    */
   @java.lang.Override
-  public com.ecmsp.product.v1.reservation.v1.Variant getItems(int index) {
+  public com.ecmsp.product.v1.reservation.v1.ReservedVariant getItems(int index) {
     return items_.get(index);
   }
   /**
-   * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+   * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
    */
   @java.lang.Override
-  public com.ecmsp.product.v1.reservation.v1.VariantOrBuilder getItemsOrBuilder(
+  public com.ecmsp.product.v1.reservation.v1.ReservedVariantOrBuilder getItemsOrBuilder(
       int index) {
     return items_.get(index);
   }
@@ -425,9 +425,9 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              com.ecmsp.product.v1.reservation.v1.Variant m =
+              com.ecmsp.product.v1.reservation.v1.ReservedVariant m =
                   input.readMessage(
-                      com.ecmsp.product.v1.reservation.v1.Variant.parser(),
+                      com.ecmsp.product.v1.reservation.v1.ReservedVariant.parser(),
                       extensionRegistry);
               if (itemsBuilder_ == null) {
                 ensureItemsIsMutable();
@@ -454,22 +454,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<com.ecmsp.product.v1.reservation.v1.Variant> items_ =
+    private java.util.List<com.ecmsp.product.v1.reservation.v1.ReservedVariant> items_ =
       java.util.Collections.emptyList();
     private void ensureItemsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        items_ = new java.util.ArrayList<com.ecmsp.product.v1.reservation.v1.Variant>(items_);
+        items_ = new java.util.ArrayList<com.ecmsp.product.v1.reservation.v1.ReservedVariant>(items_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.ecmsp.product.v1.reservation.v1.Variant, com.ecmsp.product.v1.reservation.v1.Variant.Builder, com.ecmsp.product.v1.reservation.v1.VariantOrBuilder> itemsBuilder_;
+        com.ecmsp.product.v1.reservation.v1.ReservedVariant, com.ecmsp.product.v1.reservation.v1.ReservedVariant.Builder, com.ecmsp.product.v1.reservation.v1.ReservedVariantOrBuilder> itemsBuilder_;
 
     /**
-     * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
      */
-    public java.util.List<com.ecmsp.product.v1.reservation.v1.Variant> getItemsList() {
+    public java.util.List<com.ecmsp.product.v1.reservation.v1.ReservedVariant> getItemsList() {
       if (itemsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(items_);
       } else {
@@ -477,7 +477,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
      */
     public int getItemsCount() {
       if (itemsBuilder_ == null) {
@@ -487,9 +487,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
      */
-    public com.ecmsp.product.v1.reservation.v1.Variant getItems(int index) {
+    public com.ecmsp.product.v1.reservation.v1.ReservedVariant getItems(int index) {
       if (itemsBuilder_ == null) {
         return items_.get(index);
       } else {
@@ -497,10 +497,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
      */
     public Builder setItems(
-        int index, com.ecmsp.product.v1.reservation.v1.Variant value) {
+        int index, com.ecmsp.product.v1.reservation.v1.ReservedVariant value) {
       if (itemsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -514,10 +514,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
      */
     public Builder setItems(
-        int index, com.ecmsp.product.v1.reservation.v1.Variant.Builder builderForValue) {
+        int index, com.ecmsp.product.v1.reservation.v1.ReservedVariant.Builder builderForValue) {
       if (itemsBuilder_ == null) {
         ensureItemsIsMutable();
         items_.set(index, builderForValue.build());
@@ -528,9 +528,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
      */
-    public Builder addItems(com.ecmsp.product.v1.reservation.v1.Variant value) {
+    public Builder addItems(com.ecmsp.product.v1.reservation.v1.ReservedVariant value) {
       if (itemsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -544,10 +544,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
      */
     public Builder addItems(
-        int index, com.ecmsp.product.v1.reservation.v1.Variant value) {
+        int index, com.ecmsp.product.v1.reservation.v1.ReservedVariant value) {
       if (itemsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -561,10 +561,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
      */
     public Builder addItems(
-        com.ecmsp.product.v1.reservation.v1.Variant.Builder builderForValue) {
+        com.ecmsp.product.v1.reservation.v1.ReservedVariant.Builder builderForValue) {
       if (itemsBuilder_ == null) {
         ensureItemsIsMutable();
         items_.add(builderForValue.build());
@@ -575,10 +575,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
      */
     public Builder addItems(
-        int index, com.ecmsp.product.v1.reservation.v1.Variant.Builder builderForValue) {
+        int index, com.ecmsp.product.v1.reservation.v1.ReservedVariant.Builder builderForValue) {
       if (itemsBuilder_ == null) {
         ensureItemsIsMutable();
         items_.add(index, builderForValue.build());
@@ -589,10 +589,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
      */
     public Builder addAllItems(
-        java.lang.Iterable<? extends com.ecmsp.product.v1.reservation.v1.Variant> values) {
+        java.lang.Iterable<? extends com.ecmsp.product.v1.reservation.v1.ReservedVariant> values) {
       if (itemsBuilder_ == null) {
         ensureItemsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -604,7 +604,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
      */
     public Builder clearItems() {
       if (itemsBuilder_ == null) {
@@ -617,7 +617,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
      */
     public Builder removeItems(int index) {
       if (itemsBuilder_ == null) {
@@ -630,16 +630,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
      */
-    public com.ecmsp.product.v1.reservation.v1.Variant.Builder getItemsBuilder(
+    public com.ecmsp.product.v1.reservation.v1.ReservedVariant.Builder getItemsBuilder(
         int index) {
       return getItemsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
      */
-    public com.ecmsp.product.v1.reservation.v1.VariantOrBuilder getItemsOrBuilder(
+    public com.ecmsp.product.v1.reservation.v1.ReservedVariantOrBuilder getItemsOrBuilder(
         int index) {
       if (itemsBuilder_ == null) {
         return items_.get(index);  } else {
@@ -647,9 +647,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
      */
-    public java.util.List<? extends com.ecmsp.product.v1.reservation.v1.VariantOrBuilder> 
+    public java.util.List<? extends com.ecmsp.product.v1.reservation.v1.ReservedVariantOrBuilder> 
          getItemsOrBuilderList() {
       if (itemsBuilder_ != null) {
         return itemsBuilder_.getMessageOrBuilderList();
@@ -658,33 +658,33 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
      */
-    public com.ecmsp.product.v1.reservation.v1.Variant.Builder addItemsBuilder() {
+    public com.ecmsp.product.v1.reservation.v1.ReservedVariant.Builder addItemsBuilder() {
       return getItemsFieldBuilder().addBuilder(
-          com.ecmsp.product.v1.reservation.v1.Variant.getDefaultInstance());
+          com.ecmsp.product.v1.reservation.v1.ReservedVariant.getDefaultInstance());
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
      */
-    public com.ecmsp.product.v1.reservation.v1.Variant.Builder addItemsBuilder(
+    public com.ecmsp.product.v1.reservation.v1.ReservedVariant.Builder addItemsBuilder(
         int index) {
       return getItemsFieldBuilder().addBuilder(
-          index, com.ecmsp.product.v1.reservation.v1.Variant.getDefaultInstance());
+          index, com.ecmsp.product.v1.reservation.v1.ReservedVariant.getDefaultInstance());
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.Variant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
      */
-    public java.util.List<com.ecmsp.product.v1.reservation.v1.Variant.Builder> 
+    public java.util.List<com.ecmsp.product.v1.reservation.v1.ReservedVariant.Builder> 
          getItemsBuilderList() {
       return getItemsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.ecmsp.product.v1.reservation.v1.Variant, com.ecmsp.product.v1.reservation.v1.Variant.Builder, com.ecmsp.product.v1.reservation.v1.VariantOrBuilder> 
+        com.ecmsp.product.v1.reservation.v1.ReservedVariant, com.ecmsp.product.v1.reservation.v1.ReservedVariant.Builder, com.ecmsp.product.v1.reservation.v1.ReservedVariantOrBuilder> 
         getItemsFieldBuilder() {
       if (itemsBuilder_ == null) {
         itemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.ecmsp.product.v1.reservation.v1.Variant, com.ecmsp.product.v1.reservation.v1.Variant.Builder, com.ecmsp.product.v1.reservation.v1.VariantOrBuilder>(
+            com.ecmsp.product.v1.reservation.v1.ReservedVariant, com.ecmsp.product.v1.reservation.v1.ReservedVariant.Builder, com.ecmsp.product.v1.reservation.v1.ReservedVariantOrBuilder>(
                 items_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),

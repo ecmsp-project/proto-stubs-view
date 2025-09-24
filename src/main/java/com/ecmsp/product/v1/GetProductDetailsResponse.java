@@ -41,41 +41,41 @@ private static final long serialVersionUID = 0L;
 
   public static final int VARIANTS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private java.util.List<com.ecmsp.product.v1.Variant> variants_;
+  private java.util.List<com.ecmsp.product.v1.VariantDetail> variants_;
   /**
-   * <code>repeated .product.v1.Variant variants = 1;</code>
+   * <code>repeated .product.v1.VariantDetail variants = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<com.ecmsp.product.v1.Variant> getVariantsList() {
+  public java.util.List<com.ecmsp.product.v1.VariantDetail> getVariantsList() {
     return variants_;
   }
   /**
-   * <code>repeated .product.v1.Variant variants = 1;</code>
+   * <code>repeated .product.v1.VariantDetail variants = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.ecmsp.product.v1.VariantOrBuilder> 
+  public java.util.List<? extends com.ecmsp.product.v1.VariantDetailOrBuilder> 
       getVariantsOrBuilderList() {
     return variants_;
   }
   /**
-   * <code>repeated .product.v1.Variant variants = 1;</code>
+   * <code>repeated .product.v1.VariantDetail variants = 1;</code>
    */
   @java.lang.Override
   public int getVariantsCount() {
     return variants_.size();
   }
   /**
-   * <code>repeated .product.v1.Variant variants = 1;</code>
+   * <code>repeated .product.v1.VariantDetail variants = 1;</code>
    */
   @java.lang.Override
-  public com.ecmsp.product.v1.Variant getVariants(int index) {
+  public com.ecmsp.product.v1.VariantDetail getVariants(int index) {
     return variants_.get(index);
   }
   /**
-   * <code>repeated .product.v1.Variant variants = 1;</code>
+   * <code>repeated .product.v1.VariantDetail variants = 1;</code>
    */
   @java.lang.Override
-  public com.ecmsp.product.v1.VariantOrBuilder getVariantsOrBuilder(
+  public com.ecmsp.product.v1.VariantDetailOrBuilder getVariantsOrBuilder(
       int index) {
     return variants_.get(index);
   }
@@ -425,9 +425,9 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              com.ecmsp.product.v1.Variant m =
+              com.ecmsp.product.v1.VariantDetail m =
                   input.readMessage(
-                      com.ecmsp.product.v1.Variant.parser(),
+                      com.ecmsp.product.v1.VariantDetail.parser(),
                       extensionRegistry);
               if (variantsBuilder_ == null) {
                 ensureVariantsIsMutable();
@@ -454,22 +454,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<com.ecmsp.product.v1.Variant> variants_ =
+    private java.util.List<com.ecmsp.product.v1.VariantDetail> variants_ =
       java.util.Collections.emptyList();
     private void ensureVariantsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        variants_ = new java.util.ArrayList<com.ecmsp.product.v1.Variant>(variants_);
+        variants_ = new java.util.ArrayList<com.ecmsp.product.v1.VariantDetail>(variants_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.ecmsp.product.v1.Variant, com.ecmsp.product.v1.Variant.Builder, com.ecmsp.product.v1.VariantOrBuilder> variantsBuilder_;
+        com.ecmsp.product.v1.VariantDetail, com.ecmsp.product.v1.VariantDetail.Builder, com.ecmsp.product.v1.VariantDetailOrBuilder> variantsBuilder_;
 
     /**
-     * <code>repeated .product.v1.Variant variants = 1;</code>
+     * <code>repeated .product.v1.VariantDetail variants = 1;</code>
      */
-    public java.util.List<com.ecmsp.product.v1.Variant> getVariantsList() {
+    public java.util.List<com.ecmsp.product.v1.VariantDetail> getVariantsList() {
       if (variantsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(variants_);
       } else {
@@ -477,7 +477,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .product.v1.Variant variants = 1;</code>
+     * <code>repeated .product.v1.VariantDetail variants = 1;</code>
      */
     public int getVariantsCount() {
       if (variantsBuilder_ == null) {
@@ -487,9 +487,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .product.v1.Variant variants = 1;</code>
+     * <code>repeated .product.v1.VariantDetail variants = 1;</code>
      */
-    public com.ecmsp.product.v1.Variant getVariants(int index) {
+    public com.ecmsp.product.v1.VariantDetail getVariants(int index) {
       if (variantsBuilder_ == null) {
         return variants_.get(index);
       } else {
@@ -497,10 +497,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .product.v1.Variant variants = 1;</code>
+     * <code>repeated .product.v1.VariantDetail variants = 1;</code>
      */
     public Builder setVariants(
-        int index, com.ecmsp.product.v1.Variant value) {
+        int index, com.ecmsp.product.v1.VariantDetail value) {
       if (variantsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -514,10 +514,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.Variant variants = 1;</code>
+     * <code>repeated .product.v1.VariantDetail variants = 1;</code>
      */
     public Builder setVariants(
-        int index, com.ecmsp.product.v1.Variant.Builder builderForValue) {
+        int index, com.ecmsp.product.v1.VariantDetail.Builder builderForValue) {
       if (variantsBuilder_ == null) {
         ensureVariantsIsMutable();
         variants_.set(index, builderForValue.build());
@@ -528,9 +528,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.Variant variants = 1;</code>
+     * <code>repeated .product.v1.VariantDetail variants = 1;</code>
      */
-    public Builder addVariants(com.ecmsp.product.v1.Variant value) {
+    public Builder addVariants(com.ecmsp.product.v1.VariantDetail value) {
       if (variantsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -544,10 +544,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.Variant variants = 1;</code>
+     * <code>repeated .product.v1.VariantDetail variants = 1;</code>
      */
     public Builder addVariants(
-        int index, com.ecmsp.product.v1.Variant value) {
+        int index, com.ecmsp.product.v1.VariantDetail value) {
       if (variantsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -561,10 +561,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.Variant variants = 1;</code>
+     * <code>repeated .product.v1.VariantDetail variants = 1;</code>
      */
     public Builder addVariants(
-        com.ecmsp.product.v1.Variant.Builder builderForValue) {
+        com.ecmsp.product.v1.VariantDetail.Builder builderForValue) {
       if (variantsBuilder_ == null) {
         ensureVariantsIsMutable();
         variants_.add(builderForValue.build());
@@ -575,10 +575,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.Variant variants = 1;</code>
+     * <code>repeated .product.v1.VariantDetail variants = 1;</code>
      */
     public Builder addVariants(
-        int index, com.ecmsp.product.v1.Variant.Builder builderForValue) {
+        int index, com.ecmsp.product.v1.VariantDetail.Builder builderForValue) {
       if (variantsBuilder_ == null) {
         ensureVariantsIsMutable();
         variants_.add(index, builderForValue.build());
@@ -589,10 +589,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.Variant variants = 1;</code>
+     * <code>repeated .product.v1.VariantDetail variants = 1;</code>
      */
     public Builder addAllVariants(
-        java.lang.Iterable<? extends com.ecmsp.product.v1.Variant> values) {
+        java.lang.Iterable<? extends com.ecmsp.product.v1.VariantDetail> values) {
       if (variantsBuilder_ == null) {
         ensureVariantsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -604,7 +604,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.Variant variants = 1;</code>
+     * <code>repeated .product.v1.VariantDetail variants = 1;</code>
      */
     public Builder clearVariants() {
       if (variantsBuilder_ == null) {
@@ -617,7 +617,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.Variant variants = 1;</code>
+     * <code>repeated .product.v1.VariantDetail variants = 1;</code>
      */
     public Builder removeVariants(int index) {
       if (variantsBuilder_ == null) {
@@ -630,16 +630,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.Variant variants = 1;</code>
+     * <code>repeated .product.v1.VariantDetail variants = 1;</code>
      */
-    public com.ecmsp.product.v1.Variant.Builder getVariantsBuilder(
+    public com.ecmsp.product.v1.VariantDetail.Builder getVariantsBuilder(
         int index) {
       return getVariantsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .product.v1.Variant variants = 1;</code>
+     * <code>repeated .product.v1.VariantDetail variants = 1;</code>
      */
-    public com.ecmsp.product.v1.VariantOrBuilder getVariantsOrBuilder(
+    public com.ecmsp.product.v1.VariantDetailOrBuilder getVariantsOrBuilder(
         int index) {
       if (variantsBuilder_ == null) {
         return variants_.get(index);  } else {
@@ -647,9 +647,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .product.v1.Variant variants = 1;</code>
+     * <code>repeated .product.v1.VariantDetail variants = 1;</code>
      */
-    public java.util.List<? extends com.ecmsp.product.v1.VariantOrBuilder> 
+    public java.util.List<? extends com.ecmsp.product.v1.VariantDetailOrBuilder> 
          getVariantsOrBuilderList() {
       if (variantsBuilder_ != null) {
         return variantsBuilder_.getMessageOrBuilderList();
@@ -658,33 +658,33 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .product.v1.Variant variants = 1;</code>
+     * <code>repeated .product.v1.VariantDetail variants = 1;</code>
      */
-    public com.ecmsp.product.v1.Variant.Builder addVariantsBuilder() {
+    public com.ecmsp.product.v1.VariantDetail.Builder addVariantsBuilder() {
       return getVariantsFieldBuilder().addBuilder(
-          com.ecmsp.product.v1.Variant.getDefaultInstance());
+          com.ecmsp.product.v1.VariantDetail.getDefaultInstance());
     }
     /**
-     * <code>repeated .product.v1.Variant variants = 1;</code>
+     * <code>repeated .product.v1.VariantDetail variants = 1;</code>
      */
-    public com.ecmsp.product.v1.Variant.Builder addVariantsBuilder(
+    public com.ecmsp.product.v1.VariantDetail.Builder addVariantsBuilder(
         int index) {
       return getVariantsFieldBuilder().addBuilder(
-          index, com.ecmsp.product.v1.Variant.getDefaultInstance());
+          index, com.ecmsp.product.v1.VariantDetail.getDefaultInstance());
     }
     /**
-     * <code>repeated .product.v1.Variant variants = 1;</code>
+     * <code>repeated .product.v1.VariantDetail variants = 1;</code>
      */
-    public java.util.List<com.ecmsp.product.v1.Variant.Builder> 
+    public java.util.List<com.ecmsp.product.v1.VariantDetail.Builder> 
          getVariantsBuilderList() {
       return getVariantsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.ecmsp.product.v1.Variant, com.ecmsp.product.v1.Variant.Builder, com.ecmsp.product.v1.VariantOrBuilder> 
+        com.ecmsp.product.v1.VariantDetail, com.ecmsp.product.v1.VariantDetail.Builder, com.ecmsp.product.v1.VariantDetailOrBuilder> 
         getVariantsFieldBuilder() {
       if (variantsBuilder_ == null) {
         variantsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.ecmsp.product.v1.Variant, com.ecmsp.product.v1.Variant.Builder, com.ecmsp.product.v1.VariantOrBuilder>(
+            com.ecmsp.product.v1.VariantDetail, com.ecmsp.product.v1.VariantDetail.Builder, com.ecmsp.product.v1.VariantDetailOrBuilder>(
                 variants_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),

@@ -79,9 +79,9 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VARIANT_FIELD_NUMBER = 2;
-  private com.ecmsp.product.v1.Variant variant_;
+  private com.ecmsp.product.v1.VariantDetail variant_;
   /**
-   * <code>.product.v1.Variant variant = 2;</code>
+   * <code>.product.v1.VariantDetail variant = 2;</code>
    * @return Whether the variant field is set.
    */
   @java.lang.Override
@@ -89,19 +89,19 @@ private static final long serialVersionUID = 0L;
     return variant_ != null;
   }
   /**
-   * <code>.product.v1.Variant variant = 2;</code>
+   * <code>.product.v1.VariantDetail variant = 2;</code>
    * @return The variant.
    */
   @java.lang.Override
-  public com.ecmsp.product.v1.Variant getVariant() {
-    return variant_ == null ? com.ecmsp.product.v1.Variant.getDefaultInstance() : variant_;
+  public com.ecmsp.product.v1.VariantDetail getVariant() {
+    return variant_ == null ? com.ecmsp.product.v1.VariantDetail.getDefaultInstance() : variant_;
   }
   /**
-   * <code>.product.v1.Variant variant = 2;</code>
+   * <code>.product.v1.VariantDetail variant = 2;</code>
    */
   @java.lang.Override
-  public com.ecmsp.product.v1.VariantOrBuilder getVariantOrBuilder() {
-    return variant_ == null ? com.ecmsp.product.v1.Variant.getDefaultInstance() : variant_;
+  public com.ecmsp.product.v1.VariantDetailOrBuilder getVariantOrBuilder() {
+    return variant_ == null ? com.ecmsp.product.v1.VariantDetail.getDefaultInstance() : variant_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -538,31 +538,31 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.ecmsp.product.v1.Variant variant_;
+    private com.ecmsp.product.v1.VariantDetail variant_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.ecmsp.product.v1.Variant, com.ecmsp.product.v1.Variant.Builder, com.ecmsp.product.v1.VariantOrBuilder> variantBuilder_;
+        com.ecmsp.product.v1.VariantDetail, com.ecmsp.product.v1.VariantDetail.Builder, com.ecmsp.product.v1.VariantDetailOrBuilder> variantBuilder_;
     /**
-     * <code>.product.v1.Variant variant = 2;</code>
+     * <code>.product.v1.VariantDetail variant = 2;</code>
      * @return Whether the variant field is set.
      */
     public boolean hasVariant() {
       return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>.product.v1.Variant variant = 2;</code>
+     * <code>.product.v1.VariantDetail variant = 2;</code>
      * @return The variant.
      */
-    public com.ecmsp.product.v1.Variant getVariant() {
+    public com.ecmsp.product.v1.VariantDetail getVariant() {
       if (variantBuilder_ == null) {
-        return variant_ == null ? com.ecmsp.product.v1.Variant.getDefaultInstance() : variant_;
+        return variant_ == null ? com.ecmsp.product.v1.VariantDetail.getDefaultInstance() : variant_;
       } else {
         return variantBuilder_.getMessage();
       }
     }
     /**
-     * <code>.product.v1.Variant variant = 2;</code>
+     * <code>.product.v1.VariantDetail variant = 2;</code>
      */
-    public Builder setVariant(com.ecmsp.product.v1.Variant value) {
+    public Builder setVariant(com.ecmsp.product.v1.VariantDetail value) {
       if (variantBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -576,10 +576,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.product.v1.Variant variant = 2;</code>
+     * <code>.product.v1.VariantDetail variant = 2;</code>
      */
     public Builder setVariant(
-        com.ecmsp.product.v1.Variant.Builder builderForValue) {
+        com.ecmsp.product.v1.VariantDetail.Builder builderForValue) {
       if (variantBuilder_ == null) {
         variant_ = builderForValue.build();
       } else {
@@ -590,13 +590,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.product.v1.Variant variant = 2;</code>
+     * <code>.product.v1.VariantDetail variant = 2;</code>
      */
-    public Builder mergeVariant(com.ecmsp.product.v1.Variant value) {
+    public Builder mergeVariant(com.ecmsp.product.v1.VariantDetail value) {
       if (variantBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0) &&
           variant_ != null &&
-          variant_ != com.ecmsp.product.v1.Variant.getDefaultInstance()) {
+          variant_ != com.ecmsp.product.v1.VariantDetail.getDefaultInstance()) {
           getVariantBuilder().mergeFrom(value);
         } else {
           variant_ = value;
@@ -609,7 +609,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.product.v1.Variant variant = 2;</code>
+     * <code>.product.v1.VariantDetail variant = 2;</code>
      */
     public Builder clearVariant() {
       bitField0_ = (bitField0_ & ~0x00000002);
@@ -622,33 +622,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.product.v1.Variant variant = 2;</code>
+     * <code>.product.v1.VariantDetail variant = 2;</code>
      */
-    public com.ecmsp.product.v1.Variant.Builder getVariantBuilder() {
+    public com.ecmsp.product.v1.VariantDetail.Builder getVariantBuilder() {
       bitField0_ |= 0x00000002;
       onChanged();
       return getVariantFieldBuilder().getBuilder();
     }
     /**
-     * <code>.product.v1.Variant variant = 2;</code>
+     * <code>.product.v1.VariantDetail variant = 2;</code>
      */
-    public com.ecmsp.product.v1.VariantOrBuilder getVariantOrBuilder() {
+    public com.ecmsp.product.v1.VariantDetailOrBuilder getVariantOrBuilder() {
       if (variantBuilder_ != null) {
         return variantBuilder_.getMessageOrBuilder();
       } else {
         return variant_ == null ?
-            com.ecmsp.product.v1.Variant.getDefaultInstance() : variant_;
+            com.ecmsp.product.v1.VariantDetail.getDefaultInstance() : variant_;
       }
     }
     /**
-     * <code>.product.v1.Variant variant = 2;</code>
+     * <code>.product.v1.VariantDetail variant = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.ecmsp.product.v1.Variant, com.ecmsp.product.v1.Variant.Builder, com.ecmsp.product.v1.VariantOrBuilder> 
+        com.ecmsp.product.v1.VariantDetail, com.ecmsp.product.v1.VariantDetail.Builder, com.ecmsp.product.v1.VariantDetailOrBuilder> 
         getVariantFieldBuilder() {
       if (variantBuilder_ == null) {
         variantBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.ecmsp.product.v1.Variant, com.ecmsp.product.v1.Variant.Builder, com.ecmsp.product.v1.VariantOrBuilder>(
+            com.ecmsp.product.v1.VariantDetail, com.ecmsp.product.v1.VariantDetail.Builder, com.ecmsp.product.v1.VariantDetailOrBuilder>(
                 getVariant(),
                 getParentForChildren(),
                 isClean());
