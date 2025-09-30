@@ -3,6 +3,9 @@ package com.ecmsp.order.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
+ * <pre>
+ *TODO remove all the methods that are not necessary for the frontend client
+ * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.71.0)",
@@ -170,6 +173,37 @@ public final class OrderServiceGrpc {
     return getListOrdersMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.ecmsp.order.v1.ListOrdersByUserIdRequest,
+      com.ecmsp.order.v1.ListOrdersByUserIdResponse> getListOrdersByUserIdMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListOrdersByUserId",
+      requestType = com.ecmsp.order.v1.ListOrdersByUserIdRequest.class,
+      responseType = com.ecmsp.order.v1.ListOrdersByUserIdResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.ecmsp.order.v1.ListOrdersByUserIdRequest,
+      com.ecmsp.order.v1.ListOrdersByUserIdResponse> getListOrdersByUserIdMethod() {
+    io.grpc.MethodDescriptor<com.ecmsp.order.v1.ListOrdersByUserIdRequest, com.ecmsp.order.v1.ListOrdersByUserIdResponse> getListOrdersByUserIdMethod;
+    if ((getListOrdersByUserIdMethod = OrderServiceGrpc.getListOrdersByUserIdMethod) == null) {
+      synchronized (OrderServiceGrpc.class) {
+        if ((getListOrdersByUserIdMethod = OrderServiceGrpc.getListOrdersByUserIdMethod) == null) {
+          OrderServiceGrpc.getListOrdersByUserIdMethod = getListOrdersByUserIdMethod =
+              io.grpc.MethodDescriptor.<com.ecmsp.order.v1.ListOrdersByUserIdRequest, com.ecmsp.order.v1.ListOrdersByUserIdResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListOrdersByUserId"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.ecmsp.order.v1.ListOrdersByUserIdRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.ecmsp.order.v1.ListOrdersByUserIdResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrderServiceMethodDescriptorSupplier("ListOrdersByUserId"))
+              .build();
+        }
+      }
+    }
+    return getListOrdersByUserIdMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -230,6 +264,9 @@ public final class OrderServiceGrpc {
   }
 
   /**
+   * <pre>
+   *TODO remove all the methods that are not necessary for the frontend client
+   * </pre>
    */
   public interface AsyncService {
 
@@ -267,10 +304,20 @@ public final class OrderServiceGrpc {
         io.grpc.stub.StreamObserver<com.ecmsp.order.v1.ListOrdersResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOrdersMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void listOrdersByUserId(com.ecmsp.order.v1.ListOrdersByUserIdRequest request,
+        io.grpc.stub.StreamObserver<com.ecmsp.order.v1.ListOrdersByUserIdResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOrdersByUserIdMethod(), responseObserver);
+    }
   }
 
   /**
    * Base class for the server implementation of the service OrderService.
+   * <pre>
+   *TODO remove all the methods that are not necessary for the frontend client
+   * </pre>
    */
   public static abstract class OrderServiceImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -282,6 +329,9 @@ public final class OrderServiceGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service OrderService.
+   * <pre>
+   *TODO remove all the methods that are not necessary for the frontend client
+   * </pre>
    */
   public static final class OrderServiceStub
       extends io.grpc.stub.AbstractAsyncStub<OrderServiceStub> {
@@ -335,10 +385,21 @@ public final class OrderServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOrdersMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void listOrdersByUserId(com.ecmsp.order.v1.ListOrdersByUserIdRequest request,
+        io.grpc.stub.StreamObserver<com.ecmsp.order.v1.ListOrdersByUserIdResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListOrdersByUserIdMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service OrderService.
+   * <pre>
+   *TODO remove all the methods that are not necessary for the frontend client
+   * </pre>
    */
   public static final class OrderServiceBlockingV2Stub
       extends io.grpc.stub.AbstractBlockingStub<OrderServiceBlockingV2Stub> {
@@ -387,10 +448,20 @@ public final class OrderServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOrdersMethod(), getCallOptions(), request);
     }
+
+    /**
+     */
+    public com.ecmsp.order.v1.ListOrdersByUserIdResponse listOrdersByUserId(com.ecmsp.order.v1.ListOrdersByUserIdRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListOrdersByUserIdMethod(), getCallOptions(), request);
+    }
   }
 
   /**
    * A stub to allow clients to do limited synchronous rpc calls to service OrderService.
+   * <pre>
+   *TODO remove all the methods that are not necessary for the frontend client
+   * </pre>
    */
   public static final class OrderServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<OrderServiceBlockingStub> {
@@ -439,10 +510,20 @@ public final class OrderServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOrdersMethod(), getCallOptions(), request);
     }
+
+    /**
+     */
+    public com.ecmsp.order.v1.ListOrdersByUserIdResponse listOrdersByUserId(com.ecmsp.order.v1.ListOrdersByUserIdRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListOrdersByUserIdMethod(), getCallOptions(), request);
+    }
   }
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service OrderService.
+   * <pre>
+   *TODO remove all the methods that are not necessary for the frontend client
+   * </pre>
    */
   public static final class OrderServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<OrderServiceFutureStub> {
@@ -496,6 +577,14 @@ public final class OrderServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOrdersMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.ecmsp.order.v1.ListOrdersByUserIdResponse> listOrdersByUserId(
+        com.ecmsp.order.v1.ListOrdersByUserIdRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListOrdersByUserIdMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_ORDER = 0;
@@ -503,6 +592,7 @@ public final class OrderServiceGrpc {
   private static final int METHODID_UPDATE_ORDER = 2;
   private static final int METHODID_DELETE_ORDER = 3;
   private static final int METHODID_LIST_ORDERS = 4;
+  private static final int METHODID_LIST_ORDERS_BY_USER_ID = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -540,6 +630,10 @@ public final class OrderServiceGrpc {
         case METHODID_LIST_ORDERS:
           serviceImpl.listOrders((com.ecmsp.order.v1.ListOrdersRequest) request,
               (io.grpc.stub.StreamObserver<com.ecmsp.order.v1.ListOrdersResponse>) responseObserver);
+          break;
+        case METHODID_LIST_ORDERS_BY_USER_ID:
+          serviceImpl.listOrdersByUserId((com.ecmsp.order.v1.ListOrdersByUserIdRequest) request,
+              (io.grpc.stub.StreamObserver<com.ecmsp.order.v1.ListOrdersByUserIdResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -594,6 +688,13 @@ public final class OrderServiceGrpc {
               com.ecmsp.order.v1.ListOrdersRequest,
               com.ecmsp.order.v1.ListOrdersResponse>(
                 service, METHODID_LIST_ORDERS)))
+        .addMethod(
+          getListOrdersByUserIdMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.ecmsp.order.v1.ListOrdersByUserIdRequest,
+              com.ecmsp.order.v1.ListOrdersByUserIdResponse>(
+                service, METHODID_LIST_ORDERS_BY_USER_ID)))
         .build();
   }
 
@@ -647,6 +748,7 @@ public final class OrderServiceGrpc {
               .addMethod(getUpdateOrderMethod())
               .addMethod(getDeleteOrderMethod())
               .addMethod(getListOrdersMethod())
+              .addMethod(getListOrdersByUserIdMethod())
               .build();
         }
       }
