@@ -55,44 +55,24 @@ public interface CreateOrderResponseOrBuilder extends
       getDateBytes();
 
   /**
-   * <pre>
-   *  maybe add total price field here
-   * </pre>
-   *
    * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
    */
   java.util.List<com.ecmsp.order.v1.OrderItemDetails> 
       getItemsList();
   /**
-   * <pre>
-   *  maybe add total price field here
-   * </pre>
-   *
    * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
    */
   com.ecmsp.order.v1.OrderItemDetails getItems(int index);
   /**
-   * <pre>
-   *  maybe add total price field here
-   * </pre>
-   *
    * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
    */
   int getItemsCount();
   /**
-   * <pre>
-   *  maybe add total price field here
-   * </pre>
-   *
    * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
    */
   java.util.List<? extends com.ecmsp.order.v1.OrderItemDetailsOrBuilder> 
       getItemsOrBuilderList();
   /**
-   * <pre>
-   *  maybe add total price field here
-   * </pre>
-   *
    * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
    */
   com.ecmsp.order.v1.OrderItemDetailsOrBuilder getItemsOrBuilder(

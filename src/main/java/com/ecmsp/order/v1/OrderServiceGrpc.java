@@ -3,9 +3,6 @@ package com.ecmsp.order.v1;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
- * <pre>
- *TODO remove all the methods that are not necessary for the frontend client
- * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.71.0)",
@@ -49,97 +46,66 @@ public final class OrderServiceGrpc {
     return getGetOrderMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.ecmsp.order.v1.CreateOrderRequest,
-      com.ecmsp.order.v1.CreateOrderResponse> getCreateOrderMethod;
+  private static volatile io.grpc.MethodDescriptor<com.ecmsp.order.v1.GetOrderStatusRequest,
+      com.ecmsp.order.v1.GetOrderStatusResponse> getGetOrderStatusMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "CreateOrder",
-      requestType = com.ecmsp.order.v1.CreateOrderRequest.class,
-      responseType = com.ecmsp.order.v1.CreateOrderResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "GetOrderStatus",
+      requestType = com.ecmsp.order.v1.GetOrderStatusRequest.class,
+      responseType = com.ecmsp.order.v1.GetOrderStatusResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.ecmsp.order.v1.CreateOrderRequest,
-      com.ecmsp.order.v1.CreateOrderResponse> getCreateOrderMethod() {
-    io.grpc.MethodDescriptor<com.ecmsp.order.v1.CreateOrderRequest, com.ecmsp.order.v1.CreateOrderResponse> getCreateOrderMethod;
-    if ((getCreateOrderMethod = OrderServiceGrpc.getCreateOrderMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.ecmsp.order.v1.GetOrderStatusRequest,
+      com.ecmsp.order.v1.GetOrderStatusResponse> getGetOrderStatusMethod() {
+    io.grpc.MethodDescriptor<com.ecmsp.order.v1.GetOrderStatusRequest, com.ecmsp.order.v1.GetOrderStatusResponse> getGetOrderStatusMethod;
+    if ((getGetOrderStatusMethod = OrderServiceGrpc.getGetOrderStatusMethod) == null) {
       synchronized (OrderServiceGrpc.class) {
-        if ((getCreateOrderMethod = OrderServiceGrpc.getCreateOrderMethod) == null) {
-          OrderServiceGrpc.getCreateOrderMethod = getCreateOrderMethod =
-              io.grpc.MethodDescriptor.<com.ecmsp.order.v1.CreateOrderRequest, com.ecmsp.order.v1.CreateOrderResponse>newBuilder()
+        if ((getGetOrderStatusMethod = OrderServiceGrpc.getGetOrderStatusMethod) == null) {
+          OrderServiceGrpc.getGetOrderStatusMethod = getGetOrderStatusMethod =
+              io.grpc.MethodDescriptor.<com.ecmsp.order.v1.GetOrderStatusRequest, com.ecmsp.order.v1.GetOrderStatusResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateOrder"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOrderStatus"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.ecmsp.order.v1.CreateOrderRequest.getDefaultInstance()))
+                  com.ecmsp.order.v1.GetOrderStatusRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.ecmsp.order.v1.CreateOrderResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrderServiceMethodDescriptorSupplier("CreateOrder"))
+                  com.ecmsp.order.v1.GetOrderStatusResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrderServiceMethodDescriptorSupplier("GetOrderStatus"))
               .build();
         }
       }
     }
-    return getCreateOrderMethod;
+    return getGetOrderStatusMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.ecmsp.order.v1.UpdateOrderRequest,
-      com.ecmsp.order.v1.UpdateOrderResponse> getUpdateOrderMethod;
+  private static volatile io.grpc.MethodDescriptor<com.ecmsp.order.v1.GetOrderItemsRequest,
+      com.ecmsp.order.v1.GetOrderItemsResponse> getGetOrderItemsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "UpdateOrder",
-      requestType = com.ecmsp.order.v1.UpdateOrderRequest.class,
-      responseType = com.ecmsp.order.v1.UpdateOrderResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "GetOrderItems",
+      requestType = com.ecmsp.order.v1.GetOrderItemsRequest.class,
+      responseType = com.ecmsp.order.v1.GetOrderItemsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.ecmsp.order.v1.UpdateOrderRequest,
-      com.ecmsp.order.v1.UpdateOrderResponse> getUpdateOrderMethod() {
-    io.grpc.MethodDescriptor<com.ecmsp.order.v1.UpdateOrderRequest, com.ecmsp.order.v1.UpdateOrderResponse> getUpdateOrderMethod;
-    if ((getUpdateOrderMethod = OrderServiceGrpc.getUpdateOrderMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.ecmsp.order.v1.GetOrderItemsRequest,
+      com.ecmsp.order.v1.GetOrderItemsResponse> getGetOrderItemsMethod() {
+    io.grpc.MethodDescriptor<com.ecmsp.order.v1.GetOrderItemsRequest, com.ecmsp.order.v1.GetOrderItemsResponse> getGetOrderItemsMethod;
+    if ((getGetOrderItemsMethod = OrderServiceGrpc.getGetOrderItemsMethod) == null) {
       synchronized (OrderServiceGrpc.class) {
-        if ((getUpdateOrderMethod = OrderServiceGrpc.getUpdateOrderMethod) == null) {
-          OrderServiceGrpc.getUpdateOrderMethod = getUpdateOrderMethod =
-              io.grpc.MethodDescriptor.<com.ecmsp.order.v1.UpdateOrderRequest, com.ecmsp.order.v1.UpdateOrderResponse>newBuilder()
+        if ((getGetOrderItemsMethod = OrderServiceGrpc.getGetOrderItemsMethod) == null) {
+          OrderServiceGrpc.getGetOrderItemsMethod = getGetOrderItemsMethod =
+              io.grpc.MethodDescriptor.<com.ecmsp.order.v1.GetOrderItemsRequest, com.ecmsp.order.v1.GetOrderItemsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateOrder"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetOrderItems"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.ecmsp.order.v1.UpdateOrderRequest.getDefaultInstance()))
+                  com.ecmsp.order.v1.GetOrderItemsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.ecmsp.order.v1.UpdateOrderResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrderServiceMethodDescriptorSupplier("UpdateOrder"))
+                  com.ecmsp.order.v1.GetOrderItemsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrderServiceMethodDescriptorSupplier("GetOrderItems"))
               .build();
         }
       }
     }
-    return getUpdateOrderMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.ecmsp.order.v1.DeleteOrderRequest,
-      com.ecmsp.order.v1.DeleteOrderResponse> getDeleteOrderMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "DeleteOrder",
-      requestType = com.ecmsp.order.v1.DeleteOrderRequest.class,
-      responseType = com.ecmsp.order.v1.DeleteOrderResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.ecmsp.order.v1.DeleteOrderRequest,
-      com.ecmsp.order.v1.DeleteOrderResponse> getDeleteOrderMethod() {
-    io.grpc.MethodDescriptor<com.ecmsp.order.v1.DeleteOrderRequest, com.ecmsp.order.v1.DeleteOrderResponse> getDeleteOrderMethod;
-    if ((getDeleteOrderMethod = OrderServiceGrpc.getDeleteOrderMethod) == null) {
-      synchronized (OrderServiceGrpc.class) {
-        if ((getDeleteOrderMethod = OrderServiceGrpc.getDeleteOrderMethod) == null) {
-          OrderServiceGrpc.getDeleteOrderMethod = getDeleteOrderMethod =
-              io.grpc.MethodDescriptor.<com.ecmsp.order.v1.DeleteOrderRequest, com.ecmsp.order.v1.DeleteOrderResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteOrder"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.ecmsp.order.v1.DeleteOrderRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.ecmsp.order.v1.DeleteOrderResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new OrderServiceMethodDescriptorSupplier("DeleteOrder"))
-              .build();
-        }
-      }
-    }
-    return getDeleteOrderMethod;
+    return getGetOrderItemsMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<com.ecmsp.order.v1.ListOrdersRequest,
@@ -204,6 +170,99 @@ public final class OrderServiceGrpc {
     return getListOrdersByUserIdMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.ecmsp.order.v1.UpdateOrderRequest,
+      com.ecmsp.order.v1.UpdateOrderResponse> getUpdateOrderMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateOrder",
+      requestType = com.ecmsp.order.v1.UpdateOrderRequest.class,
+      responseType = com.ecmsp.order.v1.UpdateOrderResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.ecmsp.order.v1.UpdateOrderRequest,
+      com.ecmsp.order.v1.UpdateOrderResponse> getUpdateOrderMethod() {
+    io.grpc.MethodDescriptor<com.ecmsp.order.v1.UpdateOrderRequest, com.ecmsp.order.v1.UpdateOrderResponse> getUpdateOrderMethod;
+    if ((getUpdateOrderMethod = OrderServiceGrpc.getUpdateOrderMethod) == null) {
+      synchronized (OrderServiceGrpc.class) {
+        if ((getUpdateOrderMethod = OrderServiceGrpc.getUpdateOrderMethod) == null) {
+          OrderServiceGrpc.getUpdateOrderMethod = getUpdateOrderMethod =
+              io.grpc.MethodDescriptor.<com.ecmsp.order.v1.UpdateOrderRequest, com.ecmsp.order.v1.UpdateOrderResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateOrder"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.ecmsp.order.v1.UpdateOrderRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.ecmsp.order.v1.UpdateOrderResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrderServiceMethodDescriptorSupplier("UpdateOrder"))
+              .build();
+        }
+      }
+    }
+    return getUpdateOrderMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.ecmsp.order.v1.CreateOrderRequest,
+      com.ecmsp.order.v1.CreateOrderResponse> getCreateOrderMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateOrder",
+      requestType = com.ecmsp.order.v1.CreateOrderRequest.class,
+      responseType = com.ecmsp.order.v1.CreateOrderResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.ecmsp.order.v1.CreateOrderRequest,
+      com.ecmsp.order.v1.CreateOrderResponse> getCreateOrderMethod() {
+    io.grpc.MethodDescriptor<com.ecmsp.order.v1.CreateOrderRequest, com.ecmsp.order.v1.CreateOrderResponse> getCreateOrderMethod;
+    if ((getCreateOrderMethod = OrderServiceGrpc.getCreateOrderMethod) == null) {
+      synchronized (OrderServiceGrpc.class) {
+        if ((getCreateOrderMethod = OrderServiceGrpc.getCreateOrderMethod) == null) {
+          OrderServiceGrpc.getCreateOrderMethod = getCreateOrderMethod =
+              io.grpc.MethodDescriptor.<com.ecmsp.order.v1.CreateOrderRequest, com.ecmsp.order.v1.CreateOrderResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateOrder"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.ecmsp.order.v1.CreateOrderRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.ecmsp.order.v1.CreateOrderResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrderServiceMethodDescriptorSupplier("CreateOrder"))
+              .build();
+        }
+      }
+    }
+    return getCreateOrderMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<com.ecmsp.order.v1.DeleteOrderRequest,
+      com.ecmsp.order.v1.DeleteOrderResponse> getDeleteOrderMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteOrder",
+      requestType = com.ecmsp.order.v1.DeleteOrderRequest.class,
+      responseType = com.ecmsp.order.v1.DeleteOrderResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.ecmsp.order.v1.DeleteOrderRequest,
+      com.ecmsp.order.v1.DeleteOrderResponse> getDeleteOrderMethod() {
+    io.grpc.MethodDescriptor<com.ecmsp.order.v1.DeleteOrderRequest, com.ecmsp.order.v1.DeleteOrderResponse> getDeleteOrderMethod;
+    if ((getDeleteOrderMethod = OrderServiceGrpc.getDeleteOrderMethod) == null) {
+      synchronized (OrderServiceGrpc.class) {
+        if ((getDeleteOrderMethod = OrderServiceGrpc.getDeleteOrderMethod) == null) {
+          OrderServiceGrpc.getDeleteOrderMethod = getDeleteOrderMethod =
+              io.grpc.MethodDescriptor.<com.ecmsp.order.v1.DeleteOrderRequest, com.ecmsp.order.v1.DeleteOrderResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteOrder"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.ecmsp.order.v1.DeleteOrderRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.ecmsp.order.v1.DeleteOrderResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrderServiceMethodDescriptorSupplier("DeleteOrder"))
+              .build();
+        }
+      }
+    }
+    return getDeleteOrderMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -264,9 +323,6 @@ public final class OrderServiceGrpc {
   }
 
   /**
-   * <pre>
-   *TODO remove all the methods that are not necessary for the frontend client
-   * </pre>
    */
   public interface AsyncService {
 
@@ -279,23 +335,16 @@ public final class OrderServiceGrpc {
 
     /**
      */
-    default void createOrder(com.ecmsp.order.v1.CreateOrderRequest request,
-        io.grpc.stub.StreamObserver<com.ecmsp.order.v1.CreateOrderResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateOrderMethod(), responseObserver);
+    default void getOrderStatus(com.ecmsp.order.v1.GetOrderStatusRequest request,
+        io.grpc.stub.StreamObserver<com.ecmsp.order.v1.GetOrderStatusResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOrderStatusMethod(), responseObserver);
     }
 
     /**
      */
-    default void updateOrder(com.ecmsp.order.v1.UpdateOrderRequest request,
-        io.grpc.stub.StreamObserver<com.ecmsp.order.v1.UpdateOrderResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateOrderMethod(), responseObserver);
-    }
-
-    /**
-     */
-    default void deleteOrder(com.ecmsp.order.v1.DeleteOrderRequest request,
-        io.grpc.stub.StreamObserver<com.ecmsp.order.v1.DeleteOrderResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteOrderMethod(), responseObserver);
+    default void getOrderItems(com.ecmsp.order.v1.GetOrderItemsRequest request,
+        io.grpc.stub.StreamObserver<com.ecmsp.order.v1.GetOrderItemsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetOrderItemsMethod(), responseObserver);
     }
 
     /**
@@ -311,13 +360,34 @@ public final class OrderServiceGrpc {
         io.grpc.stub.StreamObserver<com.ecmsp.order.v1.ListOrdersByUserIdResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOrdersByUserIdMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void updateOrder(com.ecmsp.order.v1.UpdateOrderRequest request,
+        io.grpc.stub.StreamObserver<com.ecmsp.order.v1.UpdateOrderResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateOrderMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     *TODO: REMOVE BELOW - DEPRECATED
+     * </pre>
+     */
+    default void createOrder(com.ecmsp.order.v1.CreateOrderRequest request,
+        io.grpc.stub.StreamObserver<com.ecmsp.order.v1.CreateOrderResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateOrderMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void deleteOrder(com.ecmsp.order.v1.DeleteOrderRequest request,
+        io.grpc.stub.StreamObserver<com.ecmsp.order.v1.DeleteOrderResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteOrderMethod(), responseObserver);
+    }
   }
 
   /**
    * Base class for the server implementation of the service OrderService.
-   * <pre>
-   *TODO remove all the methods that are not necessary for the frontend client
-   * </pre>
    */
   public static abstract class OrderServiceImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -329,9 +399,6 @@ public final class OrderServiceGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service OrderService.
-   * <pre>
-   *TODO remove all the methods that are not necessary for the frontend client
-   * </pre>
    */
   public static final class OrderServiceStub
       extends io.grpc.stub.AbstractAsyncStub<OrderServiceStub> {
@@ -356,26 +423,18 @@ public final class OrderServiceGrpc {
 
     /**
      */
-    public void createOrder(com.ecmsp.order.v1.CreateOrderRequest request,
-        io.grpc.stub.StreamObserver<com.ecmsp.order.v1.CreateOrderResponse> responseObserver) {
+    public void getOrderStatus(com.ecmsp.order.v1.GetOrderStatusRequest request,
+        io.grpc.stub.StreamObserver<com.ecmsp.order.v1.GetOrderStatusResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getCreateOrderMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetOrderStatusMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
      */
-    public void updateOrder(com.ecmsp.order.v1.UpdateOrderRequest request,
-        io.grpc.stub.StreamObserver<com.ecmsp.order.v1.UpdateOrderResponse> responseObserver) {
+    public void getOrderItems(com.ecmsp.order.v1.GetOrderItemsRequest request,
+        io.grpc.stub.StreamObserver<com.ecmsp.order.v1.GetOrderItemsResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getUpdateOrderMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     */
-    public void deleteOrder(com.ecmsp.order.v1.DeleteOrderRequest request,
-        io.grpc.stub.StreamObserver<com.ecmsp.order.v1.DeleteOrderResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getDeleteOrderMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getGetOrderItemsMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -393,13 +452,37 @@ public final class OrderServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOrdersByUserIdMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void updateOrder(com.ecmsp.order.v1.UpdateOrderRequest request,
+        io.grpc.stub.StreamObserver<com.ecmsp.order.v1.UpdateOrderResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getUpdateOrderMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     *TODO: REMOVE BELOW - DEPRECATED
+     * </pre>
+     */
+    public void createOrder(com.ecmsp.order.v1.CreateOrderRequest request,
+        io.grpc.stub.StreamObserver<com.ecmsp.order.v1.CreateOrderResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateOrderMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void deleteOrder(com.ecmsp.order.v1.DeleteOrderRequest request,
+        io.grpc.stub.StreamObserver<com.ecmsp.order.v1.DeleteOrderResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteOrderMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service OrderService.
-   * <pre>
-   *TODO remove all the methods that are not necessary for the frontend client
-   * </pre>
    */
   public static final class OrderServiceBlockingV2Stub
       extends io.grpc.stub.AbstractBlockingStub<OrderServiceBlockingV2Stub> {
@@ -423,23 +506,16 @@ public final class OrderServiceGrpc {
 
     /**
      */
-    public com.ecmsp.order.v1.CreateOrderResponse createOrder(com.ecmsp.order.v1.CreateOrderRequest request) {
+    public com.ecmsp.order.v1.GetOrderStatusResponse getOrderStatus(com.ecmsp.order.v1.GetOrderStatusRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getCreateOrderMethod(), getCallOptions(), request);
+          getChannel(), getGetOrderStatusMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.ecmsp.order.v1.UpdateOrderResponse updateOrder(com.ecmsp.order.v1.UpdateOrderRequest request) {
+    public com.ecmsp.order.v1.GetOrderItemsResponse getOrderItems(com.ecmsp.order.v1.GetOrderItemsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getUpdateOrderMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.ecmsp.order.v1.DeleteOrderResponse deleteOrder(com.ecmsp.order.v1.DeleteOrderRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getDeleteOrderMethod(), getCallOptions(), request);
+          getChannel(), getGetOrderItemsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -455,13 +531,34 @@ public final class OrderServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOrdersByUserIdMethod(), getCallOptions(), request);
     }
+
+    /**
+     */
+    public com.ecmsp.order.v1.UpdateOrderResponse updateOrder(com.ecmsp.order.v1.UpdateOrderRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateOrderMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     *TODO: REMOVE BELOW - DEPRECATED
+     * </pre>
+     */
+    public com.ecmsp.order.v1.CreateOrderResponse createOrder(com.ecmsp.order.v1.CreateOrderRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateOrderMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.ecmsp.order.v1.DeleteOrderResponse deleteOrder(com.ecmsp.order.v1.DeleteOrderRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteOrderMethod(), getCallOptions(), request);
+    }
   }
 
   /**
    * A stub to allow clients to do limited synchronous rpc calls to service OrderService.
-   * <pre>
-   *TODO remove all the methods that are not necessary for the frontend client
-   * </pre>
    */
   public static final class OrderServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<OrderServiceBlockingStub> {
@@ -485,23 +582,16 @@ public final class OrderServiceGrpc {
 
     /**
      */
-    public com.ecmsp.order.v1.CreateOrderResponse createOrder(com.ecmsp.order.v1.CreateOrderRequest request) {
+    public com.ecmsp.order.v1.GetOrderStatusResponse getOrderStatus(com.ecmsp.order.v1.GetOrderStatusRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getCreateOrderMethod(), getCallOptions(), request);
+          getChannel(), getGetOrderStatusMethod(), getCallOptions(), request);
     }
 
     /**
      */
-    public com.ecmsp.order.v1.UpdateOrderResponse updateOrder(com.ecmsp.order.v1.UpdateOrderRequest request) {
+    public com.ecmsp.order.v1.GetOrderItemsResponse getOrderItems(com.ecmsp.order.v1.GetOrderItemsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getUpdateOrderMethod(), getCallOptions(), request);
-    }
-
-    /**
-     */
-    public com.ecmsp.order.v1.DeleteOrderResponse deleteOrder(com.ecmsp.order.v1.DeleteOrderRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getDeleteOrderMethod(), getCallOptions(), request);
+          getChannel(), getGetOrderItemsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -517,13 +607,34 @@ public final class OrderServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOrdersByUserIdMethod(), getCallOptions(), request);
     }
+
+    /**
+     */
+    public com.ecmsp.order.v1.UpdateOrderResponse updateOrder(com.ecmsp.order.v1.UpdateOrderRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getUpdateOrderMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     *TODO: REMOVE BELOW - DEPRECATED
+     * </pre>
+     */
+    public com.ecmsp.order.v1.CreateOrderResponse createOrder(com.ecmsp.order.v1.CreateOrderRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateOrderMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.ecmsp.order.v1.DeleteOrderResponse deleteOrder(com.ecmsp.order.v1.DeleteOrderRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteOrderMethod(), getCallOptions(), request);
+    }
   }
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service OrderService.
-   * <pre>
-   *TODO remove all the methods that are not necessary for the frontend client
-   * </pre>
    */
   public static final class OrderServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<OrderServiceFutureStub> {
@@ -548,26 +659,18 @@ public final class OrderServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.ecmsp.order.v1.CreateOrderResponse> createOrder(
-        com.ecmsp.order.v1.CreateOrderRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.ecmsp.order.v1.GetOrderStatusResponse> getOrderStatus(
+        com.ecmsp.order.v1.GetOrderStatusRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getCreateOrderMethod(), getCallOptions()), request);
+          getChannel().newCall(getGetOrderStatusMethod(), getCallOptions()), request);
     }
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.ecmsp.order.v1.UpdateOrderResponse> updateOrder(
-        com.ecmsp.order.v1.UpdateOrderRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.ecmsp.order.v1.GetOrderItemsResponse> getOrderItems(
+        com.ecmsp.order.v1.GetOrderItemsRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getUpdateOrderMethod(), getCallOptions()), request);
-    }
-
-    /**
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.ecmsp.order.v1.DeleteOrderResponse> deleteOrder(
-        com.ecmsp.order.v1.DeleteOrderRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getDeleteOrderMethod(), getCallOptions()), request);
+          getChannel().newCall(getGetOrderItemsMethod(), getCallOptions()), request);
     }
 
     /**
@@ -585,14 +688,43 @@ public final class OrderServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOrdersByUserIdMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.ecmsp.order.v1.UpdateOrderResponse> updateOrder(
+        com.ecmsp.order.v1.UpdateOrderRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getUpdateOrderMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     *TODO: REMOVE BELOW - DEPRECATED
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.ecmsp.order.v1.CreateOrderResponse> createOrder(
+        com.ecmsp.order.v1.CreateOrderRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateOrderMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.ecmsp.order.v1.DeleteOrderResponse> deleteOrder(
+        com.ecmsp.order.v1.DeleteOrderRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteOrderMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_ORDER = 0;
-  private static final int METHODID_CREATE_ORDER = 1;
-  private static final int METHODID_UPDATE_ORDER = 2;
-  private static final int METHODID_DELETE_ORDER = 3;
-  private static final int METHODID_LIST_ORDERS = 4;
-  private static final int METHODID_LIST_ORDERS_BY_USER_ID = 5;
+  private static final int METHODID_GET_ORDER_STATUS = 1;
+  private static final int METHODID_GET_ORDER_ITEMS = 2;
+  private static final int METHODID_LIST_ORDERS = 3;
+  private static final int METHODID_LIST_ORDERS_BY_USER_ID = 4;
+  private static final int METHODID_UPDATE_ORDER = 5;
+  private static final int METHODID_CREATE_ORDER = 6;
+  private static final int METHODID_DELETE_ORDER = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -615,17 +747,13 @@ public final class OrderServiceGrpc {
           serviceImpl.getOrder((com.ecmsp.order.v1.GetOrderRequest) request,
               (io.grpc.stub.StreamObserver<com.ecmsp.order.v1.GetOrderResponse>) responseObserver);
           break;
-        case METHODID_CREATE_ORDER:
-          serviceImpl.createOrder((com.ecmsp.order.v1.CreateOrderRequest) request,
-              (io.grpc.stub.StreamObserver<com.ecmsp.order.v1.CreateOrderResponse>) responseObserver);
+        case METHODID_GET_ORDER_STATUS:
+          serviceImpl.getOrderStatus((com.ecmsp.order.v1.GetOrderStatusRequest) request,
+              (io.grpc.stub.StreamObserver<com.ecmsp.order.v1.GetOrderStatusResponse>) responseObserver);
           break;
-        case METHODID_UPDATE_ORDER:
-          serviceImpl.updateOrder((com.ecmsp.order.v1.UpdateOrderRequest) request,
-              (io.grpc.stub.StreamObserver<com.ecmsp.order.v1.UpdateOrderResponse>) responseObserver);
-          break;
-        case METHODID_DELETE_ORDER:
-          serviceImpl.deleteOrder((com.ecmsp.order.v1.DeleteOrderRequest) request,
-              (io.grpc.stub.StreamObserver<com.ecmsp.order.v1.DeleteOrderResponse>) responseObserver);
+        case METHODID_GET_ORDER_ITEMS:
+          serviceImpl.getOrderItems((com.ecmsp.order.v1.GetOrderItemsRequest) request,
+              (io.grpc.stub.StreamObserver<com.ecmsp.order.v1.GetOrderItemsResponse>) responseObserver);
           break;
         case METHODID_LIST_ORDERS:
           serviceImpl.listOrders((com.ecmsp.order.v1.ListOrdersRequest) request,
@@ -634,6 +762,18 @@ public final class OrderServiceGrpc {
         case METHODID_LIST_ORDERS_BY_USER_ID:
           serviceImpl.listOrdersByUserId((com.ecmsp.order.v1.ListOrdersByUserIdRequest) request,
               (io.grpc.stub.StreamObserver<com.ecmsp.order.v1.ListOrdersByUserIdResponse>) responseObserver);
+          break;
+        case METHODID_UPDATE_ORDER:
+          serviceImpl.updateOrder((com.ecmsp.order.v1.UpdateOrderRequest) request,
+              (io.grpc.stub.StreamObserver<com.ecmsp.order.v1.UpdateOrderResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_ORDER:
+          serviceImpl.createOrder((com.ecmsp.order.v1.CreateOrderRequest) request,
+              (io.grpc.stub.StreamObserver<com.ecmsp.order.v1.CreateOrderResponse>) responseObserver);
+          break;
+        case METHODID_DELETE_ORDER:
+          serviceImpl.deleteOrder((com.ecmsp.order.v1.DeleteOrderRequest) request,
+              (io.grpc.stub.StreamObserver<com.ecmsp.order.v1.DeleteOrderResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -661,26 +801,19 @@ public final class OrderServiceGrpc {
               com.ecmsp.order.v1.GetOrderResponse>(
                 service, METHODID_GET_ORDER)))
         .addMethod(
-          getCreateOrderMethod(),
+          getGetOrderStatusMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.ecmsp.order.v1.CreateOrderRequest,
-              com.ecmsp.order.v1.CreateOrderResponse>(
-                service, METHODID_CREATE_ORDER)))
+              com.ecmsp.order.v1.GetOrderStatusRequest,
+              com.ecmsp.order.v1.GetOrderStatusResponse>(
+                service, METHODID_GET_ORDER_STATUS)))
         .addMethod(
-          getUpdateOrderMethod(),
+          getGetOrderItemsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.ecmsp.order.v1.UpdateOrderRequest,
-              com.ecmsp.order.v1.UpdateOrderResponse>(
-                service, METHODID_UPDATE_ORDER)))
-        .addMethod(
-          getDeleteOrderMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.ecmsp.order.v1.DeleteOrderRequest,
-              com.ecmsp.order.v1.DeleteOrderResponse>(
-                service, METHODID_DELETE_ORDER)))
+              com.ecmsp.order.v1.GetOrderItemsRequest,
+              com.ecmsp.order.v1.GetOrderItemsResponse>(
+                service, METHODID_GET_ORDER_ITEMS)))
         .addMethod(
           getListOrdersMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -695,6 +828,27 @@ public final class OrderServiceGrpc {
               com.ecmsp.order.v1.ListOrdersByUserIdRequest,
               com.ecmsp.order.v1.ListOrdersByUserIdResponse>(
                 service, METHODID_LIST_ORDERS_BY_USER_ID)))
+        .addMethod(
+          getUpdateOrderMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.ecmsp.order.v1.UpdateOrderRequest,
+              com.ecmsp.order.v1.UpdateOrderResponse>(
+                service, METHODID_UPDATE_ORDER)))
+        .addMethod(
+          getCreateOrderMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.ecmsp.order.v1.CreateOrderRequest,
+              com.ecmsp.order.v1.CreateOrderResponse>(
+                service, METHODID_CREATE_ORDER)))
+        .addMethod(
+          getDeleteOrderMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.ecmsp.order.v1.DeleteOrderRequest,
+              com.ecmsp.order.v1.DeleteOrderResponse>(
+                service, METHODID_DELETE_ORDER)))
         .build();
   }
 
@@ -744,11 +898,13 @@ public final class OrderServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new OrderServiceFileDescriptorSupplier())
               .addMethod(getGetOrderMethod())
-              .addMethod(getCreateOrderMethod())
-              .addMethod(getUpdateOrderMethod())
-              .addMethod(getDeleteOrderMethod())
+              .addMethod(getGetOrderStatusMethod())
+              .addMethod(getGetOrderItemsMethod())
               .addMethod(getListOrdersMethod())
               .addMethod(getListOrdersByUserIdMethod())
+              .addMethod(getUpdateOrderMethod())
+              .addMethod(getCreateOrderMethod())
+              .addMethod(getDeleteOrderMethod())
               .build();
         }
       }

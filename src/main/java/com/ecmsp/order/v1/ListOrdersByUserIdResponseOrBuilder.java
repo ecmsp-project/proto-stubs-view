@@ -8,26 +8,26 @@ public interface ListOrdersByUserIdResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .order.v1.OrderResponse orders = 1;</code>
+   * <code>repeated .order.v1.GetOrderResponse orders = 1;</code>
    */
-  java.util.List<com.ecmsp.order.v1.OrderResponse> 
+  java.util.List<com.ecmsp.order.v1.GetOrderResponse> 
       getOrdersList();
   /**
-   * <code>repeated .order.v1.OrderResponse orders = 1;</code>
+   * <code>repeated .order.v1.GetOrderResponse orders = 1;</code>
    */
-  com.ecmsp.order.v1.OrderResponse getOrders(int index);
+  com.ecmsp.order.v1.GetOrderResponse getOrders(int index);
   /**
-   * <code>repeated .order.v1.OrderResponse orders = 1;</code>
+   * <code>repeated .order.v1.GetOrderResponse orders = 1;</code>
    */
   int getOrdersCount();
   /**
-   * <code>repeated .order.v1.OrderResponse orders = 1;</code>
+   * <code>repeated .order.v1.GetOrderResponse orders = 1;</code>
    */
-  java.util.List<? extends com.ecmsp.order.v1.OrderResponseOrBuilder> 
+  java.util.List<? extends com.ecmsp.order.v1.GetOrderResponseOrBuilder> 
       getOrdersOrBuilderList();
   /**
-   * <code>repeated .order.v1.OrderResponse orders = 1;</code>
+   * <code>repeated .order.v1.GetOrderResponse orders = 1;</code>
    */
-  com.ecmsp.order.v1.OrderResponseOrBuilder getOrdersOrBuilder(
+  com.ecmsp.order.v1.GetOrderResponseOrBuilder getOrdersOrBuilder(
       int index);
 }

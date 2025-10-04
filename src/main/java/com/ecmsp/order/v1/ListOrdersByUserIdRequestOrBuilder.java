@@ -6,16 +6,4 @@ package com.ecmsp.order.v1;
 public interface ListOrdersByUserIdRequestOrBuilder extends
     // @@protoc_insertion_point(interface_extends:order.v1.ListOrdersByUserIdRequest)
     com.google.protobuf.MessageOrBuilder {
-
-  /**
-   * <code>string user_id = 1;</code>
-   * @return The userId.
-   */
-  java.lang.String getUserId();
-  /**
-   * <code>string user_id = 1;</code>
-   * @return The bytes for userId.
-   */
-  com.google.protobuf.ByteString
-      getUserIdBytes();
 }

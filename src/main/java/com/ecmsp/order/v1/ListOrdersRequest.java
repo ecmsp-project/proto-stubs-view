@@ -4,10 +4,6 @@
 package com.ecmsp.order.v1;
 
 /**
- * <pre>
- * it calls all orders so no fields are necessary
- * </pre>
- *
  * Protobuf type {@code order.v1.ListOrdersRequest}
  */
 public final class ListOrdersRequest extends
@@ -189,10 +185,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   * it calls all orders so no fields are necessary
-   * </pre>
-   *
    * Protobuf type {@code order.v1.ListOrdersRequest}
    */
   public static final class Builder extends

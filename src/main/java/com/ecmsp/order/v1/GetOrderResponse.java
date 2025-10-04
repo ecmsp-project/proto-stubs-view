@@ -182,10 +182,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<com.ecmsp.order.v1.OrderItemDetails> items_;
   /**
-   * <pre>
-   *  maybe add total price field here
-   * </pre>
-   *
    * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
    */
   @java.lang.Override
@@ -193,10 +189,6 @@ private static final long serialVersionUID = 0L;
     return items_;
   }
   /**
-   * <pre>
-   *  maybe add total price field here
-   * </pre>
-   *
    * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
    */
   @java.lang.Override
@@ -205,10 +197,6 @@ private static final long serialVersionUID = 0L;
     return items_;
   }
   /**
-   * <pre>
-   *  maybe add total price field here
-   * </pre>
-   *
    * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
    */
   @java.lang.Override
@@ -216,10 +204,6 @@ private static final long serialVersionUID = 0L;
     return items_.size();
   }
   /**
-   * <pre>
-   *  maybe add total price field here
-   * </pre>
-   *
    * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
    */
   @java.lang.Override
@@ -227,10 +211,6 @@ private static final long serialVersionUID = 0L;
     return items_.get(index);
   }
   /**
-   * <pre>
-   *  maybe add total price field here
-   * </pre>
-   *
    * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
    */
   @java.lang.Override
@@ -989,10 +969,6 @@ private static final long serialVersionUID = 0L;
         com.ecmsp.order.v1.OrderItemDetails, com.ecmsp.order.v1.OrderItemDetails.Builder, com.ecmsp.order.v1.OrderItemDetailsOrBuilder> itemsBuilder_;
 
     /**
-     * <pre>
-     *  maybe add total price field here
-     * </pre>
-     *
      * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public java.util.List<com.ecmsp.order.v1.OrderItemDetails> getItemsList() {
@@ -1003,10 +979,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *  maybe add total price field here
-     * </pre>
-     *
      * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public int getItemsCount() {
@@ -1017,10 +989,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *  maybe add total price field here
-     * </pre>
-     *
      * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public com.ecmsp.order.v1.OrderItemDetails getItems(int index) {
@@ -1031,10 +999,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *  maybe add total price field here
-     * </pre>
-     *
      * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public Builder setItems(
@@ -1052,10 +1016,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *  maybe add total price field here
-     * </pre>
-     *
      * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public Builder setItems(
@@ -1070,10 +1030,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *  maybe add total price field here
-     * </pre>
-     *
      * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public Builder addItems(com.ecmsp.order.v1.OrderItemDetails value) {
@@ -1090,10 +1046,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *  maybe add total price field here
-     * </pre>
-     *
      * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public Builder addItems(
@@ -1111,10 +1063,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *  maybe add total price field here
-     * </pre>
-     *
      * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public Builder addItems(
@@ -1129,10 +1077,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *  maybe add total price field here
-     * </pre>
-     *
      * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public Builder addItems(
@@ -1147,10 +1091,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *  maybe add total price field here
-     * </pre>
-     *
      * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public Builder addAllItems(
@@ -1166,10 +1106,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *  maybe add total price field here
-     * </pre>
-     *
      * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public Builder clearItems() {
@@ -1183,10 +1119,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *  maybe add total price field here
-     * </pre>
-     *
      * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public Builder removeItems(int index) {
@@ -1200,10 +1132,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *  maybe add total price field here
-     * </pre>
-     *
      * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public com.ecmsp.order.v1.OrderItemDetails.Builder getItemsBuilder(
@@ -1211,10 +1139,6 @@ private static final long serialVersionUID = 0L;
       return getItemsFieldBuilder().getBuilder(index);
     }
     /**
-     * <pre>
-     *  maybe add total price field here
-     * </pre>
-     *
      * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public com.ecmsp.order.v1.OrderItemDetailsOrBuilder getItemsOrBuilder(
@@ -1225,10 +1149,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *  maybe add total price field here
-     * </pre>
-     *
      * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public java.util.List<? extends com.ecmsp.order.v1.OrderItemDetailsOrBuilder> 
@@ -1240,10 +1160,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *  maybe add total price field here
-     * </pre>
-     *
      * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public com.ecmsp.order.v1.OrderItemDetails.Builder addItemsBuilder() {
@@ -1251,10 +1167,6 @@ private static final long serialVersionUID = 0L;
           com.ecmsp.order.v1.OrderItemDetails.getDefaultInstance());
     }
     /**
-     * <pre>
-     *  maybe add total price field here
-     * </pre>
-     *
      * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public com.ecmsp.order.v1.OrderItemDetails.Builder addItemsBuilder(
@@ -1263,10 +1175,6 @@ private static final long serialVersionUID = 0L;
           index, com.ecmsp.order.v1.OrderItemDetails.getDefaultInstance());
     }
     /**
-     * <pre>
-     *  maybe add total price field here
-     * </pre>
-     *
      * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public java.util.List<com.ecmsp.order.v1.OrderItemDetails.Builder> 

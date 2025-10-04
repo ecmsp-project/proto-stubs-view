@@ -4,6 +4,10 @@
 package com.ecmsp.order.v1;
 
 /**
+ * <pre>
+ *TODO: NEEDS TO BE UPDATED AS FOR NOW THERE IS MORE FIELDS
+ * </pre>
+ *
  * Protobuf type {@code order.v1.OrderItemDetails}
  */
 public final class OrderItemDetails extends
@@ -257,6 +261,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   *TODO: NEEDS TO BE UPDATED AS FOR NOW THERE IS MORE FIELDS
+   * </pre>
+   *
    * Protobuf type {@code order.v1.OrderItemDetails}
    */
   public static final class Builder extends

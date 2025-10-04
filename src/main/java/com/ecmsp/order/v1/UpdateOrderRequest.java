@@ -17,7 +17,6 @@ private static final long serialVersionUID = 0L;
   }
   private UpdateOrderRequest() {
     orderId_ = "";
-    orderStatus_ = 0;
   }
 
   @java.lang.Override
@@ -79,24 +78,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int ORDER_STATUS_FIELD_NUMBER = 2;
-  private int orderStatus_ = 0;
-  /**
-   * <code>.order.v1.OrderStatus order_status = 2;</code>
-   * @return The enum numeric value on the wire for orderStatus.
-   */
-  @java.lang.Override public int getOrderStatusValue() {
-    return orderStatus_;
-  }
-  /**
-   * <code>.order.v1.OrderStatus order_status = 2;</code>
-   * @return The orderStatus.
-   */
-  @java.lang.Override public com.ecmsp.order.v1.OrderStatus getOrderStatus() {
-    com.ecmsp.order.v1.OrderStatus result = com.ecmsp.order.v1.OrderStatus.forNumber(orderStatus_);
-    return result == null ? com.ecmsp.order.v1.OrderStatus.UNRECOGNIZED : result;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -114,9 +95,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orderId_);
     }
-    if (orderStatus_ != com.ecmsp.order.v1.OrderStatus.ORDER_STATUS_UNSPECIFIED.getNumber()) {
-      output.writeEnum(2, orderStatus_);
-    }
     getUnknownFields().writeTo(output);
   }
 
@@ -128,10 +106,6 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orderId_);
-    }
-    if (orderStatus_ != com.ecmsp.order.v1.OrderStatus.ORDER_STATUS_UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(2, orderStatus_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -150,7 +124,6 @@ private static final long serialVersionUID = 0L;
 
     if (!getOrderId()
         .equals(other.getOrderId())) return false;
-    if (orderStatus_ != other.orderStatus_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -164,8 +137,6 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ORDER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getOrderId().hashCode();
-    hash = (37 * hash) + ORDER_STATUS_FIELD_NUMBER;
-    hash = (53 * hash) + orderStatus_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -298,7 +269,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       orderId_ = "";
-      orderStatus_ = 0;
       return this;
     }
 
@@ -334,9 +304,6 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.orderId_ = orderId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.orderStatus_ = orderStatus_;
       }
     }
 
@@ -389,9 +356,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (other.orderStatus_ != 0) {
-        setOrderStatusValue(other.getOrderStatusValue());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -423,11 +387,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 16: {
-              orderStatus_ = input.readEnum();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -513,59 +472,6 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       orderId_ = value;
       bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
-    private int orderStatus_ = 0;
-    /**
-     * <code>.order.v1.OrderStatus order_status = 2;</code>
-     * @return The enum numeric value on the wire for orderStatus.
-     */
-    @java.lang.Override public int getOrderStatusValue() {
-      return orderStatus_;
-    }
-    /**
-     * <code>.order.v1.OrderStatus order_status = 2;</code>
-     * @param value The enum numeric value on the wire for orderStatus to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrderStatusValue(int value) {
-      orderStatus_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.order.v1.OrderStatus order_status = 2;</code>
-     * @return The orderStatus.
-     */
-    @java.lang.Override
-    public com.ecmsp.order.v1.OrderStatus getOrderStatus() {
-      com.ecmsp.order.v1.OrderStatus result = com.ecmsp.order.v1.OrderStatus.forNumber(orderStatus_);
-      return result == null ? com.ecmsp.order.v1.OrderStatus.UNRECOGNIZED : result;
-    }
-    /**
-     * <code>.order.v1.OrderStatus order_status = 2;</code>
-     * @param value The orderStatus to set.
-     * @return This builder for chaining.
-     */
-    public Builder setOrderStatus(com.ecmsp.order.v1.OrderStatus value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000002;
-      orderStatus_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.order.v1.OrderStatus order_status = 2;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearOrderStatus() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      orderStatus_ = 0;
       onChanged();
       return this;
     }

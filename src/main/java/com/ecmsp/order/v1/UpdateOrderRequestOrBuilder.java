@@ -18,15 +18,4 @@ public interface UpdateOrderRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getOrderIdBytes();
-
-  /**
-   * <code>.order.v1.OrderStatus order_status = 2;</code>
-   * @return The enum numeric value on the wire for orderStatus.
-   */
-  int getOrderStatusValue();
-  /**
-   * <code>.order.v1.OrderStatus order_status = 2;</code>
-   * @return The orderStatus.
-   */
-  com.ecmsp.order.v1.OrderStatus getOrderStatus();
 }
