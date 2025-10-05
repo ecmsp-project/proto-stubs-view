@@ -32,18 +32,6 @@ public enum OrderStatus
    * <code>ORDER_STATUS_CANCELLED = 5;</code>
    */
   ORDER_STATUS_CANCELLED(5),
-  /**
-   * <code>ORDER_STATUS_RETURN_REQUESTED = 6;</code>
-   */
-  ORDER_STATUS_RETURN_REQUESTED(6),
-  /**
-   * <code>ORDER_STATUS_RETURN_PROCESSING = 7;</code>
-   */
-  ORDER_STATUS_RETURN_PROCESSING(7),
-  /**
-   * <code>ORDER_STATUS_RETURNED = 8;</code>
-   */
-  ORDER_STATUS_RETURNED(8),
   UNRECOGNIZED(-1),
   ;
 
@@ -71,18 +59,6 @@ public enum OrderStatus
    * <code>ORDER_STATUS_CANCELLED = 5;</code>
    */
   public static final int ORDER_STATUS_CANCELLED_VALUE = 5;
-  /**
-   * <code>ORDER_STATUS_RETURN_REQUESTED = 6;</code>
-   */
-  public static final int ORDER_STATUS_RETURN_REQUESTED_VALUE = 6;
-  /**
-   * <code>ORDER_STATUS_RETURN_PROCESSING = 7;</code>
-   */
-  public static final int ORDER_STATUS_RETURN_PROCESSING_VALUE = 7;
-  /**
-   * <code>ORDER_STATUS_RETURNED = 8;</code>
-   */
-  public static final int ORDER_STATUS_RETURNED_VALUE = 8;
 
 
   public final int getNumber() {
@@ -115,9 +91,6 @@ public enum OrderStatus
       case 3: return ORDER_STATUS_PAID;
       case 4: return ORDER_STATUS_FAILED;
       case 5: return ORDER_STATUS_CANCELLED;
-      case 6: return ORDER_STATUS_RETURN_REQUESTED;
-      case 7: return ORDER_STATUS_RETURN_PROCESSING;
-      case 8: return ORDER_STATUS_RETURNED;
       default: return null;
     }
   }

@@ -4,6 +4,10 @@
 package com.ecmsp.order.v1;
 
 /**
+ * <pre>
+ * DEPRECATED
+ * </pre>
+ *
  * Protobuf type {@code order.v1.UpdateOrderResponse}
  */
 public final class UpdateOrderResponse extends
@@ -439,6 +443,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * DEPRECATED
+   * </pre>
+   *
    * Protobuf type {@code order.v1.UpdateOrderResponse}
    */
   public static final class Builder extends

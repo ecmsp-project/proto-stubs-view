@@ -86,6 +86,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object clientId_ = "";
   /**
+   * <pre>
+   * client id should be removed
+   * </pre>
+   *
    * <code>string client_id = 2;</code>
    * @return The clientId.
    */
@@ -103,6 +107,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   * client id should be removed
+   * </pre>
+   *
    * <code>string client_id = 2;</code>
    * @return The bytes for clientId.
    */
@@ -761,6 +769,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object clientId_ = "";
     /**
+     * <pre>
+     * client id should be removed
+     * </pre>
+     *
      * <code>string client_id = 2;</code>
      * @return The clientId.
      */
@@ -777,6 +789,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * client id should be removed
+     * </pre>
+     *
      * <code>string client_id = 2;</code>
      * @return The bytes for clientId.
      */
@@ -794,6 +810,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * client id should be removed
+     * </pre>
+     *
      * <code>string client_id = 2;</code>
      * @param value The clientId to set.
      * @return This builder for chaining.
@@ -807,6 +827,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * client id should be removed
+     * </pre>
+     *
      * <code>string client_id = 2;</code>
      * @return This builder for chaining.
      */
@@ -817,6 +841,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * client id should be removed
+     * </pre>
+     *
      * <code>string client_id = 2;</code>
      * @param value The bytes for clientId to set.
      * @return This builder for chaining.
