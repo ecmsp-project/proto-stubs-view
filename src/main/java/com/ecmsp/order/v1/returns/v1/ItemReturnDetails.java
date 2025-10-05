@@ -4,19 +4,25 @@
 package com.ecmsp.order.v1.returns.v1;
 
 /**
- * Protobuf type {@code order.v1.returns.v1.ReturnItemReason}
+ * <pre>
+ *it should have also variant_id and quantity to choose what to return - as one tshirt might have couple sizes and
+ *we can order 2 t-shirts of the same size and one of different size
+ * </pre>
+ *
+ * Protobuf type {@code order.v1.returns.v1.ItemReturnDetails}
  */
-public final class ReturnItemReason extends
+public final class ItemReturnDetails extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:order.v1.returns.v1.ReturnItemReason)
-    ReturnItemReasonOrBuilder {
+    // @@protoc_insertion_point(message_implements:order.v1.returns.v1.ItemReturnDetails)
+    ItemReturnDetailsOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use ReturnItemReason.newBuilder() to construct.
-  private ReturnItemReason(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use ItemReturnDetails.newBuilder() to construct.
+  private ItemReturnDetails(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private ReturnItemReason() {
+  private ItemReturnDetails() {
     itemId_ = "";
+    variantId_ = "";
     reason_ = "";
   }
 
@@ -24,20 +30,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new ReturnItemReason();
+    return new ItemReturnDetails();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.ecmsp.order.v1.returns.v1.ReturnProto.internal_static_order_v1_returns_v1_ReturnItemReason_descriptor;
+    return com.ecmsp.order.v1.returns.v1.ReturnProto.internal_static_order_v1_returns_v1_ItemReturnDetails_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.ecmsp.order.v1.returns.v1.ReturnProto.internal_static_order_v1_returns_v1_ReturnItemReason_fieldAccessorTable
+    return com.ecmsp.order.v1.returns.v1.ReturnProto.internal_static_order_v1_returns_v1_ItemReturnDetails_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.ecmsp.order.v1.returns.v1.ReturnItemReason.class, com.ecmsp.order.v1.returns.v1.ReturnItemReason.Builder.class);
+            com.ecmsp.order.v1.returns.v1.ItemReturnDetails.class, com.ecmsp.order.v1.returns.v1.ItemReturnDetails.Builder.class);
   }
 
   public static final int ITEM_ID_FIELD_NUMBER = 1;
@@ -79,11 +85,61 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int REASON_FIELD_NUMBER = 2;
+  public static final int VARIANT_ID_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object variantId_ = "";
+  /**
+   * <code>string variant_id = 2;</code>
+   * @return The variantId.
+   */
+  @java.lang.Override
+  public java.lang.String getVariantId() {
+    java.lang.Object ref = variantId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      variantId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string variant_id = 2;</code>
+   * @return The bytes for variantId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getVariantIdBytes() {
+    java.lang.Object ref = variantId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      variantId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int QUANTITY_FIELD_NUMBER = 3;
+  private int quantity_ = 0;
+  /**
+   * <code>int32 quantity = 3;</code>
+   * @return The quantity.
+   */
+  @java.lang.Override
+  public int getQuantity() {
+    return quantity_;
+  }
+
+  public static final int REASON_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
   private volatile java.lang.Object reason_ = "";
   /**
-   * <code>string reason = 2;</code>
+   * <code>string reason = 4;</code>
    * @return The reason.
    */
   @java.lang.Override
@@ -100,7 +156,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string reason = 2;</code>
+   * <code>string reason = 4;</code>
    * @return The bytes for reason.
    */
   @java.lang.Override
@@ -135,8 +191,14 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(itemId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, itemId_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(variantId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, variantId_);
+    }
+    if (quantity_ != 0) {
+      output.writeInt32(3, quantity_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reason_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, reason_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, reason_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -150,8 +212,15 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(itemId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, itemId_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(variantId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, variantId_);
+    }
+    if (quantity_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(3, quantity_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reason_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, reason_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, reason_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -163,13 +232,17 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.ecmsp.order.v1.returns.v1.ReturnItemReason)) {
+    if (!(obj instanceof com.ecmsp.order.v1.returns.v1.ItemReturnDetails)) {
       return super.equals(obj);
     }
-    com.ecmsp.order.v1.returns.v1.ReturnItemReason other = (com.ecmsp.order.v1.returns.v1.ReturnItemReason) obj;
+    com.ecmsp.order.v1.returns.v1.ItemReturnDetails other = (com.ecmsp.order.v1.returns.v1.ItemReturnDetails) obj;
 
     if (!getItemId()
         .equals(other.getItemId())) return false;
+    if (!getVariantId()
+        .equals(other.getVariantId())) return false;
+    if (getQuantity()
+        != other.getQuantity()) return false;
     if (!getReason()
         .equals(other.getReason())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -185,6 +258,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ITEM_ID_FIELD_NUMBER;
     hash = (53 * hash) + getItemId().hashCode();
+    hash = (37 * hash) + VARIANT_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getVariantId().hashCode();
+    hash = (37 * hash) + QUANTITY_FIELD_NUMBER;
+    hash = (53 * hash) + getQuantity();
     hash = (37 * hash) + REASON_FIELD_NUMBER;
     hash = (53 * hash) + getReason().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -192,44 +269,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static com.ecmsp.order.v1.returns.v1.ReturnItemReason parseFrom(
+  public static com.ecmsp.order.v1.returns.v1.ItemReturnDetails parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.ecmsp.order.v1.returns.v1.ReturnItemReason parseFrom(
+  public static com.ecmsp.order.v1.returns.v1.ItemReturnDetails parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.ecmsp.order.v1.returns.v1.ReturnItemReason parseFrom(
+  public static com.ecmsp.order.v1.returns.v1.ItemReturnDetails parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.ecmsp.order.v1.returns.v1.ReturnItemReason parseFrom(
+  public static com.ecmsp.order.v1.returns.v1.ItemReturnDetails parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.ecmsp.order.v1.returns.v1.ReturnItemReason parseFrom(byte[] data)
+  public static com.ecmsp.order.v1.returns.v1.ItemReturnDetails parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.ecmsp.order.v1.returns.v1.ReturnItemReason parseFrom(
+  public static com.ecmsp.order.v1.returns.v1.ItemReturnDetails parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.ecmsp.order.v1.returns.v1.ReturnItemReason parseFrom(java.io.InputStream input)
+  public static com.ecmsp.order.v1.returns.v1.ItemReturnDetails parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.ecmsp.order.v1.returns.v1.ReturnItemReason parseFrom(
+  public static com.ecmsp.order.v1.returns.v1.ItemReturnDetails parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -237,26 +314,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.ecmsp.order.v1.returns.v1.ReturnItemReason parseDelimitedFrom(java.io.InputStream input)
+  public static com.ecmsp.order.v1.returns.v1.ItemReturnDetails parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.ecmsp.order.v1.returns.v1.ReturnItemReason parseDelimitedFrom(
+  public static com.ecmsp.order.v1.returns.v1.ItemReturnDetails parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.ecmsp.order.v1.returns.v1.ReturnItemReason parseFrom(
+  public static com.ecmsp.order.v1.returns.v1.ItemReturnDetails parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.ecmsp.order.v1.returns.v1.ReturnItemReason parseFrom(
+  public static com.ecmsp.order.v1.returns.v1.ItemReturnDetails parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -269,7 +346,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.ecmsp.order.v1.returns.v1.ReturnItemReason prototype) {
+  public static Builder newBuilder(com.ecmsp.order.v1.returns.v1.ItemReturnDetails prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -285,26 +362,31 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code order.v1.returns.v1.ReturnItemReason}
+   * <pre>
+   *it should have also variant_id and quantity to choose what to return - as one tshirt might have couple sizes and
+   *we can order 2 t-shirts of the same size and one of different size
+   * </pre>
+   *
+   * Protobuf type {@code order.v1.returns.v1.ItemReturnDetails}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:order.v1.returns.v1.ReturnItemReason)
-      com.ecmsp.order.v1.returns.v1.ReturnItemReasonOrBuilder {
+      // @@protoc_insertion_point(builder_implements:order.v1.returns.v1.ItemReturnDetails)
+      com.ecmsp.order.v1.returns.v1.ItemReturnDetailsOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.ecmsp.order.v1.returns.v1.ReturnProto.internal_static_order_v1_returns_v1_ReturnItemReason_descriptor;
+      return com.ecmsp.order.v1.returns.v1.ReturnProto.internal_static_order_v1_returns_v1_ItemReturnDetails_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.ecmsp.order.v1.returns.v1.ReturnProto.internal_static_order_v1_returns_v1_ReturnItemReason_fieldAccessorTable
+      return com.ecmsp.order.v1.returns.v1.ReturnProto.internal_static_order_v1_returns_v1_ItemReturnDetails_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.ecmsp.order.v1.returns.v1.ReturnItemReason.class, com.ecmsp.order.v1.returns.v1.ReturnItemReason.Builder.class);
+              com.ecmsp.order.v1.returns.v1.ItemReturnDetails.class, com.ecmsp.order.v1.returns.v1.ItemReturnDetails.Builder.class);
     }
 
-    // Construct using com.ecmsp.order.v1.returns.v1.ReturnItemReason.newBuilder()
+    // Construct using com.ecmsp.order.v1.returns.v1.ItemReturnDetails.newBuilder()
     private Builder() {
 
     }
@@ -319,6 +401,8 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       itemId_ = "";
+      variantId_ = "";
+      quantity_ = 0;
       reason_ = "";
       return this;
     }
@@ -326,17 +410,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.ecmsp.order.v1.returns.v1.ReturnProto.internal_static_order_v1_returns_v1_ReturnItemReason_descriptor;
+      return com.ecmsp.order.v1.returns.v1.ReturnProto.internal_static_order_v1_returns_v1_ItemReturnDetails_descriptor;
     }
 
     @java.lang.Override
-    public com.ecmsp.order.v1.returns.v1.ReturnItemReason getDefaultInstanceForType() {
-      return com.ecmsp.order.v1.returns.v1.ReturnItemReason.getDefaultInstance();
+    public com.ecmsp.order.v1.returns.v1.ItemReturnDetails getDefaultInstanceForType() {
+      return com.ecmsp.order.v1.returns.v1.ItemReturnDetails.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.ecmsp.order.v1.returns.v1.ReturnItemReason build() {
-      com.ecmsp.order.v1.returns.v1.ReturnItemReason result = buildPartial();
+    public com.ecmsp.order.v1.returns.v1.ItemReturnDetails build() {
+      com.ecmsp.order.v1.returns.v1.ItemReturnDetails result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -344,19 +428,25 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.ecmsp.order.v1.returns.v1.ReturnItemReason buildPartial() {
-      com.ecmsp.order.v1.returns.v1.ReturnItemReason result = new com.ecmsp.order.v1.returns.v1.ReturnItemReason(this);
+    public com.ecmsp.order.v1.returns.v1.ItemReturnDetails buildPartial() {
+      com.ecmsp.order.v1.returns.v1.ItemReturnDetails result = new com.ecmsp.order.v1.returns.v1.ItemReturnDetails(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.ecmsp.order.v1.returns.v1.ReturnItemReason result) {
+    private void buildPartial0(com.ecmsp.order.v1.returns.v1.ItemReturnDetails result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.itemId_ = itemId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.variantId_ = variantId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.quantity_ = quantity_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.reason_ = reason_;
       }
     }
@@ -395,24 +485,32 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.ecmsp.order.v1.returns.v1.ReturnItemReason) {
-        return mergeFrom((com.ecmsp.order.v1.returns.v1.ReturnItemReason)other);
+      if (other instanceof com.ecmsp.order.v1.returns.v1.ItemReturnDetails) {
+        return mergeFrom((com.ecmsp.order.v1.returns.v1.ItemReturnDetails)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.ecmsp.order.v1.returns.v1.ReturnItemReason other) {
-      if (other == com.ecmsp.order.v1.returns.v1.ReturnItemReason.getDefaultInstance()) return this;
+    public Builder mergeFrom(com.ecmsp.order.v1.returns.v1.ItemReturnDetails other) {
+      if (other == com.ecmsp.order.v1.returns.v1.ItemReturnDetails.getDefaultInstance()) return this;
       if (!other.getItemId().isEmpty()) {
         itemId_ = other.itemId_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
+      if (!other.getVariantId().isEmpty()) {
+        variantId_ = other.variantId_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      if (other.getQuantity() != 0) {
+        setQuantity(other.getQuantity());
+      }
       if (!other.getReason().isEmpty()) {
         reason_ = other.reason_;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -447,10 +545,20 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 10
             case 18: {
-              reason_ = input.readStringRequireUtf8();
+              variantId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 24: {
+              quantity_ = input.readInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 34: {
+              reason_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -540,9 +648,113 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.lang.Object variantId_ = "";
+    /**
+     * <code>string variant_id = 2;</code>
+     * @return The variantId.
+     */
+    public java.lang.String getVariantId() {
+      java.lang.Object ref = variantId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        variantId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string variant_id = 2;</code>
+     * @return The bytes for variantId.
+     */
+    public com.google.protobuf.ByteString
+        getVariantIdBytes() {
+      java.lang.Object ref = variantId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        variantId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string variant_id = 2;</code>
+     * @param value The variantId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setVariantId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      variantId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string variant_id = 2;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearVariantId() {
+      variantId_ = getDefaultInstance().getVariantId();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string variant_id = 2;</code>
+     * @param value The bytes for variantId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setVariantIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      variantId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private int quantity_ ;
+    /**
+     * <code>int32 quantity = 3;</code>
+     * @return The quantity.
+     */
+    @java.lang.Override
+    public int getQuantity() {
+      return quantity_;
+    }
+    /**
+     * <code>int32 quantity = 3;</code>
+     * @param value The quantity to set.
+     * @return This builder for chaining.
+     */
+    public Builder setQuantity(int value) {
+
+      quantity_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 quantity = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearQuantity() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      quantity_ = 0;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object reason_ = "";
     /**
-     * <code>string reason = 2;</code>
+     * <code>string reason = 4;</code>
      * @return The reason.
      */
     public java.lang.String getReason() {
@@ -558,7 +770,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string reason = 2;</code>
+     * <code>string reason = 4;</code>
      * @return The bytes for reason.
      */
     public com.google.protobuf.ByteString
@@ -575,7 +787,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string reason = 2;</code>
+     * <code>string reason = 4;</code>
      * @param value The reason to set.
      * @return This builder for chaining.
      */
@@ -583,22 +795,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       reason_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>string reason = 2;</code>
+     * <code>string reason = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearReason() {
       reason_ = getDefaultInstance().getReason();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
     /**
-     * <code>string reason = 2;</code>
+     * <code>string reason = 4;</code>
      * @param value The bytes for reason to set.
      * @return This builder for chaining.
      */
@@ -607,7 +819,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       reason_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -624,23 +836,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:order.v1.returns.v1.ReturnItemReason)
+    // @@protoc_insertion_point(builder_scope:order.v1.returns.v1.ItemReturnDetails)
   }
 
-  // @@protoc_insertion_point(class_scope:order.v1.returns.v1.ReturnItemReason)
-  private static final com.ecmsp.order.v1.returns.v1.ReturnItemReason DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:order.v1.returns.v1.ItemReturnDetails)
+  private static final com.ecmsp.order.v1.returns.v1.ItemReturnDetails DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.ecmsp.order.v1.returns.v1.ReturnItemReason();
+    DEFAULT_INSTANCE = new com.ecmsp.order.v1.returns.v1.ItemReturnDetails();
   }
 
-  public static com.ecmsp.order.v1.returns.v1.ReturnItemReason getDefaultInstance() {
+  public static com.ecmsp.order.v1.returns.v1.ItemReturnDetails getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<ReturnItemReason>
-      PARSER = new com.google.protobuf.AbstractParser<ReturnItemReason>() {
+  private static final com.google.protobuf.Parser<ItemReturnDetails>
+      PARSER = new com.google.protobuf.AbstractParser<ItemReturnDetails>() {
     @java.lang.Override
-    public ReturnItemReason parsePartialFrom(
+    public ItemReturnDetails parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -659,17 +871,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<ReturnItemReason> parser() {
+  public static com.google.protobuf.Parser<ItemReturnDetails> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<ReturnItemReason> getParserForType() {
+  public com.google.protobuf.Parser<ItemReturnDetails> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.ecmsp.order.v1.returns.v1.ReturnItemReason getDefaultInstanceForType() {
+  public com.ecmsp.order.v1.returns.v1.ItemReturnDetails getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

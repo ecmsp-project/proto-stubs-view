@@ -18,8 +18,7 @@ private static final long serialVersionUID = 0L;
   private Return() {
     returnId_ = "";
     orderId_ = "";
-    itemIds_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    items_ = java.util.Collections.emptyList();
     status_ = 0;
     createdAt_ = "";
   }
@@ -122,41 +121,45 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int ITEM_IDS_FIELD_NUMBER = 3;
+  public static final int ITEMS_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList itemIds_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private java.util.List<com.ecmsp.order.v1.returns.v1.ItemReturnDetails> items_;
   /**
-   * <code>repeated string item_ids = 3;</code>
-   * @return A list containing the itemIds.
+   * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
    */
-  public com.google.protobuf.ProtocolStringList
-      getItemIdsList() {
-    return itemIds_;
+  @java.lang.Override
+  public java.util.List<com.ecmsp.order.v1.returns.v1.ItemReturnDetails> getItemsList() {
+    return items_;
   }
   /**
-   * <code>repeated string item_ids = 3;</code>
-   * @return The count of itemIds.
+   * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
    */
-  public int getItemIdsCount() {
-    return itemIds_.size();
+  @java.lang.Override
+  public java.util.List<? extends com.ecmsp.order.v1.returns.v1.ItemReturnDetailsOrBuilder> 
+      getItemsOrBuilderList() {
+    return items_;
   }
   /**
-   * <code>repeated string item_ids = 3;</code>
-   * @param index The index of the element to return.
-   * @return The itemIds at the given index.
+   * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
    */
-  public java.lang.String getItemIds(int index) {
-    return itemIds_.get(index);
+  @java.lang.Override
+  public int getItemsCount() {
+    return items_.size();
   }
   /**
-   * <code>repeated string item_ids = 3;</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the itemIds at the given index.
+   * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
    */
-  public com.google.protobuf.ByteString
-      getItemIdsBytes(int index) {
-    return itemIds_.getByteString(index);
+  @java.lang.Override
+  public com.ecmsp.order.v1.returns.v1.ItemReturnDetails getItems(int index) {
+    return items_.get(index);
+  }
+  /**
+   * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
+   */
+  @java.lang.Override
+  public com.ecmsp.order.v1.returns.v1.ItemReturnDetailsOrBuilder getItemsOrBuilder(
+      int index) {
+    return items_.get(index);
   }
 
   public static final int STATUS_FIELD_NUMBER = 4;
@@ -236,8 +239,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, orderId_);
     }
-    for (int i = 0; i < itemIds_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, itemIds_.getRaw(i));
+    for (int i = 0; i < items_.size(); i++) {
+      output.writeMessage(3, items_.get(i));
     }
     if (status_ != com.ecmsp.order.v1.returns.v1.ReturnStatus.RETURN_STATUS_UNSPECIFIED.getNumber()) {
       output.writeEnum(4, status_);
@@ -260,13 +263,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, orderId_);
     }
-    {
-      int dataSize = 0;
-      for (int i = 0; i < itemIds_.size(); i++) {
-        dataSize += computeStringSizeNoTag(itemIds_.getRaw(i));
-      }
-      size += dataSize;
-      size += 1 * getItemIdsList().size();
+    for (int i = 0; i < items_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(3, items_.get(i));
     }
     if (status_ != com.ecmsp.order.v1.returns.v1.ReturnStatus.RETURN_STATUS_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
@@ -294,8 +293,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getReturnId())) return false;
     if (!getOrderId()
         .equals(other.getOrderId())) return false;
-    if (!getItemIdsList()
-        .equals(other.getItemIdsList())) return false;
+    if (!getItemsList()
+        .equals(other.getItemsList())) return false;
     if (status_ != other.status_) return false;
     if (!getCreatedAt()
         .equals(other.getCreatedAt())) return false;
@@ -314,9 +313,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getReturnId().hashCode();
     hash = (37 * hash) + ORDER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getOrderId().hashCode();
-    if (getItemIdsCount() > 0) {
-      hash = (37 * hash) + ITEM_IDS_FIELD_NUMBER;
-      hash = (53 * hash) + getItemIdsList().hashCode();
+    if (getItemsCount() > 0) {
+      hash = (37 * hash) + ITEMS_FIELD_NUMBER;
+      hash = (53 * hash) + getItemsList().hashCode();
     }
     hash = (37 * hash) + STATUS_FIELD_NUMBER;
     hash = (53 * hash) + status_;
@@ -455,8 +454,13 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       returnId_ = "";
       orderId_ = "";
-      itemIds_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      if (itemsBuilder_ == null) {
+        items_ = java.util.Collections.emptyList();
+      } else {
+        items_ = null;
+        itemsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000004);
       status_ = 0;
       createdAt_ = "";
       return this;
@@ -485,9 +489,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.ecmsp.order.v1.returns.v1.Return buildPartial() {
       com.ecmsp.order.v1.returns.v1.Return result = new com.ecmsp.order.v1.returns.v1.Return(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(com.ecmsp.order.v1.returns.v1.Return result) {
+      if (itemsBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          items_ = java.util.Collections.unmodifiableList(items_);
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.items_ = items_;
+      } else {
+        result.items_ = itemsBuilder_.build();
+      }
     }
 
     private void buildPartial0(com.ecmsp.order.v1.returns.v1.Return result) {
@@ -497,10 +514,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.orderId_ = orderId_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        itemIds_.makeImmutable();
-        result.itemIds_ = itemIds_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.status_ = status_;
@@ -564,15 +577,31 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      if (!other.itemIds_.isEmpty()) {
-        if (itemIds_.isEmpty()) {
-          itemIds_ = other.itemIds_;
-          bitField0_ |= 0x00000004;
-        } else {
-          ensureItemIdsIsMutable();
-          itemIds_.addAll(other.itemIds_);
+      if (itemsBuilder_ == null) {
+        if (!other.items_.isEmpty()) {
+          if (items_.isEmpty()) {
+            items_ = other.items_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+          } else {
+            ensureItemsIsMutable();
+            items_.addAll(other.items_);
+          }
+          onChanged();
         }
-        onChanged();
+      } else {
+        if (!other.items_.isEmpty()) {
+          if (itemsBuilder_.isEmpty()) {
+            itemsBuilder_.dispose();
+            itemsBuilder_ = null;
+            items_ = other.items_;
+            bitField0_ = (bitField0_ & ~0x00000004);
+            itemsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getItemsFieldBuilder() : null;
+          } else {
+            itemsBuilder_.addAllMessages(other.items_);
+          }
+        }
       }
       if (other.status_ != 0) {
         setStatusValue(other.getStatusValue());
@@ -619,9 +648,16 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 18
             case 26: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureItemIdsIsMutable();
-              itemIds_.add(s);
+              com.ecmsp.order.v1.returns.v1.ItemReturnDetails m =
+                  input.readMessage(
+                      com.ecmsp.order.v1.returns.v1.ItemReturnDetails.parser(),
+                      extensionRegistry);
+              if (itemsBuilder_ == null) {
+                ensureItemsIsMutable();
+                items_.add(m);
+              } else {
+                itemsBuilder_.addMessage(m);
+              }
               break;
             } // case 26
             case 32: {
@@ -795,115 +831,244 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringArrayList itemIds_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    private void ensureItemIdsIsMutable() {
-      if (!itemIds_.isModifiable()) {
-        itemIds_ = new com.google.protobuf.LazyStringArrayList(itemIds_);
+    private java.util.List<com.ecmsp.order.v1.returns.v1.ItemReturnDetails> items_ =
+      java.util.Collections.emptyList();
+    private void ensureItemsIsMutable() {
+      if (!((bitField0_ & 0x00000004) != 0)) {
+        items_ = new java.util.ArrayList<com.ecmsp.order.v1.returns.v1.ItemReturnDetails>(items_);
+        bitField0_ |= 0x00000004;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.ecmsp.order.v1.returns.v1.ItemReturnDetails, com.ecmsp.order.v1.returns.v1.ItemReturnDetails.Builder, com.ecmsp.order.v1.returns.v1.ItemReturnDetailsOrBuilder> itemsBuilder_;
+
+    /**
+     * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
+     */
+    public java.util.List<com.ecmsp.order.v1.returns.v1.ItemReturnDetails> getItemsList() {
+      if (itemsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(items_);
+      } else {
+        return itemsBuilder_.getMessageList();
       }
-      bitField0_ |= 0x00000004;
     }
     /**
-     * <code>repeated string item_ids = 3;</code>
-     * @return A list containing the itemIds.
+     * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
      */
-    public com.google.protobuf.ProtocolStringList
-        getItemIdsList() {
-      itemIds_.makeImmutable();
-      return itemIds_;
+    public int getItemsCount() {
+      if (itemsBuilder_ == null) {
+        return items_.size();
+      } else {
+        return itemsBuilder_.getCount();
+      }
     }
     /**
-     * <code>repeated string item_ids = 3;</code>
-     * @return The count of itemIds.
+     * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
      */
-    public int getItemIdsCount() {
-      return itemIds_.size();
+    public com.ecmsp.order.v1.returns.v1.ItemReturnDetails getItems(int index) {
+      if (itemsBuilder_ == null) {
+        return items_.get(index);
+      } else {
+        return itemsBuilder_.getMessage(index);
+      }
     }
     /**
-     * <code>repeated string item_ids = 3;</code>
-     * @param index The index of the element to return.
-     * @return The itemIds at the given index.
+     * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
      */
-    public java.lang.String getItemIds(int index) {
-      return itemIds_.get(index);
-    }
-    /**
-     * <code>repeated string item_ids = 3;</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the itemIds at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getItemIdsBytes(int index) {
-      return itemIds_.getByteString(index);
-    }
-    /**
-     * <code>repeated string item_ids = 3;</code>
-     * @param index The index to set the value at.
-     * @param value The itemIds to set.
-     * @return This builder for chaining.
-     */
-    public Builder setItemIds(
-        int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureItemIdsIsMutable();
-      itemIds_.set(index, value);
-      bitField0_ |= 0x00000004;
-      onChanged();
+    public Builder setItems(
+        int index, com.ecmsp.order.v1.returns.v1.ItemReturnDetails value) {
+      if (itemsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureItemsIsMutable();
+        items_.set(index, value);
+        onChanged();
+      } else {
+        itemsBuilder_.setMessage(index, value);
+      }
       return this;
     }
     /**
-     * <code>repeated string item_ids = 3;</code>
-     * @param value The itemIds to add.
-     * @return This builder for chaining.
+     * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
      */
-    public Builder addItemIds(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureItemIdsIsMutable();
-      itemIds_.add(value);
-      bitField0_ |= 0x00000004;
-      onChanged();
+    public Builder setItems(
+        int index, com.ecmsp.order.v1.returns.v1.ItemReturnDetails.Builder builderForValue) {
+      if (itemsBuilder_ == null) {
+        ensureItemsIsMutable();
+        items_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        itemsBuilder_.setMessage(index, builderForValue.build());
+      }
       return this;
     }
     /**
-     * <code>repeated string item_ids = 3;</code>
-     * @param values The itemIds to add.
-     * @return This builder for chaining.
+     * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
      */
-    public Builder addAllItemIds(
-        java.lang.Iterable<java.lang.String> values) {
-      ensureItemIdsIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, itemIds_);
-      bitField0_ |= 0x00000004;
-      onChanged();
+    public Builder addItems(com.ecmsp.order.v1.returns.v1.ItemReturnDetails value) {
+      if (itemsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureItemsIsMutable();
+        items_.add(value);
+        onChanged();
+      } else {
+        itemsBuilder_.addMessage(value);
+      }
       return this;
     }
     /**
-     * <code>repeated string item_ids = 3;</code>
-     * @return This builder for chaining.
+     * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
      */
-    public Builder clearItemIds() {
-      itemIds_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000004);;
-      onChanged();
+    public Builder addItems(
+        int index, com.ecmsp.order.v1.returns.v1.ItemReturnDetails value) {
+      if (itemsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureItemsIsMutable();
+        items_.add(index, value);
+        onChanged();
+      } else {
+        itemsBuilder_.addMessage(index, value);
+      }
       return this;
     }
     /**
-     * <code>repeated string item_ids = 3;</code>
-     * @param value The bytes of the itemIds to add.
-     * @return This builder for chaining.
+     * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
      */
-    public Builder addItemIdsBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      ensureItemIdsIsMutable();
-      itemIds_.add(value);
-      bitField0_ |= 0x00000004;
-      onChanged();
+    public Builder addItems(
+        com.ecmsp.order.v1.returns.v1.ItemReturnDetails.Builder builderForValue) {
+      if (itemsBuilder_ == null) {
+        ensureItemsIsMutable();
+        items_.add(builderForValue.build());
+        onChanged();
+      } else {
+        itemsBuilder_.addMessage(builderForValue.build());
+      }
       return this;
+    }
+    /**
+     * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
+     */
+    public Builder addItems(
+        int index, com.ecmsp.order.v1.returns.v1.ItemReturnDetails.Builder builderForValue) {
+      if (itemsBuilder_ == null) {
+        ensureItemsIsMutable();
+        items_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        itemsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
+     */
+    public Builder addAllItems(
+        java.lang.Iterable<? extends com.ecmsp.order.v1.returns.v1.ItemReturnDetails> values) {
+      if (itemsBuilder_ == null) {
+        ensureItemsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, items_);
+        onChanged();
+      } else {
+        itemsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
+     */
+    public Builder clearItems() {
+      if (itemsBuilder_ == null) {
+        items_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+      } else {
+        itemsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
+     */
+    public Builder removeItems(int index) {
+      if (itemsBuilder_ == null) {
+        ensureItemsIsMutable();
+        items_.remove(index);
+        onChanged();
+      } else {
+        itemsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
+     */
+    public com.ecmsp.order.v1.returns.v1.ItemReturnDetails.Builder getItemsBuilder(
+        int index) {
+      return getItemsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
+     */
+    public com.ecmsp.order.v1.returns.v1.ItemReturnDetailsOrBuilder getItemsOrBuilder(
+        int index) {
+      if (itemsBuilder_ == null) {
+        return items_.get(index);  } else {
+        return itemsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
+     */
+    public java.util.List<? extends com.ecmsp.order.v1.returns.v1.ItemReturnDetailsOrBuilder> 
+         getItemsOrBuilderList() {
+      if (itemsBuilder_ != null) {
+        return itemsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(items_);
+      }
+    }
+    /**
+     * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
+     */
+    public com.ecmsp.order.v1.returns.v1.ItemReturnDetails.Builder addItemsBuilder() {
+      return getItemsFieldBuilder().addBuilder(
+          com.ecmsp.order.v1.returns.v1.ItemReturnDetails.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
+     */
+    public com.ecmsp.order.v1.returns.v1.ItemReturnDetails.Builder addItemsBuilder(
+        int index) {
+      return getItemsFieldBuilder().addBuilder(
+          index, com.ecmsp.order.v1.returns.v1.ItemReturnDetails.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
+     */
+    public java.util.List<com.ecmsp.order.v1.returns.v1.ItemReturnDetails.Builder> 
+         getItemsBuilderList() {
+      return getItemsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.ecmsp.order.v1.returns.v1.ItemReturnDetails, com.ecmsp.order.v1.returns.v1.ItemReturnDetails.Builder, com.ecmsp.order.v1.returns.v1.ItemReturnDetailsOrBuilder> 
+        getItemsFieldBuilder() {
+      if (itemsBuilder_ == null) {
+        itemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.ecmsp.order.v1.returns.v1.ItemReturnDetails, com.ecmsp.order.v1.returns.v1.ItemReturnDetails.Builder, com.ecmsp.order.v1.returns.v1.ItemReturnDetailsOrBuilder>(
+                items_,
+                ((bitField0_ & 0x00000004) != 0),
+                getParentForChildren(),
+                isClean());
+        items_ = null;
+      }
+      return itemsBuilder_;
     }
 
     private int status_ = 0;

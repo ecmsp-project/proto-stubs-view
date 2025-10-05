@@ -20,26 +20,26 @@ public interface CreateReturnRequestOrBuilder extends
       getOrderIdBytes();
 
   /**
-   * <code>repeated .order.v1.returns.v1.ReturnItemReason items = 2;</code>
+   * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 2;</code>
    */
-  java.util.List<com.ecmsp.order.v1.returns.v1.ReturnItemReason> 
+  java.util.List<com.ecmsp.order.v1.returns.v1.ItemReturnDetails> 
       getItemsList();
   /**
-   * <code>repeated .order.v1.returns.v1.ReturnItemReason items = 2;</code>
+   * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 2;</code>
    */
-  com.ecmsp.order.v1.returns.v1.ReturnItemReason getItems(int index);
+  com.ecmsp.order.v1.returns.v1.ItemReturnDetails getItems(int index);
   /**
-   * <code>repeated .order.v1.returns.v1.ReturnItemReason items = 2;</code>
+   * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 2;</code>
    */
   int getItemsCount();
   /**
-   * <code>repeated .order.v1.returns.v1.ReturnItemReason items = 2;</code>
+   * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 2;</code>
    */
-  java.util.List<? extends com.ecmsp.order.v1.returns.v1.ReturnItemReasonOrBuilder> 
+  java.util.List<? extends com.ecmsp.order.v1.returns.v1.ItemReturnDetailsOrBuilder> 
       getItemsOrBuilderList();
   /**
-   * <code>repeated .order.v1.returns.v1.ReturnItemReason items = 2;</code>
+   * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 2;</code>
    */
-  com.ecmsp.order.v1.returns.v1.ReturnItemReasonOrBuilder getItemsOrBuilder(
+  com.ecmsp.order.v1.returns.v1.ItemReturnDetailsOrBuilder getItemsOrBuilder(
       int index);
 }

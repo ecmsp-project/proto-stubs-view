@@ -8,11 +8,19 @@ public interface RemoveVariantsReservationResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
+   * <pre>
+   *TODO: shouldn't be 1 here?
+   * </pre>
+   *
    * <code>string message = 2;</code>
    * @return The message.
    */
   java.lang.String getMessage();
   /**
+   * <pre>
+   *TODO: shouldn't be 1 here?
+   * </pre>
+   *
    * <code>string message = 2;</code>
    * @return The bytes for message.
    */

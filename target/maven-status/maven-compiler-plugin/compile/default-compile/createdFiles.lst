@@ -4,6 +4,7 @@ com/ecmsp/product/v1/reservation/v1/CreateVariantsReservationResponse.class
 com/ecmsp/product/v1/GetProductsByQueryRequest.class
 com/ecmsp/order/v1/returns/v1/GetReturnResponseOrBuilder.class
 com/ecmsp/order/v1/GetOrderRequest$Builder.class
+com/ecmsp/order/v1/returns/v1/ItemReturnDetails$1.class
 com/ecmsp/order/v1/DeleteOrderResponse.class
 com/ecmsp/order/v1/OrderItem.class
 com/ecmsp/product/v1/reservation/v1/VariantReservationServiceGrpc$VariantReservationServiceStub.class
@@ -83,7 +84,6 @@ com/ecmsp/example/v1/Example$1.class
 com/ecmsp/product/v1/reservation/v1/VariantReservationServiceGrpc$VariantReservationServiceImplBase.class
 com/ecmsp/order/v1/GetOrderItemsRequest$1.class
 com/ecmsp/order/v1/GetOrderStatusRequest$1.class
-com/ecmsp/order/v1/returns/v1/ReturnItemReason$1.class
 com/ecmsp/product/v1/reservation/v1/FailedReservationVariant$Builder.class
 com/ecmsp/order/v1/CreateOrderResponse$Builder.class
 com/ecmsp/product/v1/ProductServiceGrpc$AsyncService.class
@@ -94,6 +94,7 @@ com/ecmsp/order/v1/CreateOrderResponse$1.class
 com/ecmsp/order/v1/returns/v1/CreateReturnRequestOrBuilder.class
 com/ecmsp/product/v1/ProductServiceGrpc$ProductServiceFileDescriptorSupplier.class
 com/ecmsp/order/v1/returns/v1/Return$Builder.class
+com/ecmsp/order/v1/returns/v1/ItemReturnDetailsOrBuilder.class
 com/ecmsp/order/v1/UpdateOrderRequest$Builder.class
 com/ecmsp/order/v1/returns/v1/Return$1.class
 com/ecmsp/product/v1/ProductServiceProto.class
@@ -101,7 +102,6 @@ com/ecmsp/order/v1/GetOrderStatusResponseOrBuilder.class
 com/ecmsp/order/v1/returns/v1/ReturnServiceGrpc$MethodHandlers.class
 com/ecmsp/product/v1/reservation/v1/VariantReservationServiceGrpc$VariantReservationServiceBlockingStub.class
 com/ecmsp/order/v1/returns/v1/ListReturnsRequest$Builder.class
-com/ecmsp/order/v1/returns/v1/ReturnItemReasonOrBuilder.class
 com/ecmsp/order/v1/returns/v1/GetReturnResponse$Builder.class
 com/ecmsp/product/v1/reservation/v1/FailedReservationVariant.class
 com/ecmsp/product/v1/reservation/v1/CreateVariantsReservationRequest$1.class
@@ -150,6 +150,7 @@ com/ecmsp/product/v1/reservation/v1/GetVariantsReservationResponse.class
 com/ecmsp/order/v1/GetOrderItemsResponse.class
 com/ecmsp/order/v1/CreateOrderRequest$Builder.class
 com/ecmsp/order/v1/ListOrdersByUserIdResponse.class
+com/ecmsp/order/v1/returns/v1/ItemReturnDetails.class
 com/ecmsp/order/v1/returns/v1/ReturnServiceProto.class
 com/ecmsp/order/v1/OrderServiceGrpc$4.class
 com/ecmsp/order/v1/returns/v1/ListReturnsRequest.class
@@ -170,7 +171,6 @@ com/ecmsp/product/v1/reservation/v1/CreateVariantsReservationResponse$1.class
 com/ecmsp/product/v1/ProductRepresentation.class
 com/ecmsp/order/v1/returns/v1/ListReturnsRequest$1.class
 com/ecmsp/product/v1/ProductServiceGrpc$ProductServiceBlockingStub.class
-com/ecmsp/order/v1/returns/v1/ReturnItemReason.class
 com/ecmsp/order/v1/returns/v1/CreateReturnResponseOrBuilder.class
 com/ecmsp/product/v1/reservation/v1/RemoveVariantsReservationRequest.class
 com/ecmsp/order/v1/OrderStatus$1.class
@@ -206,7 +206,6 @@ com/ecmsp/order/v1/ListOrdersRequest$Builder.class
 com/ecmsp/order/v1/CreateOrderRequest.class
 com/ecmsp/order/v1/returns/v1/GetReturnResponse$1.class
 com/ecmsp/product/v1/ProductServiceGrpc$3.class
-com/ecmsp/order/v1/returns/v1/ReturnItemReason$Builder.class
 com/ecmsp/product/v1/GetProductsByQueryResponseOrBuilder.class
 com/ecmsp/order/v1/UpdateOrderRequestOrBuilder.class
 com/ecmsp/product/v1/reservation/v1/RemoveVariantsReservationRequest$1.class
@@ -220,6 +219,7 @@ com/ecmsp/product/v1/ProductRepresentation$Builder.class
 com/ecmsp/order/v1/GetOrderRequest.class
 com/ecmsp/product/v1/ProductServiceGrpc$1.class
 com/ecmsp/order/v1/returns/v1/ReturnStatus$1.class
+com/ecmsp/order/v1/returns/v1/ItemReturnDetails$Builder.class
 com/ecmsp/order/v1/DeleteOrderRequestOrBuilder.class
 com/ecmsp/product/v1/GetProductsRequest.class
 com/ecmsp/order/v1/returns/v1/ListReturnsByUserIdResponse.class

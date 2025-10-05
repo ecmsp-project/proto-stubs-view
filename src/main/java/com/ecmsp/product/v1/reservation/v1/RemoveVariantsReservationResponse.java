@@ -43,6 +43,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object message_ = "";
   /**
+   * <pre>
+   *TODO: shouldn't be 1 here?
+   * </pre>
+   *
    * <code>string message = 2;</code>
    * @return The message.
    */
@@ -60,6 +64,10 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
+   * <pre>
+   *TODO: shouldn't be 1 here?
+   * </pre>
+   *
    * <code>string message = 2;</code>
    * @return The bytes for message.
    */
@@ -406,6 +414,10 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object message_ = "";
     /**
+     * <pre>
+     *TODO: shouldn't be 1 here?
+     * </pre>
+     *
      * <code>string message = 2;</code>
      * @return The message.
      */
@@ -422,6 +434,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     *TODO: shouldn't be 1 here?
+     * </pre>
+     *
      * <code>string message = 2;</code>
      * @return The bytes for message.
      */
@@ -439,6 +455,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     *TODO: shouldn't be 1 here?
+     * </pre>
+     *
      * <code>string message = 2;</code>
      * @param value The message to set.
      * @return This builder for chaining.
@@ -452,6 +472,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     *TODO: shouldn't be 1 here?
+     * </pre>
+     *
      * <code>string message = 2;</code>
      * @return This builder for chaining.
      */
@@ -462,6 +486,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     *TODO: shouldn't be 1 here?
+     * </pre>
+     *
      * <code>string message = 2;</code>
      * @param value The bytes for message to set.
      * @return This builder for chaining.

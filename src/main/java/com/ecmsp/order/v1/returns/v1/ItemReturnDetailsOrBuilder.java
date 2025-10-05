@@ -3,8 +3,8 @@
 
 package com.ecmsp.order.v1.returns.v1;
 
-public interface ReturnItemReasonOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:order.v1.returns.v1.ReturnItemReason)
+public interface ItemReturnDetailsOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:order.v1.returns.v1.ItemReturnDetails)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -20,12 +20,30 @@ public interface ReturnItemReasonOrBuilder extends
       getItemIdBytes();
 
   /**
-   * <code>string reason = 2;</code>
+   * <code>string variant_id = 2;</code>
+   * @return The variantId.
+   */
+  java.lang.String getVariantId();
+  /**
+   * <code>string variant_id = 2;</code>
+   * @return The bytes for variantId.
+   */
+  com.google.protobuf.ByteString
+      getVariantIdBytes();
+
+  /**
+   * <code>int32 quantity = 3;</code>
+   * @return The quantity.
+   */
+  int getQuantity();
+
+  /**
+   * <code>string reason = 4;</code>
    * @return The reason.
    */
   java.lang.String getReason();
   /**
-   * <code>string reason = 2;</code>
+   * <code>string reason = 4;</code>
    * @return The bytes for reason.
    */
   com.google.protobuf.ByteString

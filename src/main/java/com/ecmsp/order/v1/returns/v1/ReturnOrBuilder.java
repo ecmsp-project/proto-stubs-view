@@ -32,29 +32,28 @@ public interface ReturnOrBuilder extends
       getOrderIdBytes();
 
   /**
-   * <code>repeated string item_ids = 3;</code>
-   * @return A list containing the itemIds.
+   * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
    */
-  java.util.List<java.lang.String>
-      getItemIdsList();
+  java.util.List<com.ecmsp.order.v1.returns.v1.ItemReturnDetails> 
+      getItemsList();
   /**
-   * <code>repeated string item_ids = 3;</code>
-   * @return The count of itemIds.
+   * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
    */
-  int getItemIdsCount();
+  com.ecmsp.order.v1.returns.v1.ItemReturnDetails getItems(int index);
   /**
-   * <code>repeated string item_ids = 3;</code>
-   * @param index The index of the element to return.
-   * @return The itemIds at the given index.
+   * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
    */
-  java.lang.String getItemIds(int index);
+  int getItemsCount();
   /**
-   * <code>repeated string item_ids = 3;</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the itemIds at the given index.
+   * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
    */
-  com.google.protobuf.ByteString
-      getItemIdsBytes(int index);
+  java.util.List<? extends com.ecmsp.order.v1.returns.v1.ItemReturnDetailsOrBuilder> 
+      getItemsOrBuilderList();
+  /**
+   * <code>repeated .order.v1.returns.v1.ItemReturnDetails items = 3;</code>
+   */
+  com.ecmsp.order.v1.returns.v1.ItemReturnDetailsOrBuilder getItemsOrBuilder(
+      int index);
 
   /**
    * <code>.order.v1.returns.v1.ReturnStatus status = 4;</code>

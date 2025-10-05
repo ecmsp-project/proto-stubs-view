@@ -15,10 +15,10 @@ public final class ReturnProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_order_v1_returns_v1_ReturnItemReason_descriptor;
+    internal_static_order_v1_returns_v1_ItemReturnDetails_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_order_v1_returns_v1_ReturnItemReason_fieldAccessorTable;
+      internal_static_order_v1_returns_v1_ItemReturnDetails_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_order_v1_returns_v1_Return_descriptor;
   static final 
@@ -35,31 +35,33 @@ public final class ReturnProto {
     java.lang.String[] descriptorData = {
       "\n order/v1/returns/v1/return.proto\022\023orde" +
       "r.v1.returns.v1\032\'order/v1/returns/v1/ret" +
-      "urn_status.proto\"3\n\020ReturnItemReason\022\017\n\007" +
-      "item_id\030\001 \001(\t\022\016\n\006reason\030\002 \001(\t\"\206\001\n\006Return" +
-      "\022\021\n\treturn_id\030\001 \001(\t\022\020\n\010order_id\030\002 \001(\t\022\020\n" +
-      "\010item_ids\030\003 \003(\t\0221\n\006status\030\004 \001(\0162!.order." +
-      "v1.returns.v1.ReturnStatus\022\022\n\ncreated_at" +
-      "\030\005 \001(\tB.\n\035com.ecmsp.order.v1.returns.v1B" +
-      "\013ReturnProtoP\001b\006proto3"
+      "urn_status.proto\"Z\n\021ItemReturnDetails\022\017\n" +
+      "\007item_id\030\001 \001(\t\022\022\n\nvariant_id\030\002 \001(\t\022\020\n\010qu" +
+      "antity\030\003 \001(\005\022\016\n\006reason\030\004 \001(\t\"\253\001\n\006Return\022" +
+      "\021\n\treturn_id\030\001 \001(\t\022\020\n\010order_id\030\002 \001(\t\0225\n\005" +
+      "items\030\003 \003(\0132&.order.v1.returns.v1.ItemRe" +
+      "turnDetails\0221\n\006status\030\004 \001(\0162!.order.v1.r" +
+      "eturns.v1.ReturnStatus\022\022\n\ncreated_at\030\005 \001" +
+      "(\tB.\n\035com.ecmsp.order.v1.returns.v1B\013Ret" +
+      "urnProtoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.ecmsp.order.v1.returns.v1.ReturnStatusProto.getDescriptor(),
         });
-    internal_static_order_v1_returns_v1_ReturnItemReason_descriptor =
+    internal_static_order_v1_returns_v1_ItemReturnDetails_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_order_v1_returns_v1_ReturnItemReason_fieldAccessorTable = new
+    internal_static_order_v1_returns_v1_ItemReturnDetails_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_order_v1_returns_v1_ReturnItemReason_descriptor,
-        new java.lang.String[] { "ItemId", "Reason", });
+        internal_static_order_v1_returns_v1_ItemReturnDetails_descriptor,
+        new java.lang.String[] { "ItemId", "VariantId", "Quantity", "Reason", });
     internal_static_order_v1_returns_v1_Return_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_order_v1_returns_v1_Return_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_returns_v1_Return_descriptor,
-        new java.lang.String[] { "ReturnId", "OrderId", "ItemIds", "Status", "CreatedAt", });
+        new java.lang.String[] { "ReturnId", "OrderId", "Items", "Status", "CreatedAt", });
     com.ecmsp.order.v1.returns.v1.ReturnStatusProto.getDescriptor();
   }
 

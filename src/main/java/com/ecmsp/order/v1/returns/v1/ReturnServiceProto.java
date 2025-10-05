@@ -66,32 +66,32 @@ public final class ReturnServiceProto {
       "\n(order/v1/returns/v1/return_service.pro" +
       "to\022\023order.v1.returns.v1\032\'order/v1/return" +
       "s/v1/return_status.proto\032 order/v1/retur" +
-      "ns/v1/return.proto\"]\n\023CreateReturnReques" +
-      "t\022\020\n\010order_id\030\001 \001(\t\0224\n\005items\030\002 \003(\0132%.ord" +
-      "er.v1.returns.v1.ReturnItemReason\"\\\n\024Cre" +
-      "ateReturnResponse\022\021\n\treturn_id\030\001 \001(\t\0221\n\006" +
-      "status\030\002 \001(\0162!.order.v1.returns.v1.Retur" +
-      "nStatus\"%\n\020GetReturnRequest\022\021\n\treturn_id" +
-      "\030\001 \001(\t\"@\n\021GetReturnResponse\022+\n\006return\030\001 " +
-      "\001(\0132\033.order.v1.returns.v1.Return\"\024\n\022List" +
-      "ReturnsRequest\"C\n\023ListReturnsResponse\022,\n" +
-      "\007returns\030\001 \003(\0132\033.order.v1.returns.v1.Ret" +
-      "urn\"\034\n\032ListReturnsByUserIdRequest\"K\n\033Lis" +
-      "tReturnsByUserIdResponse\022,\n\007returns\030\001 \003(" +
-      "\0132\033.order.v1.returns.v1.Return2\254\003\n\rRetur" +
-      "nService\022c\n\014CreateReturn\022(.order.v1.retu" +
-      "rns.v1.CreateReturnRequest\032).order.v1.re" +
-      "turns.v1.CreateReturnResponse\022Z\n\tGetRetu" +
-      "rn\022%.order.v1.returns.v1.GetReturnReques" +
-      "t\032&.order.v1.returns.v1.GetReturnRespons" +
-      "e\022x\n\023ListReturnsByUserId\022/.order.v1.retu" +
-      "rns.v1.ListReturnsByUserIdRequest\0320.orde" +
-      "r.v1.returns.v1.ListReturnsByUserIdRespo" +
-      "nse\022`\n\013ListReturns\022\'.order.v1.returns.v1" +
-      ".ListReturnsRequest\032(.order.v1.returns.v" +
-      "1.ListReturnsResponseB5\n\035com.ecmsp.order" +
-      ".v1.returns.v1B\022ReturnServiceProtoP\001b\006pr" +
-      "oto3"
+      "ns/v1/return.proto\"^\n\023CreateReturnReques" +
+      "t\022\020\n\010order_id\030\001 \001(\t\0225\n\005items\030\002 \003(\0132&.ord" +
+      "er.v1.returns.v1.ItemReturnDetails\"\\\n\024Cr" +
+      "eateReturnResponse\022\021\n\treturn_id\030\001 \001(\t\0221\n" +
+      "\006status\030\002 \001(\0162!.order.v1.returns.v1.Retu" +
+      "rnStatus\"%\n\020GetReturnRequest\022\021\n\treturn_i" +
+      "d\030\001 \001(\t\"@\n\021GetReturnResponse\022+\n\006return\030\001" +
+      " \001(\0132\033.order.v1.returns.v1.Return\"\024\n\022Lis" +
+      "tReturnsRequest\"C\n\023ListReturnsResponse\022," +
+      "\n\007returns\030\001 \003(\0132\033.order.v1.returns.v1.Re" +
+      "turn\"\034\n\032ListReturnsByUserIdRequest\"K\n\033Li" +
+      "stReturnsByUserIdResponse\022,\n\007returns\030\001 \003" +
+      "(\0132\033.order.v1.returns.v1.Return2\254\003\n\rRetu" +
+      "rnService\022c\n\014CreateReturn\022(.order.v1.ret" +
+      "urns.v1.CreateReturnRequest\032).order.v1.r" +
+      "eturns.v1.CreateReturnResponse\022Z\n\tGetRet" +
+      "urn\022%.order.v1.returns.v1.GetReturnReque" +
+      "st\032&.order.v1.returns.v1.GetReturnRespon" +
+      "se\022x\n\023ListReturnsByUserId\022/.order.v1.ret" +
+      "urns.v1.ListReturnsByUserIdRequest\0320.ord" +
+      "er.v1.returns.v1.ListReturnsByUserIdResp" +
+      "onse\022`\n\013ListReturns\022\'.order.v1.returns.v" +
+      "1.ListReturnsRequest\032(.order.v1.returns." +
+      "v1.ListReturnsResponseB5\n\035com.ecmsp.orde" +
+      "r.v1.returns.v1B\022ReturnServiceProtoP\001b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
