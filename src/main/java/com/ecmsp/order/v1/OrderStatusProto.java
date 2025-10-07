@@ -24,12 +24,16 @@ public final class OrderStatusProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\033order/v1/order_status.proto\022\010order.v1*" +
-      "\256\001\n\013OrderStatus\022\034\n\030ORDER_STATUS_UNSPECIF" +
+      "\306\002\n\013OrderStatus\022\034\n\030ORDER_STATUS_UNSPECIF" +
       "IED\020\000\022\030\n\024ORDER_STATUS_PENDING\020\001\022\033\n\027ORDER" +
       "_STATUS_PROCESSING\020\002\022\025\n\021ORDER_STATUS_PAI" +
       "D\020\003\022\027\n\023ORDER_STATUS_FAILED\020\004\022\032\n\026ORDER_ST" +
-      "ATUS_CANCELLED\020\005B(\n\022com.ecmsp.order.v1B\020" +
-      "OrderStatusProtoP\001b\006proto3"
+      "ATUS_CANCELLED\020\005\022\030\n\024ORDER_STATUS_SHIPPED" +
+      "\020\006\022\032\n\026ORDER_STATUS_DELIVERED\020\007\022!\n\035ORDER_" +
+      "STATUS_RETURN_REQUESTED\020\010\022\"\n\036ORDER_STATU" +
+      "S_RETURN_PROCESSING\020\t\022\031\n\025ORDER_STATUS_RE" +
+      "TURNED\020\nB(\n\022com.ecmsp.order.v1B\020OrderSta" +
+      "tusProtoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

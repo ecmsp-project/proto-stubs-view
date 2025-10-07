@@ -15,16 +15,6 @@ public final class OrderServiceProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_order_v1_OrderItem_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_order_v1_OrderItem_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_order_v1_OrderItemDetails_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_order_v1_OrderItemDetails_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_order_v1_GetOrderRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -74,36 +64,6 @@ public final class OrderServiceProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_order_v1_ListOrdersByUserIdResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_order_v1_UpdateOrderResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_order_v1_UpdateOrderResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_order_v1_UpdateOrderRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_order_v1_UpdateOrderRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_order_v1_CreateOrderResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_order_v1_CreateOrderResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_order_v1_CreateOrderRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_order_v1_CreateOrderRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_order_v1_DeleteOrderResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_order_v1_DeleteOrderResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_order_v1_DeleteOrderRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_order_v1_DeleteOrderRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -114,171 +74,104 @@ public final class OrderServiceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\034order/v1/order_service.proto\022\010order.v1" +
-      "\032\033order/v1/order_status.proto\"=\n\tOrderIt" +
-      "em\022\017\n\007item_id\030\001 \001(\t\022\020\n\010quantity\030\002 \001(\005\022\r\n" +
-      "\005price\030\003 \001(\001\"5\n\020OrderItemDetails\022\017\n\007item" +
-      "_id\030\001 \001(\t\022\020\n\010quantity\030\002 \001(\005\"#\n\017GetOrderR" +
-      "equest\022\020\n\010order_id\030\001 \001(\t\"\235\001\n\020GetOrderRes" +
-      "ponse\022\020\n\010order_id\030\001 \001(\t\022\021\n\tclient_id\030\002 \001" +
-      "(\t\022+\n\014order_status\030\003 \001(\0162\025.order.v1.Orde" +
-      "rStatus\022\014\n\004date\030\004 \001(\t\022)\n\005items\030\005 \003(\0132\032.o" +
-      "rder.v1.OrderItemDetails\")\n\025GetOrderStat" +
-      "usRequest\022\020\n\010order_id\030\001 \001(\t\"W\n\026GetOrderS" +
-      "tatusResponse\022\020\n\010order_id\030\001 \001(\t\022+\n\014order" +
-      "_status\030\002 \001(\0162\025.order.v1.OrderStatus\"(\n\024" +
-      "GetOrderItemsRequest\022\020\n\010order_id\030\001 \001(\t\"B" +
-      "\n\025GetOrderItemsResponse\022)\n\005items\030\001 \003(\0132\032" +
-      ".order.v1.OrderItemDetails\"\023\n\021ListOrders" +
-      "Request\"@\n\022ListOrdersResponse\022*\n\006orders\030" +
-      "\001 \003(\0132\032.order.v1.GetOrderResponse\"\033\n\031Lis" +
-      "tOrdersByUserIdRequest\"H\n\032ListOrdersByUs" +
-      "erIdResponse\022*\n\006orders\030\001 \003(\0132\032.order.v1." +
-      "GetOrderResponse\"\240\001\n\023UpdateOrderResponse" +
-      "\022\020\n\010order_id\030\001 \001(\t\022\021\n\tclient_id\030\002 \001(\t\022+\n" +
-      "\014order_status\030\003 \001(\0162\025.order.v1.OrderStat" +
-      "us\022\014\n\004date\030\004 \001(\t\022)\n\005items\030\005 \003(\0132\032.order." +
-      "v1.OrderItemDetails\"&\n\022UpdateOrderReques" +
-      "t\022\020\n\010order_id\030\001 \001(\t\"\240\001\n\023CreateOrderRespo" +
-      "nse\022\020\n\010order_id\030\001 \001(\t\022\021\n\tclient_id\030\002 \001(\t" +
-      "\022+\n\014order_status\030\003 \001(\0162\025.order.v1.OrderS" +
-      "tatus\022\014\n\004date\030\004 \001(\t\022)\n\005items\030\005 \003(\0132\032.ord" +
-      "er.v1.OrderItemDetails\"K\n\022CreateOrderReq" +
-      "uest\022\021\n\tclient_id\030\001 \001(\t\022\"\n\005items\030\002 \003(\0132\023" +
-      ".order.v1.OrderItem\"&\n\023DeleteOrderRespon" +
-      "se\022\017\n\007success\030\001 \001(\010\"&\n\022DeleteOrderReques" +
-      "t\022\020\n\010order_id\030\001 \001(\t2\206\005\n\014OrderService\022A\n\010" +
-      "GetOrder\022\031.order.v1.GetOrderRequest\032\032.or" +
-      "der.v1.GetOrderResponse\022S\n\016GetOrderStatu" +
-      "s\022\037.order.v1.GetOrderStatusRequest\032 .ord" +
-      "er.v1.GetOrderStatusResponse\022P\n\rGetOrder" +
-      "Items\022\036.order.v1.GetOrderItemsRequest\032\037." +
-      "order.v1.GetOrderItemsResponse\022G\n\nListOr" +
-      "ders\022\033.order.v1.ListOrdersRequest\032\034.orde" +
-      "r.v1.ListOrdersResponse\022_\n\022ListOrdersByU" +
-      "serId\022#.order.v1.ListOrdersByUserIdReque" +
-      "st\032$.order.v1.ListOrdersByUserIdResponse" +
-      "\022J\n\013UpdateOrder\022\034.order.v1.UpdateOrderRe" +
-      "quest\032\035.order.v1.UpdateOrderResponse\022J\n\013" +
-      "CreateOrder\022\034.order.v1.CreateOrderReques" +
-      "t\032\035.order.v1.CreateOrderResponse\022J\n\013Dele" +
-      "teOrder\022\034.order.v1.DeleteOrderRequest\032\035." +
-      "order.v1.DeleteOrderResponseB)\n\022com.ecms" +
-      "p.order.v1B\021OrderServiceProtoP\001b\006proto3"
+      "\032\033order/v1/order_status.proto\032\024order/v1/" +
+      "order.proto\"#\n\017GetOrderRequest\022\020\n\010order_" +
+      "id\030\001 \001(\t\"\212\001\n\020GetOrderResponse\022\020\n\010order_i" +
+      "d\030\001 \001(\t\022+\n\014order_status\030\003 \001(\0162\025.order.v1" +
+      ".OrderStatus\022\014\n\004date\030\004 \001(\t\022)\n\005items\030\005 \003(" +
+      "\0132\032.order.v1.OrderItemDetails\")\n\025GetOrde" +
+      "rStatusRequest\022\020\n\010order_id\030\001 \001(\t\"W\n\026GetO" +
+      "rderStatusResponse\022\020\n\010order_id\030\001 \001(\t\022+\n\014" +
+      "order_status\030\002 \001(\0162\025.order.v1.OrderStatu" +
+      "s\"(\n\024GetOrderItemsRequest\022\020\n\010order_id\030\001 " +
+      "\001(\t\"B\n\025GetOrderItemsResponse\022)\n\005items\030\001 " +
+      "\003(\0132\032.order.v1.OrderItemDetails\"\023\n\021ListO" +
+      "rdersRequest\"@\n\022ListOrdersResponse\022*\n\006or" +
+      "ders\030\001 \003(\0132\032.order.v1.GetOrderResponse\"\033" +
+      "\n\031ListOrdersByUserIdRequest\"H\n\032ListOrder" +
+      "sByUserIdResponse\022*\n\006orders\030\001 \003(\0132\032.orde" +
+      "r.v1.GetOrderResponse2\242\003\n\014OrderService\022A" +
+      "\n\010GetOrder\022\031.order.v1.GetOrderRequest\032\032." +
+      "order.v1.GetOrderResponse\022S\n\016GetOrderSta" +
+      "tus\022\037.order.v1.GetOrderStatusRequest\032 .o" +
+      "rder.v1.GetOrderStatusResponse\022P\n\rGetOrd" +
+      "erItems\022\036.order.v1.GetOrderItemsRequest\032" +
+      "\037.order.v1.GetOrderItemsResponse\022G\n\nList" +
+      "Orders\022\033.order.v1.ListOrdersRequest\032\034.or" +
+      "der.v1.ListOrdersResponse\022_\n\022ListOrdersB" +
+      "yUserId\022#.order.v1.ListOrdersByUserIdReq" +
+      "uest\032$.order.v1.ListOrdersByUserIdRespon" +
+      "seB)\n\022com.ecmsp.order.v1B\021OrderServicePr" +
+      "otoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.ecmsp.order.v1.OrderStatusProto.getDescriptor(),
+          com.ecmsp.order.v1.OrderProto.getDescriptor(),
         });
-    internal_static_order_v1_OrderItem_descriptor =
-      getDescriptor().getMessageTypes().get(0);
-    internal_static_order_v1_OrderItem_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_order_v1_OrderItem_descriptor,
-        new java.lang.String[] { "ItemId", "Quantity", "Price", });
-    internal_static_order_v1_OrderItemDetails_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_order_v1_OrderItemDetails_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_order_v1_OrderItemDetails_descriptor,
-        new java.lang.String[] { "ItemId", "Quantity", });
     internal_static_order_v1_GetOrderRequest_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(0);
     internal_static_order_v1_GetOrderRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_GetOrderRequest_descriptor,
         new java.lang.String[] { "OrderId", });
     internal_static_order_v1_GetOrderResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_order_v1_GetOrderResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_GetOrderResponse_descriptor,
-        new java.lang.String[] { "OrderId", "ClientId", "OrderStatus", "Date", "Items", });
+        new java.lang.String[] { "OrderId", "OrderStatus", "Date", "Items", });
     internal_static_order_v1_GetOrderStatusRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_order_v1_GetOrderStatusRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_GetOrderStatusRequest_descriptor,
         new java.lang.String[] { "OrderId", });
     internal_static_order_v1_GetOrderStatusResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_order_v1_GetOrderStatusResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_GetOrderStatusResponse_descriptor,
         new java.lang.String[] { "OrderId", "OrderStatus", });
     internal_static_order_v1_GetOrderItemsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_order_v1_GetOrderItemsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_GetOrderItemsRequest_descriptor,
         new java.lang.String[] { "OrderId", });
     internal_static_order_v1_GetOrderItemsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_order_v1_GetOrderItemsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_GetOrderItemsResponse_descriptor,
         new java.lang.String[] { "Items", });
     internal_static_order_v1_ListOrdersRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_order_v1_ListOrdersRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_ListOrdersRequest_descriptor,
         new java.lang.String[] { });
     internal_static_order_v1_ListOrdersResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_order_v1_ListOrdersResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_ListOrdersResponse_descriptor,
         new java.lang.String[] { "Orders", });
     internal_static_order_v1_ListOrdersByUserIdRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_order_v1_ListOrdersByUserIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_ListOrdersByUserIdRequest_descriptor,
         new java.lang.String[] { });
     internal_static_order_v1_ListOrdersByUserIdResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_order_v1_ListOrdersByUserIdResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_ListOrdersByUserIdResponse_descriptor,
         new java.lang.String[] { "Orders", });
-    internal_static_order_v1_UpdateOrderResponse_descriptor =
-      getDescriptor().getMessageTypes().get(12);
-    internal_static_order_v1_UpdateOrderResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_order_v1_UpdateOrderResponse_descriptor,
-        new java.lang.String[] { "OrderId", "ClientId", "OrderStatus", "Date", "Items", });
-    internal_static_order_v1_UpdateOrderRequest_descriptor =
-      getDescriptor().getMessageTypes().get(13);
-    internal_static_order_v1_UpdateOrderRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_order_v1_UpdateOrderRequest_descriptor,
-        new java.lang.String[] { "OrderId", });
-    internal_static_order_v1_CreateOrderResponse_descriptor =
-      getDescriptor().getMessageTypes().get(14);
-    internal_static_order_v1_CreateOrderResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_order_v1_CreateOrderResponse_descriptor,
-        new java.lang.String[] { "OrderId", "ClientId", "OrderStatus", "Date", "Items", });
-    internal_static_order_v1_CreateOrderRequest_descriptor =
-      getDescriptor().getMessageTypes().get(15);
-    internal_static_order_v1_CreateOrderRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_order_v1_CreateOrderRequest_descriptor,
-        new java.lang.String[] { "ClientId", "Items", });
-    internal_static_order_v1_DeleteOrderResponse_descriptor =
-      getDescriptor().getMessageTypes().get(16);
-    internal_static_order_v1_DeleteOrderResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_order_v1_DeleteOrderResponse_descriptor,
-        new java.lang.String[] { "Success", });
-    internal_static_order_v1_DeleteOrderRequest_descriptor =
-      getDescriptor().getMessageTypes().get(17);
-    internal_static_order_v1_DeleteOrderRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_order_v1_DeleteOrderRequest_descriptor,
-        new java.lang.String[] { "OrderId", });
     com.ecmsp.order.v1.OrderStatusProto.getDescriptor();
+    com.ecmsp.order.v1.OrderProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

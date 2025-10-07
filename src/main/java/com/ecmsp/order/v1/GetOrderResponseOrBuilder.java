@@ -20,26 +20,6 @@ public interface GetOrderResponseOrBuilder extends
       getOrderIdBytes();
 
   /**
-   * <pre>
-   * client id should be removed
-   * </pre>
-   *
-   * <code>string client_id = 2;</code>
-   * @return The clientId.
-   */
-  java.lang.String getClientId();
-  /**
-   * <pre>
-   * client id should be removed
-   * </pre>
-   *
-   * <code>string client_id = 2;</code>
-   * @return The bytes for clientId.
-   */
-  com.google.protobuf.ByteString
-      getClientIdBytes();
-
-  /**
    * <code>.order.v1.OrderStatus order_status = 3;</code>
    * @return The enum numeric value on the wire for orderStatus.
    */

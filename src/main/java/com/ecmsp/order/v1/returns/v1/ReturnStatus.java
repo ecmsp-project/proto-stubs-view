@@ -4,6 +4,10 @@
 package com.ecmsp.order.v1.returns.v1;
 
 /**
+ * <pre>
+ *TODO: should be removed as these fields were added to OrderStatus
+ * </pre>
+ *
  * Protobuf enum {@code order.v1.returns.v1.ReturnStatus}
  */
 public enum ReturnStatus

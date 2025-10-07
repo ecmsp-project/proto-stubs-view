@@ -17,7 +17,6 @@ private static final long serialVersionUID = 0L;
   }
   private GetOrderResponse() {
     orderId_ = "";
-    clientId_ = "";
     orderStatus_ = 0;
     date_ = "";
     items_ = java.util.Collections.emptyList();
@@ -76,53 +75,6 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       orderId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int CLIENT_ID_FIELD_NUMBER = 2;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object clientId_ = "";
-  /**
-   * <pre>
-   * client id should be removed
-   * </pre>
-   *
-   * <code>string client_id = 2;</code>
-   * @return The clientId.
-   */
-  @java.lang.Override
-  public java.lang.String getClientId() {
-    java.lang.Object ref = clientId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      clientId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <pre>
-   * client id should be removed
-   * </pre>
-   *
-   * <code>string client_id = 2;</code>
-   * @return The bytes for clientId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getClientIdBytes() {
-    java.lang.Object ref = clientId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      clientId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -244,9 +196,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orderId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, clientId_);
-    }
     if (orderStatus_ != com.ecmsp.order.v1.OrderStatus.ORDER_STATUS_UNSPECIFIED.getNumber()) {
       output.writeEnum(3, orderStatus_);
     }
@@ -267,9 +216,6 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orderId_);
-    }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, clientId_);
     }
     if (orderStatus_ != com.ecmsp.order.v1.OrderStatus.ORDER_STATUS_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
@@ -299,8 +245,6 @@ private static final long serialVersionUID = 0L;
 
     if (!getOrderId()
         .equals(other.getOrderId())) return false;
-    if (!getClientId()
-        .equals(other.getClientId())) return false;
     if (orderStatus_ != other.orderStatus_) return false;
     if (!getDate()
         .equals(other.getDate())) return false;
@@ -319,8 +263,6 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ORDER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getOrderId().hashCode();
-    hash = (37 * hash) + CLIENT_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getClientId().hashCode();
     hash = (37 * hash) + ORDER_STATUS_FIELD_NUMBER;
     hash = (53 * hash) + orderStatus_;
     hash = (37 * hash) + DATE_FIELD_NUMBER;
@@ -461,7 +403,6 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       orderId_ = "";
-      clientId_ = "";
       orderStatus_ = 0;
       date_ = "";
       if (itemsBuilder_ == null) {
@@ -470,7 +411,7 @@ private static final long serialVersionUID = 0L;
         items_ = null;
         itemsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -505,9 +446,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.ecmsp.order.v1.GetOrderResponse result) {
       if (itemsBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           items_ = java.util.Collections.unmodifiableList(items_);
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.items_ = items_;
       } else {
@@ -521,12 +462,9 @@ private static final long serialVersionUID = 0L;
         result.orderId_ = orderId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.clientId_ = clientId_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.orderStatus_ = orderStatus_;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
+      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.date_ = date_;
       }
     }
@@ -580,24 +518,19 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (!other.getClientId().isEmpty()) {
-        clientId_ = other.clientId_;
-        bitField0_ |= 0x00000002;
-        onChanged();
-      }
       if (other.orderStatus_ != 0) {
         setOrderStatusValue(other.getOrderStatusValue());
       }
       if (!other.getDate().isEmpty()) {
         date_ = other.date_;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       if (itemsBuilder_ == null) {
         if (!other.items_.isEmpty()) {
           if (items_.isEmpty()) {
             items_ = other.items_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureItemsIsMutable();
             items_.addAll(other.items_);
@@ -610,7 +543,7 @@ private static final long serialVersionUID = 0L;
             itemsBuilder_.dispose();
             itemsBuilder_ = null;
             items_ = other.items_;
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00000008);
             itemsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getItemsFieldBuilder() : null;
@@ -650,19 +583,14 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              clientId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
             case 24: {
               orderStatus_ = input.readEnum();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000002;
               break;
             } // case 24
             case 34: {
               date_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000004;
               break;
             } // case 34
             case 42: {
@@ -767,98 +695,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object clientId_ = "";
-    /**
-     * <pre>
-     * client id should be removed
-     * </pre>
-     *
-     * <code>string client_id = 2;</code>
-     * @return The clientId.
-     */
-    public java.lang.String getClientId() {
-      java.lang.Object ref = clientId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        clientId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <pre>
-     * client id should be removed
-     * </pre>
-     *
-     * <code>string client_id = 2;</code>
-     * @return The bytes for clientId.
-     */
-    public com.google.protobuf.ByteString
-        getClientIdBytes() {
-      java.lang.Object ref = clientId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        clientId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <pre>
-     * client id should be removed
-     * </pre>
-     *
-     * <code>string client_id = 2;</code>
-     * @param value The clientId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setClientId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      clientId_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * client id should be removed
-     * </pre>
-     *
-     * <code>string client_id = 2;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearClientId() {
-      clientId_ = getDefaultInstance().getClientId();
-      bitField0_ = (bitField0_ & ~0x00000002);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * client id should be removed
-     * </pre>
-     *
-     * <code>string client_id = 2;</code>
-     * @param value The bytes for clientId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setClientIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      clientId_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-
     private int orderStatus_ = 0;
     /**
      * <code>.order.v1.OrderStatus order_status = 3;</code>
@@ -874,7 +710,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setOrderStatusValue(int value) {
       orderStatus_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -896,7 +732,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       orderStatus_ = value.getNumber();
       onChanged();
       return this;
@@ -906,7 +742,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearOrderStatus() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       orderStatus_ = 0;
       onChanged();
       return this;
@@ -955,7 +791,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       date_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -965,7 +801,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearDate() {
       date_ = getDefaultInstance().getDate();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }
@@ -979,7 +815,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       date_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -987,9 +823,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.ecmsp.order.v1.OrderItemDetails> items_ =
       java.util.Collections.emptyList();
     private void ensureItemsIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         items_ = new java.util.ArrayList<com.ecmsp.order.v1.OrderItemDetails>(items_);
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -1139,7 +975,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearItems() {
       if (itemsBuilder_ == null) {
         items_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         itemsBuilder_.clear();
@@ -1216,7 +1052,7 @@ private static final long serialVersionUID = 0L;
         itemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.ecmsp.order.v1.OrderItemDetails, com.ecmsp.order.v1.OrderItemDetails.Builder, com.ecmsp.order.v1.OrderItemDetailsOrBuilder>(
                 items_,
-                ((bitField0_ & 0x00000010) != 0),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         items_ = null;
