@@ -18,7 +18,6 @@ private static final long serialVersionUID = 0L;
   private Order() {
     orderId_ = "";
     reservationId_ = "";
-    clientId_ = "";
     orderStatus_ = 0;
     date_ = "";
     items_ = java.util.Collections.emptyList();
@@ -122,56 +121,17 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CLIENT_ID_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object clientId_ = "";
-  /**
-   * <code>string client_id = 3;</code>
-   * @return The clientId.
-   */
-  @java.lang.Override
-  public java.lang.String getClientId() {
-    java.lang.Object ref = clientId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      clientId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string client_id = 3;</code>
-   * @return The bytes for clientId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getClientIdBytes() {
-    java.lang.Object ref = clientId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      clientId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int ORDER_STATUS_FIELD_NUMBER = 4;
+  public static final int ORDER_STATUS_FIELD_NUMBER = 3;
   private int orderStatus_ = 0;
   /**
-   * <code>.order.v1.OrderStatus order_status = 4;</code>
+   * <code>.order.v1.OrderStatus order_status = 3;</code>
    * @return The enum numeric value on the wire for orderStatus.
    */
   @java.lang.Override public int getOrderStatusValue() {
     return orderStatus_;
   }
   /**
-   * <code>.order.v1.OrderStatus order_status = 4;</code>
+   * <code>.order.v1.OrderStatus order_status = 3;</code>
    * @return The orderStatus.
    */
   @java.lang.Override public com.ecmsp.order.v1.OrderStatus getOrderStatus() {
@@ -179,11 +139,11 @@ private static final long serialVersionUID = 0L;
     return result == null ? com.ecmsp.order.v1.OrderStatus.UNRECOGNIZED : result;
   }
 
-  public static final int DATE_FIELD_NUMBER = 5;
+  public static final int DATE_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
   private volatile java.lang.Object date_ = "";
   /**
-   * <code>string date = 5;</code>
+   * <code>string date = 4;</code>
    * @return The date.
    */
   @java.lang.Override
@@ -200,7 +160,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string date = 5;</code>
+   * <code>string date = 4;</code>
    * @return The bytes for date.
    */
   @java.lang.Override
@@ -218,18 +178,18 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int ITEMS_FIELD_NUMBER = 6;
+  public static final int ITEMS_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
   private java.util.List<com.ecmsp.order.v1.OrderItemDetails> items_;
   /**
-   * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+   * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
    */
   @java.lang.Override
   public java.util.List<com.ecmsp.order.v1.OrderItemDetails> getItemsList() {
     return items_;
   }
   /**
-   * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+   * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.ecmsp.order.v1.OrderItemDetailsOrBuilder> 
@@ -237,21 +197,21 @@ private static final long serialVersionUID = 0L;
     return items_;
   }
   /**
-   * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+   * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
    */
   @java.lang.Override
   public int getItemsCount() {
     return items_.size();
   }
   /**
-   * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+   * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
    */
   @java.lang.Override
   public com.ecmsp.order.v1.OrderItemDetails getItems(int index) {
     return items_.get(index);
   }
   /**
-   * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+   * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
    */
   @java.lang.Override
   public com.ecmsp.order.v1.OrderItemDetailsOrBuilder getItemsOrBuilder(
@@ -279,17 +239,14 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reservationId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, reservationId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, clientId_);
-    }
     if (orderStatus_ != com.ecmsp.order.v1.OrderStatus.ORDER_STATUS_UNSPECIFIED.getNumber()) {
-      output.writeEnum(4, orderStatus_);
+      output.writeEnum(3, orderStatus_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(date_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, date_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, date_);
     }
     for (int i = 0; i < items_.size(); i++) {
-      output.writeMessage(6, items_.get(i));
+      output.writeMessage(5, items_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -306,19 +263,16 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reservationId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, reservationId_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(clientId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, clientId_);
-    }
     if (orderStatus_ != com.ecmsp.order.v1.OrderStatus.ORDER_STATUS_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(4, orderStatus_);
+        .computeEnumSize(3, orderStatus_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(date_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, date_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, date_);
     }
     for (int i = 0; i < items_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, items_.get(i));
+        .computeMessageSize(5, items_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -339,8 +293,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getOrderId())) return false;
     if (!getReservationId()
         .equals(other.getReservationId())) return false;
-    if (!getClientId()
-        .equals(other.getClientId())) return false;
     if (orderStatus_ != other.orderStatus_) return false;
     if (!getDate()
         .equals(other.getDate())) return false;
@@ -361,8 +313,6 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getOrderId().hashCode();
     hash = (37 * hash) + RESERVATION_ID_FIELD_NUMBER;
     hash = (53 * hash) + getReservationId().hashCode();
-    hash = (37 * hash) + CLIENT_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getClientId().hashCode();
     hash = (37 * hash) + ORDER_STATUS_FIELD_NUMBER;
     hash = (53 * hash) + orderStatus_;
     hash = (37 * hash) + DATE_FIELD_NUMBER;
@@ -504,7 +454,6 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       orderId_ = "";
       reservationId_ = "";
-      clientId_ = "";
       orderStatus_ = 0;
       date_ = "";
       if (itemsBuilder_ == null) {
@@ -513,7 +462,7 @@ private static final long serialVersionUID = 0L;
         items_ = null;
         itemsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000010);
       return this;
     }
 
@@ -548,9 +497,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.ecmsp.order.v1.Order result) {
       if (itemsBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           items_ = java.util.Collections.unmodifiableList(items_);
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.items_ = items_;
       } else {
@@ -567,12 +516,9 @@ private static final long serialVersionUID = 0L;
         result.reservationId_ = reservationId_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.clientId_ = clientId_;
-      }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.orderStatus_ = orderStatus_;
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.date_ = date_;
       }
     }
@@ -631,24 +577,19 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
-      if (!other.getClientId().isEmpty()) {
-        clientId_ = other.clientId_;
-        bitField0_ |= 0x00000004;
-        onChanged();
-      }
       if (other.orderStatus_ != 0) {
         setOrderStatusValue(other.getOrderStatusValue());
       }
       if (!other.getDate().isEmpty()) {
         date_ = other.date_;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (itemsBuilder_ == null) {
         if (!other.items_.isEmpty()) {
           if (items_.isEmpty()) {
             items_ = other.items_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureItemsIsMutable();
             items_.addAll(other.items_);
@@ -661,7 +602,7 @@ private static final long serialVersionUID = 0L;
             itemsBuilder_.dispose();
             itemsBuilder_ = null;
             items_ = other.items_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000010);
             itemsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getItemsFieldBuilder() : null;
@@ -706,22 +647,17 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 26: {
-              clientId_ = input.readStringRequireUtf8();
+            case 24: {
+              orderStatus_ = input.readEnum();
               bitField0_ |= 0x00000004;
               break;
-            } // case 26
-            case 32: {
-              orderStatus_ = input.readEnum();
+            } // case 24
+            case 34: {
+              date_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000008;
               break;
-            } // case 32
+            } // case 34
             case 42: {
-              date_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
-            case 50: {
               com.ecmsp.order.v1.OrderItemDetails m =
                   input.readMessage(
                       com.ecmsp.order.v1.OrderItemDetails.parser(),
@@ -733,7 +669,7 @@ private static final long serialVersionUID = 0L;
                 itemsBuilder_.addMessage(m);
               }
               break;
-            } // case 50
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -895,99 +831,27 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object clientId_ = "";
-    /**
-     * <code>string client_id = 3;</code>
-     * @return The clientId.
-     */
-    public java.lang.String getClientId() {
-      java.lang.Object ref = clientId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        clientId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string client_id = 3;</code>
-     * @return The bytes for clientId.
-     */
-    public com.google.protobuf.ByteString
-        getClientIdBytes() {
-      java.lang.Object ref = clientId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        clientId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string client_id = 3;</code>
-     * @param value The clientId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setClientId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      clientId_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string client_id = 3;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearClientId() {
-      clientId_ = getDefaultInstance().getClientId();
-      bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string client_id = 3;</code>
-     * @param value The bytes for clientId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setClientIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      clientId_ = value;
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-
     private int orderStatus_ = 0;
     /**
-     * <code>.order.v1.OrderStatus order_status = 4;</code>
+     * <code>.order.v1.OrderStatus order_status = 3;</code>
      * @return The enum numeric value on the wire for orderStatus.
      */
     @java.lang.Override public int getOrderStatusValue() {
       return orderStatus_;
     }
     /**
-     * <code>.order.v1.OrderStatus order_status = 4;</code>
+     * <code>.order.v1.OrderStatus order_status = 3;</code>
      * @param value The enum numeric value on the wire for orderStatus to set.
      * @return This builder for chaining.
      */
     public Builder setOrderStatusValue(int value) {
       orderStatus_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
     /**
-     * <code>.order.v1.OrderStatus order_status = 4;</code>
+     * <code>.order.v1.OrderStatus order_status = 3;</code>
      * @return The orderStatus.
      */
     @java.lang.Override
@@ -996,7 +860,7 @@ private static final long serialVersionUID = 0L;
       return result == null ? com.ecmsp.order.v1.OrderStatus.UNRECOGNIZED : result;
     }
     /**
-     * <code>.order.v1.OrderStatus order_status = 4;</code>
+     * <code>.order.v1.OrderStatus order_status = 3;</code>
      * @param value The orderStatus to set.
      * @return This builder for chaining.
      */
@@ -1004,17 +868,17 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000004;
       orderStatus_ = value.getNumber();
       onChanged();
       return this;
     }
     /**
-     * <code>.order.v1.OrderStatus order_status = 4;</code>
+     * <code>.order.v1.OrderStatus order_status = 3;</code>
      * @return This builder for chaining.
      */
     public Builder clearOrderStatus() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000004);
       orderStatus_ = 0;
       onChanged();
       return this;
@@ -1022,7 +886,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object date_ = "";
     /**
-     * <code>string date = 5;</code>
+     * <code>string date = 4;</code>
      * @return The date.
      */
     public java.lang.String getDate() {
@@ -1038,7 +902,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string date = 5;</code>
+     * <code>string date = 4;</code>
      * @return The bytes for date.
      */
     public com.google.protobuf.ByteString
@@ -1055,7 +919,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string date = 5;</code>
+     * <code>string date = 4;</code>
      * @param value The date to set.
      * @return This builder for chaining.
      */
@@ -1063,22 +927,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       date_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>string date = 5;</code>
+     * <code>string date = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearDate() {
       date_ = getDefaultInstance().getDate();
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
     /**
-     * <code>string date = 5;</code>
+     * <code>string date = 4;</code>
      * @param value The bytes for date to set.
      * @return This builder for chaining.
      */
@@ -1087,7 +951,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       date_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1095,9 +959,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.ecmsp.order.v1.OrderItemDetails> items_ =
       java.util.Collections.emptyList();
     private void ensureItemsIsMutable() {
-      if (!((bitField0_ & 0x00000020) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         items_ = new java.util.ArrayList<com.ecmsp.order.v1.OrderItemDetails>(items_);
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
        }
     }
 
@@ -1105,7 +969,7 @@ private static final long serialVersionUID = 0L;
         com.ecmsp.order.v1.OrderItemDetails, com.ecmsp.order.v1.OrderItemDetails.Builder, com.ecmsp.order.v1.OrderItemDetailsOrBuilder> itemsBuilder_;
 
     /**
-     * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public java.util.List<com.ecmsp.order.v1.OrderItemDetails> getItemsList() {
       if (itemsBuilder_ == null) {
@@ -1115,7 +979,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public int getItemsCount() {
       if (itemsBuilder_ == null) {
@@ -1125,7 +989,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public com.ecmsp.order.v1.OrderItemDetails getItems(int index) {
       if (itemsBuilder_ == null) {
@@ -1135,7 +999,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public Builder setItems(
         int index, com.ecmsp.order.v1.OrderItemDetails value) {
@@ -1152,7 +1016,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public Builder setItems(
         int index, com.ecmsp.order.v1.OrderItemDetails.Builder builderForValue) {
@@ -1166,7 +1030,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public Builder addItems(com.ecmsp.order.v1.OrderItemDetails value) {
       if (itemsBuilder_ == null) {
@@ -1182,7 +1046,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public Builder addItems(
         int index, com.ecmsp.order.v1.OrderItemDetails value) {
@@ -1199,7 +1063,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public Builder addItems(
         com.ecmsp.order.v1.OrderItemDetails.Builder builderForValue) {
@@ -1213,7 +1077,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public Builder addItems(
         int index, com.ecmsp.order.v1.OrderItemDetails.Builder builderForValue) {
@@ -1227,7 +1091,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public Builder addAllItems(
         java.lang.Iterable<? extends com.ecmsp.order.v1.OrderItemDetails> values) {
@@ -1242,12 +1106,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public Builder clearItems() {
       if (itemsBuilder_ == null) {
         items_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
       } else {
         itemsBuilder_.clear();
@@ -1255,7 +1119,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public Builder removeItems(int index) {
       if (itemsBuilder_ == null) {
@@ -1268,14 +1132,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public com.ecmsp.order.v1.OrderItemDetails.Builder getItemsBuilder(
         int index) {
       return getItemsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public com.ecmsp.order.v1.OrderItemDetailsOrBuilder getItemsOrBuilder(
         int index) {
@@ -1285,7 +1149,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public java.util.List<? extends com.ecmsp.order.v1.OrderItemDetailsOrBuilder> 
          getItemsOrBuilderList() {
@@ -1296,14 +1160,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public com.ecmsp.order.v1.OrderItemDetails.Builder addItemsBuilder() {
       return getItemsFieldBuilder().addBuilder(
           com.ecmsp.order.v1.OrderItemDetails.getDefaultInstance());
     }
     /**
-     * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public com.ecmsp.order.v1.OrderItemDetails.Builder addItemsBuilder(
         int index) {
@@ -1311,7 +1175,7 @@ private static final long serialVersionUID = 0L;
           index, com.ecmsp.order.v1.OrderItemDetails.getDefaultInstance());
     }
     /**
-     * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
      */
     public java.util.List<com.ecmsp.order.v1.OrderItemDetails.Builder> 
          getItemsBuilderList() {
@@ -1324,7 +1188,7 @@ private static final long serialVersionUID = 0L;
         itemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.ecmsp.order.v1.OrderItemDetails, com.ecmsp.order.v1.OrderItemDetails.Builder, com.ecmsp.order.v1.OrderItemDetailsOrBuilder>(
                 items_,
-                ((bitField0_ & 0x00000020) != 0),
+                ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
         items_ = null;

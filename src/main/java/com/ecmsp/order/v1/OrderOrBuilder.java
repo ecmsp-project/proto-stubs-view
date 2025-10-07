@@ -32,60 +32,48 @@ public interface OrderOrBuilder extends
       getReservationIdBytes();
 
   /**
-   * <code>string client_id = 3;</code>
-   * @return The clientId.
-   */
-  java.lang.String getClientId();
-  /**
-   * <code>string client_id = 3;</code>
-   * @return The bytes for clientId.
-   */
-  com.google.protobuf.ByteString
-      getClientIdBytes();
-
-  /**
-   * <code>.order.v1.OrderStatus order_status = 4;</code>
+   * <code>.order.v1.OrderStatus order_status = 3;</code>
    * @return The enum numeric value on the wire for orderStatus.
    */
   int getOrderStatusValue();
   /**
-   * <code>.order.v1.OrderStatus order_status = 4;</code>
+   * <code>.order.v1.OrderStatus order_status = 3;</code>
    * @return The orderStatus.
    */
   com.ecmsp.order.v1.OrderStatus getOrderStatus();
 
   /**
-   * <code>string date = 5;</code>
+   * <code>string date = 4;</code>
    * @return The date.
    */
   java.lang.String getDate();
   /**
-   * <code>string date = 5;</code>
+   * <code>string date = 4;</code>
    * @return The bytes for date.
    */
   com.google.protobuf.ByteString
       getDateBytes();
 
   /**
-   * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+   * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
    */
   java.util.List<com.ecmsp.order.v1.OrderItemDetails> 
       getItemsList();
   /**
-   * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+   * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
    */
   com.ecmsp.order.v1.OrderItemDetails getItems(int index);
   /**
-   * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+   * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
    */
   int getItemsCount();
   /**
-   * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+   * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
    */
   java.util.List<? extends com.ecmsp.order.v1.OrderItemDetailsOrBuilder> 
       getItemsOrBuilderList();
   /**
-   * <code>repeated .order.v1.OrderItemDetails items = 6;</code>
+   * <code>repeated .order.v1.OrderItemDetails items = 5;</code>
    */
   com.ecmsp.order.v1.OrderItemDetailsOrBuilder getItemsOrBuilder(
       int index);
