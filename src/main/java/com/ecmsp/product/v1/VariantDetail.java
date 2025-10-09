@@ -81,14 +81,29 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int PRICE_FIELD_NUMBER = 2;
-  private double price_ = 0D;
+  private com.google.type.Decimal price_;
   /**
-   * <code>double price = 2;</code>
+   * <code>.google.type.Decimal price = 2;</code>
+   * @return Whether the price field is set.
+   */
+  @java.lang.Override
+  public boolean hasPrice() {
+    return price_ != null;
+  }
+  /**
+   * <code>.google.type.Decimal price = 2;</code>
    * @return The price.
    */
   @java.lang.Override
-  public double getPrice() {
-    return price_;
+  public com.google.type.Decimal getPrice() {
+    return price_ == null ? com.google.type.Decimal.getDefaultInstance() : price_;
+  }
+  /**
+   * <code>.google.type.Decimal price = 2;</code>
+   */
+  @java.lang.Override
+  public com.google.type.DecimalOrBuilder getPriceOrBuilder() {
+    return price_ == null ? com.google.type.Decimal.getDefaultInstance() : price_;
   }
 
   public static final int STOCK_QUANTITY_FIELD_NUMBER = 3;
@@ -223,8 +238,8 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(variantId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, variantId_);
     }
-    if (java.lang.Double.doubleToRawLongBits(price_) != 0) {
-      output.writeDouble(2, price_);
+    if (price_ != null) {
+      output.writeMessage(2, getPrice());
     }
     if (stockQuantity_ != 0) {
       output.writeInt32(3, stockQuantity_);
@@ -250,9 +265,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(variantId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, variantId_);
     }
-    if (java.lang.Double.doubleToRawLongBits(price_) != 0) {
+    if (price_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(2, price_);
+        .computeMessageSize(2, getPrice());
     }
     if (stockQuantity_ != 0) {
       size += com.google.protobuf.CodedOutputStream
@@ -285,9 +300,11 @@ private static final long serialVersionUID = 0L;
 
     if (!getVariantId()
         .equals(other.getVariantId())) return false;
-    if (java.lang.Double.doubleToLongBits(getPrice())
-        != java.lang.Double.doubleToLongBits(
-            other.getPrice())) return false;
+    if (hasPrice() != other.hasPrice()) return false;
+    if (hasPrice()) {
+      if (!getPrice()
+          .equals(other.getPrice())) return false;
+    }
     if (getStockQuantity()
         != other.getStockQuantity()) return false;
     if (!getImageUrl()
@@ -312,9 +329,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + VARIANT_ID_FIELD_NUMBER;
     hash = (53 * hash) + getVariantId().hashCode();
-    hash = (37 * hash) + PRICE_FIELD_NUMBER;
-    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
-        java.lang.Double.doubleToLongBits(getPrice()));
+    if (hasPrice()) {
+      hash = (37 * hash) + PRICE_FIELD_NUMBER;
+      hash = (53 * hash) + getPrice().hashCode();
+    }
     hash = (37 * hash) + STOCK_QUANTITY_FIELD_NUMBER;
     hash = (53 * hash) + getStockQuantity();
     hash = (37 * hash) + IMAGE_URL_FIELD_NUMBER;
@@ -457,7 +475,11 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       variantId_ = "";
-      price_ = 0D;
+      price_ = null;
+      if (priceBuilder_ != null) {
+        priceBuilder_.dispose();
+        priceBuilder_ = null;
+      }
       stockQuantity_ = 0;
       imageUrl_ = "";
       description_ = "";
@@ -503,7 +525,9 @@ private static final long serialVersionUID = 0L;
         result.variantId_ = variantId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.price_ = price_;
+        result.price_ = priceBuilder_ == null
+            ? price_
+            : priceBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.stockQuantity_ = stockQuantity_;
@@ -570,8 +594,8 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (other.getPrice() != 0D) {
-        setPrice(other.getPrice());
+      if (other.hasPrice()) {
+        mergePrice(other.getPrice());
       }
       if (other.getStockQuantity() != 0) {
         setStockQuantity(other.getStockQuantity());
@@ -620,11 +644,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 17: {
-              price_ = input.readDouble();
+            case 18: {
+              input.readMessage(
+                  getPriceFieldBuilder().getBuilder(),
+                  extensionRegistry);
               bitField0_ |= 0x00000002;
               break;
-            } // case 17
+            } // case 18
             case 24: {
               stockQuantity_ = input.readInt32();
               bitField0_ |= 0x00000004;
@@ -736,36 +762,123 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private double price_ ;
+    private com.google.type.Decimal price_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.type.Decimal, com.google.type.Decimal.Builder, com.google.type.DecimalOrBuilder> priceBuilder_;
     /**
-     * <code>double price = 2;</code>
-     * @return The price.
+     * <code>.google.type.Decimal price = 2;</code>
+     * @return Whether the price field is set.
      */
-    @java.lang.Override
-    public double getPrice() {
-      return price_;
+    public boolean hasPrice() {
+      return ((bitField0_ & 0x00000002) != 0);
     }
     /**
-     * <code>double price = 2;</code>
-     * @param value The price to set.
-     * @return This builder for chaining.
+     * <code>.google.type.Decimal price = 2;</code>
+     * @return The price.
      */
-    public Builder setPrice(double value) {
-
-      price_ = value;
+    public com.google.type.Decimal getPrice() {
+      if (priceBuilder_ == null) {
+        return price_ == null ? com.google.type.Decimal.getDefaultInstance() : price_;
+      } else {
+        return priceBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.type.Decimal price = 2;</code>
+     */
+    public Builder setPrice(com.google.type.Decimal value) {
+      if (priceBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        price_ = value;
+      } else {
+        priceBuilder_.setMessage(value);
+      }
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>double price = 2;</code>
-     * @return This builder for chaining.
+     * <code>.google.type.Decimal price = 2;</code>
+     */
+    public Builder setPrice(
+        com.google.type.Decimal.Builder builderForValue) {
+      if (priceBuilder_ == null) {
+        price_ = builderForValue.build();
+      } else {
+        priceBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.type.Decimal price = 2;</code>
+     */
+    public Builder mergePrice(com.google.type.Decimal value) {
+      if (priceBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          price_ != null &&
+          price_ != com.google.type.Decimal.getDefaultInstance()) {
+          getPriceBuilder().mergeFrom(value);
+        } else {
+          price_ = value;
+        }
+      } else {
+        priceBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.type.Decimal price = 2;</code>
      */
     public Builder clearPrice() {
       bitField0_ = (bitField0_ & ~0x00000002);
-      price_ = 0D;
+      price_ = null;
+      if (priceBuilder_ != null) {
+        priceBuilder_.dispose();
+        priceBuilder_ = null;
+      }
       onChanged();
       return this;
+    }
+    /**
+     * <code>.google.type.Decimal price = 2;</code>
+     */
+    public com.google.type.Decimal.Builder getPriceBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return getPriceFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.type.Decimal price = 2;</code>
+     */
+    public com.google.type.DecimalOrBuilder getPriceOrBuilder() {
+      if (priceBuilder_ != null) {
+        return priceBuilder_.getMessageOrBuilder();
+      } else {
+        return price_ == null ?
+            com.google.type.Decimal.getDefaultInstance() : price_;
+      }
+    }
+    /**
+     * <code>.google.type.Decimal price = 2;</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.type.Decimal, com.google.type.Decimal.Builder, com.google.type.DecimalOrBuilder> 
+        getPriceFieldBuilder() {
+      if (priceBuilder_ == null) {
+        priceBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.type.Decimal, com.google.type.Decimal.Builder, com.google.type.DecimalOrBuilder>(
+                getPrice(),
+                getParentForChildren(),
+                isClean());
+        price_ = null;
+      }
+      return priceBuilder_;
     }
 
     private int stockQuantity_ ;

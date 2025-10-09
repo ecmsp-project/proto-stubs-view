@@ -39,15 +39,11 @@ private static final long serialVersionUID = 0L;
             com.ecmsp.product.v1.reservation.v1.RemoveVariantsReservationResponse.class, com.ecmsp.product.v1.reservation.v1.RemoveVariantsReservationResponse.Builder.class);
   }
 
-  public static final int MESSAGE_FIELD_NUMBER = 2;
+  public static final int MESSAGE_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object message_ = "";
   /**
-   * <pre>
-   *TODO: shouldn't be 1 here?
-   * </pre>
-   *
-   * <code>string message = 2;</code>
+   * <code>string message = 1;</code>
    * @return The message.
    */
   @java.lang.Override
@@ -64,11 +60,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   *TODO: shouldn't be 1 here?
-   * </pre>
-   *
-   * <code>string message = 2;</code>
+   * <code>string message = 1;</code>
    * @return The bytes for message.
    */
   @java.lang.Override
@@ -101,7 +93,7 @@ private static final long serialVersionUID = 0L;
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, message_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, message_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -113,7 +105,7 @@ private static final long serialVersionUID = 0L;
 
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(message_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, message_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, message_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -390,11 +382,11 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 18: {
+            case 10: {
               message_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
-            } // case 18
+            } // case 10
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -414,11 +406,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object message_ = "";
     /**
-     * <pre>
-     *TODO: shouldn't be 1 here?
-     * </pre>
-     *
-     * <code>string message = 2;</code>
+     * <code>string message = 1;</code>
      * @return The message.
      */
     public java.lang.String getMessage() {
@@ -434,11 +422,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *TODO: shouldn't be 1 here?
-     * </pre>
-     *
-     * <code>string message = 2;</code>
+     * <code>string message = 1;</code>
      * @return The bytes for message.
      */
     public com.google.protobuf.ByteString
@@ -455,11 +439,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     *TODO: shouldn't be 1 here?
-     * </pre>
-     *
-     * <code>string message = 2;</code>
+     * <code>string message = 1;</code>
      * @param value The message to set.
      * @return This builder for chaining.
      */
@@ -472,11 +452,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *TODO: shouldn't be 1 here?
-     * </pre>
-     *
-     * <code>string message = 2;</code>
+     * <code>string message = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearMessage() {
@@ -486,11 +462,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     *TODO: shouldn't be 1 here?
-     * </pre>
-     *
-     * <code>string message = 2;</code>
+     * <code>string message = 1;</code>
      * @param value The bytes for message to set.
      * @return This builder for chaining.
      */

@@ -4,6 +4,10 @@
 package com.ecmsp.product.v1;
 
 /**
+ * <pre>
+ * Returns the products and one of its variant, as an representative on the website
+ * </pre>
+ *
  * Protobuf type {@code product.v1.GetProductsByQueryResponse}
  */
 public final class GetProductsByQueryResponse extends
@@ -290,6 +294,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Returns the products and one of its variant, as an representative on the website
+   * </pre>
+   *
    * Protobuf type {@code product.v1.GetProductsByQueryResponse}
    */
   public static final class Builder extends

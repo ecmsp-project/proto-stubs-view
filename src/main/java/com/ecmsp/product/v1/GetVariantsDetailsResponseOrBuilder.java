@@ -3,8 +3,8 @@
 
 package com.ecmsp.product.v1;
 
-public interface GetProductDetailsResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:product.v1.GetProductDetailsResponse)
+public interface GetVariantsDetailsResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:product.v1.GetVariantsDetailsResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**

@@ -76,7 +76,7 @@ public final class VariantReservationProto {
       "uested_quantity\030\002 \001(\005\022\032\n\022available_quant" +
       "ity\030\003 \001(\005\":\n RemoveVariantsReservationRe" +
       "quest\022\026\n\016reservation_id\030\001 \001(\t\"4\n!RemoveV" +
-      "ariantsReservationResponse\022\017\n\007message\030\002 " +
+      "ariantsReservationResponse\022\017\n\007message\030\001 " +
       "\001(\t\"7\n\035GetVariantsReservationRequest\022\026\n\016" +
       "reservation_id\030\001 \001(\t\"[\n\036GetVariantsReser" +
       "vationResponse\0229\n\005items\030\001 \003(\0132*.product." +

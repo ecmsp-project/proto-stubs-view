@@ -4,6 +4,10 @@
 package com.ecmsp.product.v1.reservation.v1;
 
 /**
+ * <pre>
+ * Message indicates the number of missing items
+ * </pre>
+ *
  * Protobuf type {@code product.v1.reservation.v1.FailedReservationVariant}
  */
 public final class FailedReservationVariant extends
@@ -279,6 +283,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   * Message indicates the number of missing items
+   * </pre>
+   *
    * Protobuf type {@code product.v1.reservation.v1.FailedReservationVariant}
    */
   public static final class Builder extends

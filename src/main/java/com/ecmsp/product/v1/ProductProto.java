@@ -25,15 +25,15 @@ public final class ProductProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_product_v1_GetProductsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_product_v1_GetProductDetailsRequest_descriptor;
+    internal_static_product_v1_GetVariantsDetailsRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_product_v1_GetProductDetailsRequest_fieldAccessorTable;
+      internal_static_product_v1_GetVariantsDetailsRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_product_v1_GetProductDetailsResponse_descriptor;
+    internal_static_product_v1_GetVariantsDetailsResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_product_v1_GetProductDetailsResponse_fieldAccessorTable;
+      internal_static_product_v1_GetVariantsDetailsResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_product_v1_GetProductsByQueryRequest_descriptor;
   static final 
@@ -64,34 +64,36 @@ public final class ProductProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\030product/v1/product.proto\022\nproduct.v1\032\034" +
-      "google/protobuf/struct.proto\"P\n\022GetProdu" +
-      "ctsRequest\022\023\n\013category_id\030\001 \001(\t\022\021\n\tpage_" +
-      "size\030\002 \001(\005\022\022\n\npage_token\030\003 \001(\t\"r\n\023GetPro" +
-      "ductsResponse\022B\n\027products_representation" +
-      "\030\001 \003(\0132!.product.v1.ProductRepresentatio" +
-      "n\022\027\n\017next_page_token\030\002 \001(\t\".\n\030GetProduct" +
-      "DetailsRequest\022\022\n\nproduct_id\030\001 \001(\t\"H\n\031Ge" +
-      "tProductDetailsResponse\022+\n\010variants\030\001 \003(" +
-      "\0132\031.product.v1.VariantDetail\"f\n\031GetProdu" +
-      "ctsByQueryRequest\022\r\n\005query\030\001 \001(\t\022\023\n\013cate" +
-      "gory_id\030\002 \001(\t\022\021\n\tpage_size\030\003 \001(\005\022\022\n\npage" +
-      "_token\030\004 \001(\t\"y\n\032GetProductsByQueryRespon" +
-      "se\022B\n\027products_representation\030\001 \003(\0132!.pr" +
-      "oduct.v1.ProductRepresentation\022\027\n\017next_p" +
-      "age_token\030\002 \001(\t\"W\n\025ProductRepresentation" +
-      "\022\022\n\nproduct_id\030\001 \001(\t\022*\n\007variant\030\002 \001(\0132\031." +
-      "product.v1.VariantDetail\"\252\001\n\rVariantDeta" +
-      "il\022\022\n\nvariant_id\030\001 \001(\t\022\r\n\005price\030\002 \001(\001\022\026\n" +
-      "\016stock_quantity\030\003 \001(\005\022\021\n\timage_url\030\004 \001(\t" +
-      "\022\023\n\013description\030\005 \001(\t\0226\n\025additional_prop" +
-      "erties\030\006 \001(\0132\027.google.protobuf.StructB&\n" +
-      "\024com.ecmsp.product.v1B\014ProductProtoP\001b\006p" +
-      "roto3"
+      "google/protobuf/struct.proto\032\031google/typ" +
+      "e/decimal.proto\"P\n\022GetProductsRequest\022\023\n" +
+      "\013category_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\005\022\022\n" +
+      "\npage_token\030\003 \001(\t\"r\n\023GetProductsResponse" +
+      "\022B\n\027products_representation\030\001 \003(\0132!.prod" +
+      "uct.v1.ProductRepresentation\022\027\n\017next_pag" +
+      "e_token\030\002 \001(\t\"/\n\031GetVariantsDetailsReque" +
+      "st\022\022\n\nproduct_id\030\001 \001(\t\"I\n\032GetVariantsDet" +
+      "ailsResponse\022+\n\010variants\030\001 \003(\0132\031.product" +
+      ".v1.VariantDetail\"f\n\031GetProductsByQueryR" +
+      "equest\022\r\n\005query\030\001 \001(\t\022\023\n\013category_id\030\002 \001" +
+      "(\t\022\021\n\tpage_size\030\003 \001(\005\022\022\n\npage_token\030\004 \001(" +
+      "\t\"y\n\032GetProductsByQueryResponse\022B\n\027produ" +
+      "cts_representation\030\001 \003(\0132!.product.v1.Pr" +
+      "oductRepresentation\022\027\n\017next_page_token\030\002" +
+      " \001(\t\"W\n\025ProductRepresentation\022\022\n\nproduct" +
+      "_id\030\001 \001(\t\022*\n\007variant\030\002 \001(\0132\031.product.v1." +
+      "VariantDetail\"\300\001\n\rVariantDetail\022\022\n\nvaria" +
+      "nt_id\030\001 \001(\t\022#\n\005price\030\002 \001(\0132\024.google.type" +
+      ".Decimal\022\026\n\016stock_quantity\030\003 \001(\005\022\021\n\timag" +
+      "e_url\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\0226\n\025addi" +
+      "tional_properties\030\006 \001(\0132\027.google.protobu" +
+      "f.StructB&\n\024com.ecmsp.product.v1B\014Produc" +
+      "tProtoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.protobuf.StructProto.getDescriptor(),
+          com.google.type.DecimalProto.getDescriptor(),
         });
     internal_static_product_v1_GetProductsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -105,17 +107,17 @@ public final class ProductProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_product_v1_GetProductsResponse_descriptor,
         new java.lang.String[] { "ProductsRepresentation", "NextPageToken", });
-    internal_static_product_v1_GetProductDetailsRequest_descriptor =
+    internal_static_product_v1_GetVariantsDetailsRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_product_v1_GetProductDetailsRequest_fieldAccessorTable = new
+    internal_static_product_v1_GetVariantsDetailsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_product_v1_GetProductDetailsRequest_descriptor,
+        internal_static_product_v1_GetVariantsDetailsRequest_descriptor,
         new java.lang.String[] { "ProductId", });
-    internal_static_product_v1_GetProductDetailsResponse_descriptor =
+    internal_static_product_v1_GetVariantsDetailsResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_product_v1_GetProductDetailsResponse_fieldAccessorTable = new
+    internal_static_product_v1_GetVariantsDetailsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_product_v1_GetProductDetailsResponse_descriptor,
+        internal_static_product_v1_GetVariantsDetailsResponse_descriptor,
         new java.lang.String[] { "Variants", });
     internal_static_product_v1_GetProductsByQueryRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
@@ -142,6 +144,7 @@ public final class ProductProto {
         internal_static_product_v1_VariantDetail_descriptor,
         new java.lang.String[] { "VariantId", "Price", "StockQuantity", "ImageUrl", "Description", "AdditionalProperties", });
     com.google.protobuf.StructProto.getDescriptor();
+    com.google.type.DecimalProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

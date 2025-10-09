@@ -20,10 +20,19 @@ public interface VariantDetailOrBuilder extends
       getVariantIdBytes();
 
   /**
-   * <code>double price = 2;</code>
+   * <code>.google.type.Decimal price = 2;</code>
+   * @return Whether the price field is set.
+   */
+  boolean hasPrice();
+  /**
+   * <code>.google.type.Decimal price = 2;</code>
    * @return The price.
    */
-  double getPrice();
+  com.google.type.Decimal getPrice();
+  /**
+   * <code>.google.type.Decimal price = 2;</code>
+   */
+  com.google.type.DecimalOrBuilder getPriceOrBuilder();
 
   /**
    * <code>int32 stock_quantity = 3;</code>
