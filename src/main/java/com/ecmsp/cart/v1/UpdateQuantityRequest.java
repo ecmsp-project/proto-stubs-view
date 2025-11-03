@@ -4,64 +4,64 @@
 package com.ecmsp.cart.v1;
 
 /**
- * Protobuf type {@code cart.v1.UpdateQuantitiesResponse}
+ * Protobuf type {@code cart.v1.UpdateQuantityRequest}
  */
-public final class UpdateQuantitiesResponse extends
+public final class UpdateQuantityRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:cart.v1.UpdateQuantitiesResponse)
-    UpdateQuantitiesResponseOrBuilder {
+    // @@protoc_insertion_point(message_implements:cart.v1.UpdateQuantityRequest)
+    UpdateQuantityRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use UpdateQuantitiesResponse.newBuilder() to construct.
-  private UpdateQuantitiesResponse(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use UpdateQuantityRequest.newBuilder() to construct.
+  private UpdateQuantityRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private UpdateQuantitiesResponse() {
+  private UpdateQuantityRequest() {
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new UpdateQuantitiesResponse();
+    return new UpdateQuantityRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.ecmsp.cart.v1.CartServiceProto.internal_static_cart_v1_UpdateQuantitiesResponse_descriptor;
+    return com.ecmsp.cart.v1.CartServiceProto.internal_static_cart_v1_UpdateQuantityRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.ecmsp.cart.v1.CartServiceProto.internal_static_cart_v1_UpdateQuantitiesResponse_fieldAccessorTable
+    return com.ecmsp.cart.v1.CartServiceProto.internal_static_cart_v1_UpdateQuantityRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            com.ecmsp.cart.v1.UpdateQuantitiesResponse.class, com.ecmsp.cart.v1.UpdateQuantitiesResponse.Builder.class);
+            com.ecmsp.cart.v1.UpdateQuantityRequest.class, com.ecmsp.cart.v1.UpdateQuantityRequest.Builder.class);
   }
 
-  public static final int CART_FIELD_NUMBER = 1;
-  private com.ecmsp.cart.v1.Cart cart_;
+  public static final int PRODUCT_FIELD_NUMBER = 1;
+  private com.ecmsp.cart.v1.ProductRequest product_;
   /**
-   * <code>.cart.v1.Cart cart = 1;</code>
-   * @return Whether the cart field is set.
+   * <code>.cart.v1.ProductRequest product = 1;</code>
+   * @return Whether the product field is set.
    */
   @java.lang.Override
-  public boolean hasCart() {
-    return cart_ != null;
+  public boolean hasProduct() {
+    return product_ != null;
   }
   /**
-   * <code>.cart.v1.Cart cart = 1;</code>
-   * @return The cart.
+   * <code>.cart.v1.ProductRequest product = 1;</code>
+   * @return The product.
    */
   @java.lang.Override
-  public com.ecmsp.cart.v1.Cart getCart() {
-    return cart_ == null ? com.ecmsp.cart.v1.Cart.getDefaultInstance() : cart_;
+  public com.ecmsp.cart.v1.ProductRequest getProduct() {
+    return product_ == null ? com.ecmsp.cart.v1.ProductRequest.getDefaultInstance() : product_;
   }
   /**
-   * <code>.cart.v1.Cart cart = 1;</code>
+   * <code>.cart.v1.ProductRequest product = 1;</code>
    */
   @java.lang.Override
-  public com.ecmsp.cart.v1.CartOrBuilder getCartOrBuilder() {
-    return cart_ == null ? com.ecmsp.cart.v1.Cart.getDefaultInstance() : cart_;
+  public com.ecmsp.cart.v1.ProductRequestOrBuilder getProductOrBuilder() {
+    return product_ == null ? com.ecmsp.cart.v1.ProductRequest.getDefaultInstance() : product_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -78,8 +78,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (cart_ != null) {
-      output.writeMessage(1, getCart());
+    if (product_ != null) {
+      output.writeMessage(1, getProduct());
     }
     getUnknownFields().writeTo(output);
   }
@@ -90,9 +90,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (cart_ != null) {
+    if (product_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getCart());
+        .computeMessageSize(1, getProduct());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -104,15 +104,15 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof com.ecmsp.cart.v1.UpdateQuantitiesResponse)) {
+    if (!(obj instanceof com.ecmsp.cart.v1.UpdateQuantityRequest)) {
       return super.equals(obj);
     }
-    com.ecmsp.cart.v1.UpdateQuantitiesResponse other = (com.ecmsp.cart.v1.UpdateQuantitiesResponse) obj;
+    com.ecmsp.cart.v1.UpdateQuantityRequest other = (com.ecmsp.cart.v1.UpdateQuantityRequest) obj;
 
-    if (hasCart() != other.hasCart()) return false;
-    if (hasCart()) {
-      if (!getCart()
-          .equals(other.getCart())) return false;
+    if (hasProduct() != other.hasProduct()) return false;
+    if (hasProduct()) {
+      if (!getProduct()
+          .equals(other.getProduct())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -125,53 +125,53 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasCart()) {
-      hash = (37 * hash) + CART_FIELD_NUMBER;
-      hash = (53 * hash) + getCart().hashCode();
+    if (hasProduct()) {
+      hash = (37 * hash) + PRODUCT_FIELD_NUMBER;
+      hash = (53 * hash) + getProduct().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static com.ecmsp.cart.v1.UpdateQuantitiesResponse parseFrom(
+  public static com.ecmsp.cart.v1.UpdateQuantityRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.ecmsp.cart.v1.UpdateQuantitiesResponse parseFrom(
+  public static com.ecmsp.cart.v1.UpdateQuantityRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.ecmsp.cart.v1.UpdateQuantitiesResponse parseFrom(
+  public static com.ecmsp.cart.v1.UpdateQuantityRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.ecmsp.cart.v1.UpdateQuantitiesResponse parseFrom(
+  public static com.ecmsp.cart.v1.UpdateQuantityRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.ecmsp.cart.v1.UpdateQuantitiesResponse parseFrom(byte[] data)
+  public static com.ecmsp.cart.v1.UpdateQuantityRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static com.ecmsp.cart.v1.UpdateQuantitiesResponse parseFrom(
+  public static com.ecmsp.cart.v1.UpdateQuantityRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static com.ecmsp.cart.v1.UpdateQuantitiesResponse parseFrom(java.io.InputStream input)
+  public static com.ecmsp.cart.v1.UpdateQuantityRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.ecmsp.cart.v1.UpdateQuantitiesResponse parseFrom(
+  public static com.ecmsp.cart.v1.UpdateQuantityRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -179,26 +179,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static com.ecmsp.cart.v1.UpdateQuantitiesResponse parseDelimitedFrom(java.io.InputStream input)
+  public static com.ecmsp.cart.v1.UpdateQuantityRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static com.ecmsp.cart.v1.UpdateQuantitiesResponse parseDelimitedFrom(
+  public static com.ecmsp.cart.v1.UpdateQuantityRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static com.ecmsp.cart.v1.UpdateQuantitiesResponse parseFrom(
+  public static com.ecmsp.cart.v1.UpdateQuantityRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static com.ecmsp.cart.v1.UpdateQuantitiesResponse parseFrom(
+  public static com.ecmsp.cart.v1.UpdateQuantityRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -211,7 +211,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(com.ecmsp.cart.v1.UpdateQuantitiesResponse prototype) {
+  public static Builder newBuilder(com.ecmsp.cart.v1.UpdateQuantityRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -227,26 +227,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code cart.v1.UpdateQuantitiesResponse}
+   * Protobuf type {@code cart.v1.UpdateQuantityRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:cart.v1.UpdateQuantitiesResponse)
-      com.ecmsp.cart.v1.UpdateQuantitiesResponseOrBuilder {
+      // @@protoc_insertion_point(builder_implements:cart.v1.UpdateQuantityRequest)
+      com.ecmsp.cart.v1.UpdateQuantityRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.ecmsp.cart.v1.CartServiceProto.internal_static_cart_v1_UpdateQuantitiesResponse_descriptor;
+      return com.ecmsp.cart.v1.CartServiceProto.internal_static_cart_v1_UpdateQuantityRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.ecmsp.cart.v1.CartServiceProto.internal_static_cart_v1_UpdateQuantitiesResponse_fieldAccessorTable
+      return com.ecmsp.cart.v1.CartServiceProto.internal_static_cart_v1_UpdateQuantityRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              com.ecmsp.cart.v1.UpdateQuantitiesResponse.class, com.ecmsp.cart.v1.UpdateQuantitiesResponse.Builder.class);
+              com.ecmsp.cart.v1.UpdateQuantityRequest.class, com.ecmsp.cart.v1.UpdateQuantityRequest.Builder.class);
     }
 
-    // Construct using com.ecmsp.cart.v1.UpdateQuantitiesResponse.newBuilder()
+    // Construct using com.ecmsp.cart.v1.UpdateQuantityRequest.newBuilder()
     private Builder() {
 
     }
@@ -260,10 +260,10 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      cart_ = null;
-      if (cartBuilder_ != null) {
-        cartBuilder_.dispose();
-        cartBuilder_ = null;
+      product_ = null;
+      if (productBuilder_ != null) {
+        productBuilder_.dispose();
+        productBuilder_ = null;
       }
       return this;
     }
@@ -271,17 +271,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.ecmsp.cart.v1.CartServiceProto.internal_static_cart_v1_UpdateQuantitiesResponse_descriptor;
+      return com.ecmsp.cart.v1.CartServiceProto.internal_static_cart_v1_UpdateQuantityRequest_descriptor;
     }
 
     @java.lang.Override
-    public com.ecmsp.cart.v1.UpdateQuantitiesResponse getDefaultInstanceForType() {
-      return com.ecmsp.cart.v1.UpdateQuantitiesResponse.getDefaultInstance();
+    public com.ecmsp.cart.v1.UpdateQuantityRequest getDefaultInstanceForType() {
+      return com.ecmsp.cart.v1.UpdateQuantityRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public com.ecmsp.cart.v1.UpdateQuantitiesResponse build() {
-      com.ecmsp.cart.v1.UpdateQuantitiesResponse result = buildPartial();
+    public com.ecmsp.cart.v1.UpdateQuantityRequest build() {
+      com.ecmsp.cart.v1.UpdateQuantityRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -289,19 +289,19 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public com.ecmsp.cart.v1.UpdateQuantitiesResponse buildPartial() {
-      com.ecmsp.cart.v1.UpdateQuantitiesResponse result = new com.ecmsp.cart.v1.UpdateQuantitiesResponse(this);
+    public com.ecmsp.cart.v1.UpdateQuantityRequest buildPartial() {
+      com.ecmsp.cart.v1.UpdateQuantityRequest result = new com.ecmsp.cart.v1.UpdateQuantityRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(com.ecmsp.cart.v1.UpdateQuantitiesResponse result) {
+    private void buildPartial0(com.ecmsp.cart.v1.UpdateQuantityRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.cart_ = cartBuilder_ == null
-            ? cart_
-            : cartBuilder_.build();
+        result.product_ = productBuilder_ == null
+            ? product_
+            : productBuilder_.build();
       }
     }
 
@@ -339,18 +339,18 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof com.ecmsp.cart.v1.UpdateQuantitiesResponse) {
-        return mergeFrom((com.ecmsp.cart.v1.UpdateQuantitiesResponse)other);
+      if (other instanceof com.ecmsp.cart.v1.UpdateQuantityRequest) {
+        return mergeFrom((com.ecmsp.cart.v1.UpdateQuantityRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(com.ecmsp.cart.v1.UpdateQuantitiesResponse other) {
-      if (other == com.ecmsp.cart.v1.UpdateQuantitiesResponse.getDefaultInstance()) return this;
-      if (other.hasCart()) {
-        mergeCart(other.getCart());
+    public Builder mergeFrom(com.ecmsp.cart.v1.UpdateQuantityRequest other) {
+      if (other == com.ecmsp.cart.v1.UpdateQuantityRequest.getDefaultInstance()) return this;
+      if (other.hasProduct()) {
+        mergeProduct(other.getProduct());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -380,7 +380,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               input.readMessage(
-                  getCartFieldBuilder().getBuilder(),
+                  getProductFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000001;
               break;
@@ -402,123 +402,123 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.ecmsp.cart.v1.Cart cart_;
+    private com.ecmsp.cart.v1.ProductRequest product_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.ecmsp.cart.v1.Cart, com.ecmsp.cart.v1.Cart.Builder, com.ecmsp.cart.v1.CartOrBuilder> cartBuilder_;
+        com.ecmsp.cart.v1.ProductRequest, com.ecmsp.cart.v1.ProductRequest.Builder, com.ecmsp.cart.v1.ProductRequestOrBuilder> productBuilder_;
     /**
-     * <code>.cart.v1.Cart cart = 1;</code>
-     * @return Whether the cart field is set.
+     * <code>.cart.v1.ProductRequest product = 1;</code>
+     * @return Whether the product field is set.
      */
-    public boolean hasCart() {
+    public boolean hasProduct() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.cart.v1.Cart cart = 1;</code>
-     * @return The cart.
+     * <code>.cart.v1.ProductRequest product = 1;</code>
+     * @return The product.
      */
-    public com.ecmsp.cart.v1.Cart getCart() {
-      if (cartBuilder_ == null) {
-        return cart_ == null ? com.ecmsp.cart.v1.Cart.getDefaultInstance() : cart_;
+    public com.ecmsp.cart.v1.ProductRequest getProduct() {
+      if (productBuilder_ == null) {
+        return product_ == null ? com.ecmsp.cart.v1.ProductRequest.getDefaultInstance() : product_;
       } else {
-        return cartBuilder_.getMessage();
+        return productBuilder_.getMessage();
       }
     }
     /**
-     * <code>.cart.v1.Cart cart = 1;</code>
+     * <code>.cart.v1.ProductRequest product = 1;</code>
      */
-    public Builder setCart(com.ecmsp.cart.v1.Cart value) {
-      if (cartBuilder_ == null) {
+    public Builder setProduct(com.ecmsp.cart.v1.ProductRequest value) {
+      if (productBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        cart_ = value;
+        product_ = value;
       } else {
-        cartBuilder_.setMessage(value);
+        productBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.cart.v1.Cart cart = 1;</code>
+     * <code>.cart.v1.ProductRequest product = 1;</code>
      */
-    public Builder setCart(
-        com.ecmsp.cart.v1.Cart.Builder builderForValue) {
-      if (cartBuilder_ == null) {
-        cart_ = builderForValue.build();
+    public Builder setProduct(
+        com.ecmsp.cart.v1.ProductRequest.Builder builderForValue) {
+      if (productBuilder_ == null) {
+        product_ = builderForValue.build();
       } else {
-        cartBuilder_.setMessage(builderForValue.build());
+        productBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.cart.v1.Cart cart = 1;</code>
+     * <code>.cart.v1.ProductRequest product = 1;</code>
      */
-    public Builder mergeCart(com.ecmsp.cart.v1.Cart value) {
-      if (cartBuilder_ == null) {
+    public Builder mergeProduct(com.ecmsp.cart.v1.ProductRequest value) {
+      if (productBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
-          cart_ != null &&
-          cart_ != com.ecmsp.cart.v1.Cart.getDefaultInstance()) {
-          getCartBuilder().mergeFrom(value);
+          product_ != null &&
+          product_ != com.ecmsp.cart.v1.ProductRequest.getDefaultInstance()) {
+          getProductBuilder().mergeFrom(value);
         } else {
-          cart_ = value;
+          product_ = value;
         }
       } else {
-        cartBuilder_.mergeFrom(value);
+        productBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.cart.v1.Cart cart = 1;</code>
+     * <code>.cart.v1.ProductRequest product = 1;</code>
      */
-    public Builder clearCart() {
+    public Builder clearProduct() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      cart_ = null;
-      if (cartBuilder_ != null) {
-        cartBuilder_.dispose();
-        cartBuilder_ = null;
+      product_ = null;
+      if (productBuilder_ != null) {
+        productBuilder_.dispose();
+        productBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
-     * <code>.cart.v1.Cart cart = 1;</code>
+     * <code>.cart.v1.ProductRequest product = 1;</code>
      */
-    public com.ecmsp.cart.v1.Cart.Builder getCartBuilder() {
+    public com.ecmsp.cart.v1.ProductRequest.Builder getProductBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
-      return getCartFieldBuilder().getBuilder();
+      return getProductFieldBuilder().getBuilder();
     }
     /**
-     * <code>.cart.v1.Cart cart = 1;</code>
+     * <code>.cart.v1.ProductRequest product = 1;</code>
      */
-    public com.ecmsp.cart.v1.CartOrBuilder getCartOrBuilder() {
-      if (cartBuilder_ != null) {
-        return cartBuilder_.getMessageOrBuilder();
+    public com.ecmsp.cart.v1.ProductRequestOrBuilder getProductOrBuilder() {
+      if (productBuilder_ != null) {
+        return productBuilder_.getMessageOrBuilder();
       } else {
-        return cart_ == null ?
-            com.ecmsp.cart.v1.Cart.getDefaultInstance() : cart_;
+        return product_ == null ?
+            com.ecmsp.cart.v1.ProductRequest.getDefaultInstance() : product_;
       }
     }
     /**
-     * <code>.cart.v1.Cart cart = 1;</code>
+     * <code>.cart.v1.ProductRequest product = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.ecmsp.cart.v1.Cart, com.ecmsp.cart.v1.Cart.Builder, com.ecmsp.cart.v1.CartOrBuilder> 
-        getCartFieldBuilder() {
-      if (cartBuilder_ == null) {
-        cartBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.ecmsp.cart.v1.Cart, com.ecmsp.cart.v1.Cart.Builder, com.ecmsp.cart.v1.CartOrBuilder>(
-                getCart(),
+        com.ecmsp.cart.v1.ProductRequest, com.ecmsp.cart.v1.ProductRequest.Builder, com.ecmsp.cart.v1.ProductRequestOrBuilder> 
+        getProductFieldBuilder() {
+      if (productBuilder_ == null) {
+        productBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.ecmsp.cart.v1.ProductRequest, com.ecmsp.cart.v1.ProductRequest.Builder, com.ecmsp.cart.v1.ProductRequestOrBuilder>(
+                getProduct(),
                 getParentForChildren(),
                 isClean());
-        cart_ = null;
+        product_ = null;
       }
-      return cartBuilder_;
+      return productBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
@@ -533,23 +533,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:cart.v1.UpdateQuantitiesResponse)
+    // @@protoc_insertion_point(builder_scope:cart.v1.UpdateQuantityRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:cart.v1.UpdateQuantitiesResponse)
-  private static final com.ecmsp.cart.v1.UpdateQuantitiesResponse DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:cart.v1.UpdateQuantityRequest)
+  private static final com.ecmsp.cart.v1.UpdateQuantityRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new com.ecmsp.cart.v1.UpdateQuantitiesResponse();
+    DEFAULT_INSTANCE = new com.ecmsp.cart.v1.UpdateQuantityRequest();
   }
 
-  public static com.ecmsp.cart.v1.UpdateQuantitiesResponse getDefaultInstance() {
+  public static com.ecmsp.cart.v1.UpdateQuantityRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<UpdateQuantitiesResponse>
-      PARSER = new com.google.protobuf.AbstractParser<UpdateQuantitiesResponse>() {
+  private static final com.google.protobuf.Parser<UpdateQuantityRequest>
+      PARSER = new com.google.protobuf.AbstractParser<UpdateQuantityRequest>() {
     @java.lang.Override
-    public UpdateQuantitiesResponse parsePartialFrom(
+    public UpdateQuantityRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -568,17 +568,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<UpdateQuantitiesResponse> parser() {
+  public static com.google.protobuf.Parser<UpdateQuantityRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<UpdateQuantitiesResponse> getParserForType() {
+  public com.google.protobuf.Parser<UpdateQuantityRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.ecmsp.cart.v1.UpdateQuantitiesResponse getDefaultInstanceForType() {
+  public com.ecmsp.cart.v1.UpdateQuantityRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

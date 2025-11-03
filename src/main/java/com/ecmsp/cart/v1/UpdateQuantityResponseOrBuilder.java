@@ -3,8 +3,8 @@
 
 package com.ecmsp.cart.v1;
 
-public interface UpdateQuantitiesResponseOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:cart.v1.UpdateQuantitiesResponse)
+public interface UpdateQuantityResponseOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:cart.v1.UpdateQuantityResponse)
     com.google.protobuf.MessageOrBuilder {
 
   /**

@@ -30,20 +30,15 @@ public final class CartServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cart_v1_SubtractProductRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_cart_v1_DeleteProductFromCartRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_cart_v1_DeleteProductFromCartRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cart_v1_DeleteCartRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cart_v1_DeleteCartRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_cart_v1_CreateOrderRequest_descriptor;
+    internal_static_cart_v1_UpdateQuantityRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_cart_v1_CreateOrderRequest_fieldAccessorTable;
+      internal_static_cart_v1_UpdateQuantityRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cart_v1_GetCartResponse_descriptor;
   static final 
@@ -70,10 +65,10 @@ public final class CartServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cart_v1_DeleteCartResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_cart_v1_UpdateQuantitiesResponse_descriptor;
+    internal_static_cart_v1_UpdateQuantityResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_cart_v1_UpdateQuantitiesResponse_fieldAccessorTable;
+      internal_static_cart_v1_UpdateQuantityResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cart_v1_CreateOrderResponse_descriptor;
   static final 
@@ -93,35 +88,32 @@ public final class CartServiceProto {
       "ddProductRequest\022(\n\007product\030\001 \001(\0132\027.cart" +
       ".v1.ProductRequest\"B\n\026SubtractProductReq" +
       "uest\022(\n\007product\030\001 \001(\0132\027.cart.v1.ProductR" +
-      "equest\"U\n\034DeleteProductFromCartRequest\0225" +
-      "\n\016delete_request\030\001 \001(\0132\035.cart.v1.DeleteP" +
-      "roductRequest\"\023\n\021DeleteCartRequest\"\024\n\022Cr" +
-      "eateOrderRequest\".\n\017GetCartResponse\022\033\n\004c" +
-      "art\030\001 \001(\0132\r.cart.v1.Cart\"1\n\022AddProductRe" +
-      "sponse\022\033\n\004cart\030\001 \001(\0132\r.cart.v1.Cart\"5\n\027S" +
-      "ubtractProductResponse\022\032\n\003cat\030\001 \001(\0132\r.ca" +
-      "rt.v1.Cart\"4\n\025DeleteProductResponse\022\033\n\004c" +
-      "art\030\001 \001(\0132\r.cart.v1.Cart\"6\n\022DeleteCartRe" +
-      "sponse\022\017\n\007success\030\001 \001(\010\022\017\n\007message\030\002 \001(\t" +
-      "\"7\n\030UpdateQuantitiesResponse\022\033\n\004cart\030\001 \001" +
-      "(\0132\r.cart.v1.Cart\"H\n\023CreateOrderResponse" +
-      "\0221\n\013reservation\030\001 \001(\0132\034.cart.v1.Reservat" +
-      "ionResponse2\233\004\n\013CartService\022<\n\007GetCart\022\027" +
-      ".cart.v1.GetCartRequest\032\030.cart.v1.GetCar" +
-      "tResponse\022E\n\nAddProduct\022\032.cart.v1.AddPro" +
-      "ductRequest\032\033.cart.v1.AddProductResponse" +
-      "\022S\n\017SubtractProduct\022\037.cart.v1.SubtractPr" +
-      "oductRequest\032\037.cart.v1.SubtractProductRe" +
-      "quest\022N\n\rDeleteProduct\022\035.cart.v1.DeleteP" +
-      "roductRequest\032\036.cart.v1.DeleteProductRes" +
-      "ponse\022E\n\nDeleteCart\022\032.cart.v1.DeleteCart" +
-      "Request\032\033.cart.v1.DeleteCartResponse\022Q\n\020" +
-      "UpdateQuantities\022\032.cart.v1.AddProductReq" +
-      "uest\032!.cart.v1.UpdateQuantitiesResponse\022" +
-      "H\n\013CreateOrder\022\033.cart.v1.CreateOrderRequ" +
-      "est\032\034.cart.v1.CreateOrderResponseB\'\n\021com" +
-      ".ecmsp.cart.v1B\020CartServiceProtoP\001b\006prot" +
-      "o3"
+      "equest\"\023\n\021DeleteCartRequest\"A\n\025UpdateQua" +
+      "ntityRequest\022(\n\007product\030\001 \001(\0132\027.cart.v1." +
+      "ProductRequest\".\n\017GetCartResponse\022\033\n\004car" +
+      "t\030\001 \001(\0132\r.cart.v1.Cart\"1\n\022AddProductResp" +
+      "onse\022\033\n\004cart\030\001 \001(\0132\r.cart.v1.Cart\"5\n\027Sub" +
+      "tractProductResponse\022\032\n\003cat\030\001 \001(\0132\r.cart" +
+      ".v1.Cart\"4\n\025DeleteProductResponse\022\033\n\004car" +
+      "t\030\001 \001(\0132\r.cart.v1.Cart\"6\n\022DeleteCartResp" +
+      "onse\022\017\n\007success\030\001 \001(\010\022\017\n\007message\030\002 \001(\t\"5" +
+      "\n\026UpdateQuantityResponse\022\033\n\004cart\030\001 \001(\0132\r" +
+      ".cart.v1.Cart\"H\n\023CreateOrderResponse\0221\n\013" +
+      "reservation\030\001 \001(\0132\034.cart.v1.ReservationR" +
+      "esponse2\322\003\n\013CartService\022<\n\007GetCart\022\027.car" +
+      "t.v1.GetCartRequest\032\030.cart.v1.GetCartRes" +
+      "ponse\022E\n\nAddProduct\022\032.cart.v1.AddProduct" +
+      "Request\032\033.cart.v1.AddProductResponse\022T\n\017" +
+      "SubtractProduct\022\037.cart.v1.SubtractProduc" +
+      "tRequest\032 .cart.v1.SubtractProductRespon" +
+      "se\022N\n\rDeleteProduct\022\035.cart.v1.DeleteProd" +
+      "uctRequest\032\036.cart.v1.DeleteProductRespon" +
+      "se\022E\n\nDeleteCart\022\032.cart.v1.DeleteCartReq" +
+      "uest\032\033.cart.v1.DeleteCartResponse\022Q\n\016Upd" +
+      "ateQuantity\022\036.cart.v1.UpdateQuantityRequ" +
+      "est\032\037.cart.v1.UpdateQuantityResponseB\'\n\021" +
+      "com.ecmsp.cart.v1B\020CartServiceProtoP\001b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -146,62 +138,56 @@ public final class CartServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cart_v1_SubtractProductRequest_descriptor,
         new java.lang.String[] { "Product", });
-    internal_static_cart_v1_DeleteProductFromCartRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
-    internal_static_cart_v1_DeleteProductFromCartRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_cart_v1_DeleteProductFromCartRequest_descriptor,
-        new java.lang.String[] { "DeleteRequest", });
     internal_static_cart_v1_DeleteCartRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_cart_v1_DeleteCartRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cart_v1_DeleteCartRequest_descriptor,
         new java.lang.String[] { });
-    internal_static_cart_v1_CreateOrderRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_cart_v1_CreateOrderRequest_fieldAccessorTable = new
+    internal_static_cart_v1_UpdateQuantityRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_cart_v1_UpdateQuantityRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_cart_v1_CreateOrderRequest_descriptor,
-        new java.lang.String[] { });
+        internal_static_cart_v1_UpdateQuantityRequest_descriptor,
+        new java.lang.String[] { "Product", });
     internal_static_cart_v1_GetCartResponse_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_cart_v1_GetCartResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cart_v1_GetCartResponse_descriptor,
         new java.lang.String[] { "Cart", });
     internal_static_cart_v1_AddProductResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_cart_v1_AddProductResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cart_v1_AddProductResponse_descriptor,
         new java.lang.String[] { "Cart", });
     internal_static_cart_v1_SubtractProductResponse_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_cart_v1_SubtractProductResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cart_v1_SubtractProductResponse_descriptor,
         new java.lang.String[] { "Cat", });
     internal_static_cart_v1_DeleteProductResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_cart_v1_DeleteProductResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cart_v1_DeleteProductResponse_descriptor,
         new java.lang.String[] { "Cart", });
     internal_static_cart_v1_DeleteCartResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_cart_v1_DeleteCartResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cart_v1_DeleteCartResponse_descriptor,
         new java.lang.String[] { "Success", "Message", });
-    internal_static_cart_v1_UpdateQuantitiesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
-    internal_static_cart_v1_UpdateQuantitiesResponse_fieldAccessorTable = new
+    internal_static_cart_v1_UpdateQuantityResponse_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_cart_v1_UpdateQuantityResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_cart_v1_UpdateQuantitiesResponse_descriptor,
+        internal_static_cart_v1_UpdateQuantityResponse_descriptor,
         new java.lang.String[] { "Cart", });
     internal_static_cart_v1_CreateOrderResponse_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_cart_v1_CreateOrderResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cart_v1_CreateOrderResponse_descriptor,

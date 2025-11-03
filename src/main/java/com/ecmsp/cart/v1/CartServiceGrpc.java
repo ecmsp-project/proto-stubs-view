@@ -81,28 +81,28 @@ public final class CartServiceGrpc {
   }
 
   private static volatile io.grpc.MethodDescriptor<com.ecmsp.cart.v1.SubtractProductRequest,
-      com.ecmsp.cart.v1.SubtractProductRequest> getSubtractProductMethod;
+      com.ecmsp.cart.v1.SubtractProductResponse> getSubtractProductMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "SubtractProduct",
       requestType = com.ecmsp.cart.v1.SubtractProductRequest.class,
-      responseType = com.ecmsp.cart.v1.SubtractProductRequest.class,
+      responseType = com.ecmsp.cart.v1.SubtractProductResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<com.ecmsp.cart.v1.SubtractProductRequest,
-      com.ecmsp.cart.v1.SubtractProductRequest> getSubtractProductMethod() {
-    io.grpc.MethodDescriptor<com.ecmsp.cart.v1.SubtractProductRequest, com.ecmsp.cart.v1.SubtractProductRequest> getSubtractProductMethod;
+      com.ecmsp.cart.v1.SubtractProductResponse> getSubtractProductMethod() {
+    io.grpc.MethodDescriptor<com.ecmsp.cart.v1.SubtractProductRequest, com.ecmsp.cart.v1.SubtractProductResponse> getSubtractProductMethod;
     if ((getSubtractProductMethod = CartServiceGrpc.getSubtractProductMethod) == null) {
       synchronized (CartServiceGrpc.class) {
         if ((getSubtractProductMethod = CartServiceGrpc.getSubtractProductMethod) == null) {
           CartServiceGrpc.getSubtractProductMethod = getSubtractProductMethod =
-              io.grpc.MethodDescriptor.<com.ecmsp.cart.v1.SubtractProductRequest, com.ecmsp.cart.v1.SubtractProductRequest>newBuilder()
+              io.grpc.MethodDescriptor.<com.ecmsp.cart.v1.SubtractProductRequest, com.ecmsp.cart.v1.SubtractProductResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SubtractProduct"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.ecmsp.cart.v1.SubtractProductRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.ecmsp.cart.v1.SubtractProductRequest.getDefaultInstance()))
+                  com.ecmsp.cart.v1.SubtractProductResponse.getDefaultInstance()))
               .setSchemaDescriptor(new CartServiceMethodDescriptorSupplier("SubtractProduct"))
               .build();
         }
@@ -173,66 +173,35 @@ public final class CartServiceGrpc {
     return getDeleteCartMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.ecmsp.cart.v1.AddProductRequest,
-      com.ecmsp.cart.v1.UpdateQuantitiesResponse> getUpdateQuantitiesMethod;
+  private static volatile io.grpc.MethodDescriptor<com.ecmsp.cart.v1.UpdateQuantityRequest,
+      com.ecmsp.cart.v1.UpdateQuantityResponse> getUpdateQuantityMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "UpdateQuantities",
-      requestType = com.ecmsp.cart.v1.AddProductRequest.class,
-      responseType = com.ecmsp.cart.v1.UpdateQuantitiesResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "UpdateQuantity",
+      requestType = com.ecmsp.cart.v1.UpdateQuantityRequest.class,
+      responseType = com.ecmsp.cart.v1.UpdateQuantityResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.ecmsp.cart.v1.AddProductRequest,
-      com.ecmsp.cart.v1.UpdateQuantitiesResponse> getUpdateQuantitiesMethod() {
-    io.grpc.MethodDescriptor<com.ecmsp.cart.v1.AddProductRequest, com.ecmsp.cart.v1.UpdateQuantitiesResponse> getUpdateQuantitiesMethod;
-    if ((getUpdateQuantitiesMethod = CartServiceGrpc.getUpdateQuantitiesMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.ecmsp.cart.v1.UpdateQuantityRequest,
+      com.ecmsp.cart.v1.UpdateQuantityResponse> getUpdateQuantityMethod() {
+    io.grpc.MethodDescriptor<com.ecmsp.cart.v1.UpdateQuantityRequest, com.ecmsp.cart.v1.UpdateQuantityResponse> getUpdateQuantityMethod;
+    if ((getUpdateQuantityMethod = CartServiceGrpc.getUpdateQuantityMethod) == null) {
       synchronized (CartServiceGrpc.class) {
-        if ((getUpdateQuantitiesMethod = CartServiceGrpc.getUpdateQuantitiesMethod) == null) {
-          CartServiceGrpc.getUpdateQuantitiesMethod = getUpdateQuantitiesMethod =
-              io.grpc.MethodDescriptor.<com.ecmsp.cart.v1.AddProductRequest, com.ecmsp.cart.v1.UpdateQuantitiesResponse>newBuilder()
+        if ((getUpdateQuantityMethod = CartServiceGrpc.getUpdateQuantityMethod) == null) {
+          CartServiceGrpc.getUpdateQuantityMethod = getUpdateQuantityMethod =
+              io.grpc.MethodDescriptor.<com.ecmsp.cart.v1.UpdateQuantityRequest, com.ecmsp.cart.v1.UpdateQuantityResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateQuantities"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateQuantity"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.ecmsp.cart.v1.AddProductRequest.getDefaultInstance()))
+                  com.ecmsp.cart.v1.UpdateQuantityRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.ecmsp.cart.v1.UpdateQuantitiesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new CartServiceMethodDescriptorSupplier("UpdateQuantities"))
+                  com.ecmsp.cart.v1.UpdateQuantityResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new CartServiceMethodDescriptorSupplier("UpdateQuantity"))
               .build();
         }
       }
     }
-    return getUpdateQuantitiesMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.ecmsp.cart.v1.CreateOrderRequest,
-      com.ecmsp.cart.v1.CreateOrderResponse> getCreateOrderMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "CreateOrder",
-      requestType = com.ecmsp.cart.v1.CreateOrderRequest.class,
-      responseType = com.ecmsp.cart.v1.CreateOrderResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.ecmsp.cart.v1.CreateOrderRequest,
-      com.ecmsp.cart.v1.CreateOrderResponse> getCreateOrderMethod() {
-    io.grpc.MethodDescriptor<com.ecmsp.cart.v1.CreateOrderRequest, com.ecmsp.cart.v1.CreateOrderResponse> getCreateOrderMethod;
-    if ((getCreateOrderMethod = CartServiceGrpc.getCreateOrderMethod) == null) {
-      synchronized (CartServiceGrpc.class) {
-        if ((getCreateOrderMethod = CartServiceGrpc.getCreateOrderMethod) == null) {
-          CartServiceGrpc.getCreateOrderMethod = getCreateOrderMethod =
-              io.grpc.MethodDescriptor.<com.ecmsp.cart.v1.CreateOrderRequest, com.ecmsp.cart.v1.CreateOrderResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateOrder"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.ecmsp.cart.v1.CreateOrderRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.ecmsp.cart.v1.CreateOrderResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new CartServiceMethodDescriptorSupplier("CreateOrder"))
-              .build();
-        }
-      }
-    }
-    return getCreateOrderMethod;
+    return getUpdateQuantityMethod;
   }
 
   /**
@@ -327,7 +296,7 @@ public final class CartServiceGrpc {
      * </pre>
      */
     default void subtractProduct(com.ecmsp.cart.v1.SubtractProductRequest request,
-        io.grpc.stub.StreamObserver<com.ecmsp.cart.v1.SubtractProductRequest> responseObserver) {
+        io.grpc.stub.StreamObserver<com.ecmsp.cart.v1.SubtractProductResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSubtractProductMethod(), responseObserver);
     }
 
@@ -356,19 +325,9 @@ public final class CartServiceGrpc {
      * Update quantities of existing products
      * </pre>
      */
-    default void updateQuantities(com.ecmsp.cart.v1.AddProductRequest request,
-        io.grpc.stub.StreamObserver<com.ecmsp.cart.v1.UpdateQuantitiesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateQuantitiesMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Create order/reservation from cart
-     * </pre>
-     */
-    default void createOrder(com.ecmsp.cart.v1.CreateOrderRequest request,
-        io.grpc.stub.StreamObserver<com.ecmsp.cart.v1.CreateOrderResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateOrderMethod(), responseObserver);
+    default void updateQuantity(com.ecmsp.cart.v1.UpdateQuantityRequest request,
+        io.grpc.stub.StreamObserver<com.ecmsp.cart.v1.UpdateQuantityResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateQuantityMethod(), responseObserver);
     }
   }
 
@@ -433,7 +392,7 @@ public final class CartServiceGrpc {
      * </pre>
      */
     public void subtractProduct(com.ecmsp.cart.v1.SubtractProductRequest request,
-        io.grpc.stub.StreamObserver<com.ecmsp.cart.v1.SubtractProductRequest> responseObserver) {
+        io.grpc.stub.StreamObserver<com.ecmsp.cart.v1.SubtractProductResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSubtractProductMethod(), getCallOptions()), request, responseObserver);
     }
@@ -465,21 +424,10 @@ public final class CartServiceGrpc {
      * Update quantities of existing products
      * </pre>
      */
-    public void updateQuantities(com.ecmsp.cart.v1.AddProductRequest request,
-        io.grpc.stub.StreamObserver<com.ecmsp.cart.v1.UpdateQuantitiesResponse> responseObserver) {
+    public void updateQuantity(com.ecmsp.cart.v1.UpdateQuantityRequest request,
+        io.grpc.stub.StreamObserver<com.ecmsp.cart.v1.UpdateQuantityResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getUpdateQuantitiesMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Create order/reservation from cart
-     * </pre>
-     */
-    public void createOrder(com.ecmsp.cart.v1.CreateOrderRequest request,
-        io.grpc.stub.StreamObserver<com.ecmsp.cart.v1.CreateOrderResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getCreateOrderMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getUpdateQuantityMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -527,7 +475,7 @@ public final class CartServiceGrpc {
      * Subtract product from cart
      * </pre>
      */
-    public com.ecmsp.cart.v1.SubtractProductRequest subtractProduct(com.ecmsp.cart.v1.SubtractProductRequest request) {
+    public com.ecmsp.cart.v1.SubtractProductResponse subtractProduct(com.ecmsp.cart.v1.SubtractProductRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSubtractProductMethod(), getCallOptions(), request);
     }
@@ -557,19 +505,9 @@ public final class CartServiceGrpc {
      * Update quantities of existing products
      * </pre>
      */
-    public com.ecmsp.cart.v1.UpdateQuantitiesResponse updateQuantities(com.ecmsp.cart.v1.AddProductRequest request) {
+    public com.ecmsp.cart.v1.UpdateQuantityResponse updateQuantity(com.ecmsp.cart.v1.UpdateQuantityRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getUpdateQuantitiesMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * Create order/reservation from cart
-     * </pre>
-     */
-    public com.ecmsp.cart.v1.CreateOrderResponse createOrder(com.ecmsp.cart.v1.CreateOrderRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getCreateOrderMethod(), getCallOptions(), request);
+          getChannel(), getUpdateQuantityMethod(), getCallOptions(), request);
     }
   }
 
@@ -617,7 +555,7 @@ public final class CartServiceGrpc {
      * Subtract product from cart
      * </pre>
      */
-    public com.ecmsp.cart.v1.SubtractProductRequest subtractProduct(com.ecmsp.cart.v1.SubtractProductRequest request) {
+    public com.ecmsp.cart.v1.SubtractProductResponse subtractProduct(com.ecmsp.cart.v1.SubtractProductRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSubtractProductMethod(), getCallOptions(), request);
     }
@@ -647,19 +585,9 @@ public final class CartServiceGrpc {
      * Update quantities of existing products
      * </pre>
      */
-    public com.ecmsp.cart.v1.UpdateQuantitiesResponse updateQuantities(com.ecmsp.cart.v1.AddProductRequest request) {
+    public com.ecmsp.cart.v1.UpdateQuantityResponse updateQuantity(com.ecmsp.cart.v1.UpdateQuantityRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getUpdateQuantitiesMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * Create order/reservation from cart
-     * </pre>
-     */
-    public com.ecmsp.cart.v1.CreateOrderResponse createOrder(com.ecmsp.cart.v1.CreateOrderRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getCreateOrderMethod(), getCallOptions(), request);
+          getChannel(), getUpdateQuantityMethod(), getCallOptions(), request);
     }
   }
 
@@ -709,7 +637,7 @@ public final class CartServiceGrpc {
      * Subtract product from cart
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.ecmsp.cart.v1.SubtractProductRequest> subtractProduct(
+    public com.google.common.util.concurrent.ListenableFuture<com.ecmsp.cart.v1.SubtractProductResponse> subtractProduct(
         com.ecmsp.cart.v1.SubtractProductRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSubtractProductMethod(), getCallOptions()), request);
@@ -742,21 +670,10 @@ public final class CartServiceGrpc {
      * Update quantities of existing products
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.ecmsp.cart.v1.UpdateQuantitiesResponse> updateQuantities(
-        com.ecmsp.cart.v1.AddProductRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.ecmsp.cart.v1.UpdateQuantityResponse> updateQuantity(
+        com.ecmsp.cart.v1.UpdateQuantityRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getUpdateQuantitiesMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * Create order/reservation from cart
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.ecmsp.cart.v1.CreateOrderResponse> createOrder(
-        com.ecmsp.cart.v1.CreateOrderRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getCreateOrderMethod(), getCallOptions()), request);
+          getChannel().newCall(getUpdateQuantityMethod(), getCallOptions()), request);
     }
   }
 
@@ -765,8 +682,7 @@ public final class CartServiceGrpc {
   private static final int METHODID_SUBTRACT_PRODUCT = 2;
   private static final int METHODID_DELETE_PRODUCT = 3;
   private static final int METHODID_DELETE_CART = 4;
-  private static final int METHODID_UPDATE_QUANTITIES = 5;
-  private static final int METHODID_CREATE_ORDER = 6;
+  private static final int METHODID_UPDATE_QUANTITY = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -795,7 +711,7 @@ public final class CartServiceGrpc {
           break;
         case METHODID_SUBTRACT_PRODUCT:
           serviceImpl.subtractProduct((com.ecmsp.cart.v1.SubtractProductRequest) request,
-              (io.grpc.stub.StreamObserver<com.ecmsp.cart.v1.SubtractProductRequest>) responseObserver);
+              (io.grpc.stub.StreamObserver<com.ecmsp.cart.v1.SubtractProductResponse>) responseObserver);
           break;
         case METHODID_DELETE_PRODUCT:
           serviceImpl.deleteProduct((com.ecmsp.cart.v1.DeleteProductRequest) request,
@@ -805,13 +721,9 @@ public final class CartServiceGrpc {
           serviceImpl.deleteCart((com.ecmsp.cart.v1.DeleteCartRequest) request,
               (io.grpc.stub.StreamObserver<com.ecmsp.cart.v1.DeleteCartResponse>) responseObserver);
           break;
-        case METHODID_UPDATE_QUANTITIES:
-          serviceImpl.updateQuantities((com.ecmsp.cart.v1.AddProductRequest) request,
-              (io.grpc.stub.StreamObserver<com.ecmsp.cart.v1.UpdateQuantitiesResponse>) responseObserver);
-          break;
-        case METHODID_CREATE_ORDER:
-          serviceImpl.createOrder((com.ecmsp.cart.v1.CreateOrderRequest) request,
-              (io.grpc.stub.StreamObserver<com.ecmsp.cart.v1.CreateOrderResponse>) responseObserver);
+        case METHODID_UPDATE_QUANTITY:
+          serviceImpl.updateQuantity((com.ecmsp.cart.v1.UpdateQuantityRequest) request,
+              (io.grpc.stub.StreamObserver<com.ecmsp.cart.v1.UpdateQuantityResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -850,7 +762,7 @@ public final class CartServiceGrpc {
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               com.ecmsp.cart.v1.SubtractProductRequest,
-              com.ecmsp.cart.v1.SubtractProductRequest>(
+              com.ecmsp.cart.v1.SubtractProductResponse>(
                 service, METHODID_SUBTRACT_PRODUCT)))
         .addMethod(
           getDeleteProductMethod(),
@@ -867,19 +779,12 @@ public final class CartServiceGrpc {
               com.ecmsp.cart.v1.DeleteCartResponse>(
                 service, METHODID_DELETE_CART)))
         .addMethod(
-          getUpdateQuantitiesMethod(),
+          getUpdateQuantityMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.ecmsp.cart.v1.AddProductRequest,
-              com.ecmsp.cart.v1.UpdateQuantitiesResponse>(
-                service, METHODID_UPDATE_QUANTITIES)))
-        .addMethod(
-          getCreateOrderMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.ecmsp.cart.v1.CreateOrderRequest,
-              com.ecmsp.cart.v1.CreateOrderResponse>(
-                service, METHODID_CREATE_ORDER)))
+              com.ecmsp.cart.v1.UpdateQuantityRequest,
+              com.ecmsp.cart.v1.UpdateQuantityResponse>(
+                service, METHODID_UPDATE_QUANTITY)))
         .build();
   }
 
@@ -933,8 +838,7 @@ public final class CartServiceGrpc {
               .addMethod(getSubtractProductMethod())
               .addMethod(getDeleteProductMethod())
               .addMethod(getDeleteCartMethod())
-              .addMethod(getUpdateQuantitiesMethod())
-              .addMethod(getCreateOrderMethod())
+              .addMethod(getUpdateQuantityMethod())
               .build();
         }
       }
