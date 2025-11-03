@@ -25,7 +25,9 @@ com/ecmsp/cart/v1/GetCartResponse.class
 com/ecmsp/cart/v1/GetCartResponse$1.class
 com/ecmsp/order/v1/returns/v1/ListReturnsByUserIdResponse$Builder.class
 com/ecmsp/product/v1/reservation/v1/GetVariantsReservationResponse$1.class
+com/ecmsp/cart/v1/SubtractProductResponse.class
 com/google/type/DecimalProto.class
+com/ecmsp/cart/v1/SubtractProductResponse$1.class
 com/ecmsp/order/v1/ListOrdersByUserIdRequest$1.class
 com/ecmsp/cart/v1/DeleteCartRequest$1.class
 com/ecmsp/order/v1/returns/v1/CreateReturnResponse$Builder.class
@@ -49,6 +51,7 @@ com/ecmsp/order/v1/GetOrderStatusResponse$Builder.class
 com/ecmsp/product/v1/GetProductsByQueryRequest$Builder.class
 com/ecmsp/order/v1/GetOrderResponseOrBuilder.class
 com/ecmsp/order/v1/GetOrderItemsRequest.class
+com/ecmsp/cart/v1/SubtractProductRequest$Builder.class
 com/ecmsp/order/v1/returns/v1/ListReturnsByUserIdRequest.class
 com/ecmsp/cart/v1/CartServiceGrpc$CartServiceFutureStub.class
 com/ecmsp/product/v1/ProductServiceGrpc$MethodHandlers.class
@@ -87,7 +90,6 @@ com/ecmsp/cart/v1/CreateOrderResponse$Builder.class
 com/ecmsp/cart/v1/DeleteProductFromCartRequest$Builder.class
 com/ecmsp/cart/v1/CartServiceGrpc.class
 com/ecmsp/product/v1/reservation/v1/VariantReservationServiceGrpc$VariantReservationServiceImplBase.class
-com/ecmsp/cart/v1/UpdateQuantitiesRequest$Builder.class
 com/ecmsp/order/v1/GetOrderItemsRequest$1.class
 com/ecmsp/order/v1/GetOrderStatusRequest$1.class
 com/ecmsp/product/v1/GetVariantsDetailsResponse$Builder.class
@@ -163,7 +165,6 @@ com/ecmsp/order/v1/ListOrdersByUserIdRequestOrBuilder.class
 com/ecmsp/order/v1/OrderServiceGrpc.class
 com/ecmsp/cart/v1/DeleteProductResponse.class
 com/ecmsp/product/v1/GetProductsByQueryResponse$1.class
-com/ecmsp/cart/v1/UpdateQuantitiesRequestOrBuilder.class
 com/ecmsp/product/v1/GetProductsByQueryResponse.class
 com/ecmsp/cart/v1/DeleteCartResponseOrBuilder.class
 com/ecmsp/order/v1/OrderServiceGrpc$OrderServiceImplBase.class
@@ -174,7 +175,6 @@ com/ecmsp/cart/v1/CartServiceGrpc$MethodHandlers.class
 com/ecmsp/product/v1/GetProductsResponseOrBuilder.class
 com/ecmsp/cart/v1/DeleteCartResponse$Builder.class
 com/ecmsp/product/v1/reservation/v1/GetVariantsReservationResponse.class
-com/ecmsp/cart/v1/UpdateQuantitiesRequest$1.class
 com/ecmsp/order/v1/GetOrderItemsResponse.class
 com/ecmsp/cart/v1/ProductRequest$Builder.class
 com/ecmsp/order/v1/ListOrdersByUserIdResponse.class
@@ -211,6 +211,7 @@ com/ecmsp/cart/v1/DeleteCartRequest$Builder.class
 com/ecmsp/cart/v1/ProductRequest.class
 com/ecmsp/product/v1/reservation/v1/CreateVariantsReservationResponse$1.class
 com/ecmsp/product/v1/ProductRepresentation.class
+com/ecmsp/cart/v1/SubtractProductResponseOrBuilder.class
 com/ecmsp/order/v1/returns/v1/ListReturnsRequest$1.class
 com/ecmsp/cart/v1/DeleteProductResponse$1.class
 com/ecmsp/cart/v1/CartProduct.class
@@ -240,6 +241,7 @@ com/ecmsp/example/v1/Example$Builder.class
 com/ecmsp/example/v1/ExampleOrBuilder.class
 com/ecmsp/order/v1/returns/v1/ReturnServiceGrpc$ReturnServiceBaseDescriptorSupplier.class
 com/ecmsp/product/v1/GetProductsResponse.class
+com/ecmsp/cart/v1/SubtractProductRequestOrBuilder.class
 com/ecmsp/order/v1/ListOrdersByUserIdResponseOrBuilder.class
 com/ecmsp/order/v1/GetOrderItemsResponse$1.class
 com/ecmsp/order/v1/OrderProto.class
@@ -261,7 +263,6 @@ com/ecmsp/product/v1/ProductRepresentationOrBuilder.class
 com/ecmsp/order/v1/ListOrdersRequest$Builder.class
 com/ecmsp/order/v1/returns/v1/GetReturnResponse$1.class
 com/ecmsp/product/v1/ProductServiceGrpc$3.class
-com/ecmsp/cart/v1/UpdateQuantitiesRequest.class
 com/ecmsp/cart/v1/DeleteCartRequestOrBuilder.class
 com/ecmsp/product/v1/GetProductsByQueryResponseOrBuilder.class
 com/ecmsp/cart/v1/Cart$Builder.class
@@ -296,6 +297,7 @@ com/ecmsp/cart/v1/DeleteProductRequestOrBuilder.class
 com/ecmsp/product/v1/VariantDetail.class
 com/ecmsp/product/v1/reservation/v1/GetVariantsReservationRequest$Builder.class
 com/ecmsp/order/v1/OrderServiceGrpc$OrderServiceStub.class
+com/ecmsp/cart/v1/SubtractProductRequest.class
 com/ecmsp/order/v1/GetOrderStatusRequestOrBuilder.class
 com/ecmsp/product/v1/ProductServiceGrpc.class
 com/ecmsp/cart/v1/CartServiceGrpc$CartServiceBaseDescriptorSupplier.class
@@ -309,10 +311,12 @@ com/ecmsp/order/v1/returns/v1/ReturnServiceGrpc$1.class
 com/ecmsp/order/v1/GetOrderStatusRequest$Builder.class
 com/ecmsp/order/v1/returns/v1/ListReturnsResponse$Builder.class
 com/ecmsp/cart/v1/ReservationResponseOrBuilder.class
+com/ecmsp/cart/v1/SubtractProductRequest$1.class
 com/ecmsp/order/v1/OrderStatusProto.class
 com/ecmsp/product/v1/reservation/v1/VariantReservationServiceGrpc$MethodHandlers.class
 com/ecmsp/product/v1/reservation/v1/VariantReservationServiceGrpc$VariantReservationServiceBaseDescriptorSupplier.class
 com/ecmsp/order/v1/returns/v1/CreateReturnResponse$1.class
+com/ecmsp/cart/v1/SubtractProductResponse$Builder.class
 com/ecmsp/order/v1/OrderItemDetailsOrBuilder.class
 com/ecmsp/order/v1/GetOrderItemsResponse$Builder.class
 com/ecmsp/order/v1/returns/v1/CreateReturnRequest$1.class
