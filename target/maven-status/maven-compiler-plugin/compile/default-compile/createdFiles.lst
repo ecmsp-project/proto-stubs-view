@@ -58,6 +58,7 @@ com/ecmsp/product/v1/reservation/v1/FailedReservationVariantOrBuilder.class
 com/ecmsp/user/v1/RoleOrBuilder.class
 com/ecmsp/order/v1/ListOrdersRequest$1.class
 com/ecmsp/order/v1/GetOrderItemsRequestOrBuilder.class
+com/ecmsp/user/v1/UserToCreate.class
 com/ecmsp/user/v1/ListAllPermissionsResponse$Builder.class
 com/ecmsp/product/v1/reservation/v1/GetVariantsReservationResponseOrBuilder.class
 com/ecmsp/order/v1/ListOrdersByUserIdResponse$Builder.class
@@ -92,6 +93,7 @@ com/ecmsp/user/v1/GetUserResponseOrBuilder.class
 com/ecmsp/product/v1/GetVariantsDetailsResponse$1.class
 com/ecmsp/user/v1/ListAllPermissionsRequest$Builder.class
 com/ecmsp/order/v1/returns/v1/Return$Builder.class
+com/ecmsp/user/v1/UserToCreateOrBuilder.class
 com/ecmsp/user/v1/UpdateRoleResponse$1.class
 com/ecmsp/order/v1/returns/v1/Return$1.class
 com/ecmsp/order/v1/GetOrderStatusResponseOrBuilder.class
@@ -107,6 +109,7 @@ com/ecmsp/cart/v1/UpdateQuantityRequest$1.class
 com/ecmsp/order/v1/returns/v1/ReturnServiceGrpc$ReturnServiceFutureStub.class
 com/ecmsp/order/v1/OrderServiceGrpc$1.class
 com/ecmsp/user/v1/ListRolesResponse$Builder.class
+com/ecmsp/user/v1/UserToCreate$1.class
 com/ecmsp/order/v1/ListOrdersByUserIdRequest$Builder.class
 com/ecmsp/order/v1/OrderItemDetails.class
 com/ecmsp/user/v1/GetUserRequestOrBuilder.class
@@ -238,6 +241,7 @@ com/ecmsp/product/v1/reservation/v1/GetVariantsReservationResponse$1.class
 com/google/type/DecimalProto.class
 com/ecmsp/cart/v1/SubtractProductResponse$1.class
 com/ecmsp/cart/v1/UpdateQuantityResponse.class
+com/ecmsp/user/v1/UserToCreate$Builder.class
 com/ecmsp/order/v1/ListOrdersByUserIdRequest$1.class
 com/ecmsp/cart/v1/DeleteCartRequest$1.class
 com/ecmsp/user/v1/ListUsersRequestOrBuilder.class

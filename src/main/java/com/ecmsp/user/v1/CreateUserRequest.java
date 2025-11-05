@@ -38,30 +38,30 @@ private static final long serialVersionUID = 0L;
             com.ecmsp.user.v1.CreateUserRequest.class, com.ecmsp.user.v1.CreateUserRequest.Builder.class);
   }
 
-  public static final int USER_FIELD_NUMBER = 1;
-  private com.ecmsp.user.v1.User user_;
+  public static final int USER_TO_CREATE_FIELD_NUMBER = 1;
+  private com.ecmsp.user.v1.UserToCreate userToCreate_;
   /**
-   * <code>.user.v1.User user = 1;</code>
-   * @return Whether the user field is set.
+   * <code>.user.v1.UserToCreate user_to_create = 1;</code>
+   * @return Whether the userToCreate field is set.
    */
   @java.lang.Override
-  public boolean hasUser() {
-    return user_ != null;
+  public boolean hasUserToCreate() {
+    return userToCreate_ != null;
   }
   /**
-   * <code>.user.v1.User user = 1;</code>
-   * @return The user.
+   * <code>.user.v1.UserToCreate user_to_create = 1;</code>
+   * @return The userToCreate.
    */
   @java.lang.Override
-  public com.ecmsp.user.v1.User getUser() {
-    return user_ == null ? com.ecmsp.user.v1.User.getDefaultInstance() : user_;
+  public com.ecmsp.user.v1.UserToCreate getUserToCreate() {
+    return userToCreate_ == null ? com.ecmsp.user.v1.UserToCreate.getDefaultInstance() : userToCreate_;
   }
   /**
-   * <code>.user.v1.User user = 1;</code>
+   * <code>.user.v1.UserToCreate user_to_create = 1;</code>
    */
   @java.lang.Override
-  public com.ecmsp.user.v1.UserOrBuilder getUserOrBuilder() {
-    return user_ == null ? com.ecmsp.user.v1.User.getDefaultInstance() : user_;
+  public com.ecmsp.user.v1.UserToCreateOrBuilder getUserToCreateOrBuilder() {
+    return userToCreate_ == null ? com.ecmsp.user.v1.UserToCreate.getDefaultInstance() : userToCreate_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -78,8 +78,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (user_ != null) {
-      output.writeMessage(1, getUser());
+    if (userToCreate_ != null) {
+      output.writeMessage(1, getUserToCreate());
     }
     getUnknownFields().writeTo(output);
   }
@@ -90,9 +90,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (user_ != null) {
+    if (userToCreate_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getUser());
+        .computeMessageSize(1, getUserToCreate());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -109,10 +109,10 @@ private static final long serialVersionUID = 0L;
     }
     com.ecmsp.user.v1.CreateUserRequest other = (com.ecmsp.user.v1.CreateUserRequest) obj;
 
-    if (hasUser() != other.hasUser()) return false;
-    if (hasUser()) {
-      if (!getUser()
-          .equals(other.getUser())) return false;
+    if (hasUserToCreate() != other.hasUserToCreate()) return false;
+    if (hasUserToCreate()) {
+      if (!getUserToCreate()
+          .equals(other.getUserToCreate())) return false;
     }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -125,9 +125,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasUser()) {
-      hash = (37 * hash) + USER_FIELD_NUMBER;
-      hash = (53 * hash) + getUser().hashCode();
+    if (hasUserToCreate()) {
+      hash = (37 * hash) + USER_TO_CREATE_FIELD_NUMBER;
+      hash = (53 * hash) + getUserToCreate().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -260,10 +260,10 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      user_ = null;
-      if (userBuilder_ != null) {
-        userBuilder_.dispose();
-        userBuilder_ = null;
+      userToCreate_ = null;
+      if (userToCreateBuilder_ != null) {
+        userToCreateBuilder_.dispose();
+        userToCreateBuilder_ = null;
       }
       return this;
     }
@@ -299,9 +299,9 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.ecmsp.user.v1.CreateUserRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.user_ = userBuilder_ == null
-            ? user_
-            : userBuilder_.build();
+        result.userToCreate_ = userToCreateBuilder_ == null
+            ? userToCreate_
+            : userToCreateBuilder_.build();
       }
     }
 
@@ -349,8 +349,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.ecmsp.user.v1.CreateUserRequest other) {
       if (other == com.ecmsp.user.v1.CreateUserRequest.getDefaultInstance()) return this;
-      if (other.hasUser()) {
-        mergeUser(other.getUser());
+      if (other.hasUserToCreate()) {
+        mergeUserToCreate(other.getUserToCreate());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -380,7 +380,7 @@ private static final long serialVersionUID = 0L;
               break;
             case 10: {
               input.readMessage(
-                  getUserFieldBuilder().getBuilder(),
+                  getUserToCreateFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000001;
               break;
@@ -402,123 +402,123 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.ecmsp.user.v1.User user_;
+    private com.ecmsp.user.v1.UserToCreate userToCreate_;
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.ecmsp.user.v1.User, com.ecmsp.user.v1.User.Builder, com.ecmsp.user.v1.UserOrBuilder> userBuilder_;
+        com.ecmsp.user.v1.UserToCreate, com.ecmsp.user.v1.UserToCreate.Builder, com.ecmsp.user.v1.UserToCreateOrBuilder> userToCreateBuilder_;
     /**
-     * <code>.user.v1.User user = 1;</code>
-     * @return Whether the user field is set.
+     * <code>.user.v1.UserToCreate user_to_create = 1;</code>
+     * @return Whether the userToCreate field is set.
      */
-    public boolean hasUser() {
+    public boolean hasUserToCreate() {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>.user.v1.User user = 1;</code>
-     * @return The user.
+     * <code>.user.v1.UserToCreate user_to_create = 1;</code>
+     * @return The userToCreate.
      */
-    public com.ecmsp.user.v1.User getUser() {
-      if (userBuilder_ == null) {
-        return user_ == null ? com.ecmsp.user.v1.User.getDefaultInstance() : user_;
+    public com.ecmsp.user.v1.UserToCreate getUserToCreate() {
+      if (userToCreateBuilder_ == null) {
+        return userToCreate_ == null ? com.ecmsp.user.v1.UserToCreate.getDefaultInstance() : userToCreate_;
       } else {
-        return userBuilder_.getMessage();
+        return userToCreateBuilder_.getMessage();
       }
     }
     /**
-     * <code>.user.v1.User user = 1;</code>
+     * <code>.user.v1.UserToCreate user_to_create = 1;</code>
      */
-    public Builder setUser(com.ecmsp.user.v1.User value) {
-      if (userBuilder_ == null) {
+    public Builder setUserToCreate(com.ecmsp.user.v1.UserToCreate value) {
+      if (userToCreateBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        user_ = value;
+        userToCreate_ = value;
       } else {
-        userBuilder_.setMessage(value);
+        userToCreateBuilder_.setMessage(value);
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.user.v1.User user = 1;</code>
+     * <code>.user.v1.UserToCreate user_to_create = 1;</code>
      */
-    public Builder setUser(
-        com.ecmsp.user.v1.User.Builder builderForValue) {
-      if (userBuilder_ == null) {
-        user_ = builderForValue.build();
+    public Builder setUserToCreate(
+        com.ecmsp.user.v1.UserToCreate.Builder builderForValue) {
+      if (userToCreateBuilder_ == null) {
+        userToCreate_ = builderForValue.build();
       } else {
-        userBuilder_.setMessage(builderForValue.build());
+        userToCreateBuilder_.setMessage(builderForValue.build());
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.user.v1.User user = 1;</code>
+     * <code>.user.v1.UserToCreate user_to_create = 1;</code>
      */
-    public Builder mergeUser(com.ecmsp.user.v1.User value) {
-      if (userBuilder_ == null) {
+    public Builder mergeUserToCreate(com.ecmsp.user.v1.UserToCreate value) {
+      if (userToCreateBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0) &&
-          user_ != null &&
-          user_ != com.ecmsp.user.v1.User.getDefaultInstance()) {
-          getUserBuilder().mergeFrom(value);
+          userToCreate_ != null &&
+          userToCreate_ != com.ecmsp.user.v1.UserToCreate.getDefaultInstance()) {
+          getUserToCreateBuilder().mergeFrom(value);
         } else {
-          user_ = value;
+          userToCreate_ = value;
         }
       } else {
-        userBuilder_.mergeFrom(value);
+        userToCreateBuilder_.mergeFrom(value);
       }
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.user.v1.User user = 1;</code>
+     * <code>.user.v1.UserToCreate user_to_create = 1;</code>
      */
-    public Builder clearUser() {
+    public Builder clearUserToCreate() {
       bitField0_ = (bitField0_ & ~0x00000001);
-      user_ = null;
-      if (userBuilder_ != null) {
-        userBuilder_.dispose();
-        userBuilder_ = null;
+      userToCreate_ = null;
+      if (userToCreateBuilder_ != null) {
+        userToCreateBuilder_.dispose();
+        userToCreateBuilder_ = null;
       }
       onChanged();
       return this;
     }
     /**
-     * <code>.user.v1.User user = 1;</code>
+     * <code>.user.v1.UserToCreate user_to_create = 1;</code>
      */
-    public com.ecmsp.user.v1.User.Builder getUserBuilder() {
+    public com.ecmsp.user.v1.UserToCreate.Builder getUserToCreateBuilder() {
       bitField0_ |= 0x00000001;
       onChanged();
-      return getUserFieldBuilder().getBuilder();
+      return getUserToCreateFieldBuilder().getBuilder();
     }
     /**
-     * <code>.user.v1.User user = 1;</code>
+     * <code>.user.v1.UserToCreate user_to_create = 1;</code>
      */
-    public com.ecmsp.user.v1.UserOrBuilder getUserOrBuilder() {
-      if (userBuilder_ != null) {
-        return userBuilder_.getMessageOrBuilder();
+    public com.ecmsp.user.v1.UserToCreateOrBuilder getUserToCreateOrBuilder() {
+      if (userToCreateBuilder_ != null) {
+        return userToCreateBuilder_.getMessageOrBuilder();
       } else {
-        return user_ == null ?
-            com.ecmsp.user.v1.User.getDefaultInstance() : user_;
+        return userToCreate_ == null ?
+            com.ecmsp.user.v1.UserToCreate.getDefaultInstance() : userToCreate_;
       }
     }
     /**
-     * <code>.user.v1.User user = 1;</code>
+     * <code>.user.v1.UserToCreate user_to_create = 1;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
-        com.ecmsp.user.v1.User, com.ecmsp.user.v1.User.Builder, com.ecmsp.user.v1.UserOrBuilder> 
-        getUserFieldBuilder() {
-      if (userBuilder_ == null) {
-        userBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.ecmsp.user.v1.User, com.ecmsp.user.v1.User.Builder, com.ecmsp.user.v1.UserOrBuilder>(
-                getUser(),
+        com.ecmsp.user.v1.UserToCreate, com.ecmsp.user.v1.UserToCreate.Builder, com.ecmsp.user.v1.UserToCreateOrBuilder> 
+        getUserToCreateFieldBuilder() {
+      if (userToCreateBuilder_ == null) {
+        userToCreateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.ecmsp.user.v1.UserToCreate, com.ecmsp.user.v1.UserToCreate.Builder, com.ecmsp.user.v1.UserToCreateOrBuilder>(
+                getUserToCreate(),
                 getParentForChildren(),
                 isClean());
-        user_ = null;
+        userToCreate_ = null;
       }
-      return userBuilder_;
+      return userToCreateBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

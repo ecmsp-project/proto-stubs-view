@@ -80,6 +80,8 @@
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/product/v1/GetVariantsDetailsRequestOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/returns/v1/ReturnOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/UpdateRoleResponseOrBuilder.java
+/home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/UserToCreate.java
+/home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/UserToCreateOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/ListUsersRequest.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/GetOrderStatusRequestOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/example/v1/ExampleOrBuilder.java

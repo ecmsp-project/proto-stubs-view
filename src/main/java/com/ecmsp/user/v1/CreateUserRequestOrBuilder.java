@@ -8,17 +8,17 @@ public interface CreateUserRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.user.v1.User user = 1;</code>
-   * @return Whether the user field is set.
+   * <code>.user.v1.UserToCreate user_to_create = 1;</code>
+   * @return Whether the userToCreate field is set.
    */
-  boolean hasUser();
+  boolean hasUserToCreate();
   /**
-   * <code>.user.v1.User user = 1;</code>
-   * @return The user.
+   * <code>.user.v1.UserToCreate user_to_create = 1;</code>
+   * @return The userToCreate.
    */
-  com.ecmsp.user.v1.User getUser();
+  com.ecmsp.user.v1.UserToCreate getUserToCreate();
   /**
-   * <code>.user.v1.User user = 1;</code>
+   * <code>.user.v1.UserToCreate user_to_create = 1;</code>
    */
-  com.ecmsp.user.v1.UserOrBuilder getUserOrBuilder();
+  com.ecmsp.user.v1.UserToCreateOrBuilder getUserToCreateOrBuilder();
 }
