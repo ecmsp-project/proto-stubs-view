@@ -16,7 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private RemoveVariantsReservationRequest() {
-    reservationId_ = "";
+    orderId_ = "";
   }
 
   @java.lang.Override
@@ -39,39 +39,39 @@ private static final long serialVersionUID = 0L;
             com.ecmsp.product.v1.reservation.v1.RemoveVariantsReservationRequest.class, com.ecmsp.product.v1.reservation.v1.RemoveVariantsReservationRequest.Builder.class);
   }
 
-  public static final int RESERVATION_ID_FIELD_NUMBER = 1;
+  public static final int ORDER_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object reservationId_ = "";
+  private volatile java.lang.Object orderId_ = "";
   /**
-   * <code>string reservation_id = 1;</code>
-   * @return The reservationId.
+   * <code>string order_id = 1;</code>
+   * @return The orderId.
    */
   @java.lang.Override
-  public java.lang.String getReservationId() {
-    java.lang.Object ref = reservationId_;
+  public java.lang.String getOrderId() {
+    java.lang.Object ref = orderId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      reservationId_ = s;
+      orderId_ = s;
       return s;
     }
   }
   /**
-   * <code>string reservation_id = 1;</code>
-   * @return The bytes for reservationId.
+   * <code>string order_id = 1;</code>
+   * @return The bytes for orderId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getReservationIdBytes() {
-    java.lang.Object ref = reservationId_;
+      getOrderIdBytes() {
+    java.lang.Object ref = orderId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      reservationId_ = b;
+      orderId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -92,8 +92,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reservationId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, reservationId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orderId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -104,8 +104,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reservationId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, reservationId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orderId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -122,8 +122,8 @@ private static final long serialVersionUID = 0L;
     }
     com.ecmsp.product.v1.reservation.v1.RemoveVariantsReservationRequest other = (com.ecmsp.product.v1.reservation.v1.RemoveVariantsReservationRequest) obj;
 
-    if (!getReservationId()
-        .equals(other.getReservationId())) return false;
+    if (!getOrderId()
+        .equals(other.getOrderId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -135,8 +135,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + RESERVATION_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getReservationId().hashCode();
+    hash = (37 * hash) + ORDER_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getOrderId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -268,7 +268,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      reservationId_ = "";
+      orderId_ = "";
       return this;
     }
 
@@ -303,7 +303,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.ecmsp.product.v1.reservation.v1.RemoveVariantsReservationRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.reservationId_ = reservationId_;
+        result.orderId_ = orderId_;
       }
     }
 
@@ -351,8 +351,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.ecmsp.product.v1.reservation.v1.RemoveVariantsReservationRequest other) {
       if (other == com.ecmsp.product.v1.reservation.v1.RemoveVariantsReservationRequest.getDefaultInstance()) return this;
-      if (!other.getReservationId().isEmpty()) {
-        reservationId_ = other.reservationId_;
+      if (!other.getOrderId().isEmpty()) {
+        orderId_ = other.orderId_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
@@ -383,7 +383,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              reservationId_ = input.readStringRequireUtf8();
+              orderId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -404,73 +404,73 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object reservationId_ = "";
+    private java.lang.Object orderId_ = "";
     /**
-     * <code>string reservation_id = 1;</code>
-     * @return The reservationId.
+     * <code>string order_id = 1;</code>
+     * @return The orderId.
      */
-    public java.lang.String getReservationId() {
-      java.lang.Object ref = reservationId_;
+    public java.lang.String getOrderId() {
+      java.lang.Object ref = orderId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        reservationId_ = s;
+        orderId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string reservation_id = 1;</code>
-     * @return The bytes for reservationId.
+     * <code>string order_id = 1;</code>
+     * @return The bytes for orderId.
      */
     public com.google.protobuf.ByteString
-        getReservationIdBytes() {
-      java.lang.Object ref = reservationId_;
+        getOrderIdBytes() {
+      java.lang.Object ref = orderId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        reservationId_ = b;
+        orderId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string reservation_id = 1;</code>
-     * @param value The reservationId to set.
+     * <code>string order_id = 1;</code>
+     * @param value The orderId to set.
      * @return This builder for chaining.
      */
-    public Builder setReservationId(
+    public Builder setOrderId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      reservationId_ = value;
+      orderId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string reservation_id = 1;</code>
+     * <code>string order_id = 1;</code>
      * @return This builder for chaining.
      */
-    public Builder clearReservationId() {
-      reservationId_ = getDefaultInstance().getReservationId();
+    public Builder clearOrderId() {
+      orderId_ = getDefaultInstance().getOrderId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string reservation_id = 1;</code>
-     * @param value The bytes for reservationId to set.
+     * <code>string order_id = 1;</code>
+     * @param value The bytes for orderId to set.
      * @return This builder for chaining.
      */
-    public Builder setReservationIdBytes(
+    public Builder setOrderIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      reservationId_ = value;
+      orderId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;

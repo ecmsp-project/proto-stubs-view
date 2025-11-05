@@ -16,7 +16,6 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CreateVariantsReservationResponse() {
-    reservationId_ = "";
     reservedVariantIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     failedVariants_ = java.util.Collections.emptyList();
@@ -40,45 +39,6 @@ private static final long serialVersionUID = 0L;
     return com.ecmsp.product.v1.reservation.v1.VariantReservationProto.internal_static_product_v1_reservation_v1_CreateVariantsReservationResponse_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.ecmsp.product.v1.reservation.v1.CreateVariantsReservationResponse.class, com.ecmsp.product.v1.reservation.v1.CreateVariantsReservationResponse.Builder.class);
-  }
-
-  public static final int RESERVATION_ID_FIELD_NUMBER = 1;
-  @SuppressWarnings("serial")
-  private volatile java.lang.Object reservationId_ = "";
-  /**
-   * <code>string reservation_id = 1;</code>
-   * @return The reservationId.
-   */
-  @java.lang.Override
-  public java.lang.String getReservationId() {
-    java.lang.Object ref = reservationId_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      reservationId_ = s;
-      return s;
-    }
-  }
-  /**
-   * <code>string reservation_id = 1;</code>
-   * @return The bytes for reservationId.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString
-      getReservationIdBytes() {
-    java.lang.Object ref = reservationId_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      reservationId_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
   }
 
   public static final int RESERVED_VARIANT_IDS_FIELD_NUMBER = 3;
@@ -173,9 +133,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reservationId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, reservationId_);
-    }
     for (int i = 0; i < reservedVariantIds_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, reservedVariantIds_.getRaw(i));
     }
@@ -191,9 +148,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(reservationId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, reservationId_);
-    }
     {
       int dataSize = 0;
       for (int i = 0; i < reservedVariantIds_.size(); i++) {
@@ -221,8 +175,6 @@ private static final long serialVersionUID = 0L;
     }
     com.ecmsp.product.v1.reservation.v1.CreateVariantsReservationResponse other = (com.ecmsp.product.v1.reservation.v1.CreateVariantsReservationResponse) obj;
 
-    if (!getReservationId()
-        .equals(other.getReservationId())) return false;
     if (!getReservedVariantIdsList()
         .equals(other.getReservedVariantIdsList())) return false;
     if (!getFailedVariantsList()
@@ -238,8 +190,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + RESERVATION_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getReservationId().hashCode();
     if (getReservedVariantIdsCount() > 0) {
       hash = (37 * hash) + RESERVED_VARIANT_IDS_FIELD_NUMBER;
       hash = (53 * hash) + getReservedVariantIdsList().hashCode();
@@ -379,7 +329,6 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      reservationId_ = "";
       reservedVariantIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       if (failedVariantsBuilder_ == null) {
@@ -388,7 +337,7 @@ private static final long serialVersionUID = 0L;
         failedVariants_ = null;
         failedVariantsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -423,9 +372,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.ecmsp.product.v1.reservation.v1.CreateVariantsReservationResponse result) {
       if (failedVariantsBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           failedVariants_ = java.util.Collections.unmodifiableList(failedVariants_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.failedVariants_ = failedVariants_;
       } else {
@@ -436,9 +385,6 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.ecmsp.product.v1.reservation.v1.CreateVariantsReservationResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.reservationId_ = reservationId_;
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
         reservedVariantIds_.makeImmutable();
         result.reservedVariantIds_ = reservedVariantIds_;
       }
@@ -488,15 +434,10 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.ecmsp.product.v1.reservation.v1.CreateVariantsReservationResponse other) {
       if (other == com.ecmsp.product.v1.reservation.v1.CreateVariantsReservationResponse.getDefaultInstance()) return this;
-      if (!other.getReservationId().isEmpty()) {
-        reservationId_ = other.reservationId_;
-        bitField0_ |= 0x00000001;
-        onChanged();
-      }
       if (!other.reservedVariantIds_.isEmpty()) {
         if (reservedVariantIds_.isEmpty()) {
           reservedVariantIds_ = other.reservedVariantIds_;
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000001;
         } else {
           ensureReservedVariantIdsIsMutable();
           reservedVariantIds_.addAll(other.reservedVariantIds_);
@@ -507,7 +448,7 @@ private static final long serialVersionUID = 0L;
         if (!other.failedVariants_.isEmpty()) {
           if (failedVariants_.isEmpty()) {
             failedVariants_ = other.failedVariants_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureFailedVariantsIsMutable();
             failedVariants_.addAll(other.failedVariants_);
@@ -520,7 +461,7 @@ private static final long serialVersionUID = 0L;
             failedVariantsBuilder_.dispose();
             failedVariantsBuilder_ = null;
             failedVariants_ = other.failedVariants_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000002);
             failedVariantsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getFailedVariantsFieldBuilder() : null;
@@ -555,11 +496,6 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              reservationId_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
             case 26: {
               java.lang.String s = input.readStringRequireUtf8();
               ensureReservedVariantIdsIsMutable();
@@ -596,85 +532,13 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object reservationId_ = "";
-    /**
-     * <code>string reservation_id = 1;</code>
-     * @return The reservationId.
-     */
-    public java.lang.String getReservationId() {
-      java.lang.Object ref = reservationId_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        reservationId_ = s;
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string reservation_id = 1;</code>
-     * @return The bytes for reservationId.
-     */
-    public com.google.protobuf.ByteString
-        getReservationIdBytes() {
-      java.lang.Object ref = reservationId_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        reservationId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string reservation_id = 1;</code>
-     * @param value The reservationId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setReservationId(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      reservationId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string reservation_id = 1;</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearReservationId() {
-      reservationId_ = getDefaultInstance().getReservationId();
-      bitField0_ = (bitField0_ & ~0x00000001);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string reservation_id = 1;</code>
-     * @param value The bytes for reservationId to set.
-     * @return This builder for chaining.
-     */
-    public Builder setReservationIdBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      reservationId_ = value;
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-
     private com.google.protobuf.LazyStringArrayList reservedVariantIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureReservedVariantIdsIsMutable() {
       if (!reservedVariantIds_.isModifiable()) {
         reservedVariantIds_ = new com.google.protobuf.LazyStringArrayList(reservedVariantIds_);
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
     }
     /**
      * <code>repeated string reserved_variant_ids = 3;</code>
@@ -720,7 +584,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureReservedVariantIdsIsMutable();
       reservedVariantIds_.set(index, value);
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -734,7 +598,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureReservedVariantIdsIsMutable();
       reservedVariantIds_.add(value);
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -748,7 +612,7 @@ private static final long serialVersionUID = 0L;
       ensureReservedVariantIdsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, reservedVariantIds_);
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -759,7 +623,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearReservedVariantIds() {
       reservedVariantIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000002);;
+      bitField0_ = (bitField0_ & ~0x00000001);;
       onChanged();
       return this;
     }
@@ -774,7 +638,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureReservedVariantIdsIsMutable();
       reservedVariantIds_.add(value);
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -782,9 +646,9 @@ private static final long serialVersionUID = 0L;
     private java.util.List<com.ecmsp.product.v1.reservation.v1.FailedReservationVariant> failedVariants_ =
       java.util.Collections.emptyList();
     private void ensureFailedVariantsIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         failedVariants_ = new java.util.ArrayList<com.ecmsp.product.v1.reservation.v1.FailedReservationVariant>(failedVariants_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -934,7 +798,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearFailedVariants() {
       if (failedVariantsBuilder_ == null) {
         failedVariants_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         failedVariantsBuilder_.clear();
@@ -1011,7 +875,7 @@ private static final long serialVersionUID = 0L;
         failedVariantsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.ecmsp.product.v1.reservation.v1.FailedReservationVariant, com.ecmsp.product.v1.reservation.v1.FailedReservationVariant.Builder, com.ecmsp.product.v1.reservation.v1.FailedReservationVariantOrBuilder>(
                 failedVariants_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         failedVariants_ = null;

@@ -65,26 +65,25 @@ public final class VariantReservationProto {
     java.lang.String[] descriptorData = {
       "\n3product/v1/reservation/v1/variant_rese" +
       "rvation.proto\022\031product.v1.reservation.v1" +
-      "\"]\n CreateVariantsReservationRequest\0229\n\005" +
-      "items\030\001 \003(\0132*.product.v1.reservation.v1." +
-      "ReservedVariant\"\247\001\n!CreateVariantsReserv" +
-      "ationResponse\022\026\n\016reservation_id\030\001 \001(\t\022\034\n" +
-      "\024reserved_variant_ids\030\003 \003(\t\022L\n\017failed_va" +
-      "riants\030\004 \003(\01323.product.v1.reservation.v1" +
-      ".FailedReservationVariant\"f\n\030FailedReser" +
-      "vationVariant\022\022\n\nvariant_id\030\001 \001(\t\022\032\n\022req" +
-      "uested_quantity\030\002 \001(\005\022\032\n\022available_quant" +
-      "ity\030\003 \001(\005\":\n RemoveVariantsReservationRe" +
-      "quest\022\026\n\016reservation_id\030\001 \001(\t\"4\n!RemoveV" +
-      "ariantsReservationResponse\022\017\n\007message\030\001 " +
-      "\001(\t\"7\n\035GetVariantsReservationRequest\022\026\n\016" +
-      "reservation_id\030\001 \001(\t\"[\n\036GetVariantsReser" +
-      "vationResponse\0229\n\005items\030\001 \003(\0132*.product." +
-      "v1.reservation.v1.ReservedVariant\"7\n\017Res" +
-      "ervedVariant\022\022\n\nvariant_id\030\001 \001(\t\022\020\n\010quan" +
-      "tity\030\002 \001(\005B@\n#com.ecmsp.product.v1.reser" +
-      "vation.v1B\027VariantReservationProtoP\001b\006pr" +
-      "oto3"
+      "\"o\n CreateVariantsReservationRequest\022\020\n\010" +
+      "order_id\030\001 \001(\t\0229\n\005items\030\002 \003(\0132*.product." +
+      "v1.reservation.v1.ReservedVariant\"\217\001\n!Cr" +
+      "eateVariantsReservationResponse\022\034\n\024reser" +
+      "ved_variant_ids\030\003 \003(\t\022L\n\017failed_variants" +
+      "\030\004 \003(\01323.product.v1.reservation.v1.Faile" +
+      "dReservationVariant\"d\n\030FailedReservation" +
+      "Variant\022\020\n\010order_id\030\001 \001(\t\022\032\n\022requested_q" +
+      "uantity\030\002 \001(\005\022\032\n\022available_quantity\030\003 \001(" +
+      "\005\"4\n RemoveVariantsReservationRequest\022\020\n" +
+      "\010order_id\030\001 \001(\t\"4\n!RemoveVariantsReserva" +
+      "tionResponse\022\017\n\007message\030\001 \001(\t\"1\n\035GetVari" +
+      "antsReservationRequest\022\020\n\010order_id\030\001 \001(\t" +
+      "\"[\n\036GetVariantsReservationResponse\0229\n\005it" +
+      "ems\030\001 \003(\0132*.product.v1.reservation.v1.Re" +
+      "servedVariant\"7\n\017ReservedVariant\022\022\n\nvari" +
+      "ant_id\030\001 \001(\t\022\020\n\010quantity\030\002 \001(\005B@\n#com.ec" +
+      "msp.product.v1.reservation.v1B\027VariantRe" +
+      "servationProtoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -95,25 +94,25 @@ public final class VariantReservationProto {
     internal_static_product_v1_reservation_v1_CreateVariantsReservationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_product_v1_reservation_v1_CreateVariantsReservationRequest_descriptor,
-        new java.lang.String[] { "Items", });
+        new java.lang.String[] { "OrderId", "Items", });
     internal_static_product_v1_reservation_v1_CreateVariantsReservationResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_product_v1_reservation_v1_CreateVariantsReservationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_product_v1_reservation_v1_CreateVariantsReservationResponse_descriptor,
-        new java.lang.String[] { "ReservationId", "ReservedVariantIds", "FailedVariants", });
+        new java.lang.String[] { "ReservedVariantIds", "FailedVariants", });
     internal_static_product_v1_reservation_v1_FailedReservationVariant_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_product_v1_reservation_v1_FailedReservationVariant_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_product_v1_reservation_v1_FailedReservationVariant_descriptor,
-        new java.lang.String[] { "VariantId", "RequestedQuantity", "AvailableQuantity", });
+        new java.lang.String[] { "OrderId", "RequestedQuantity", "AvailableQuantity", });
     internal_static_product_v1_reservation_v1_RemoveVariantsReservationRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_product_v1_reservation_v1_RemoveVariantsReservationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_product_v1_reservation_v1_RemoveVariantsReservationRequest_descriptor,
-        new java.lang.String[] { "ReservationId", });
+        new java.lang.String[] { "OrderId", });
     internal_static_product_v1_reservation_v1_RemoveVariantsReservationResponse_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_product_v1_reservation_v1_RemoveVariantsReservationResponse_fieldAccessorTable = new
@@ -125,7 +124,7 @@ public final class VariantReservationProto {
     internal_static_product_v1_reservation_v1_GetVariantsReservationRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_product_v1_reservation_v1_GetVariantsReservationRequest_descriptor,
-        new java.lang.String[] { "ReservationId", });
+        new java.lang.String[] { "OrderId", });
     internal_static_product_v1_reservation_v1_GetVariantsReservationResponse_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_product_v1_reservation_v1_GetVariantsReservationResponse_fieldAccessorTable = new

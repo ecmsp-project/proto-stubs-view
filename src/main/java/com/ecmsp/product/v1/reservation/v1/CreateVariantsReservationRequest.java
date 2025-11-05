@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private CreateVariantsReservationRequest() {
+    orderId_ = "";
     items_ = java.util.Collections.emptyList();
   }
 
@@ -39,18 +40,57 @@ private static final long serialVersionUID = 0L;
             com.ecmsp.product.v1.reservation.v1.CreateVariantsReservationRequest.class, com.ecmsp.product.v1.reservation.v1.CreateVariantsReservationRequest.Builder.class);
   }
 
-  public static final int ITEMS_FIELD_NUMBER = 1;
+  public static final int ORDER_ID_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object orderId_ = "";
+  /**
+   * <code>string order_id = 1;</code>
+   * @return The orderId.
+   */
+  @java.lang.Override
+  public java.lang.String getOrderId() {
+    java.lang.Object ref = orderId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      orderId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string order_id = 1;</code>
+   * @return The bytes for orderId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getOrderIdBytes() {
+    java.lang.Object ref = orderId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      orderId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int ITEMS_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private java.util.List<com.ecmsp.product.v1.reservation.v1.ReservedVariant> items_;
   /**
-   * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
+   * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 2;</code>
    */
   @java.lang.Override
   public java.util.List<com.ecmsp.product.v1.reservation.v1.ReservedVariant> getItemsList() {
     return items_;
   }
   /**
-   * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
+   * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 2;</code>
    */
   @java.lang.Override
   public java.util.List<? extends com.ecmsp.product.v1.reservation.v1.ReservedVariantOrBuilder> 
@@ -58,21 +98,21 @@ private static final long serialVersionUID = 0L;
     return items_;
   }
   /**
-   * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
+   * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 2;</code>
    */
   @java.lang.Override
   public int getItemsCount() {
     return items_.size();
   }
   /**
-   * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
+   * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 2;</code>
    */
   @java.lang.Override
   public com.ecmsp.product.v1.reservation.v1.ReservedVariant getItems(int index) {
     return items_.get(index);
   }
   /**
-   * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
+   * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 2;</code>
    */
   @java.lang.Override
   public com.ecmsp.product.v1.reservation.v1.ReservedVariantOrBuilder getItemsOrBuilder(
@@ -94,8 +134,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orderId_);
+    }
     for (int i = 0; i < items_.size(); i++) {
-      output.writeMessage(1, items_.get(i));
+      output.writeMessage(2, items_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -106,9 +149,12 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orderId_);
+    }
     for (int i = 0; i < items_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, items_.get(i));
+        .computeMessageSize(2, items_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -125,6 +171,8 @@ private static final long serialVersionUID = 0L;
     }
     com.ecmsp.product.v1.reservation.v1.CreateVariantsReservationRequest other = (com.ecmsp.product.v1.reservation.v1.CreateVariantsReservationRequest) obj;
 
+    if (!getOrderId()
+        .equals(other.getOrderId())) return false;
     if (!getItemsList()
         .equals(other.getItemsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -138,6 +186,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + ORDER_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getOrderId().hashCode();
     if (getItemsCount() > 0) {
       hash = (37 * hash) + ITEMS_FIELD_NUMBER;
       hash = (53 * hash) + getItemsList().hashCode();
@@ -273,13 +323,14 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      orderId_ = "";
       if (itemsBuilder_ == null) {
         items_ = java.util.Collections.emptyList();
       } else {
         items_ = null;
         itemsBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
 
@@ -314,9 +365,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(com.ecmsp.product.v1.reservation.v1.CreateVariantsReservationRequest result) {
       if (itemsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           items_ = java.util.Collections.unmodifiableList(items_);
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.items_ = items_;
       } else {
@@ -326,6 +377,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(com.ecmsp.product.v1.reservation.v1.CreateVariantsReservationRequest result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.orderId_ = orderId_;
+      }
     }
 
     @java.lang.Override
@@ -372,11 +426,16 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.ecmsp.product.v1.reservation.v1.CreateVariantsReservationRequest other) {
       if (other == com.ecmsp.product.v1.reservation.v1.CreateVariantsReservationRequest.getDefaultInstance()) return this;
+      if (!other.getOrderId().isEmpty()) {
+        orderId_ = other.orderId_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
       if (itemsBuilder_ == null) {
         if (!other.items_.isEmpty()) {
           if (items_.isEmpty()) {
             items_ = other.items_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureItemsIsMutable();
             items_.addAll(other.items_);
@@ -389,7 +448,7 @@ private static final long serialVersionUID = 0L;
             itemsBuilder_.dispose();
             itemsBuilder_ = null;
             items_ = other.items_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             itemsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getItemsFieldBuilder() : null;
@@ -425,6 +484,11 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
+              orderId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 10
+            case 18: {
               com.ecmsp.product.v1.reservation.v1.ReservedVariant m =
                   input.readMessage(
                       com.ecmsp.product.v1.reservation.v1.ReservedVariant.parser(),
@@ -436,7 +500,7 @@ private static final long serialVersionUID = 0L;
                 itemsBuilder_.addMessage(m);
               }
               break;
-            } // case 10
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -454,12 +518,84 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
+    private java.lang.Object orderId_ = "";
+    /**
+     * <code>string order_id = 1;</code>
+     * @return The orderId.
+     */
+    public java.lang.String getOrderId() {
+      java.lang.Object ref = orderId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        orderId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string order_id = 1;</code>
+     * @return The bytes for orderId.
+     */
+    public com.google.protobuf.ByteString
+        getOrderIdBytes() {
+      java.lang.Object ref = orderId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        orderId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string order_id = 1;</code>
+     * @param value The orderId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOrderId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      orderId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string order_id = 1;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearOrderId() {
+      orderId_ = getDefaultInstance().getOrderId();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string order_id = 1;</code>
+     * @param value The bytes for orderId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOrderIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      orderId_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
     private java.util.List<com.ecmsp.product.v1.reservation.v1.ReservedVariant> items_ =
       java.util.Collections.emptyList();
     private void ensureItemsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         items_ = new java.util.ArrayList<com.ecmsp.product.v1.reservation.v1.ReservedVariant>(items_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
 
@@ -467,7 +603,7 @@ private static final long serialVersionUID = 0L;
         com.ecmsp.product.v1.reservation.v1.ReservedVariant, com.ecmsp.product.v1.reservation.v1.ReservedVariant.Builder, com.ecmsp.product.v1.reservation.v1.ReservedVariantOrBuilder> itemsBuilder_;
 
     /**
-     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 2;</code>
      */
     public java.util.List<com.ecmsp.product.v1.reservation.v1.ReservedVariant> getItemsList() {
       if (itemsBuilder_ == null) {
@@ -477,7 +613,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 2;</code>
      */
     public int getItemsCount() {
       if (itemsBuilder_ == null) {
@@ -487,7 +623,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 2;</code>
      */
     public com.ecmsp.product.v1.reservation.v1.ReservedVariant getItems(int index) {
       if (itemsBuilder_ == null) {
@@ -497,7 +633,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 2;</code>
      */
     public Builder setItems(
         int index, com.ecmsp.product.v1.reservation.v1.ReservedVariant value) {
@@ -514,7 +650,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 2;</code>
      */
     public Builder setItems(
         int index, com.ecmsp.product.v1.reservation.v1.ReservedVariant.Builder builderForValue) {
@@ -528,7 +664,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 2;</code>
      */
     public Builder addItems(com.ecmsp.product.v1.reservation.v1.ReservedVariant value) {
       if (itemsBuilder_ == null) {
@@ -544,7 +680,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 2;</code>
      */
     public Builder addItems(
         int index, com.ecmsp.product.v1.reservation.v1.ReservedVariant value) {
@@ -561,7 +697,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 2;</code>
      */
     public Builder addItems(
         com.ecmsp.product.v1.reservation.v1.ReservedVariant.Builder builderForValue) {
@@ -575,7 +711,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 2;</code>
      */
     public Builder addItems(
         int index, com.ecmsp.product.v1.reservation.v1.ReservedVariant.Builder builderForValue) {
@@ -589,7 +725,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 2;</code>
      */
     public Builder addAllItems(
         java.lang.Iterable<? extends com.ecmsp.product.v1.reservation.v1.ReservedVariant> values) {
@@ -604,12 +740,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 2;</code>
      */
     public Builder clearItems() {
       if (itemsBuilder_ == null) {
         items_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
         itemsBuilder_.clear();
@@ -617,7 +753,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 2;</code>
      */
     public Builder removeItems(int index) {
       if (itemsBuilder_ == null) {
@@ -630,14 +766,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 2;</code>
      */
     public com.ecmsp.product.v1.reservation.v1.ReservedVariant.Builder getItemsBuilder(
         int index) {
       return getItemsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 2;</code>
      */
     public com.ecmsp.product.v1.reservation.v1.ReservedVariantOrBuilder getItemsOrBuilder(
         int index) {
@@ -647,7 +783,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 2;</code>
      */
     public java.util.List<? extends com.ecmsp.product.v1.reservation.v1.ReservedVariantOrBuilder> 
          getItemsOrBuilderList() {
@@ -658,14 +794,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 2;</code>
      */
     public com.ecmsp.product.v1.reservation.v1.ReservedVariant.Builder addItemsBuilder() {
       return getItemsFieldBuilder().addBuilder(
           com.ecmsp.product.v1.reservation.v1.ReservedVariant.getDefaultInstance());
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 2;</code>
      */
     public com.ecmsp.product.v1.reservation.v1.ReservedVariant.Builder addItemsBuilder(
         int index) {
@@ -673,7 +809,7 @@ private static final long serialVersionUID = 0L;
           index, com.ecmsp.product.v1.reservation.v1.ReservedVariant.getDefaultInstance());
     }
     /**
-     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 1;</code>
+     * <code>repeated .product.v1.reservation.v1.ReservedVariant items = 2;</code>
      */
     public java.util.List<com.ecmsp.product.v1.reservation.v1.ReservedVariant.Builder> 
          getItemsBuilderList() {
@@ -686,7 +822,7 @@ private static final long serialVersionUID = 0L;
         itemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             com.ecmsp.product.v1.reservation.v1.ReservedVariant, com.ecmsp.product.v1.reservation.v1.ReservedVariant.Builder, com.ecmsp.product.v1.reservation.v1.ReservedVariantOrBuilder>(
                 items_,
-                ((bitField0_ & 0x00000001) != 0),
+                ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
         items_ = null;

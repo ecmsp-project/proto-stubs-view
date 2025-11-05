@@ -8,14 +8,14 @@ public interface RemoveVariantsReservationRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string reservation_id = 1;</code>
-   * @return The reservationId.
+   * <code>string order_id = 1;</code>
+   * @return The orderId.
    */
-  java.lang.String getReservationId();
+  java.lang.String getOrderId();
   /**
-   * <code>string reservation_id = 1;</code>
-   * @return The bytes for reservationId.
+   * <code>string order_id = 1;</code>
+   * @return The bytes for orderId.
    */
   com.google.protobuf.ByteString
-      getReservationIdBytes();
+      getOrderIdBytes();
 }

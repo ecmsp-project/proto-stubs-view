@@ -8,18 +8,6 @@ public interface CreateVariantsReservationResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string reservation_id = 1;</code>
-   * @return The reservationId.
-   */
-  java.lang.String getReservationId();
-  /**
-   * <code>string reservation_id = 1;</code>
-   * @return The bytes for reservationId.
-   */
-  com.google.protobuf.ByteString
-      getReservationIdBytes();
-
-  /**
    * <code>repeated string reserved_variant_ids = 3;</code>
    * @return A list containing the reservedVariantIds.
    */
