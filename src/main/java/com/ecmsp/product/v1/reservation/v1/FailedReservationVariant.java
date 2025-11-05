@@ -20,7 +20,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private FailedReservationVariant() {
-    orderId_ = "";
+    variantId_ = "";
   }
 
   @java.lang.Override
@@ -43,39 +43,39 @@ private static final long serialVersionUID = 0L;
             com.ecmsp.product.v1.reservation.v1.FailedReservationVariant.class, com.ecmsp.product.v1.reservation.v1.FailedReservationVariant.Builder.class);
   }
 
-  public static final int ORDER_ID_FIELD_NUMBER = 1;
+  public static final int VARIANT_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object orderId_ = "";
+  private volatile java.lang.Object variantId_ = "";
   /**
-   * <code>string order_id = 1;</code>
-   * @return The orderId.
+   * <code>string variant_id = 1;</code>
+   * @return The variantId.
    */
   @java.lang.Override
-  public java.lang.String getOrderId() {
-    java.lang.Object ref = orderId_;
+  public java.lang.String getVariantId() {
+    java.lang.Object ref = variantId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      orderId_ = s;
+      variantId_ = s;
       return s;
     }
   }
   /**
-   * <code>string order_id = 1;</code>
-   * @return The bytes for orderId.
+   * <code>string variant_id = 1;</code>
+   * @return The bytes for variantId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getOrderIdBytes() {
-    java.lang.Object ref = orderId_;
+      getVariantIdBytes() {
+    java.lang.Object ref = variantId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      orderId_ = b;
+      variantId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -118,8 +118,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orderId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(variantId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, variantId_);
     }
     if (requestedQuantity_ != 0) {
       output.writeInt32(2, requestedQuantity_);
@@ -136,8 +136,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orderId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(variantId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, variantId_);
     }
     if (requestedQuantity_ != 0) {
       size += com.google.protobuf.CodedOutputStream
@@ -162,8 +162,8 @@ private static final long serialVersionUID = 0L;
     }
     com.ecmsp.product.v1.reservation.v1.FailedReservationVariant other = (com.ecmsp.product.v1.reservation.v1.FailedReservationVariant) obj;
 
-    if (!getOrderId()
-        .equals(other.getOrderId())) return false;
+    if (!getVariantId()
+        .equals(other.getVariantId())) return false;
     if (getRequestedQuantity()
         != other.getRequestedQuantity()) return false;
     if (getAvailableQuantity()
@@ -179,8 +179,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ORDER_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getOrderId().hashCode();
+    hash = (37 * hash) + VARIANT_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getVariantId().hashCode();
     hash = (37 * hash) + REQUESTED_QUANTITY_FIELD_NUMBER;
     hash = (53 * hash) + getRequestedQuantity();
     hash = (37 * hash) + AVAILABLE_QUANTITY_FIELD_NUMBER;
@@ -320,7 +320,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      orderId_ = "";
+      variantId_ = "";
       requestedQuantity_ = 0;
       availableQuantity_ = 0;
       return this;
@@ -357,7 +357,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.ecmsp.product.v1.reservation.v1.FailedReservationVariant result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.orderId_ = orderId_;
+        result.variantId_ = variantId_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.requestedQuantity_ = requestedQuantity_;
@@ -411,8 +411,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.ecmsp.product.v1.reservation.v1.FailedReservationVariant other) {
       if (other == com.ecmsp.product.v1.reservation.v1.FailedReservationVariant.getDefaultInstance()) return this;
-      if (!other.getOrderId().isEmpty()) {
-        orderId_ = other.orderId_;
+      if (!other.getVariantId().isEmpty()) {
+        variantId_ = other.variantId_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
@@ -449,7 +449,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              orderId_ = input.readStringRequireUtf8();
+              variantId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -480,73 +480,73 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object orderId_ = "";
+    private java.lang.Object variantId_ = "";
     /**
-     * <code>string order_id = 1;</code>
-     * @return The orderId.
+     * <code>string variant_id = 1;</code>
+     * @return The variantId.
      */
-    public java.lang.String getOrderId() {
-      java.lang.Object ref = orderId_;
+    public java.lang.String getVariantId() {
+      java.lang.Object ref = variantId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        orderId_ = s;
+        variantId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string order_id = 1;</code>
-     * @return The bytes for orderId.
+     * <code>string variant_id = 1;</code>
+     * @return The bytes for variantId.
      */
     public com.google.protobuf.ByteString
-        getOrderIdBytes() {
-      java.lang.Object ref = orderId_;
+        getVariantIdBytes() {
+      java.lang.Object ref = variantId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        orderId_ = b;
+        variantId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string order_id = 1;</code>
-     * @param value The orderId to set.
+     * <code>string variant_id = 1;</code>
+     * @param value The variantId to set.
      * @return This builder for chaining.
      */
-    public Builder setOrderId(
+    public Builder setVariantId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      orderId_ = value;
+      variantId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string order_id = 1;</code>
+     * <code>string variant_id = 1;</code>
      * @return This builder for chaining.
      */
-    public Builder clearOrderId() {
-      orderId_ = getDefaultInstance().getOrderId();
+    public Builder clearVariantId() {
+      variantId_ = getDefaultInstance().getVariantId();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string order_id = 1;</code>
-     * @param value The bytes for orderId to set.
+     * <code>string variant_id = 1;</code>
+     * @param value The bytes for variantId to set.
      * @return This builder for chaining.
      */
-    public Builder setOrderIdBytes(
+    public Builder setVariantIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      orderId_ = value;
+      variantId_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;

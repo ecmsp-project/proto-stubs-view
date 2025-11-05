@@ -8,16 +8,16 @@ public interface FailedReservationVariantOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string order_id = 1;</code>
-   * @return The orderId.
+   * <code>string variant_id = 1;</code>
+   * @return The variantId.
    */
-  java.lang.String getOrderId();
+  java.lang.String getVariantId();
   /**
-   * <code>string order_id = 1;</code>
-   * @return The bytes for orderId.
+   * <code>string variant_id = 1;</code>
+   * @return The bytes for variantId.
    */
   com.google.protobuf.ByteString
-      getOrderIdBytes();
+      getVariantIdBytes();
 
   /**
    * <code>int32 requested_quantity = 2;</code>
