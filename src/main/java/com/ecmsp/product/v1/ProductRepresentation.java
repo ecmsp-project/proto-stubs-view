@@ -4,6 +4,10 @@
 package com.ecmsp.product.v1;
 
 /**
+ * <pre>
+ *TODO shouldn't we add name here?
+ * </pre>
+ *
  * Protobuf type {@code product.v1.ProductRepresentation}
  */
 public final class ProductRepresentation extends
@@ -277,6 +281,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   *TODO shouldn't we add name here?
+   * </pre>
+   *
    * Protobuf type {@code product.v1.ProductRepresentation}
    */
   public static final class Builder extends

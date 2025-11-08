@@ -94,7 +94,6 @@
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/cart/v1/DeleteProductResponseOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/cart/v1/DeleteProductRequest.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/GetOrderStatusResponse.java
-/home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/CreateOrderItem.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/product/v1/GetProductsByQueryRequestOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/CreateUserResponseOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/returns/v1/GetReturnResponseOrBuilder.java
@@ -115,7 +114,6 @@
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/RoleId.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/GetOrderItemsResponseOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/CreateRoleResponse.java
-/home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/CreateOrderItemOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/returns/v1/ListReturnsByUserIdRequestOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/returns/v1/ListReturnsByUserIdResponse.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/cart/v1/DeleteCartResponse.java

@@ -32,43 +32,55 @@ public interface OrderItemDetailsOrBuilder extends
       getVariantIdBytes();
 
   /**
-   * <code>int32 quantity = 3;</code>
+   * <code>string name = 3;</code>
+   * @return The name.
+   */
+  java.lang.String getName();
+  /**
+   * <code>string name = 3;</code>
+   * @return The bytes for name.
+   */
+  com.google.protobuf.ByteString
+      getNameBytes();
+
+  /**
+   * <code>int32 quantity = 4;</code>
    * @return The quantity.
    */
   int getQuantity();
 
   /**
-   * <code>double price = 4;</code>
+   * <code>double price = 5;</code>
    * @return The price.
    */
   double getPrice();
 
   /**
-   * <code>string image_url = 5;</code>
+   * <code>string image_url = 6;</code>
    * @return The imageUrl.
    */
   java.lang.String getImageUrl();
   /**
-   * <code>string image_url = 5;</code>
+   * <code>string image_url = 6;</code>
    * @return The bytes for imageUrl.
    */
   com.google.protobuf.ByteString
       getImageUrlBytes();
 
   /**
-   * <code>string description = 6;</code>
+   * <code>string description = 7;</code>
    * @return The description.
    */
   java.lang.String getDescription();
   /**
-   * <code>string description = 6;</code>
+   * <code>string description = 7;</code>
    * @return The bytes for description.
    */
   com.google.protobuf.ByteString
       getDescriptionBytes();
 
   /**
-   * <code>bool is_returnable = 7;</code>
+   * <code>bool is_returnable = 8;</code>
    * @return The isReturnable.
    */
   boolean getIsReturnable();

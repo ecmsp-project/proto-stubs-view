@@ -2,7 +2,6 @@ com/ecmsp/order/v1/CreateOrderResponseOrBuilder.class
 com/ecmsp/order/v1/GetOrderResponse.class
 com/ecmsp/product/v1/reservation/v1/CreateVariantsReservationResponse.class
 com/ecmsp/cart/v1/AddProductResponseOrBuilder.class
-com/ecmsp/order/v1/CreateOrderItem.class
 com/ecmsp/product/v1/GetProductsByQueryRequest.class
 com/ecmsp/order/v1/returns/v1/GetReturnResponseOrBuilder.class
 com/ecmsp/order/v1/GetOrderRequest$Builder.class
@@ -52,7 +51,6 @@ com/ecmsp/order/v1/GetOrderItemsRequest.class
 com/ecmsp/user/v1/AssignRoleToUsersRequest$Builder.class
 com/ecmsp/cart/v1/SubtractProductRequest$Builder.class
 com/ecmsp/user/v1/CreateRoleRequest$Builder.class
-com/ecmsp/order/v1/CreateOrderItemOrBuilder.class
 com/ecmsp/user/v1/RemoveRoleFromUsersRequestOrBuilder.class
 com/ecmsp/user/v1/UserServiceGrpc$MethodHandlers.class
 com/ecmsp/product/v1/ProductServiceGrpc$MethodHandlers.class
@@ -233,7 +231,6 @@ com/ecmsp/order/v1/returns/v1/ItemReturnDetails$1.class
 com/ecmsp/product/v1/GetVariantsDetailsRequestOrBuilder.class
 com/ecmsp/user/v1/UpdateRoleRequest.class
 com/ecmsp/user/v1/RoleId.class
-com/ecmsp/order/v1/CreateOrderItem$1.class
 com/ecmsp/product/v1/reservation/v1/VariantReservationServiceGrpc$VariantReservationServiceStub.class
 com/ecmsp/user/v1/ListUsersResponseOrBuilder.class
 com/ecmsp/order/v1/returns/v1/ReturnStatus.class
@@ -257,7 +254,6 @@ com/ecmsp/user/v1/UserServiceGrpc$AsyncService.class
 com/ecmsp/user/v1/CreateRoleResponse$1.class
 com/ecmsp/order/v1/OrderServiceProto.class
 com/ecmsp/user/v1/ListAllPermissionsRequest.class
-com/ecmsp/order/v1/CreateOrderItem$Builder.class
 com/ecmsp/product/v1/reservation/v1/GetVariantsReservationRequest$1.class
 com/ecmsp/order/v1/GetOrderStatusResponse$Builder.class
 com/ecmsp/user/v1/GetUserRequest$1.class

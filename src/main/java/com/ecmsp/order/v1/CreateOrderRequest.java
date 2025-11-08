@@ -41,41 +41,41 @@ private static final long serialVersionUID = 0L;
 
   public static final int ITEMS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private java.util.List<com.ecmsp.order.v1.CreateOrderItem> items_;
+  private java.util.List<com.ecmsp.order.v1.OrderItemDetails> items_;
   /**
-   * <code>repeated .order.v1.CreateOrderItem items = 1;</code>
+   * <code>repeated .order.v1.OrderItemDetails items = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<com.ecmsp.order.v1.CreateOrderItem> getItemsList() {
+  public java.util.List<com.ecmsp.order.v1.OrderItemDetails> getItemsList() {
     return items_;
   }
   /**
-   * <code>repeated .order.v1.CreateOrderItem items = 1;</code>
+   * <code>repeated .order.v1.OrderItemDetails items = 1;</code>
    */
   @java.lang.Override
-  public java.util.List<? extends com.ecmsp.order.v1.CreateOrderItemOrBuilder> 
+  public java.util.List<? extends com.ecmsp.order.v1.OrderItemDetailsOrBuilder> 
       getItemsOrBuilderList() {
     return items_;
   }
   /**
-   * <code>repeated .order.v1.CreateOrderItem items = 1;</code>
+   * <code>repeated .order.v1.OrderItemDetails items = 1;</code>
    */
   @java.lang.Override
   public int getItemsCount() {
     return items_.size();
   }
   /**
-   * <code>repeated .order.v1.CreateOrderItem items = 1;</code>
+   * <code>repeated .order.v1.OrderItemDetails items = 1;</code>
    */
   @java.lang.Override
-  public com.ecmsp.order.v1.CreateOrderItem getItems(int index) {
+  public com.ecmsp.order.v1.OrderItemDetails getItems(int index) {
     return items_.get(index);
   }
   /**
-   * <code>repeated .order.v1.CreateOrderItem items = 1;</code>
+   * <code>repeated .order.v1.OrderItemDetails items = 1;</code>
    */
   @java.lang.Override
-  public com.ecmsp.order.v1.CreateOrderItemOrBuilder getItemsOrBuilder(
+  public com.ecmsp.order.v1.OrderItemDetailsOrBuilder getItemsOrBuilder(
       int index) {
     return items_.get(index);
   }
@@ -425,9 +425,9 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              com.ecmsp.order.v1.CreateOrderItem m =
+              com.ecmsp.order.v1.OrderItemDetails m =
                   input.readMessage(
-                      com.ecmsp.order.v1.CreateOrderItem.parser(),
+                      com.ecmsp.order.v1.OrderItemDetails.parser(),
                       extensionRegistry);
               if (itemsBuilder_ == null) {
                 ensureItemsIsMutable();
@@ -454,22 +454,22 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<com.ecmsp.order.v1.CreateOrderItem> items_ =
+    private java.util.List<com.ecmsp.order.v1.OrderItemDetails> items_ =
       java.util.Collections.emptyList();
     private void ensureItemsIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        items_ = new java.util.ArrayList<com.ecmsp.order.v1.CreateOrderItem>(items_);
+        items_ = new java.util.ArrayList<com.ecmsp.order.v1.OrderItemDetails>(items_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.ecmsp.order.v1.CreateOrderItem, com.ecmsp.order.v1.CreateOrderItem.Builder, com.ecmsp.order.v1.CreateOrderItemOrBuilder> itemsBuilder_;
+        com.ecmsp.order.v1.OrderItemDetails, com.ecmsp.order.v1.OrderItemDetails.Builder, com.ecmsp.order.v1.OrderItemDetailsOrBuilder> itemsBuilder_;
 
     /**
-     * <code>repeated .order.v1.CreateOrderItem items = 1;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 1;</code>
      */
-    public java.util.List<com.ecmsp.order.v1.CreateOrderItem> getItemsList() {
+    public java.util.List<com.ecmsp.order.v1.OrderItemDetails> getItemsList() {
       if (itemsBuilder_ == null) {
         return java.util.Collections.unmodifiableList(items_);
       } else {
@@ -477,7 +477,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .order.v1.CreateOrderItem items = 1;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 1;</code>
      */
     public int getItemsCount() {
       if (itemsBuilder_ == null) {
@@ -487,9 +487,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .order.v1.CreateOrderItem items = 1;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 1;</code>
      */
-    public com.ecmsp.order.v1.CreateOrderItem getItems(int index) {
+    public com.ecmsp.order.v1.OrderItemDetails getItems(int index) {
       if (itemsBuilder_ == null) {
         return items_.get(index);
       } else {
@@ -497,10 +497,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .order.v1.CreateOrderItem items = 1;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 1;</code>
      */
     public Builder setItems(
-        int index, com.ecmsp.order.v1.CreateOrderItem value) {
+        int index, com.ecmsp.order.v1.OrderItemDetails value) {
       if (itemsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -514,10 +514,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .order.v1.CreateOrderItem items = 1;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 1;</code>
      */
     public Builder setItems(
-        int index, com.ecmsp.order.v1.CreateOrderItem.Builder builderForValue) {
+        int index, com.ecmsp.order.v1.OrderItemDetails.Builder builderForValue) {
       if (itemsBuilder_ == null) {
         ensureItemsIsMutable();
         items_.set(index, builderForValue.build());
@@ -528,9 +528,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .order.v1.CreateOrderItem items = 1;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 1;</code>
      */
-    public Builder addItems(com.ecmsp.order.v1.CreateOrderItem value) {
+    public Builder addItems(com.ecmsp.order.v1.OrderItemDetails value) {
       if (itemsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -544,10 +544,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .order.v1.CreateOrderItem items = 1;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 1;</code>
      */
     public Builder addItems(
-        int index, com.ecmsp.order.v1.CreateOrderItem value) {
+        int index, com.ecmsp.order.v1.OrderItemDetails value) {
       if (itemsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -561,10 +561,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .order.v1.CreateOrderItem items = 1;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 1;</code>
      */
     public Builder addItems(
-        com.ecmsp.order.v1.CreateOrderItem.Builder builderForValue) {
+        com.ecmsp.order.v1.OrderItemDetails.Builder builderForValue) {
       if (itemsBuilder_ == null) {
         ensureItemsIsMutable();
         items_.add(builderForValue.build());
@@ -575,10 +575,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .order.v1.CreateOrderItem items = 1;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 1;</code>
      */
     public Builder addItems(
-        int index, com.ecmsp.order.v1.CreateOrderItem.Builder builderForValue) {
+        int index, com.ecmsp.order.v1.OrderItemDetails.Builder builderForValue) {
       if (itemsBuilder_ == null) {
         ensureItemsIsMutable();
         items_.add(index, builderForValue.build());
@@ -589,10 +589,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .order.v1.CreateOrderItem items = 1;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 1;</code>
      */
     public Builder addAllItems(
-        java.lang.Iterable<? extends com.ecmsp.order.v1.CreateOrderItem> values) {
+        java.lang.Iterable<? extends com.ecmsp.order.v1.OrderItemDetails> values) {
       if (itemsBuilder_ == null) {
         ensureItemsIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -604,7 +604,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .order.v1.CreateOrderItem items = 1;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 1;</code>
      */
     public Builder clearItems() {
       if (itemsBuilder_ == null) {
@@ -617,7 +617,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .order.v1.CreateOrderItem items = 1;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 1;</code>
      */
     public Builder removeItems(int index) {
       if (itemsBuilder_ == null) {
@@ -630,16 +630,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .order.v1.CreateOrderItem items = 1;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 1;</code>
      */
-    public com.ecmsp.order.v1.CreateOrderItem.Builder getItemsBuilder(
+    public com.ecmsp.order.v1.OrderItemDetails.Builder getItemsBuilder(
         int index) {
       return getItemsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .order.v1.CreateOrderItem items = 1;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 1;</code>
      */
-    public com.ecmsp.order.v1.CreateOrderItemOrBuilder getItemsOrBuilder(
+    public com.ecmsp.order.v1.OrderItemDetailsOrBuilder getItemsOrBuilder(
         int index) {
       if (itemsBuilder_ == null) {
         return items_.get(index);  } else {
@@ -647,9 +647,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .order.v1.CreateOrderItem items = 1;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 1;</code>
      */
-    public java.util.List<? extends com.ecmsp.order.v1.CreateOrderItemOrBuilder> 
+    public java.util.List<? extends com.ecmsp.order.v1.OrderItemDetailsOrBuilder> 
          getItemsOrBuilderList() {
       if (itemsBuilder_ != null) {
         return itemsBuilder_.getMessageOrBuilderList();
@@ -658,33 +658,33 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .order.v1.CreateOrderItem items = 1;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 1;</code>
      */
-    public com.ecmsp.order.v1.CreateOrderItem.Builder addItemsBuilder() {
+    public com.ecmsp.order.v1.OrderItemDetails.Builder addItemsBuilder() {
       return getItemsFieldBuilder().addBuilder(
-          com.ecmsp.order.v1.CreateOrderItem.getDefaultInstance());
+          com.ecmsp.order.v1.OrderItemDetails.getDefaultInstance());
     }
     /**
-     * <code>repeated .order.v1.CreateOrderItem items = 1;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 1;</code>
      */
-    public com.ecmsp.order.v1.CreateOrderItem.Builder addItemsBuilder(
+    public com.ecmsp.order.v1.OrderItemDetails.Builder addItemsBuilder(
         int index) {
       return getItemsFieldBuilder().addBuilder(
-          index, com.ecmsp.order.v1.CreateOrderItem.getDefaultInstance());
+          index, com.ecmsp.order.v1.OrderItemDetails.getDefaultInstance());
     }
     /**
-     * <code>repeated .order.v1.CreateOrderItem items = 1;</code>
+     * <code>repeated .order.v1.OrderItemDetails items = 1;</code>
      */
-    public java.util.List<com.ecmsp.order.v1.CreateOrderItem.Builder> 
+    public java.util.List<com.ecmsp.order.v1.OrderItemDetails.Builder> 
          getItemsBuilderList() {
       return getItemsFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        com.ecmsp.order.v1.CreateOrderItem, com.ecmsp.order.v1.CreateOrderItem.Builder, com.ecmsp.order.v1.CreateOrderItemOrBuilder> 
+        com.ecmsp.order.v1.OrderItemDetails, com.ecmsp.order.v1.OrderItemDetails.Builder, com.ecmsp.order.v1.OrderItemDetailsOrBuilder> 
         getItemsFieldBuilder() {
       if (itemsBuilder_ == null) {
         itemsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            com.ecmsp.order.v1.CreateOrderItem, com.ecmsp.order.v1.CreateOrderItem.Builder, com.ecmsp.order.v1.CreateOrderItemOrBuilder>(
+            com.ecmsp.order.v1.OrderItemDetails, com.ecmsp.order.v1.OrderItemDetails.Builder, com.ecmsp.order.v1.OrderItemDetailsOrBuilder>(
                 items_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),

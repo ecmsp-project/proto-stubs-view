@@ -18,6 +18,7 @@ private static final long serialVersionUID = 0L;
   private OrderItemDetails() {
     itemId_ = "";
     variantId_ = "";
+    name_ = "";
     imageUrl_ = "";
     description_ = "";
   }
@@ -120,10 +121,49 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int QUANTITY_FIELD_NUMBER = 3;
+  public static final int NAME_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object name_ = "";
+  /**
+   * <code>string name = 3;</code>
+   * @return The name.
+   */
+  @java.lang.Override
+  public java.lang.String getName() {
+    java.lang.Object ref = name_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      name_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string name = 3;</code>
+   * @return The bytes for name.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getNameBytes() {
+    java.lang.Object ref = name_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      name_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int QUANTITY_FIELD_NUMBER = 4;
   private int quantity_ = 0;
   /**
-   * <code>int32 quantity = 3;</code>
+   * <code>int32 quantity = 4;</code>
    * @return The quantity.
    */
   @java.lang.Override
@@ -131,10 +171,10 @@ private static final long serialVersionUID = 0L;
     return quantity_;
   }
 
-  public static final int PRICE_FIELD_NUMBER = 4;
+  public static final int PRICE_FIELD_NUMBER = 5;
   private double price_ = 0D;
   /**
-   * <code>double price = 4;</code>
+   * <code>double price = 5;</code>
    * @return The price.
    */
   @java.lang.Override
@@ -142,11 +182,11 @@ private static final long serialVersionUID = 0L;
     return price_;
   }
 
-  public static final int IMAGE_URL_FIELD_NUMBER = 5;
+  public static final int IMAGE_URL_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
   private volatile java.lang.Object imageUrl_ = "";
   /**
-   * <code>string image_url = 5;</code>
+   * <code>string image_url = 6;</code>
    * @return The imageUrl.
    */
   @java.lang.Override
@@ -163,7 +203,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string image_url = 5;</code>
+   * <code>string image_url = 6;</code>
    * @return The bytes for imageUrl.
    */
   @java.lang.Override
@@ -181,11 +221,11 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int DESCRIPTION_FIELD_NUMBER = 6;
+  public static final int DESCRIPTION_FIELD_NUMBER = 7;
   @SuppressWarnings("serial")
   private volatile java.lang.Object description_ = "";
   /**
-   * <code>string description = 6;</code>
+   * <code>string description = 7;</code>
    * @return The description.
    */
   @java.lang.Override
@@ -202,7 +242,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string description = 6;</code>
+   * <code>string description = 7;</code>
    * @return The bytes for description.
    */
   @java.lang.Override
@@ -220,10 +260,10 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int IS_RETURNABLE_FIELD_NUMBER = 7;
+  public static final int IS_RETURNABLE_FIELD_NUMBER = 8;
   private boolean isReturnable_ = false;
   /**
-   * <code>bool is_returnable = 7;</code>
+   * <code>bool is_returnable = 8;</code>
    * @return The isReturnable.
    */
   @java.lang.Override
@@ -251,20 +291,23 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(variantId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, variantId_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, name_);
+    }
     if (quantity_ != 0) {
-      output.writeInt32(3, quantity_);
+      output.writeInt32(4, quantity_);
     }
     if (java.lang.Double.doubleToRawLongBits(price_) != 0) {
-      output.writeDouble(4, price_);
+      output.writeDouble(5, price_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageUrl_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, imageUrl_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, imageUrl_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, description_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, description_);
     }
     if (isReturnable_ != false) {
-      output.writeBool(7, isReturnable_);
+      output.writeBool(8, isReturnable_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -281,23 +324,26 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(variantId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, variantId_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, name_);
+    }
     if (quantity_ != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(3, quantity_);
+        .computeInt32Size(4, quantity_);
     }
     if (java.lang.Double.doubleToRawLongBits(price_) != 0) {
       size += com.google.protobuf.CodedOutputStream
-        .computeDoubleSize(4, price_);
+        .computeDoubleSize(5, price_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(imageUrl_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, imageUrl_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, imageUrl_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(description_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, description_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, description_);
     }
     if (isReturnable_ != false) {
       size += com.google.protobuf.CodedOutputStream
-        .computeBoolSize(7, isReturnable_);
+        .computeBoolSize(8, isReturnable_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -318,6 +364,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getItemId())) return false;
     if (!getVariantId()
         .equals(other.getVariantId())) return false;
+    if (!getName()
+        .equals(other.getName())) return false;
     if (getQuantity()
         != other.getQuantity()) return false;
     if (java.lang.Double.doubleToLongBits(getPrice())
@@ -344,6 +392,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getItemId().hashCode();
     hash = (37 * hash) + VARIANT_ID_FIELD_NUMBER;
     hash = (53 * hash) + getVariantId().hashCode();
+    hash = (37 * hash) + NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getName().hashCode();
     hash = (37 * hash) + QUANTITY_FIELD_NUMBER;
     hash = (53 * hash) + getQuantity();
     hash = (37 * hash) + PRICE_FIELD_NUMBER;
@@ -489,6 +539,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       itemId_ = "";
       variantId_ = "";
+      name_ = "";
       quantity_ = 0;
       price_ = 0D;
       imageUrl_ = "";
@@ -534,18 +585,21 @@ private static final long serialVersionUID = 0L;
         result.variantId_ = variantId_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.quantity_ = quantity_;
+        result.name_ = name_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.price_ = price_;
+        result.quantity_ = quantity_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.imageUrl_ = imageUrl_;
+        result.price_ = price_;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.description_ = description_;
+        result.imageUrl_ = imageUrl_;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.description_ = description_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.isReturnable_ = isReturnable_;
       }
     }
@@ -604,6 +658,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
+      if (!other.getName().isEmpty()) {
+        name_ = other.name_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       if (other.getQuantity() != 0) {
         setQuantity(other.getQuantity());
       }
@@ -612,12 +671,12 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getImageUrl().isEmpty()) {
         imageUrl_ = other.imageUrl_;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (!other.getDescription().isEmpty()) {
         description_ = other.description_;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (other.getIsReturnable() != false) {
@@ -659,31 +718,36 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
-            case 24: {
-              quantity_ = input.readInt32();
+            case 26: {
+              name_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000004;
               break;
-            } // case 24
-            case 33: {
-              price_ = input.readDouble();
+            } // case 26
+            case 32: {
+              quantity_ = input.readInt32();
               bitField0_ |= 0x00000008;
               break;
-            } // case 33
-            case 42: {
-              imageUrl_ = input.readStringRequireUtf8();
+            } // case 32
+            case 41: {
+              price_ = input.readDouble();
               bitField0_ |= 0x00000010;
               break;
-            } // case 42
+            } // case 41
             case 50: {
-              description_ = input.readStringRequireUtf8();
+              imageUrl_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000020;
               break;
             } // case 50
-            case 56: {
-              isReturnable_ = input.readBool();
+            case 58: {
+              description_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000040;
               break;
-            } // case 56
+            } // case 58
+            case 64: {
+              isReturnable_ = input.readBool();
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 64
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -845,9 +909,81 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.lang.Object name_ = "";
+    /**
+     * <code>string name = 3;</code>
+     * @return The name.
+     */
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        name_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string name = 3;</code>
+     * @return The bytes for name.
+     */
+    public com.google.protobuf.ByteString
+        getNameBytes() {
+      java.lang.Object ref = name_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        name_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string name = 3;</code>
+     * @param value The name to set.
+     * @return This builder for chaining.
+     */
+    public Builder setName(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      name_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string name = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearName() {
+      name_ = getDefaultInstance().getName();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string name = 3;</code>
+     * @param value The bytes for name to set.
+     * @return This builder for chaining.
+     */
+    public Builder setNameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      name_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
     private int quantity_ ;
     /**
-     * <code>int32 quantity = 3;</code>
+     * <code>int32 quantity = 4;</code>
      * @return The quantity.
      */
     @java.lang.Override
@@ -855,23 +991,23 @@ private static final long serialVersionUID = 0L;
       return quantity_;
     }
     /**
-     * <code>int32 quantity = 3;</code>
+     * <code>int32 quantity = 4;</code>
      * @param value The quantity to set.
      * @return This builder for chaining.
      */
     public Builder setQuantity(int value) {
 
       quantity_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>int32 quantity = 3;</code>
+     * <code>int32 quantity = 4;</code>
      * @return This builder for chaining.
      */
     public Builder clearQuantity() {
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       quantity_ = 0;
       onChanged();
       return this;
@@ -879,7 +1015,7 @@ private static final long serialVersionUID = 0L;
 
     private double price_ ;
     /**
-     * <code>double price = 4;</code>
+     * <code>double price = 5;</code>
      * @return The price.
      */
     @java.lang.Override
@@ -887,23 +1023,23 @@ private static final long serialVersionUID = 0L;
       return price_;
     }
     /**
-     * <code>double price = 4;</code>
+     * <code>double price = 5;</code>
      * @param value The price to set.
      * @return This builder for chaining.
      */
     public Builder setPrice(double value) {
 
       price_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
     /**
-     * <code>double price = 4;</code>
+     * <code>double price = 5;</code>
      * @return This builder for chaining.
      */
     public Builder clearPrice() {
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       price_ = 0D;
       onChanged();
       return this;
@@ -911,7 +1047,7 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object imageUrl_ = "";
     /**
-     * <code>string image_url = 5;</code>
+     * <code>string image_url = 6;</code>
      * @return The imageUrl.
      */
     public java.lang.String getImageUrl() {
@@ -927,7 +1063,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string image_url = 5;</code>
+     * <code>string image_url = 6;</code>
      * @return The bytes for imageUrl.
      */
     public com.google.protobuf.ByteString
@@ -944,7 +1080,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string image_url = 5;</code>
+     * <code>string image_url = 6;</code>
      * @param value The imageUrl to set.
      * @return This builder for chaining.
      */
@@ -952,22 +1088,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       imageUrl_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
-     * <code>string image_url = 5;</code>
+     * <code>string image_url = 6;</code>
      * @return This builder for chaining.
      */
     public Builder clearImageUrl() {
       imageUrl_ = getDefaultInstance().getImageUrl();
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
     /**
-     * <code>string image_url = 5;</code>
+     * <code>string image_url = 6;</code>
      * @param value The bytes for imageUrl to set.
      * @return This builder for chaining.
      */
@@ -976,14 +1112,14 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       imageUrl_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
 
     private java.lang.Object description_ = "";
     /**
-     * <code>string description = 6;</code>
+     * <code>string description = 7;</code>
      * @return The description.
      */
     public java.lang.String getDescription() {
@@ -999,7 +1135,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string description = 6;</code>
+     * <code>string description = 7;</code>
      * @return The bytes for description.
      */
     public com.google.protobuf.ByteString
@@ -1016,7 +1152,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string description = 6;</code>
+     * <code>string description = 7;</code>
      * @param value The description to set.
      * @return This builder for chaining.
      */
@@ -1024,22 +1160,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       description_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
     /**
-     * <code>string description = 6;</code>
+     * <code>string description = 7;</code>
      * @return This builder for chaining.
      */
     public Builder clearDescription() {
       description_ = getDefaultInstance().getDescription();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
     /**
-     * <code>string description = 6;</code>
+     * <code>string description = 7;</code>
      * @param value The bytes for description to set.
      * @return This builder for chaining.
      */
@@ -1048,14 +1184,14 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       description_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
 
     private boolean isReturnable_ ;
     /**
-     * <code>bool is_returnable = 7;</code>
+     * <code>bool is_returnable = 8;</code>
      * @return The isReturnable.
      */
     @java.lang.Override
@@ -1063,23 +1199,23 @@ private static final long serialVersionUID = 0L;
       return isReturnable_;
     }
     /**
-     * <code>bool is_returnable = 7;</code>
+     * <code>bool is_returnable = 8;</code>
      * @param value The isReturnable to set.
      * @return This builder for chaining.
      */
     public Builder setIsReturnable(boolean value) {
 
       isReturnable_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
     /**
-     * <code>bool is_returnable = 7;</code>
+     * <code>bool is_returnable = 8;</code>
      * @return This builder for chaining.
      */
     public Builder clearIsReturnable() {
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000080);
       isReturnable_ = false;
       onChanged();
       return this;
