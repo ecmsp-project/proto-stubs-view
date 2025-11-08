@@ -170,6 +170,37 @@ public final class OrderServiceGrpc {
     return getListOrdersByUserIdMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.ecmsp.order.v1.CreateOrderRequest,
+      com.ecmsp.order.v1.CreateOrderResponse> getCreateOrderMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateOrder",
+      requestType = com.ecmsp.order.v1.CreateOrderRequest.class,
+      responseType = com.ecmsp.order.v1.CreateOrderResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.ecmsp.order.v1.CreateOrderRequest,
+      com.ecmsp.order.v1.CreateOrderResponse> getCreateOrderMethod() {
+    io.grpc.MethodDescriptor<com.ecmsp.order.v1.CreateOrderRequest, com.ecmsp.order.v1.CreateOrderResponse> getCreateOrderMethod;
+    if ((getCreateOrderMethod = OrderServiceGrpc.getCreateOrderMethod) == null) {
+      synchronized (OrderServiceGrpc.class) {
+        if ((getCreateOrderMethod = OrderServiceGrpc.getCreateOrderMethod) == null) {
+          OrderServiceGrpc.getCreateOrderMethod = getCreateOrderMethod =
+              io.grpc.MethodDescriptor.<com.ecmsp.order.v1.CreateOrderRequest, com.ecmsp.order.v1.CreateOrderResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateOrder"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.ecmsp.order.v1.CreateOrderRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.ecmsp.order.v1.CreateOrderResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OrderServiceMethodDescriptorSupplier("CreateOrder"))
+              .build();
+        }
+      }
+    }
+    return getCreateOrderMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -267,6 +298,13 @@ public final class OrderServiceGrpc {
         io.grpc.stub.StreamObserver<com.ecmsp.order.v1.ListOrdersByUserIdResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListOrdersByUserIdMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void createOrder(com.ecmsp.order.v1.CreateOrderRequest request,
+        io.grpc.stub.StreamObserver<com.ecmsp.order.v1.CreateOrderResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateOrderMethod(), responseObserver);
+    }
   }
 
   /**
@@ -335,6 +373,14 @@ public final class OrderServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListOrdersByUserIdMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void createOrder(com.ecmsp.order.v1.CreateOrderRequest request,
+        io.grpc.stub.StreamObserver<com.ecmsp.order.v1.CreateOrderResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateOrderMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -387,6 +433,13 @@ public final class OrderServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOrdersByUserIdMethod(), getCallOptions(), request);
     }
+
+    /**
+     */
+    public com.ecmsp.order.v1.CreateOrderResponse createOrder(com.ecmsp.order.v1.CreateOrderRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateOrderMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -438,6 +491,13 @@ public final class OrderServiceGrpc {
     public com.ecmsp.order.v1.ListOrdersByUserIdResponse listOrdersByUserId(com.ecmsp.order.v1.ListOrdersByUserIdRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListOrdersByUserIdMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.ecmsp.order.v1.CreateOrderResponse createOrder(com.ecmsp.order.v1.CreateOrderRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateOrderMethod(), getCallOptions(), request);
     }
   }
 
@@ -496,6 +556,14 @@ public final class OrderServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListOrdersByUserIdMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.ecmsp.order.v1.CreateOrderResponse> createOrder(
+        com.ecmsp.order.v1.CreateOrderRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateOrderMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_ORDER = 0;
@@ -503,6 +571,7 @@ public final class OrderServiceGrpc {
   private static final int METHODID_GET_ORDER_ITEMS = 2;
   private static final int METHODID_LIST_ORDERS = 3;
   private static final int METHODID_LIST_ORDERS_BY_USER_ID = 4;
+  private static final int METHODID_CREATE_ORDER = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -540,6 +609,10 @@ public final class OrderServiceGrpc {
         case METHODID_LIST_ORDERS_BY_USER_ID:
           serviceImpl.listOrdersByUserId((com.ecmsp.order.v1.ListOrdersByUserIdRequest) request,
               (io.grpc.stub.StreamObserver<com.ecmsp.order.v1.ListOrdersByUserIdResponse>) responseObserver);
+          break;
+        case METHODID_CREATE_ORDER:
+          serviceImpl.createOrder((com.ecmsp.order.v1.CreateOrderRequest) request,
+              (io.grpc.stub.StreamObserver<com.ecmsp.order.v1.CreateOrderResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -594,6 +667,13 @@ public final class OrderServiceGrpc {
               com.ecmsp.order.v1.ListOrdersByUserIdRequest,
               com.ecmsp.order.v1.ListOrdersByUserIdResponse>(
                 service, METHODID_LIST_ORDERS_BY_USER_ID)))
+        .addMethod(
+          getCreateOrderMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.ecmsp.order.v1.CreateOrderRequest,
+              com.ecmsp.order.v1.CreateOrderResponse>(
+                service, METHODID_CREATE_ORDER)))
         .build();
   }
 
@@ -647,6 +727,7 @@ public final class OrderServiceGrpc {
               .addMethod(getGetOrderItemsMethod())
               .addMethod(getListOrdersMethod())
               .addMethod(getListOrdersByUserIdMethod())
+              .addMethod(getCreateOrderMethod())
               .build();
         }
       }

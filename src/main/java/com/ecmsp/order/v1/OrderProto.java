@@ -24,6 +24,11 @@ public final class OrderProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_order_v1_Order_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_order_v1_CreateOrderItem_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_order_v1_CreateOrderItem_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -42,8 +47,9 @@ public final class OrderProto {
       "\001(\t\022\026\n\016reservation_id\030\002 \001(\t\022+\n\014order_sta" +
       "tus\030\003 \001(\0162\025.order.v1.OrderStatus\022\014\n\004date" +
       "\030\004 \001(\t\022)\n\005items\030\005 \003(\0132\032.order.v1.OrderIt" +
-      "emDetailsB\"\n\022com.ecmsp.order.v1B\nOrderPr" +
-      "otoP\001b\006proto3"
+      "emDetails\"7\n\017CreateOrderItem\022\022\n\nvariant_" +
+      "id\030\001 \001(\t\022\020\n\010quantity\030\002 \001(\005B\"\n\022com.ecmsp." +
+      "order.v1B\nOrderProtoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -62,6 +68,12 @@ public final class OrderProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_Order_descriptor,
         new java.lang.String[] { "OrderId", "ReservationId", "OrderStatus", "Date", "Items", });
+    internal_static_order_v1_CreateOrderItem_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_order_v1_CreateOrderItem_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_order_v1_CreateOrderItem_descriptor,
+        new java.lang.String[] { "VariantId", "Quantity", });
     com.ecmsp.order.v1.OrderStatusProto.getDescriptor();
   }
 

@@ -4,6 +4,10 @@
 package com.ecmsp.order.v1;
 
 /**
+ * <pre>
+ *TODO: reservation_id should be removed
+ * </pre>
+ *
  * Protobuf type {@code order.v1.Order}
  */
 public final class Order extends
@@ -419,6 +423,10 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
+   * <pre>
+   *TODO: reservation_id should be removed
+   * </pre>
+   *
    * Protobuf type {@code order.v1.Order}
    */
   public static final class Builder extends

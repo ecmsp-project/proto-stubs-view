@@ -15,9 +15,11 @@
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/RemoveRoleFromUsersRequestOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/GetUserResponse.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/OrderOrBuilder.java
+/home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/CreateOrderRequestOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/returns/v1/ReturnServiceProto.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/ListUsersResponse.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/DeleteRoleRequestOrBuilder.java
+/home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/CreateOrderResponseOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/ListUsersRequestOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/product/v1/VariantDetailOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/returns/v1/ReturnStatusProto.java
@@ -92,6 +94,7 @@
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/cart/v1/DeleteProductResponseOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/cart/v1/DeleteProductRequest.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/GetOrderStatusResponse.java
+/home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/CreateOrderItem.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/product/v1/GetProductsByQueryRequestOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/CreateUserResponseOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/returns/v1/GetReturnResponseOrBuilder.java
@@ -112,6 +115,7 @@
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/RoleId.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/GetOrderItemsResponseOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/CreateRoleResponse.java
+/home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/CreateOrderItemOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/returns/v1/ListReturnsByUserIdRequestOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/returns/v1/ListReturnsByUserIdResponse.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/cart/v1/DeleteCartResponse.java
@@ -164,6 +168,7 @@
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/GetOrderItemsRequestOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/UserServiceProto.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/CreateUserResponse.java
+/home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/CreateOrderResponse.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/cart/v1/SubtractProductRequest.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/product/v1/GetProductsRequestOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/AssignRoleToUsersRequest.java
@@ -185,6 +190,7 @@
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/product/v1/GetProductsByQueryRequest.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/RoleIdOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/GetOrderItemsResponse.java
+/home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/CreateOrderRequest.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/cart/v1/CreateOrderResponseOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/cart/v1/UpdateQuantityResponse.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/ListRolesResponseOrBuilder.java
