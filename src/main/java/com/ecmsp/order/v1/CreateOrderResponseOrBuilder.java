@@ -8,14 +8,69 @@ public interface CreateOrderResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string order_id = 1;</code>
+   * <code>bool is_success = 1;</code>
+   * @return The isSuccess.
+   */
+  boolean getIsSuccess();
+
+  /**
+   * <code>string order_id = 2;</code>
    * @return The orderId.
    */
   java.lang.String getOrderId();
   /**
-   * <code>string order_id = 1;</code>
+   * <code>string order_id = 2;</code>
    * @return The bytes for orderId.
    */
   com.google.protobuf.ByteString
       getOrderIdBytes();
+
+  /**
+   * <code>repeated string reserved_variant_ids = 3;</code>
+   * @return A list containing the reservedVariantIds.
+   */
+  java.util.List<java.lang.String>
+      getReservedVariantIdsList();
+  /**
+   * <code>repeated string reserved_variant_ids = 3;</code>
+   * @return The count of reservedVariantIds.
+   */
+  int getReservedVariantIdsCount();
+  /**
+   * <code>repeated string reserved_variant_ids = 3;</code>
+   * @param index The index of the element to return.
+   * @return The reservedVariantIds at the given index.
+   */
+  java.lang.String getReservedVariantIds(int index);
+  /**
+   * <code>repeated string reserved_variant_ids = 3;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the reservedVariantIds at the given index.
+   */
+  com.google.protobuf.ByteString
+      getReservedVariantIdsBytes(int index);
+
+  /**
+   * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+   */
+  java.util.List<com.ecmsp.order.v1.FailedReservationVariant> 
+      getFailedVariantsList();
+  /**
+   * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+   */
+  com.ecmsp.order.v1.FailedReservationVariant getFailedVariants(int index);
+  /**
+   * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+   */
+  int getFailedVariantsCount();
+  /**
+   * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+   */
+  java.util.List<? extends com.ecmsp.order.v1.FailedReservationVariantOrBuilder> 
+      getFailedVariantsOrBuilderList();
+  /**
+   * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+   */
+  com.ecmsp.order.v1.FailedReservationVariantOrBuilder getFailedVariantsOrBuilder(
+      int index);
 }

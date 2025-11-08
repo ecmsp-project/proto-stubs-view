@@ -25,6 +25,11 @@ public final class OrderServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_order_v1_CreateOrderResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_order_v1_FailedReservationVariant_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_order_v1_FailedReservationVariant_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_order_v1_GetOrderRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -86,37 +91,43 @@ public final class OrderServiceProto {
       "\n\034order/v1/order_service.proto\022\010order.v1" +
       "\032\033order/v1/order_status.proto\032\024order/v1/" +
       "order.proto\"?\n\022CreateOrderRequest\022)\n\005ite" +
-      "ms\030\001 \003(\0132\032.order.v1.OrderItemDetails\"\'\n\023" +
-      "CreateOrderResponse\022\020\n\010order_id\030\001 \001(\t\"#\n" +
-      "\017GetOrderRequest\022\020\n\010order_id\030\001 \001(\t\"\212\001\n\020G" +
-      "etOrderResponse\022\020\n\010order_id\030\001 \001(\t\022+\n\014ord" +
-      "er_status\030\003 \001(\0162\025.order.v1.OrderStatus\022\014" +
-      "\n\004date\030\004 \001(\t\022)\n\005items\030\005 \003(\0132\032.order.v1.O" +
-      "rderItemDetails\")\n\025GetOrderStatusRequest" +
-      "\022\020\n\010order_id\030\001 \001(\t\"W\n\026GetOrderStatusResp" +
-      "onse\022\020\n\010order_id\030\001 \001(\t\022+\n\014order_status\030\002" +
-      " \001(\0162\025.order.v1.OrderStatus\"(\n\024GetOrderI" +
-      "temsRequest\022\020\n\010order_id\030\001 \001(\t\"B\n\025GetOrde" +
-      "rItemsResponse\022)\n\005items\030\001 \003(\0132\032.order.v1" +
-      ".OrderItemDetails\"\023\n\021ListOrdersRequest\"@" +
-      "\n\022ListOrdersResponse\022*\n\006orders\030\001 \003(\0132\032.o" +
-      "rder.v1.GetOrderResponse\"\033\n\031ListOrdersBy" +
-      "UserIdRequest\"H\n\032ListOrdersByUserIdRespo" +
-      "nse\022*\n\006orders\030\001 \003(\0132\032.order.v1.GetOrderR" +
-      "esponse2\356\003\n\014OrderService\022A\n\010GetOrder\022\031.o" +
-      "rder.v1.GetOrderRequest\032\032.order.v1.GetOr" +
-      "derResponse\022S\n\016GetOrderStatus\022\037.order.v1" +
-      ".GetOrderStatusRequest\032 .order.v1.GetOrd" +
-      "erStatusResponse\022P\n\rGetOrderItems\022\036.orde" +
-      "r.v1.GetOrderItemsRequest\032\037.order.v1.Get" +
-      "OrderItemsResponse\022G\n\nListOrders\022\033.order" +
-      ".v1.ListOrdersRequest\032\034.order.v1.ListOrd" +
-      "ersResponse\022_\n\022ListOrdersByUserId\022#.orde" +
-      "r.v1.ListOrdersByUserIdRequest\032$.order.v" +
-      "1.ListOrdersByUserIdResponse\022J\n\013CreateOr" +
-      "der\022\034.order.v1.CreateOrderRequest\032\035.orde" +
-      "r.v1.CreateOrderResponseB)\n\022com.ecmsp.or" +
-      "der.v1B\021OrderServiceProtoP\001b\006proto3"
+      "ms\030\001 \003(\0132\032.order.v1.OrderItemDetails\"\226\001\n" +
+      "\023CreateOrderResponse\022\022\n\nis_success\030\001 \001(\010" +
+      "\022\020\n\010order_id\030\002 \001(\t\022\034\n\024reserved_variant_i" +
+      "ds\030\003 \003(\t\022;\n\017failed_variants\030\004 \003(\0132\".orde" +
+      "r.v1.FailedReservationVariant\"f\n\030FailedR" +
+      "eservationVariant\022\022\n\nvariant_id\030\001 \001(\t\022\032\n" +
+      "\022requested_quantity\030\002 \001(\005\022\032\n\022available_q" +
+      "uantity\030\003 \001(\005\"#\n\017GetOrderRequest\022\020\n\010orde" +
+      "r_id\030\001 \001(\t\"\212\001\n\020GetOrderResponse\022\020\n\010order" +
+      "_id\030\001 \001(\t\022+\n\014order_status\030\003 \001(\0162\025.order." +
+      "v1.OrderStatus\022\014\n\004date\030\004 \001(\t\022)\n\005items\030\005 " +
+      "\003(\0132\032.order.v1.OrderItemDetails\")\n\025GetOr" +
+      "derStatusRequest\022\020\n\010order_id\030\001 \001(\t\"W\n\026Ge" +
+      "tOrderStatusResponse\022\020\n\010order_id\030\001 \001(\t\022+" +
+      "\n\014order_status\030\002 \001(\0162\025.order.v1.OrderSta" +
+      "tus\"(\n\024GetOrderItemsRequest\022\020\n\010order_id\030" +
+      "\001 \001(\t\"B\n\025GetOrderItemsResponse\022)\n\005items\030" +
+      "\001 \003(\0132\032.order.v1.OrderItemDetails\"\023\n\021Lis" +
+      "tOrdersRequest\"@\n\022ListOrdersResponse\022*\n\006" +
+      "orders\030\001 \003(\0132\032.order.v1.GetOrderResponse" +
+      "\"\033\n\031ListOrdersByUserIdRequest\"H\n\032ListOrd" +
+      "ersByUserIdResponse\022*\n\006orders\030\001 \003(\0132\032.or" +
+      "der.v1.GetOrderResponse2\356\003\n\014OrderService" +
+      "\022A\n\010GetOrder\022\031.order.v1.GetOrderRequest\032" +
+      "\032.order.v1.GetOrderResponse\022S\n\016GetOrderS" +
+      "tatus\022\037.order.v1.GetOrderStatusRequest\032 " +
+      ".order.v1.GetOrderStatusResponse\022P\n\rGetO" +
+      "rderItems\022\036.order.v1.GetOrderItemsReques" +
+      "t\032\037.order.v1.GetOrderItemsResponse\022G\n\nLi" +
+      "stOrders\022\033.order.v1.ListOrdersRequest\032\034." +
+      "order.v1.ListOrdersResponse\022_\n\022ListOrder" +
+      "sByUserId\022#.order.v1.ListOrdersByUserIdR" +
+      "equest\032$.order.v1.ListOrdersByUserIdResp" +
+      "onse\022J\n\013CreateOrder\022\034.order.v1.CreateOrd" +
+      "erRequest\032\035.order.v1.CreateOrderResponse" +
+      "B)\n\022com.ecmsp.order.v1B\021OrderServiceProt" +
+      "oP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -135,63 +146,69 @@ public final class OrderServiceProto {
     internal_static_order_v1_CreateOrderResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_CreateOrderResponse_descriptor,
-        new java.lang.String[] { "OrderId", });
-    internal_static_order_v1_GetOrderRequest_descriptor =
+        new java.lang.String[] { "IsSuccess", "OrderId", "ReservedVariantIds", "FailedVariants", });
+    internal_static_order_v1_FailedReservationVariant_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_order_v1_FailedReservationVariant_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_order_v1_FailedReservationVariant_descriptor,
+        new java.lang.String[] { "VariantId", "RequestedQuantity", "AvailableQuantity", });
+    internal_static_order_v1_GetOrderRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_order_v1_GetOrderRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_GetOrderRequest_descriptor,
         new java.lang.String[] { "OrderId", });
     internal_static_order_v1_GetOrderResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_order_v1_GetOrderResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_GetOrderResponse_descriptor,
         new java.lang.String[] { "OrderId", "OrderStatus", "Date", "Items", });
     internal_static_order_v1_GetOrderStatusRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_order_v1_GetOrderStatusRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_GetOrderStatusRequest_descriptor,
         new java.lang.String[] { "OrderId", });
     internal_static_order_v1_GetOrderStatusResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_order_v1_GetOrderStatusResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_GetOrderStatusResponse_descriptor,
         new java.lang.String[] { "OrderId", "OrderStatus", });
     internal_static_order_v1_GetOrderItemsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_order_v1_GetOrderItemsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_GetOrderItemsRequest_descriptor,
         new java.lang.String[] { "OrderId", });
     internal_static_order_v1_GetOrderItemsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_order_v1_GetOrderItemsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_GetOrderItemsResponse_descriptor,
         new java.lang.String[] { "Items", });
     internal_static_order_v1_ListOrdersRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_order_v1_ListOrdersRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_ListOrdersRequest_descriptor,
         new java.lang.String[] { });
     internal_static_order_v1_ListOrdersResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_order_v1_ListOrdersResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_ListOrdersResponse_descriptor,
         new java.lang.String[] { "Orders", });
     internal_static_order_v1_ListOrdersByUserIdRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_order_v1_ListOrdersByUserIdRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_ListOrdersByUserIdRequest_descriptor,
         new java.lang.String[] { });
     internal_static_order_v1_ListOrdersByUserIdResponse_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_order_v1_ListOrdersByUserIdResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_ListOrdersByUserIdResponse_descriptor,

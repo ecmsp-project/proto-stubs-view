@@ -91,6 +91,7 @@ com/ecmsp/order/v1/OrderServiceGrpc$3.class
 com/ecmsp/cart/v1/AddProductRequest.class
 com/ecmsp/user/v1/UpdateRoleResponse.class
 com/ecmsp/user/v1/GetUserResponseOrBuilder.class
+com/ecmsp/order/v1/FailedReservationVariantOrBuilder.class
 com/ecmsp/order/v1/CreateOrderResponse$1.class
 com/ecmsp/product/v1/GetVariantsDetailsResponse$1.class
 com/ecmsp/user/v1/ListAllPermissionsRequest$Builder.class
@@ -157,6 +158,7 @@ com/ecmsp/cart/v1/UpdateQuantityRequestOrBuilder.class
 com/ecmsp/order/v1/returns/v1/ListReturnsRequest$1.class
 com/ecmsp/cart/v1/CartProduct.class
 com/ecmsp/product/v1/ProductServiceGrpc$ProductServiceBlockingStub.class
+com/ecmsp/order/v1/FailedReservationVariant$Builder.class
 com/ecmsp/user/v1/CreateUserRequest.class
 com/ecmsp/user/v1/GetUserResponse$1.class
 com/ecmsp/order/v1/Order$1.class
@@ -278,6 +280,7 @@ com/ecmsp/example/v1/Example$1.class
 com/ecmsp/cart/v1/CreateOrderResponse$Builder.class
 com/ecmsp/user/v1/RemoveRoleFromUsersResponse.class
 com/ecmsp/cart/v1/CartServiceGrpc.class
+com/ecmsp/order/v1/FailedReservationVariant$1.class
 com/ecmsp/product/v1/reservation/v1/FailedReservationVariant$Builder.class
 com/ecmsp/order/v1/CreateOrderResponse$Builder.class
 com/ecmsp/product/v1/reservation/v1/RemoveVariantsReservationRequestOrBuilder.class
@@ -298,6 +301,7 @@ com/ecmsp/product/v1/ProductServiceProto.class
 com/ecmsp/product/v1/reservation/v1/VariantReservationServiceGrpc$VariantReservationServiceBlockingStub.class
 com/ecmsp/order/v1/returns/v1/GetReturnResponse$Builder.class
 com/ecmsp/product/v1/reservation/v1/CreateVariantsReservationRequest$1.class
+com/ecmsp/order/v1/FailedReservationVariant.class
 com/ecmsp/product/v1/reservation/v1/FailedReservationVariant$1.class
 com/ecmsp/order/v1/OrderServiceGrpc$OrderServiceBlockingStub.class
 com/ecmsp/order/v1/ListOrdersRequestOrBuilder.class

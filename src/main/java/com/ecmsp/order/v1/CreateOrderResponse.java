@@ -17,6 +17,9 @@ private static final long serialVersionUID = 0L;
   }
   private CreateOrderResponse() {
     orderId_ = "";
+    reservedVariantIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    failedVariants_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -39,11 +42,22 @@ private static final long serialVersionUID = 0L;
             com.ecmsp.order.v1.CreateOrderResponse.class, com.ecmsp.order.v1.CreateOrderResponse.Builder.class);
   }
 
-  public static final int ORDER_ID_FIELD_NUMBER = 1;
+  public static final int IS_SUCCESS_FIELD_NUMBER = 1;
+  private boolean isSuccess_ = false;
+  /**
+   * <code>bool is_success = 1;</code>
+   * @return The isSuccess.
+   */
+  @java.lang.Override
+  public boolean getIsSuccess() {
+    return isSuccess_;
+  }
+
+  public static final int ORDER_ID_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private volatile java.lang.Object orderId_ = "";
   /**
-   * <code>string order_id = 1;</code>
+   * <code>string order_id = 2;</code>
    * @return The orderId.
    */
   @java.lang.Override
@@ -60,7 +74,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string order_id = 1;</code>
+   * <code>string order_id = 2;</code>
    * @return The bytes for orderId.
    */
   @java.lang.Override
@@ -78,6 +92,84 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int RESERVED_VARIANT_IDS_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList reservedVariantIds_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <code>repeated string reserved_variant_ids = 3;</code>
+   * @return A list containing the reservedVariantIds.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getReservedVariantIdsList() {
+    return reservedVariantIds_;
+  }
+  /**
+   * <code>repeated string reserved_variant_ids = 3;</code>
+   * @return The count of reservedVariantIds.
+   */
+  public int getReservedVariantIdsCount() {
+    return reservedVariantIds_.size();
+  }
+  /**
+   * <code>repeated string reserved_variant_ids = 3;</code>
+   * @param index The index of the element to return.
+   * @return The reservedVariantIds at the given index.
+   */
+  public java.lang.String getReservedVariantIds(int index) {
+    return reservedVariantIds_.get(index);
+  }
+  /**
+   * <code>repeated string reserved_variant_ids = 3;</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the reservedVariantIds at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getReservedVariantIdsBytes(int index) {
+    return reservedVariantIds_.getByteString(index);
+  }
+
+  public static final int FAILED_VARIANTS_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private java.util.List<com.ecmsp.order.v1.FailedReservationVariant> failedVariants_;
+  /**
+   * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.ecmsp.order.v1.FailedReservationVariant> getFailedVariantsList() {
+    return failedVariants_;
+  }
+  /**
+   * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.ecmsp.order.v1.FailedReservationVariantOrBuilder> 
+      getFailedVariantsOrBuilderList() {
+    return failedVariants_;
+  }
+  /**
+   * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+   */
+  @java.lang.Override
+  public int getFailedVariantsCount() {
+    return failedVariants_.size();
+  }
+  /**
+   * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+   */
+  @java.lang.Override
+  public com.ecmsp.order.v1.FailedReservationVariant getFailedVariants(int index) {
+    return failedVariants_.get(index);
+  }
+  /**
+   * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+   */
+  @java.lang.Override
+  public com.ecmsp.order.v1.FailedReservationVariantOrBuilder getFailedVariantsOrBuilder(
+      int index) {
+    return failedVariants_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -92,8 +184,17 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
+    if (isSuccess_ != false) {
+      output.writeBool(1, isSuccess_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, orderId_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, orderId_);
+    }
+    for (int i = 0; i < reservedVariantIds_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, reservedVariantIds_.getRaw(i));
+    }
+    for (int i = 0; i < failedVariants_.size(); i++) {
+      output.writeMessage(4, failedVariants_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -104,8 +205,24 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
+    if (isSuccess_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(1, isSuccess_);
+    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(orderId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, orderId_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, orderId_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < reservedVariantIds_.size(); i++) {
+        dataSize += computeStringSizeNoTag(reservedVariantIds_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getReservedVariantIdsList().size();
+    }
+    for (int i = 0; i < failedVariants_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, failedVariants_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -122,8 +239,14 @@ private static final long serialVersionUID = 0L;
     }
     com.ecmsp.order.v1.CreateOrderResponse other = (com.ecmsp.order.v1.CreateOrderResponse) obj;
 
+    if (getIsSuccess()
+        != other.getIsSuccess()) return false;
     if (!getOrderId()
         .equals(other.getOrderId())) return false;
+    if (!getReservedVariantIdsList()
+        .equals(other.getReservedVariantIdsList())) return false;
+    if (!getFailedVariantsList()
+        .equals(other.getFailedVariantsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -135,8 +258,19 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + IS_SUCCESS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getIsSuccess());
     hash = (37 * hash) + ORDER_ID_FIELD_NUMBER;
     hash = (53 * hash) + getOrderId().hashCode();
+    if (getReservedVariantIdsCount() > 0) {
+      hash = (37 * hash) + RESERVED_VARIANT_IDS_FIELD_NUMBER;
+      hash = (53 * hash) + getReservedVariantIdsList().hashCode();
+    }
+    if (getFailedVariantsCount() > 0) {
+      hash = (37 * hash) + FAILED_VARIANTS_FIELD_NUMBER;
+      hash = (53 * hash) + getFailedVariantsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -268,7 +402,17 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      isSuccess_ = false;
       orderId_ = "";
+      reservedVariantIds_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      if (failedVariantsBuilder_ == null) {
+        failedVariants_ = java.util.Collections.emptyList();
+      } else {
+        failedVariants_ = null;
+        failedVariantsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
@@ -295,15 +439,35 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.ecmsp.order.v1.CreateOrderResponse buildPartial() {
       com.ecmsp.order.v1.CreateOrderResponse result = new com.ecmsp.order.v1.CreateOrderResponse(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
+    private void buildPartialRepeatedFields(com.ecmsp.order.v1.CreateOrderResponse result) {
+      if (failedVariantsBuilder_ == null) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          failedVariants_ = java.util.Collections.unmodifiableList(failedVariants_);
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.failedVariants_ = failedVariants_;
+      } else {
+        result.failedVariants_ = failedVariantsBuilder_.build();
+      }
+    }
+
     private void buildPartial0(com.ecmsp.order.v1.CreateOrderResponse result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.isSuccess_ = isSuccess_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.orderId_ = orderId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        reservedVariantIds_.makeImmutable();
+        result.reservedVariantIds_ = reservedVariantIds_;
       }
     }
 
@@ -351,10 +515,49 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.ecmsp.order.v1.CreateOrderResponse other) {
       if (other == com.ecmsp.order.v1.CreateOrderResponse.getDefaultInstance()) return this;
+      if (other.getIsSuccess() != false) {
+        setIsSuccess(other.getIsSuccess());
+      }
       if (!other.getOrderId().isEmpty()) {
         orderId_ = other.orderId_;
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
         onChanged();
+      }
+      if (!other.reservedVariantIds_.isEmpty()) {
+        if (reservedVariantIds_.isEmpty()) {
+          reservedVariantIds_ = other.reservedVariantIds_;
+          bitField0_ |= 0x00000004;
+        } else {
+          ensureReservedVariantIdsIsMutable();
+          reservedVariantIds_.addAll(other.reservedVariantIds_);
+        }
+        onChanged();
+      }
+      if (failedVariantsBuilder_ == null) {
+        if (!other.failedVariants_.isEmpty()) {
+          if (failedVariants_.isEmpty()) {
+            failedVariants_ = other.failedVariants_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+          } else {
+            ensureFailedVariantsIsMutable();
+            failedVariants_.addAll(other.failedVariants_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.failedVariants_.isEmpty()) {
+          if (failedVariantsBuilder_.isEmpty()) {
+            failedVariantsBuilder_.dispose();
+            failedVariantsBuilder_ = null;
+            failedVariants_ = other.failedVariants_;
+            bitField0_ = (bitField0_ & ~0x00000008);
+            failedVariantsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getFailedVariantsFieldBuilder() : null;
+          } else {
+            failedVariantsBuilder_.addAllMessages(other.failedVariants_);
+          }
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -382,11 +585,35 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              orderId_ = input.readStringRequireUtf8();
+            case 8: {
+              isSuccess_ = input.readBool();
               bitField0_ |= 0x00000001;
               break;
-            } // case 10
+            } // case 8
+            case 18: {
+              orderId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureReservedVariantIdsIsMutable();
+              reservedVariantIds_.add(s);
+              break;
+            } // case 26
+            case 34: {
+              com.ecmsp.order.v1.FailedReservationVariant m =
+                  input.readMessage(
+                      com.ecmsp.order.v1.FailedReservationVariant.parser(),
+                      extensionRegistry);
+              if (failedVariantsBuilder_ == null) {
+                ensureFailedVariantsIsMutable();
+                failedVariants_.add(m);
+              } else {
+                failedVariantsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -404,9 +631,41 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
+    private boolean isSuccess_ ;
+    /**
+     * <code>bool is_success = 1;</code>
+     * @return The isSuccess.
+     */
+    @java.lang.Override
+    public boolean getIsSuccess() {
+      return isSuccess_;
+    }
+    /**
+     * <code>bool is_success = 1;</code>
+     * @param value The isSuccess to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIsSuccess(boolean value) {
+
+      isSuccess_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool is_success = 1;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIsSuccess() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      isSuccess_ = false;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object orderId_ = "";
     /**
-     * <code>string order_id = 1;</code>
+     * <code>string order_id = 2;</code>
      * @return The orderId.
      */
     public java.lang.String getOrderId() {
@@ -422,7 +681,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string order_id = 1;</code>
+     * <code>string order_id = 2;</code>
      * @return The bytes for orderId.
      */
     public com.google.protobuf.ByteString
@@ -439,7 +698,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string order_id = 1;</code>
+     * <code>string order_id = 2;</code>
      * @param value The orderId to set.
      * @return This builder for chaining.
      */
@@ -447,22 +706,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       orderId_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>string order_id = 1;</code>
+     * <code>string order_id = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearOrderId() {
       orderId_ = getDefaultInstance().getOrderId();
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>string order_id = 1;</code>
+     * <code>string order_id = 2;</code>
      * @param value The bytes for orderId to set.
      * @return This builder for chaining.
      */
@@ -471,9 +730,360 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       orderId_ = value;
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList reservedVariantIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureReservedVariantIdsIsMutable() {
+      if (!reservedVariantIds_.isModifiable()) {
+        reservedVariantIds_ = new com.google.protobuf.LazyStringArrayList(reservedVariantIds_);
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>repeated string reserved_variant_ids = 3;</code>
+     * @return A list containing the reservedVariantIds.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getReservedVariantIdsList() {
+      reservedVariantIds_.makeImmutable();
+      return reservedVariantIds_;
+    }
+    /**
+     * <code>repeated string reserved_variant_ids = 3;</code>
+     * @return The count of reservedVariantIds.
+     */
+    public int getReservedVariantIdsCount() {
+      return reservedVariantIds_.size();
+    }
+    /**
+     * <code>repeated string reserved_variant_ids = 3;</code>
+     * @param index The index of the element to return.
+     * @return The reservedVariantIds at the given index.
+     */
+    public java.lang.String getReservedVariantIds(int index) {
+      return reservedVariantIds_.get(index);
+    }
+    /**
+     * <code>repeated string reserved_variant_ids = 3;</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the reservedVariantIds at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getReservedVariantIdsBytes(int index) {
+      return reservedVariantIds_.getByteString(index);
+    }
+    /**
+     * <code>repeated string reserved_variant_ids = 3;</code>
+     * @param index The index to set the value at.
+     * @param value The reservedVariantIds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setReservedVariantIds(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureReservedVariantIdsIsMutable();
+      reservedVariantIds_.set(index, value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string reserved_variant_ids = 3;</code>
+     * @param value The reservedVariantIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addReservedVariantIds(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureReservedVariantIdsIsMutable();
+      reservedVariantIds_.add(value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string reserved_variant_ids = 3;</code>
+     * @param values The reservedVariantIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllReservedVariantIds(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureReservedVariantIdsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, reservedVariantIds_);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string reserved_variant_ids = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearReservedVariantIds() {
+      reservedVariantIds_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string reserved_variant_ids = 3;</code>
+     * @param value The bytes of the reservedVariantIds to add.
+     * @return This builder for chaining.
+     */
+    public Builder addReservedVariantIdsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureReservedVariantIdsIsMutable();
+      reservedVariantIds_.add(value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<com.ecmsp.order.v1.FailedReservationVariant> failedVariants_ =
+      java.util.Collections.emptyList();
+    private void ensureFailedVariantsIsMutable() {
+      if (!((bitField0_ & 0x00000008) != 0)) {
+        failedVariants_ = new java.util.ArrayList<com.ecmsp.order.v1.FailedReservationVariant>(failedVariants_);
+        bitField0_ |= 0x00000008;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.ecmsp.order.v1.FailedReservationVariant, com.ecmsp.order.v1.FailedReservationVariant.Builder, com.ecmsp.order.v1.FailedReservationVariantOrBuilder> failedVariantsBuilder_;
+
+    /**
+     * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+     */
+    public java.util.List<com.ecmsp.order.v1.FailedReservationVariant> getFailedVariantsList() {
+      if (failedVariantsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(failedVariants_);
+      } else {
+        return failedVariantsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+     */
+    public int getFailedVariantsCount() {
+      if (failedVariantsBuilder_ == null) {
+        return failedVariants_.size();
+      } else {
+        return failedVariantsBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+     */
+    public com.ecmsp.order.v1.FailedReservationVariant getFailedVariants(int index) {
+      if (failedVariantsBuilder_ == null) {
+        return failedVariants_.get(index);
+      } else {
+        return failedVariantsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+     */
+    public Builder setFailedVariants(
+        int index, com.ecmsp.order.v1.FailedReservationVariant value) {
+      if (failedVariantsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFailedVariantsIsMutable();
+        failedVariants_.set(index, value);
+        onChanged();
+      } else {
+        failedVariantsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+     */
+    public Builder setFailedVariants(
+        int index, com.ecmsp.order.v1.FailedReservationVariant.Builder builderForValue) {
+      if (failedVariantsBuilder_ == null) {
+        ensureFailedVariantsIsMutable();
+        failedVariants_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        failedVariantsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+     */
+    public Builder addFailedVariants(com.ecmsp.order.v1.FailedReservationVariant value) {
+      if (failedVariantsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFailedVariantsIsMutable();
+        failedVariants_.add(value);
+        onChanged();
+      } else {
+        failedVariantsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+     */
+    public Builder addFailedVariants(
+        int index, com.ecmsp.order.v1.FailedReservationVariant value) {
+      if (failedVariantsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFailedVariantsIsMutable();
+        failedVariants_.add(index, value);
+        onChanged();
+      } else {
+        failedVariantsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+     */
+    public Builder addFailedVariants(
+        com.ecmsp.order.v1.FailedReservationVariant.Builder builderForValue) {
+      if (failedVariantsBuilder_ == null) {
+        ensureFailedVariantsIsMutable();
+        failedVariants_.add(builderForValue.build());
+        onChanged();
+      } else {
+        failedVariantsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+     */
+    public Builder addFailedVariants(
+        int index, com.ecmsp.order.v1.FailedReservationVariant.Builder builderForValue) {
+      if (failedVariantsBuilder_ == null) {
+        ensureFailedVariantsIsMutable();
+        failedVariants_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        failedVariantsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+     */
+    public Builder addAllFailedVariants(
+        java.lang.Iterable<? extends com.ecmsp.order.v1.FailedReservationVariant> values) {
+      if (failedVariantsBuilder_ == null) {
+        ensureFailedVariantsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, failedVariants_);
+        onChanged();
+      } else {
+        failedVariantsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+     */
+    public Builder clearFailedVariants() {
+      if (failedVariantsBuilder_ == null) {
+        failedVariants_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000008);
+        onChanged();
+      } else {
+        failedVariantsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+     */
+    public Builder removeFailedVariants(int index) {
+      if (failedVariantsBuilder_ == null) {
+        ensureFailedVariantsIsMutable();
+        failedVariants_.remove(index);
+        onChanged();
+      } else {
+        failedVariantsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+     */
+    public com.ecmsp.order.v1.FailedReservationVariant.Builder getFailedVariantsBuilder(
+        int index) {
+      return getFailedVariantsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+     */
+    public com.ecmsp.order.v1.FailedReservationVariantOrBuilder getFailedVariantsOrBuilder(
+        int index) {
+      if (failedVariantsBuilder_ == null) {
+        return failedVariants_.get(index);  } else {
+        return failedVariantsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+     */
+    public java.util.List<? extends com.ecmsp.order.v1.FailedReservationVariantOrBuilder> 
+         getFailedVariantsOrBuilderList() {
+      if (failedVariantsBuilder_ != null) {
+        return failedVariantsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(failedVariants_);
+      }
+    }
+    /**
+     * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+     */
+    public com.ecmsp.order.v1.FailedReservationVariant.Builder addFailedVariantsBuilder() {
+      return getFailedVariantsFieldBuilder().addBuilder(
+          com.ecmsp.order.v1.FailedReservationVariant.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+     */
+    public com.ecmsp.order.v1.FailedReservationVariant.Builder addFailedVariantsBuilder(
+        int index) {
+      return getFailedVariantsFieldBuilder().addBuilder(
+          index, com.ecmsp.order.v1.FailedReservationVariant.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .order.v1.FailedReservationVariant failed_variants = 4;</code>
+     */
+    public java.util.List<com.ecmsp.order.v1.FailedReservationVariant.Builder> 
+         getFailedVariantsBuilderList() {
+      return getFailedVariantsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.ecmsp.order.v1.FailedReservationVariant, com.ecmsp.order.v1.FailedReservationVariant.Builder, com.ecmsp.order.v1.FailedReservationVariantOrBuilder> 
+        getFailedVariantsFieldBuilder() {
+      if (failedVariantsBuilder_ == null) {
+        failedVariantsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.ecmsp.order.v1.FailedReservationVariant, com.ecmsp.order.v1.FailedReservationVariant.Builder, com.ecmsp.order.v1.FailedReservationVariantOrBuilder>(
+                failedVariants_,
+                ((bitField0_ & 0x00000008) != 0),
+                getParentForChildren(),
+                isClean());
+        failedVariants_ = null;
+      }
+      return failedVariantsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
