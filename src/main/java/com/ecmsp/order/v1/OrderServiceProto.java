@@ -99,35 +99,35 @@ public final class OrderServiceProto {
       "eservationVariant\022\022\n\nvariant_id\030\001 \001(\t\022\032\n" +
       "\022requested_quantity\030\002 \001(\005\022\032\n\022available_q" +
       "uantity\030\003 \001(\005\"#\n\017GetOrderRequest\022\020\n\010orde" +
-      "r_id\030\001 \001(\t\"\212\001\n\020GetOrderResponse\022\020\n\010order" +
+      "r_id\030\001 \001(\t\"\235\001\n\020GetOrderResponse\022\020\n\010order" +
       "_id\030\001 \001(\t\022+\n\014order_status\030\003 \001(\0162\025.order." +
       "v1.OrderStatus\022\014\n\004date\030\004 \001(\t\022)\n\005items\030\005 " +
-      "\003(\0132\032.order.v1.OrderItemDetails\")\n\025GetOr" +
-      "derStatusRequest\022\020\n\010order_id\030\001 \001(\t\"W\n\026Ge" +
-      "tOrderStatusResponse\022\020\n\010order_id\030\001 \001(\t\022+" +
-      "\n\014order_status\030\002 \001(\0162\025.order.v1.OrderSta" +
-      "tus\"(\n\024GetOrderItemsRequest\022\020\n\010order_id\030" +
-      "\001 \001(\t\"B\n\025GetOrderItemsResponse\022)\n\005items\030" +
-      "\001 \003(\0132\032.order.v1.OrderItemDetails\"\023\n\021Lis" +
-      "tOrdersRequest\"@\n\022ListOrdersResponse\022*\n\006" +
-      "orders\030\001 \003(\0132\032.order.v1.GetOrderResponse" +
-      "\"\033\n\031ListOrdersByUserIdRequest\"H\n\032ListOrd" +
-      "ersByUserIdResponse\022*\n\006orders\030\001 \003(\0132\032.or" +
-      "der.v1.GetOrderResponse2\356\003\n\014OrderService" +
-      "\022A\n\010GetOrder\022\031.order.v1.GetOrderRequest\032" +
-      "\032.order.v1.GetOrderResponse\022S\n\016GetOrderS" +
-      "tatus\022\037.order.v1.GetOrderStatusRequest\032 " +
-      ".order.v1.GetOrderStatusResponse\022P\n\rGetO" +
-      "rderItems\022\036.order.v1.GetOrderItemsReques" +
-      "t\032\037.order.v1.GetOrderItemsResponse\022G\n\nLi" +
-      "stOrders\022\033.order.v1.ListOrdersRequest\032\034." +
-      "order.v1.ListOrdersResponse\022_\n\022ListOrder" +
-      "sByUserId\022#.order.v1.ListOrdersByUserIdR" +
-      "equest\032$.order.v1.ListOrdersByUserIdResp" +
-      "onse\022J\n\013CreateOrder\022\034.order.v1.CreateOrd" +
-      "erRequest\032\035.order.v1.CreateOrderResponse" +
-      "B)\n\022com.ecmsp.order.v1B\021OrderServiceProt" +
-      "oP\001b\006proto3"
+      "\003(\0132\032.order.v1.OrderItemDetails\022\021\n\tclien" +
+      "t_id\030\006 \001(\t\")\n\025GetOrderStatusRequest\022\020\n\010o" +
+      "rder_id\030\001 \001(\t\"W\n\026GetOrderStatusResponse\022" +
+      "\020\n\010order_id\030\001 \001(\t\022+\n\014order_status\030\002 \001(\0162" +
+      "\025.order.v1.OrderStatus\"(\n\024GetOrderItemsR" +
+      "equest\022\020\n\010order_id\030\001 \001(\t\"B\n\025GetOrderItem" +
+      "sResponse\022)\n\005items\030\001 \003(\0132\032.order.v1.Orde" +
+      "rItemDetails\"\023\n\021ListOrdersRequest\"@\n\022Lis" +
+      "tOrdersResponse\022*\n\006orders\030\001 \003(\0132\032.order." +
+      "v1.GetOrderResponse\"\033\n\031ListOrdersByUserI" +
+      "dRequest\"H\n\032ListOrdersByUserIdResponse\022*" +
+      "\n\006orders\030\001 \003(\0132\032.order.v1.GetOrderRespon" +
+      "se2\356\003\n\014OrderService\022A\n\010GetOrder\022\031.order." +
+      "v1.GetOrderRequest\032\032.order.v1.GetOrderRe" +
+      "sponse\022S\n\016GetOrderStatus\022\037.order.v1.GetO" +
+      "rderStatusRequest\032 .order.v1.GetOrderSta" +
+      "tusResponse\022P\n\rGetOrderItems\022\036.order.v1." +
+      "GetOrderItemsRequest\032\037.order.v1.GetOrder" +
+      "ItemsResponse\022G\n\nListOrders\022\033.order.v1.L" +
+      "istOrdersRequest\032\034.order.v1.ListOrdersRe" +
+      "sponse\022_\n\022ListOrdersByUserId\022#.order.v1." +
+      "ListOrdersByUserIdRequest\032$.order.v1.Lis" +
+      "tOrdersByUserIdResponse\022J\n\013CreateOrder\022\034" +
+      ".order.v1.CreateOrderRequest\032\035.order.v1." +
+      "CreateOrderResponseB)\n\022com.ecmsp.order.v" +
+      "1B\021OrderServiceProtoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -164,7 +164,7 @@ public final class OrderServiceProto {
     internal_static_order_v1_GetOrderResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_order_v1_GetOrderResponse_descriptor,
-        new java.lang.String[] { "OrderId", "OrderStatus", "Date", "Items", });
+        new java.lang.String[] { "OrderId", "OrderStatus", "Date", "Items", "ClientId", });
     internal_static_order_v1_GetOrderStatusRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_order_v1_GetOrderStatusRequest_fieldAccessorTable = new
