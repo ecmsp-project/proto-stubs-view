@@ -303,6 +303,7 @@ com/ecmsp/product/v1/reservation/v1/CreateVariantsReservationRequest$1.class
 com/ecmsp/order/v1/FailedReservationVariant.class
 com/ecmsp/product/v1/reservation/v1/FailedReservationVariant$1.class
 com/ecmsp/order/v1/OrderServiceGrpc$OrderServiceBlockingStub.class
+com/ecmsp/common/userservice/user/domain/Permission.class
 com/ecmsp/order/v1/ListOrdersRequestOrBuilder.class
 com/ecmsp/user/v1/UserServiceGrpc$UserServiceStub.class
 com/ecmsp/cart/v1/GetCartResponseOrBuilder.class
