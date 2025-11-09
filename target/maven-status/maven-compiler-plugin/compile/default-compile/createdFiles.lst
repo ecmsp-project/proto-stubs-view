@@ -232,7 +232,6 @@ com/ecmsp/user/v1/ListUsersResponse.class
 com/ecmsp/order/v1/returns/v1/ItemReturnDetails$1.class
 com/ecmsp/product/v1/GetVariantsDetailsRequestOrBuilder.class
 com/ecmsp/user/v1/UpdateRoleRequest.class
-com/ecmsp/user/v1/RoleId.class
 com/ecmsp/product/v1/reservation/v1/VariantReservationServiceGrpc$VariantReservationServiceStub.class
 com/ecmsp/user/v1/ListUsersResponseOrBuilder.class
 com/ecmsp/order/v1/returns/v1/ReturnStatus.class
@@ -307,7 +306,6 @@ com/ecmsp/order/v1/OrderServiceGrpc$OrderServiceBlockingStub.class
 com/ecmsp/order/v1/ListOrdersRequestOrBuilder.class
 com/ecmsp/user/v1/UserServiceGrpc$UserServiceStub.class
 com/ecmsp/cart/v1/GetCartResponseOrBuilder.class
-com/ecmsp/user/v1/RoleIdOrBuilder.class
 com/ecmsp/product/v1/GetVariantsDetailsRequest$1.class
 com/ecmsp/product/v1/reservation/v1/RemoveVariantsReservationResponseOrBuilder.class
 com/ecmsp/product/v1/GetProductsRequest$Builder.class
@@ -346,7 +344,6 @@ com/ecmsp/product/v1/GetProductsResponseOrBuilder.class
 com/ecmsp/cart/v1/DeleteCartResponse$Builder.class
 com/ecmsp/user/v1/CreateRoleRequest$1.class
 com/ecmsp/cart/v1/ProductRequest$Builder.class
-com/ecmsp/user/v1/RoleId$1.class
 com/ecmsp/order/v1/ListOrdersByUserIdResponse.class
 com/ecmsp/cart/v1/DeleteProductRequest.class
 com/ecmsp/cart/v1/CartServiceGrpc$AsyncService.class
@@ -441,7 +438,6 @@ com/ecmsp/cart/v1/DeleteProductRequestOrBuilder.class
 com/ecmsp/product/v1/VariantDetail.class
 com/ecmsp/order/v1/OrderServiceGrpc$OrderServiceStub.class
 com/ecmsp/cart/v1/SubtractProductRequest.class
-com/ecmsp/user/v1/RoleId$Builder.class
 com/ecmsp/product/v1/ProductServiceGrpc.class
 com/ecmsp/order/v1/CreateOrderRequestOrBuilder.class
 com/ecmsp/user/v1/CreateRoleResponse$Builder.class

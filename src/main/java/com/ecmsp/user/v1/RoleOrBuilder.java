@@ -8,51 +8,36 @@ public interface RoleOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.user.v1.RoleId id = 1;</code>
-   * @return Whether the id field is set.
-   */
-  boolean hasId();
-  /**
-   * <code>.user.v1.RoleId id = 1;</code>
-   * @return The id.
-   */
-  com.ecmsp.user.v1.RoleId getId();
-  /**
-   * <code>.user.v1.RoleId id = 1;</code>
-   */
-  com.ecmsp.user.v1.RoleIdOrBuilder getIdOrBuilder();
-
-  /**
-   * <code>string name = 2;</code>
+   * <code>string name = 1;</code>
    * @return The name.
    */
   java.lang.String getName();
   /**
-   * <code>string name = 2;</code>
+   * <code>string name = 1;</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
 
   /**
-   * <code>repeated string permissions = 3;</code>
+   * <code>repeated string permissions = 2;</code>
    * @return A list containing the permissions.
    */
   java.util.List<java.lang.String>
       getPermissionsList();
   /**
-   * <code>repeated string permissions = 3;</code>
+   * <code>repeated string permissions = 2;</code>
    * @return The count of permissions.
    */
   int getPermissionsCount();
   /**
-   * <code>repeated string permissions = 3;</code>
+   * <code>repeated string permissions = 2;</code>
    * @param index The index of the element to return.
    * @return The permissions at the given index.
    */
   java.lang.String getPermissions(int index);
   /**
-   * <code>repeated string permissions = 3;</code>
+   * <code>repeated string permissions = 2;</code>
    * @param index The index of the value to return.
    * @return The bytes of the permissions at the given index.
    */

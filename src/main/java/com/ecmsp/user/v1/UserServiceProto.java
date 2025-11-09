@@ -164,38 +164,39 @@ public final class UserServiceProto {
       "role\030\001 \001(\0132\r.user.v1.Role\"$\n\021DeleteRoleR" +
       "equest\022\017\n\007role_id\030\001 \001(\t\"\024\n\022DeleteRoleRes" +
       "ponse\"\022\n\020ListRolesRequest\"1\n\021ListRolesRe" +
-      "sponse\022\034\n\005roles\030\001 \003(\0132\r.user.v1.Role\"=\n\030" +
-      "AssignRoleToUsersRequest\022\017\n\007role_id\030\001 \001(" +
-      "\t\022\020\n\010user_ids\030\002 \003(\t\"\033\n\031AssignRoleToUsers" +
-      "Response\"?\n\032RemoveRoleFromUsersRequest\022\017" +
-      "\n\007role_id\030\001 \001(\t\022\020\n\010user_ids\030\002 \003(\t\"\035\n\033Rem" +
-      "oveRoleFromUsersResponse\"\033\n\031ListAllPermi" +
-      "ssionsRequest\"1\n\032ListAllPermissionsRespo" +
-      "nse\022\023\n\013permissions\030\001 \003(\t2\232\007\n\013UserService" +
-      "\022<\n\007GetUser\022\027.user.v1.GetUserRequest\032\030.u" +
-      "ser.v1.GetUserResponse\022E\n\nCreateUser\022\032.u" +
-      "ser.v1.CreateUserRequest\032\033.user.v1.Creat" +
-      "eUserResponse\022E\n\nUpdateUser\022\032.user.v1.Up" +
-      "dateUserRequest\032\033.user.v1.UpdateUserResp" +
-      "onse\022E\n\nDeleteUser\022\032.user.v1.DeleteUserR" +
-      "equest\032\033.user.v1.DeleteUserResponse\022B\n\tL" +
-      "istUsers\022\031.user.v1.ListUsersRequest\032\032.us" +
-      "er.v1.ListUsersResponse\022E\n\nCreateRole\022\032." +
-      "user.v1.CreateRoleRequest\032\033.user.v1.Crea" +
-      "teRoleResponse\022E\n\nUpdateRole\022\032.user.v1.U" +
-      "pdateRoleRequest\032\033.user.v1.UpdateRoleRes" +
-      "ponse\022E\n\nDeleteRole\022\032.user.v1.DeleteRole" +
-      "Request\032\033.user.v1.DeleteRoleResponse\022B\n\t" +
-      "ListRoles\022\031.user.v1.ListRolesRequest\032\032.u" +
-      "ser.v1.ListRolesResponse\022Z\n\021AssignRoleTo" +
-      "Users\022!.user.v1.AssignRoleToUsersRequest" +
-      "\032\".user.v1.AssignRoleToUsersResponse\022`\n\023" +
-      "RemoveRoleFromUsers\022#.user.v1.RemoveRole" +
-      "FromUsersRequest\032$.user.v1.RemoveRoleFro" +
-      "mUsersResponse\022]\n\022ListAllPermissions\022\".u" +
-      "ser.v1.ListAllPermissionsRequest\032#.user." +
-      "v1.ListAllPermissionsResponseB\'\n\021com.ecm" +
-      "sp.user.v1B\020UserServiceProtoP\001b\006proto3"
+      "sponse\022\034\n\005roles\030\001 \003(\0132\r.user.v1.Role\"?\n\030" +
+      "AssignRoleToUsersRequest\022\021\n\trole_name\030\001 " +
+      "\001(\t\022\020\n\010user_ids\030\002 \003(\t\"\033\n\031AssignRoleToUse" +
+      "rsResponse\"A\n\032RemoveRoleFromUsersRequest" +
+      "\022\021\n\trole_name\030\001 \001(\t\022\020\n\010user_ids\030\002 \003(\t\"\035\n" +
+      "\033RemoveRoleFromUsersResponse\"\033\n\031ListAllP" +
+      "ermissionsRequest\"1\n\032ListAllPermissionsR" +
+      "esponse\022\023\n\013permissions\030\001 \003(\t2\232\007\n\013UserSer" +
+      "vice\022<\n\007GetUser\022\027.user.v1.GetUserRequest" +
+      "\032\030.user.v1.GetUserResponse\022E\n\nCreateUser" +
+      "\022\032.user.v1.CreateUserRequest\032\033.user.v1.C" +
+      "reateUserResponse\022E\n\nUpdateUser\022\032.user.v" +
+      "1.UpdateUserRequest\032\033.user.v1.UpdateUser" +
+      "Response\022E\n\nDeleteUser\022\032.user.v1.DeleteU" +
+      "serRequest\032\033.user.v1.DeleteUserResponse\022" +
+      "B\n\tListUsers\022\031.user.v1.ListUsersRequest\032" +
+      "\032.user.v1.ListUsersResponse\022E\n\nCreateRol" +
+      "e\022\032.user.v1.CreateRoleRequest\032\033.user.v1." +
+      "CreateRoleResponse\022E\n\nUpdateRole\022\032.user." +
+      "v1.UpdateRoleRequest\032\033.user.v1.UpdateRol" +
+      "eResponse\022E\n\nDeleteRole\022\032.user.v1.Delete" +
+      "RoleRequest\032\033.user.v1.DeleteRoleResponse" +
+      "\022B\n\tListRoles\022\031.user.v1.ListRolesRequest" +
+      "\032\032.user.v1.ListRolesResponse\022Z\n\021AssignRo" +
+      "leToUsers\022!.user.v1.AssignRoleToUsersReq" +
+      "uest\032\".user.v1.AssignRoleToUsersResponse" +
+      "\022`\n\023RemoveRoleFromUsers\022#.user.v1.Remove" +
+      "RoleFromUsersRequest\032$.user.v1.RemoveRol" +
+      "eFromUsersResponse\022]\n\022ListAllPermissions" +
+      "\022\".user.v1.ListAllPermissionsRequest\032#.u" +
+      "ser.v1.ListAllPermissionsResponseB\'\n\021com" +
+      ".ecmsp.user.v1B\020UserServiceProtoP\001b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -315,7 +316,7 @@ public final class UserServiceProto {
     internal_static_user_v1_AssignRoleToUsersRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_user_v1_AssignRoleToUsersRequest_descriptor,
-        new java.lang.String[] { "RoleId", "UserIds", });
+        new java.lang.String[] { "RoleName", "UserIds", });
     internal_static_user_v1_AssignRoleToUsersResponse_descriptor =
       getDescriptor().getMessageTypes().get(19);
     internal_static_user_v1_AssignRoleToUsersResponse_fieldAccessorTable = new
@@ -327,7 +328,7 @@ public final class UserServiceProto {
     internal_static_user_v1_RemoveRoleFromUsersRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_user_v1_RemoveRoleFromUsersRequest_descriptor,
-        new java.lang.String[] { "RoleId", "UserIds", });
+        new java.lang.String[] { "RoleName", "UserIds", });
     internal_static_user_v1_RemoveRoleFromUsersResponse_descriptor =
       getDescriptor().getMessageTypes().get(21);
     internal_static_user_v1_RemoveRoleFromUsersResponse_fieldAccessorTable = new

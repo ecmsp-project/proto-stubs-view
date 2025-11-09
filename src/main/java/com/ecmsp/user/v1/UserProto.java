@@ -20,11 +20,6 @@ public final class UserProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_user_v1_UserId_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_user_v1_RoleId_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_user_v1_RoleId_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_user_v1_Role_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -49,14 +44,12 @@ public final class UserProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\022user/v1/user.proto\022\007user.v1\"\027\n\006UserId\022" +
-      "\r\n\005value\030\001 \001(\t\"\027\n\006RoleId\022\r\n\005value\030\001 \001(\t\"" +
-      "F\n\004Role\022\033\n\002id\030\001 \001(\0132\017.user.v1.RoleId\022\014\n\004" +
-      "name\030\002 \001(\t\022\023\n\013permissions\030\003 \003(\t\"P\n\004User\022" +
-      "\033\n\002id\030\001 \001(\0132\017.user.v1.UserId\022\r\n\005login\030\002 " +
-      "\001(\t\022\034\n\005roles\030\003 \003(\0132\r.user.v1.Role\"/\n\014Use" +
-      "rToCreate\022\r\n\005login\030\001 \001(\t\022\020\n\010password\030\002 \001" +
-      "(\tB \n\021com.ecmsp.user.v1B\tUserProtoP\001b\006pr" +
-      "oto3"
+      "\r\n\005value\030\001 \001(\t\")\n\004Role\022\014\n\004name\030\001 \001(\t\022\023\n\013" +
+      "permissions\030\002 \003(\t\"P\n\004User\022\033\n\002id\030\001 \001(\0132\017." +
+      "user.v1.UserId\022\r\n\005login\030\002 \001(\t\022\034\n\005roles\030\003" +
+      " \003(\0132\r.user.v1.Role\"/\n\014UserToCreate\022\r\n\005l" +
+      "ogin\030\001 \001(\t\022\020\n\010password\030\002 \001(\tB \n\021com.ecms" +
+      "p.user.v1B\tUserProtoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -68,26 +61,20 @@ public final class UserProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_user_v1_UserId_descriptor,
         new java.lang.String[] { "Value", });
-    internal_static_user_v1_RoleId_descriptor =
-      getDescriptor().getMessageTypes().get(1);
-    internal_static_user_v1_RoleId_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_user_v1_RoleId_descriptor,
-        new java.lang.String[] { "Value", });
     internal_static_user_v1_Role_descriptor =
-      getDescriptor().getMessageTypes().get(2);
+      getDescriptor().getMessageTypes().get(1);
     internal_static_user_v1_Role_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_user_v1_Role_descriptor,
-        new java.lang.String[] { "Id", "Name", "Permissions", });
+        new java.lang.String[] { "Name", "Permissions", });
     internal_static_user_v1_User_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_user_v1_User_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_user_v1_User_descriptor,
         new java.lang.String[] { "Id", "Login", "Roles", });
     internal_static_user_v1_UserToCreate_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_user_v1_UserToCreate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_user_v1_UserToCreate_descriptor,

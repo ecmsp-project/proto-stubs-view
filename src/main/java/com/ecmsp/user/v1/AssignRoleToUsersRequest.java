@@ -16,7 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private AssignRoleToUsersRequest() {
-    roleId_ = "";
+    roleName_ = "";
     userIds_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
   }
@@ -41,39 +41,39 @@ private static final long serialVersionUID = 0L;
             com.ecmsp.user.v1.AssignRoleToUsersRequest.class, com.ecmsp.user.v1.AssignRoleToUsersRequest.Builder.class);
   }
 
-  public static final int ROLE_ID_FIELD_NUMBER = 1;
+  public static final int ROLE_NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object roleId_ = "";
+  private volatile java.lang.Object roleName_ = "";
   /**
-   * <code>string role_id = 1;</code>
-   * @return The roleId.
+   * <code>string role_name = 1;</code>
+   * @return The roleName.
    */
   @java.lang.Override
-  public java.lang.String getRoleId() {
-    java.lang.Object ref = roleId_;
+  public java.lang.String getRoleName() {
+    java.lang.Object ref = roleName_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      roleId_ = s;
+      roleName_ = s;
       return s;
     }
   }
   /**
-   * <code>string role_id = 1;</code>
-   * @return The bytes for roleId.
+   * <code>string role_name = 1;</code>
+   * @return The bytes for roleName.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getRoleIdBytes() {
-    java.lang.Object ref = roleId_;
+      getRoleNameBytes() {
+    java.lang.Object ref = roleName_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      roleId_ = b;
+      roleName_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -131,8 +131,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roleId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, roleId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roleName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, roleName_);
     }
     for (int i = 0; i < userIds_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, userIds_.getRaw(i));
@@ -146,8 +146,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roleId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, roleId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(roleName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, roleName_);
     }
     {
       int dataSize = 0;
@@ -172,8 +172,8 @@ private static final long serialVersionUID = 0L;
     }
     com.ecmsp.user.v1.AssignRoleToUsersRequest other = (com.ecmsp.user.v1.AssignRoleToUsersRequest) obj;
 
-    if (!getRoleId()
-        .equals(other.getRoleId())) return false;
+    if (!getRoleName()
+        .equals(other.getRoleName())) return false;
     if (!getUserIdsList()
         .equals(other.getUserIdsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -187,8 +187,8 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + ROLE_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getRoleId().hashCode();
+    hash = (37 * hash) + ROLE_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getRoleName().hashCode();
     if (getUserIdsCount() > 0) {
       hash = (37 * hash) + USER_IDS_FIELD_NUMBER;
       hash = (53 * hash) + getUserIdsList().hashCode();
@@ -324,7 +324,7 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      roleId_ = "";
+      roleName_ = "";
       userIds_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
@@ -361,7 +361,7 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.ecmsp.user.v1.AssignRoleToUsersRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.roleId_ = roleId_;
+        result.roleName_ = roleName_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         userIds_.makeImmutable();
@@ -413,8 +413,8 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.ecmsp.user.v1.AssignRoleToUsersRequest other) {
       if (other == com.ecmsp.user.v1.AssignRoleToUsersRequest.getDefaultInstance()) return this;
-      if (!other.getRoleId().isEmpty()) {
-        roleId_ = other.roleId_;
+      if (!other.getRoleName().isEmpty()) {
+        roleName_ = other.roleName_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
@@ -455,7 +455,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              roleId_ = input.readStringRequireUtf8();
+              roleName_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -482,73 +482,73 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object roleId_ = "";
+    private java.lang.Object roleName_ = "";
     /**
-     * <code>string role_id = 1;</code>
-     * @return The roleId.
+     * <code>string role_name = 1;</code>
+     * @return The roleName.
      */
-    public java.lang.String getRoleId() {
-      java.lang.Object ref = roleId_;
+    public java.lang.String getRoleName() {
+      java.lang.Object ref = roleName_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        roleId_ = s;
+        roleName_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string role_id = 1;</code>
-     * @return The bytes for roleId.
+     * <code>string role_name = 1;</code>
+     * @return The bytes for roleName.
      */
     public com.google.protobuf.ByteString
-        getRoleIdBytes() {
-      java.lang.Object ref = roleId_;
+        getRoleNameBytes() {
+      java.lang.Object ref = roleName_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        roleId_ = b;
+        roleName_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string role_id = 1;</code>
-     * @param value The roleId to set.
+     * <code>string role_name = 1;</code>
+     * @param value The roleName to set.
      * @return This builder for chaining.
      */
-    public Builder setRoleId(
+    public Builder setRoleName(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      roleId_ = value;
+      roleName_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string role_id = 1;</code>
+     * <code>string role_name = 1;</code>
      * @return This builder for chaining.
      */
-    public Builder clearRoleId() {
-      roleId_ = getDefaultInstance().getRoleId();
+    public Builder clearRoleName() {
+      roleName_ = getDefaultInstance().getRoleName();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string role_id = 1;</code>
-     * @param value The bytes for roleId to set.
+     * <code>string role_name = 1;</code>
+     * @param value The bytes for roleName to set.
      * @return This builder for chaining.
      */
-    public Builder setRoleIdBytes(
+    public Builder setRoleNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      roleId_ = value;
+      roleName_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;

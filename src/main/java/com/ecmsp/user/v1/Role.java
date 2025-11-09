@@ -41,37 +41,11 @@ private static final long serialVersionUID = 0L;
             com.ecmsp.user.v1.Role.class, com.ecmsp.user.v1.Role.Builder.class);
   }
 
-  public static final int ID_FIELD_NUMBER = 1;
-  private com.ecmsp.user.v1.RoleId id_;
-  /**
-   * <code>.user.v1.RoleId id = 1;</code>
-   * @return Whether the id field is set.
-   */
-  @java.lang.Override
-  public boolean hasId() {
-    return id_ != null;
-  }
-  /**
-   * <code>.user.v1.RoleId id = 1;</code>
-   * @return The id.
-   */
-  @java.lang.Override
-  public com.ecmsp.user.v1.RoleId getId() {
-    return id_ == null ? com.ecmsp.user.v1.RoleId.getDefaultInstance() : id_;
-  }
-  /**
-   * <code>.user.v1.RoleId id = 1;</code>
-   */
-  @java.lang.Override
-  public com.ecmsp.user.v1.RoleIdOrBuilder getIdOrBuilder() {
-    return id_ == null ? com.ecmsp.user.v1.RoleId.getDefaultInstance() : id_;
-  }
-
-  public static final int NAME_FIELD_NUMBER = 2;
+  public static final int NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
   /**
-   * <code>string name = 2;</code>
+   * <code>string name = 1;</code>
    * @return The name.
    */
   @java.lang.Override
@@ -88,7 +62,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string name = 2;</code>
+   * <code>string name = 1;</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -106,12 +80,12 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int PERMISSIONS_FIELD_NUMBER = 3;
+  public static final int PERMISSIONS_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringArrayList permissions_ =
       com.google.protobuf.LazyStringArrayList.emptyList();
   /**
-   * <code>repeated string permissions = 3;</code>
+   * <code>repeated string permissions = 2;</code>
    * @return A list containing the permissions.
    */
   public com.google.protobuf.ProtocolStringList
@@ -119,14 +93,14 @@ private static final long serialVersionUID = 0L;
     return permissions_;
   }
   /**
-   * <code>repeated string permissions = 3;</code>
+   * <code>repeated string permissions = 2;</code>
    * @return The count of permissions.
    */
   public int getPermissionsCount() {
     return permissions_.size();
   }
   /**
-   * <code>repeated string permissions = 3;</code>
+   * <code>repeated string permissions = 2;</code>
    * @param index The index of the element to return.
    * @return The permissions at the given index.
    */
@@ -134,7 +108,7 @@ private static final long serialVersionUID = 0L;
     return permissions_.get(index);
   }
   /**
-   * <code>repeated string permissions = 3;</code>
+   * <code>repeated string permissions = 2;</code>
    * @param index The index of the value to return.
    * @return The bytes of the permissions at the given index.
    */
@@ -157,14 +131,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (id_ != null) {
-      output.writeMessage(1, getId());
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, name_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
     for (int i = 0; i < permissions_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, permissions_.getRaw(i));
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, permissions_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -175,12 +146,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (id_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getId());
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, name_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
     }
     {
       int dataSize = 0;
@@ -205,11 +172,6 @@ private static final long serialVersionUID = 0L;
     }
     com.ecmsp.user.v1.Role other = (com.ecmsp.user.v1.Role) obj;
 
-    if (hasId() != other.hasId()) return false;
-    if (hasId()) {
-      if (!getId()
-          .equals(other.getId())) return false;
-    }
     if (!getName()
         .equals(other.getName())) return false;
     if (!getPermissionsList()
@@ -225,10 +187,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasId()) {
-      hash = (37 * hash) + ID_FIELD_NUMBER;
-      hash = (53 * hash) + getId().hashCode();
-    }
     hash = (37 * hash) + NAME_FIELD_NUMBER;
     hash = (53 * hash) + getName().hashCode();
     if (getPermissionsCount() > 0) {
@@ -366,11 +324,6 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      id_ = null;
-      if (idBuilder_ != null) {
-        idBuilder_.dispose();
-        idBuilder_ = null;
-      }
       name_ = "";
       permissions_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
@@ -408,14 +361,9 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(com.ecmsp.user.v1.Role result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.id_ = idBuilder_ == null
-            ? id_
-            : idBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.name_ = name_;
       }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
+      if (((from_bitField0_ & 0x00000002) != 0)) {
         permissions_.makeImmutable();
         result.permissions_ = permissions_;
       }
@@ -465,18 +413,15 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(com.ecmsp.user.v1.Role other) {
       if (other == com.ecmsp.user.v1.Role.getDefaultInstance()) return this;
-      if (other.hasId()) {
-        mergeId(other.getId());
-      }
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       if (!other.permissions_.isEmpty()) {
         if (permissions_.isEmpty()) {
           permissions_ = other.permissions_;
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000002;
         } else {
           ensurePermissionsIsMutable();
           permissions_.addAll(other.permissions_);
@@ -510,23 +455,16 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              input.readMessage(
-                  getIdFieldBuilder().getBuilder(),
-                  extensionRegistry);
+              name_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
             case 18: {
-              name_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
-            case 26: {
               java.lang.String s = input.readStringRequireUtf8();
               ensurePermissionsIsMutable();
               permissions_.add(s);
               break;
-            } // case 26
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -544,128 +482,9 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.ecmsp.user.v1.RoleId id_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.ecmsp.user.v1.RoleId, com.ecmsp.user.v1.RoleId.Builder, com.ecmsp.user.v1.RoleIdOrBuilder> idBuilder_;
-    /**
-     * <code>.user.v1.RoleId id = 1;</code>
-     * @return Whether the id field is set.
-     */
-    public boolean hasId() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>.user.v1.RoleId id = 1;</code>
-     * @return The id.
-     */
-    public com.ecmsp.user.v1.RoleId getId() {
-      if (idBuilder_ == null) {
-        return id_ == null ? com.ecmsp.user.v1.RoleId.getDefaultInstance() : id_;
-      } else {
-        return idBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.user.v1.RoleId id = 1;</code>
-     */
-    public Builder setId(com.ecmsp.user.v1.RoleId value) {
-      if (idBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        id_ = value;
-      } else {
-        idBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.user.v1.RoleId id = 1;</code>
-     */
-    public Builder setId(
-        com.ecmsp.user.v1.RoleId.Builder builderForValue) {
-      if (idBuilder_ == null) {
-        id_ = builderForValue.build();
-      } else {
-        idBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.user.v1.RoleId id = 1;</code>
-     */
-    public Builder mergeId(com.ecmsp.user.v1.RoleId value) {
-      if (idBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          id_ != null &&
-          id_ != com.ecmsp.user.v1.RoleId.getDefaultInstance()) {
-          getIdBuilder().mergeFrom(value);
-        } else {
-          id_ = value;
-        }
-      } else {
-        idBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.user.v1.RoleId id = 1;</code>
-     */
-    public Builder clearId() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      id_ = null;
-      if (idBuilder_ != null) {
-        idBuilder_.dispose();
-        idBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.user.v1.RoleId id = 1;</code>
-     */
-    public com.ecmsp.user.v1.RoleId.Builder getIdBuilder() {
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return getIdFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.user.v1.RoleId id = 1;</code>
-     */
-    public com.ecmsp.user.v1.RoleIdOrBuilder getIdOrBuilder() {
-      if (idBuilder_ != null) {
-        return idBuilder_.getMessageOrBuilder();
-      } else {
-        return id_ == null ?
-            com.ecmsp.user.v1.RoleId.getDefaultInstance() : id_;
-      }
-    }
-    /**
-     * <code>.user.v1.RoleId id = 1;</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        com.ecmsp.user.v1.RoleId, com.ecmsp.user.v1.RoleId.Builder, com.ecmsp.user.v1.RoleIdOrBuilder> 
-        getIdFieldBuilder() {
-      if (idBuilder_ == null) {
-        idBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            com.ecmsp.user.v1.RoleId, com.ecmsp.user.v1.RoleId.Builder, com.ecmsp.user.v1.RoleIdOrBuilder>(
-                getId(),
-                getParentForChildren(),
-                isClean());
-        id_ = null;
-      }
-      return idBuilder_;
-    }
-
     private java.lang.Object name_ = "";
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 1;</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -681,7 +500,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 1;</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -698,7 +517,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 1;</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -706,22 +525,22 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       name_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 1;</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
       name_ = getDefaultInstance().getName();
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string name = 2;</code>
+     * <code>string name = 1;</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -730,7 +549,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       name_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -741,10 +560,10 @@ private static final long serialVersionUID = 0L;
       if (!permissions_.isModifiable()) {
         permissions_ = new com.google.protobuf.LazyStringArrayList(permissions_);
       }
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
     }
     /**
-     * <code>repeated string permissions = 3;</code>
+     * <code>repeated string permissions = 2;</code>
      * @return A list containing the permissions.
      */
     public com.google.protobuf.ProtocolStringList
@@ -753,14 +572,14 @@ private static final long serialVersionUID = 0L;
       return permissions_;
     }
     /**
-     * <code>repeated string permissions = 3;</code>
+     * <code>repeated string permissions = 2;</code>
      * @return The count of permissions.
      */
     public int getPermissionsCount() {
       return permissions_.size();
     }
     /**
-     * <code>repeated string permissions = 3;</code>
+     * <code>repeated string permissions = 2;</code>
      * @param index The index of the element to return.
      * @return The permissions at the given index.
      */
@@ -768,7 +587,7 @@ private static final long serialVersionUID = 0L;
       return permissions_.get(index);
     }
     /**
-     * <code>repeated string permissions = 3;</code>
+     * <code>repeated string permissions = 2;</code>
      * @param index The index of the value to return.
      * @return The bytes of the permissions at the given index.
      */
@@ -777,7 +596,7 @@ private static final long serialVersionUID = 0L;
       return permissions_.getByteString(index);
     }
     /**
-     * <code>repeated string permissions = 3;</code>
+     * <code>repeated string permissions = 2;</code>
      * @param index The index to set the value at.
      * @param value The permissions to set.
      * @return This builder for chaining.
@@ -787,12 +606,12 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensurePermissionsIsMutable();
       permissions_.set(index, value);
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string permissions = 3;</code>
+     * <code>repeated string permissions = 2;</code>
      * @param value The permissions to add.
      * @return This builder for chaining.
      */
@@ -801,12 +620,12 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensurePermissionsIsMutable();
       permissions_.add(value);
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string permissions = 3;</code>
+     * <code>repeated string permissions = 2;</code>
      * @param values The permissions to add.
      * @return This builder for chaining.
      */
@@ -815,23 +634,23 @@ private static final long serialVersionUID = 0L;
       ensurePermissionsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, permissions_);
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string permissions = 3;</code>
+     * <code>repeated string permissions = 2;</code>
      * @return This builder for chaining.
      */
     public Builder clearPermissions() {
       permissions_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000004);;
+      bitField0_ = (bitField0_ & ~0x00000002);;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string permissions = 3;</code>
+     * <code>repeated string permissions = 2;</code>
      * @param value The bytes of the permissions to add.
      * @return This builder for chaining.
      */
@@ -841,7 +660,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensurePermissionsIsMutable();
       permissions_.add(value);
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
