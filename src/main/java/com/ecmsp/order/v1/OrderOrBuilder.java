@@ -77,4 +77,16 @@ public interface OrderOrBuilder extends
    */
   com.ecmsp.order.v1.OrderItemDetailsOrBuilder getItemsOrBuilder(
       int index);
+
+  /**
+   * <code>string client_id = 6;</code>
+   * @return The clientId.
+   */
+  java.lang.String getClientId();
+  /**
+   * <code>string client_id = 6;</code>
+   * @return The bytes for clientId.
+   */
+  com.google.protobuf.ByteString
+      getClientIdBytes();
 }
