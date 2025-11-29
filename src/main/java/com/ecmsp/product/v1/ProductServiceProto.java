@@ -24,16 +24,14 @@ public final class ProductServiceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n product/v1/product_service.proto\022\nprod" +
-      "uct.v1\032\030product/v1/product.proto2\252\002\n\016Pro" +
-      "ductService\022N\n\013GetProducts\022\036.product.v1." +
-      "GetProductsRequest\032\037.product.v1.GetProdu" +
-      "ctsResponse\022c\n\022GetProductsByQuery\022%.prod" +
-      "uct.v1.GetProductsByQueryRequest\032&.produ" +
-      "ct.v1.GetProductsByQueryResponse\022c\n\022GetV" +
-      "ariantsDetails\022%.product.v1.GetVariantsD" +
-      "etailsRequest\032&.product.v1.GetVariantsDe" +
-      "tailsResponseB-\n\024com.ecmsp.product.v1B\023P" +
-      "roductServiceProtoP\001b\006proto3"
+      "uct.v1\032\030product/v1/product.proto2\300\001\n\016Pro" +
+      "ductService\022V\n\rCreateProduct\022 .product.v" +
+      "1.CreateProductRequest\032!.product.v1.Crea" +
+      "teProductResponse\"\000\022V\n\rDeleteProduct\022 .p" +
+      "roduct.v1.DeleteProductRequest\032!.product" +
+      ".v1.DeleteProductResponse\"\000B-\n\024com.ecmsp" +
+      ".product.v1B\023ProductServiceProtoP\001b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

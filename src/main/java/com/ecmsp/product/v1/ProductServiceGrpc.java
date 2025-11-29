@@ -15,97 +15,66 @@ public final class ProductServiceGrpc {
   public static final java.lang.String SERVICE_NAME = "product.v1.ProductService";
 
   // Static method descriptors that strictly reflect the proto.
-  private static volatile io.grpc.MethodDescriptor<com.ecmsp.product.v1.GetProductsRequest,
-      com.ecmsp.product.v1.GetProductsResponse> getGetProductsMethod;
+  private static volatile io.grpc.MethodDescriptor<com.ecmsp.product.v1.CreateProductRequest,
+      com.ecmsp.product.v1.CreateProductResponse> getCreateProductMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetProducts",
-      requestType = com.ecmsp.product.v1.GetProductsRequest.class,
-      responseType = com.ecmsp.product.v1.GetProductsResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "CreateProduct",
+      requestType = com.ecmsp.product.v1.CreateProductRequest.class,
+      responseType = com.ecmsp.product.v1.CreateProductResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.ecmsp.product.v1.GetProductsRequest,
-      com.ecmsp.product.v1.GetProductsResponse> getGetProductsMethod() {
-    io.grpc.MethodDescriptor<com.ecmsp.product.v1.GetProductsRequest, com.ecmsp.product.v1.GetProductsResponse> getGetProductsMethod;
-    if ((getGetProductsMethod = ProductServiceGrpc.getGetProductsMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.ecmsp.product.v1.CreateProductRequest,
+      com.ecmsp.product.v1.CreateProductResponse> getCreateProductMethod() {
+    io.grpc.MethodDescriptor<com.ecmsp.product.v1.CreateProductRequest, com.ecmsp.product.v1.CreateProductResponse> getCreateProductMethod;
+    if ((getCreateProductMethod = ProductServiceGrpc.getCreateProductMethod) == null) {
       synchronized (ProductServiceGrpc.class) {
-        if ((getGetProductsMethod = ProductServiceGrpc.getGetProductsMethod) == null) {
-          ProductServiceGrpc.getGetProductsMethod = getGetProductsMethod =
-              io.grpc.MethodDescriptor.<com.ecmsp.product.v1.GetProductsRequest, com.ecmsp.product.v1.GetProductsResponse>newBuilder()
+        if ((getCreateProductMethod = ProductServiceGrpc.getCreateProductMethod) == null) {
+          ProductServiceGrpc.getCreateProductMethod = getCreateProductMethod =
+              io.grpc.MethodDescriptor.<com.ecmsp.product.v1.CreateProductRequest, com.ecmsp.product.v1.CreateProductResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetProducts"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateProduct"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.ecmsp.product.v1.GetProductsRequest.getDefaultInstance()))
+                  com.ecmsp.product.v1.CreateProductRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.ecmsp.product.v1.GetProductsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ProductServiceMethodDescriptorSupplier("GetProducts"))
+                  com.ecmsp.product.v1.CreateProductResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ProductServiceMethodDescriptorSupplier("CreateProduct"))
               .build();
         }
       }
     }
-    return getGetProductsMethod;
+    return getCreateProductMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<com.ecmsp.product.v1.GetProductsByQueryRequest,
-      com.ecmsp.product.v1.GetProductsByQueryResponse> getGetProductsByQueryMethod;
+  private static volatile io.grpc.MethodDescriptor<com.ecmsp.product.v1.DeleteProductRequest,
+      com.ecmsp.product.v1.DeleteProductResponse> getDeleteProductMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetProductsByQuery",
-      requestType = com.ecmsp.product.v1.GetProductsByQueryRequest.class,
-      responseType = com.ecmsp.product.v1.GetProductsByQueryResponse.class,
+      fullMethodName = SERVICE_NAME + '/' + "DeleteProduct",
+      requestType = com.ecmsp.product.v1.DeleteProductRequest.class,
+      responseType = com.ecmsp.product.v1.DeleteProductResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.ecmsp.product.v1.GetProductsByQueryRequest,
-      com.ecmsp.product.v1.GetProductsByQueryResponse> getGetProductsByQueryMethod() {
-    io.grpc.MethodDescriptor<com.ecmsp.product.v1.GetProductsByQueryRequest, com.ecmsp.product.v1.GetProductsByQueryResponse> getGetProductsByQueryMethod;
-    if ((getGetProductsByQueryMethod = ProductServiceGrpc.getGetProductsByQueryMethod) == null) {
+  public static io.grpc.MethodDescriptor<com.ecmsp.product.v1.DeleteProductRequest,
+      com.ecmsp.product.v1.DeleteProductResponse> getDeleteProductMethod() {
+    io.grpc.MethodDescriptor<com.ecmsp.product.v1.DeleteProductRequest, com.ecmsp.product.v1.DeleteProductResponse> getDeleteProductMethod;
+    if ((getDeleteProductMethod = ProductServiceGrpc.getDeleteProductMethod) == null) {
       synchronized (ProductServiceGrpc.class) {
-        if ((getGetProductsByQueryMethod = ProductServiceGrpc.getGetProductsByQueryMethod) == null) {
-          ProductServiceGrpc.getGetProductsByQueryMethod = getGetProductsByQueryMethod =
-              io.grpc.MethodDescriptor.<com.ecmsp.product.v1.GetProductsByQueryRequest, com.ecmsp.product.v1.GetProductsByQueryResponse>newBuilder()
+        if ((getDeleteProductMethod = ProductServiceGrpc.getDeleteProductMethod) == null) {
+          ProductServiceGrpc.getDeleteProductMethod = getDeleteProductMethod =
+              io.grpc.MethodDescriptor.<com.ecmsp.product.v1.DeleteProductRequest, com.ecmsp.product.v1.DeleteProductResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetProductsByQuery"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteProduct"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.ecmsp.product.v1.GetProductsByQueryRequest.getDefaultInstance()))
+                  com.ecmsp.product.v1.DeleteProductRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.ecmsp.product.v1.GetProductsByQueryResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ProductServiceMethodDescriptorSupplier("GetProductsByQuery"))
+                  com.ecmsp.product.v1.DeleteProductResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ProductServiceMethodDescriptorSupplier("DeleteProduct"))
               .build();
         }
       }
     }
-    return getGetProductsByQueryMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.ecmsp.product.v1.GetVariantsDetailsRequest,
-      com.ecmsp.product.v1.GetVariantsDetailsResponse> getGetVariantsDetailsMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "GetVariantsDetails",
-      requestType = com.ecmsp.product.v1.GetVariantsDetailsRequest.class,
-      responseType = com.ecmsp.product.v1.GetVariantsDetailsResponse.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.ecmsp.product.v1.GetVariantsDetailsRequest,
-      com.ecmsp.product.v1.GetVariantsDetailsResponse> getGetVariantsDetailsMethod() {
-    io.grpc.MethodDescriptor<com.ecmsp.product.v1.GetVariantsDetailsRequest, com.ecmsp.product.v1.GetVariantsDetailsResponse> getGetVariantsDetailsMethod;
-    if ((getGetVariantsDetailsMethod = ProductServiceGrpc.getGetVariantsDetailsMethod) == null) {
-      synchronized (ProductServiceGrpc.class) {
-        if ((getGetVariantsDetailsMethod = ProductServiceGrpc.getGetVariantsDetailsMethod) == null) {
-          ProductServiceGrpc.getGetVariantsDetailsMethod = getGetVariantsDetailsMethod =
-              io.grpc.MethodDescriptor.<com.ecmsp.product.v1.GetVariantsDetailsRequest, com.ecmsp.product.v1.GetVariantsDetailsResponse>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetVariantsDetails"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.ecmsp.product.v1.GetVariantsDetailsRequest.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.ecmsp.product.v1.GetVariantsDetailsResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new ProductServiceMethodDescriptorSupplier("GetVariantsDetails"))
-              .build();
-        }
-      }
-    }
-    return getGetVariantsDetailsMethod;
+    return getDeleteProductMethod;
   }
 
   /**
@@ -172,33 +141,17 @@ public final class ProductServiceGrpc {
   public interface AsyncService {
 
     /**
-     * <pre>
-     * Searches for products based on category and returns only one variant per product, as a representative
-     * </pre>
      */
-    default void getProducts(com.ecmsp.product.v1.GetProductsRequest request,
-        io.grpc.stub.StreamObserver<com.ecmsp.product.v1.GetProductsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProductsMethod(), responseObserver);
+    default void createProduct(com.ecmsp.product.v1.CreateProductRequest request,
+        io.grpc.stub.StreamObserver<com.ecmsp.product.v1.CreateProductResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateProductMethod(), responseObserver);
     }
 
     /**
-     * <pre>
-     * Searches for products based on provided query (and category) and returns only one variant per product, as a representative
-     * </pre>
      */
-    default void getProductsByQuery(com.ecmsp.product.v1.GetProductsByQueryRequest request,
-        io.grpc.stub.StreamObserver<com.ecmsp.product.v1.GetProductsByQueryResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetProductsByQueryMethod(), responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Searches for variants details of a particular product. Returns images, prices, descriptions etc. 
-     * </pre>
-     */
-    default void getVariantsDetails(com.ecmsp.product.v1.GetVariantsDetailsRequest request,
-        io.grpc.stub.StreamObserver<com.ecmsp.product.v1.GetVariantsDetailsResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetVariantsDetailsMethod(), responseObserver);
+    default void deleteProduct(com.ecmsp.product.v1.DeleteProductRequest request,
+        io.grpc.stub.StreamObserver<com.ecmsp.product.v1.DeleteProductResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteProductMethod(), responseObserver);
     }
   }
 
@@ -230,36 +183,19 @@ public final class ProductServiceGrpc {
     }
 
     /**
-     * <pre>
-     * Searches for products based on category and returns only one variant per product, as a representative
-     * </pre>
      */
-    public void getProducts(com.ecmsp.product.v1.GetProductsRequest request,
-        io.grpc.stub.StreamObserver<com.ecmsp.product.v1.GetProductsResponse> responseObserver) {
+    public void createProduct(com.ecmsp.product.v1.CreateProductRequest request,
+        io.grpc.stub.StreamObserver<com.ecmsp.product.v1.CreateProductResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetProductsMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getCreateProductMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
-     * <pre>
-     * Searches for products based on provided query (and category) and returns only one variant per product, as a representative
-     * </pre>
      */
-    public void getProductsByQuery(com.ecmsp.product.v1.GetProductsByQueryRequest request,
-        io.grpc.stub.StreamObserver<com.ecmsp.product.v1.GetProductsByQueryResponse> responseObserver) {
+    public void deleteProduct(com.ecmsp.product.v1.DeleteProductRequest request,
+        io.grpc.stub.StreamObserver<com.ecmsp.product.v1.DeleteProductResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetProductsByQueryMethod(), getCallOptions()), request, responseObserver);
-    }
-
-    /**
-     * <pre>
-     * Searches for variants details of a particular product. Returns images, prices, descriptions etc. 
-     * </pre>
-     */
-    public void getVariantsDetails(com.ecmsp.product.v1.GetVariantsDetailsRequest request,
-        io.grpc.stub.StreamObserver<com.ecmsp.product.v1.GetVariantsDetailsResponse> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getGetVariantsDetailsMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getDeleteProductMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -280,33 +216,17 @@ public final class ProductServiceGrpc {
     }
 
     /**
-     * <pre>
-     * Searches for products based on category and returns only one variant per product, as a representative
-     * </pre>
      */
-    public com.ecmsp.product.v1.GetProductsResponse getProducts(com.ecmsp.product.v1.GetProductsRequest request) {
+    public com.ecmsp.product.v1.CreateProductResponse createProduct(com.ecmsp.product.v1.CreateProductRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetProductsMethod(), getCallOptions(), request);
+          getChannel(), getCreateProductMethod(), getCallOptions(), request);
     }
 
     /**
-     * <pre>
-     * Searches for products based on provided query (and category) and returns only one variant per product, as a representative
-     * </pre>
      */
-    public com.ecmsp.product.v1.GetProductsByQueryResponse getProductsByQuery(com.ecmsp.product.v1.GetProductsByQueryRequest request) {
+    public com.ecmsp.product.v1.DeleteProductResponse deleteProduct(com.ecmsp.product.v1.DeleteProductRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetProductsByQueryMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * Searches for variants details of a particular product. Returns images, prices, descriptions etc. 
-     * </pre>
-     */
-    public com.ecmsp.product.v1.GetVariantsDetailsResponse getVariantsDetails(com.ecmsp.product.v1.GetVariantsDetailsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetVariantsDetailsMethod(), getCallOptions(), request);
+          getChannel(), getDeleteProductMethod(), getCallOptions(), request);
     }
   }
 
@@ -327,33 +247,17 @@ public final class ProductServiceGrpc {
     }
 
     /**
-     * <pre>
-     * Searches for products based on category and returns only one variant per product, as a representative
-     * </pre>
      */
-    public com.ecmsp.product.v1.GetProductsResponse getProducts(com.ecmsp.product.v1.GetProductsRequest request) {
+    public com.ecmsp.product.v1.CreateProductResponse createProduct(com.ecmsp.product.v1.CreateProductRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetProductsMethod(), getCallOptions(), request);
+          getChannel(), getCreateProductMethod(), getCallOptions(), request);
     }
 
     /**
-     * <pre>
-     * Searches for products based on provided query (and category) and returns only one variant per product, as a representative
-     * </pre>
      */
-    public com.ecmsp.product.v1.GetProductsByQueryResponse getProductsByQuery(com.ecmsp.product.v1.GetProductsByQueryRequest request) {
+    public com.ecmsp.product.v1.DeleteProductResponse deleteProduct(com.ecmsp.product.v1.DeleteProductRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetProductsByQueryMethod(), getCallOptions(), request);
-    }
-
-    /**
-     * <pre>
-     * Searches for variants details of a particular product. Returns images, prices, descriptions etc. 
-     * </pre>
-     */
-    public com.ecmsp.product.v1.GetVariantsDetailsResponse getVariantsDetails(com.ecmsp.product.v1.GetVariantsDetailsRequest request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getGetVariantsDetailsMethod(), getCallOptions(), request);
+          getChannel(), getDeleteProductMethod(), getCallOptions(), request);
     }
   }
 
@@ -374,42 +278,24 @@ public final class ProductServiceGrpc {
     }
 
     /**
-     * <pre>
-     * Searches for products based on category and returns only one variant per product, as a representative
-     * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.ecmsp.product.v1.GetProductsResponse> getProducts(
-        com.ecmsp.product.v1.GetProductsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.ecmsp.product.v1.CreateProductResponse> createProduct(
+        com.ecmsp.product.v1.CreateProductRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetProductsMethod(), getCallOptions()), request);
+          getChannel().newCall(getCreateProductMethod(), getCallOptions()), request);
     }
 
     /**
-     * <pre>
-     * Searches for products based on provided query (and category) and returns only one variant per product, as a representative
-     * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.ecmsp.product.v1.GetProductsByQueryResponse> getProductsByQuery(
-        com.ecmsp.product.v1.GetProductsByQueryRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.ecmsp.product.v1.DeleteProductResponse> deleteProduct(
+        com.ecmsp.product.v1.DeleteProductRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetProductsByQueryMethod(), getCallOptions()), request);
-    }
-
-    /**
-     * <pre>
-     * Searches for variants details of a particular product. Returns images, prices, descriptions etc. 
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.ecmsp.product.v1.GetVariantsDetailsResponse> getVariantsDetails(
-        com.ecmsp.product.v1.GetVariantsDetailsRequest request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getGetVariantsDetailsMethod(), getCallOptions()), request);
+          getChannel().newCall(getDeleteProductMethod(), getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_GET_PRODUCTS = 0;
-  private static final int METHODID_GET_PRODUCTS_BY_QUERY = 1;
-  private static final int METHODID_GET_VARIANTS_DETAILS = 2;
+  private static final int METHODID_CREATE_PRODUCT = 0;
+  private static final int METHODID_DELETE_PRODUCT = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -428,17 +314,13 @@ public final class ProductServiceGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_GET_PRODUCTS:
-          serviceImpl.getProducts((com.ecmsp.product.v1.GetProductsRequest) request,
-              (io.grpc.stub.StreamObserver<com.ecmsp.product.v1.GetProductsResponse>) responseObserver);
+        case METHODID_CREATE_PRODUCT:
+          serviceImpl.createProduct((com.ecmsp.product.v1.CreateProductRequest) request,
+              (io.grpc.stub.StreamObserver<com.ecmsp.product.v1.CreateProductResponse>) responseObserver);
           break;
-        case METHODID_GET_PRODUCTS_BY_QUERY:
-          serviceImpl.getProductsByQuery((com.ecmsp.product.v1.GetProductsByQueryRequest) request,
-              (io.grpc.stub.StreamObserver<com.ecmsp.product.v1.GetProductsByQueryResponse>) responseObserver);
-          break;
-        case METHODID_GET_VARIANTS_DETAILS:
-          serviceImpl.getVariantsDetails((com.ecmsp.product.v1.GetVariantsDetailsRequest) request,
-              (io.grpc.stub.StreamObserver<com.ecmsp.product.v1.GetVariantsDetailsResponse>) responseObserver);
+        case METHODID_DELETE_PRODUCT:
+          serviceImpl.deleteProduct((com.ecmsp.product.v1.DeleteProductRequest) request,
+              (io.grpc.stub.StreamObserver<com.ecmsp.product.v1.DeleteProductResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -459,26 +341,19 @@ public final class ProductServiceGrpc {
   public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
     return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
         .addMethod(
-          getGetProductsMethod(),
+          getCreateProductMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.ecmsp.product.v1.GetProductsRequest,
-              com.ecmsp.product.v1.GetProductsResponse>(
-                service, METHODID_GET_PRODUCTS)))
+              com.ecmsp.product.v1.CreateProductRequest,
+              com.ecmsp.product.v1.CreateProductResponse>(
+                service, METHODID_CREATE_PRODUCT)))
         .addMethod(
-          getGetProductsByQueryMethod(),
+          getDeleteProductMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              com.ecmsp.product.v1.GetProductsByQueryRequest,
-              com.ecmsp.product.v1.GetProductsByQueryResponse>(
-                service, METHODID_GET_PRODUCTS_BY_QUERY)))
-        .addMethod(
-          getGetVariantsDetailsMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.ecmsp.product.v1.GetVariantsDetailsRequest,
-              com.ecmsp.product.v1.GetVariantsDetailsResponse>(
-                service, METHODID_GET_VARIANTS_DETAILS)))
+              com.ecmsp.product.v1.DeleteProductRequest,
+              com.ecmsp.product.v1.DeleteProductResponse>(
+                service, METHODID_DELETE_PRODUCT)))
         .build();
   }
 
@@ -527,9 +402,8 @@ public final class ProductServiceGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ProductServiceFileDescriptorSupplier())
-              .addMethod(getGetProductsMethod())
-              .addMethod(getGetProductsByQueryMethod())
-              .addMethod(getGetVariantsDetailsMethod())
+              .addMethod(getCreateProductMethod())
+              .addMethod(getDeleteProductMethod())
               .build();
         }
       }

@@ -15,45 +15,25 @@ public final class ProductProto {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_product_v1_GetProductsRequest_descriptor;
+    internal_static_product_v1_CreateProductRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_product_v1_GetProductsRequest_fieldAccessorTable;
+      internal_static_product_v1_CreateProductRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_product_v1_GetProductsResponse_descriptor;
+    internal_static_product_v1_CreateProductResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_product_v1_GetProductsResponse_fieldAccessorTable;
+      internal_static_product_v1_CreateProductResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_product_v1_GetVariantsDetailsRequest_descriptor;
+    internal_static_product_v1_DeleteProductRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_product_v1_GetVariantsDetailsRequest_fieldAccessorTable;
+      internal_static_product_v1_DeleteProductRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_product_v1_GetVariantsDetailsResponse_descriptor;
+    internal_static_product_v1_DeleteProductResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_product_v1_GetVariantsDetailsResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_product_v1_GetProductsByQueryRequest_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_product_v1_GetProductsByQueryRequest_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_product_v1_GetProductsByQueryResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_product_v1_GetProductsByQueryResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_product_v1_ProductRepresentation_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_product_v1_ProductRepresentation_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_product_v1_VariantDetail_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_product_v1_VariantDetail_fieldAccessorTable;
+      internal_static_product_v1_DeleteProductResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -63,87 +43,46 @@ public final class ProductProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\030product/v1/product.proto\022\nproduct.v1\032\034" +
-      "google/protobuf/struct.proto\032\031google/typ" +
-      "e/decimal.proto\"P\n\022GetProductsRequest\022\023\n" +
-      "\013category_id\030\001 \001(\t\022\021\n\tpage_size\030\002 \001(\005\022\022\n" +
-      "\npage_token\030\003 \001(\t\"r\n\023GetProductsResponse" +
-      "\022B\n\027products_representation\030\001 \003(\0132!.prod" +
-      "uct.v1.ProductRepresentation\022\027\n\017next_pag" +
-      "e_token\030\002 \001(\t\"/\n\031GetVariantsDetailsReque" +
-      "st\022\022\n\nproduct_id\030\001 \001(\t\"I\n\032GetVariantsDet" +
-      "ailsResponse\022+\n\010variants\030\001 \003(\0132\031.product" +
-      ".v1.VariantDetail\"f\n\031GetProductsByQueryR" +
-      "equest\022\r\n\005query\030\001 \001(\t\022\023\n\013category_id\030\002 \001" +
-      "(\t\022\021\n\tpage_size\030\003 \001(\005\022\022\n\npage_token\030\004 \001(" +
-      "\t\"y\n\032GetProductsByQueryResponse\022B\n\027produ" +
-      "cts_representation\030\001 \003(\0132!.product.v1.Pr" +
-      "oductRepresentation\022\027\n\017next_page_token\030\002" +
-      " \001(\t\"W\n\025ProductRepresentation\022\022\n\nproduct" +
-      "_id\030\001 \001(\t\022*\n\007variant\030\002 \001(\0132\031.product.v1." +
-      "VariantDetail\"\300\001\n\rVariantDetail\022\022\n\nvaria" +
-      "nt_id\030\001 \001(\t\022#\n\005price\030\002 \001(\0132\024.google.type" +
-      ".Decimal\022\026\n\016stock_quantity\030\003 \001(\005\022\021\n\timag" +
-      "e_url\030\004 \001(\t\022\023\n\013description\030\005 \001(\t\0226\n\025addi" +
-      "tional_properties\030\006 \001(\0132\027.google.protobu" +
-      "f.StructB&\n\024com.ecmsp.product.v1B\014Produc" +
-      "tProtoP\001b\006proto3"
+      "\n\030product/v1/product.proto\022\nproduct.v1\032\031" +
+      "google/type/decimal.proto\"\255\001\n\024CreateProd" +
+      "uctRequest\022\023\n\013category_id\030\001 \001(\t\022\014\n\004name\030" +
+      "\002 \001(\t\022/\n\021approximate_price\030\003 \001(\0132\024.googl" +
+      "e.type.Decimal\022,\n\016delivery_price\030\004 \001(\0132\024" +
+      ".google.type.Decimal\022\023\n\013description\030\005 \001(" +
+      "\t\"#\n\025CreateProductResponse\022\n\n\002id\030\001 \001(\t\"\"" +
+      "\n\024DeleteProductRequest\022\n\n\002id\030\001 \001(\t\"\027\n\025De" +
+      "leteProductResponseB&\n\024com.ecmsp.product" +
+      ".v1B\014ProductProtoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          com.google.protobuf.StructProto.getDescriptor(),
           com.google.type.DecimalProto.getDescriptor(),
         });
-    internal_static_product_v1_GetProductsRequest_descriptor =
+    internal_static_product_v1_CreateProductRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_product_v1_GetProductsRequest_fieldAccessorTable = new
+    internal_static_product_v1_CreateProductRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_product_v1_GetProductsRequest_descriptor,
-        new java.lang.String[] { "CategoryId", "PageSize", "PageToken", });
-    internal_static_product_v1_GetProductsResponse_descriptor =
+        internal_static_product_v1_CreateProductRequest_descriptor,
+        new java.lang.String[] { "CategoryId", "Name", "ApproximatePrice", "DeliveryPrice", "Description", });
+    internal_static_product_v1_CreateProductResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_product_v1_GetProductsResponse_fieldAccessorTable = new
+    internal_static_product_v1_CreateProductResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_product_v1_GetProductsResponse_descriptor,
-        new java.lang.String[] { "ProductsRepresentation", "NextPageToken", });
-    internal_static_product_v1_GetVariantsDetailsRequest_descriptor =
+        internal_static_product_v1_CreateProductResponse_descriptor,
+        new java.lang.String[] { "Id", });
+    internal_static_product_v1_DeleteProductRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
-    internal_static_product_v1_GetVariantsDetailsRequest_fieldAccessorTable = new
+    internal_static_product_v1_DeleteProductRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_product_v1_GetVariantsDetailsRequest_descriptor,
-        new java.lang.String[] { "ProductId", });
-    internal_static_product_v1_GetVariantsDetailsResponse_descriptor =
+        internal_static_product_v1_DeleteProductRequest_descriptor,
+        new java.lang.String[] { "Id", });
+    internal_static_product_v1_DeleteProductResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
-    internal_static_product_v1_GetVariantsDetailsResponse_fieldAccessorTable = new
+    internal_static_product_v1_DeleteProductResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_product_v1_GetVariantsDetailsResponse_descriptor,
-        new java.lang.String[] { "Variants", });
-    internal_static_product_v1_GetProductsByQueryRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_product_v1_GetProductsByQueryRequest_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_product_v1_GetProductsByQueryRequest_descriptor,
-        new java.lang.String[] { "Query", "CategoryId", "PageSize", "PageToken", });
-    internal_static_product_v1_GetProductsByQueryResponse_descriptor =
-      getDescriptor().getMessageTypes().get(5);
-    internal_static_product_v1_GetProductsByQueryResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_product_v1_GetProductsByQueryResponse_descriptor,
-        new java.lang.String[] { "ProductsRepresentation", "NextPageToken", });
-    internal_static_product_v1_ProductRepresentation_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_product_v1_ProductRepresentation_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_product_v1_ProductRepresentation_descriptor,
-        new java.lang.String[] { "ProductId", "Variant", });
-    internal_static_product_v1_VariantDetail_descriptor =
-      getDescriptor().getMessageTypes().get(7);
-    internal_static_product_v1_VariantDetail_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_product_v1_VariantDetail_descriptor,
-        new java.lang.String[] { "VariantId", "Price", "StockQuantity", "ImageUrl", "Description", "AdditionalProperties", });
-    com.google.protobuf.StructProto.getDescriptor();
+        internal_static_product_v1_DeleteProductResponse_descriptor,
+        new java.lang.String[] { });
     com.google.type.DecimalProto.getDescriptor();
   }
 
