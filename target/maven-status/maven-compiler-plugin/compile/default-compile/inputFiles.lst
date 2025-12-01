@@ -32,7 +32,6 @@
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/product/v1/CreateProductResponseOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/ListUsersRequestOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/returns/v1/ReturnStatusProto.java
-/home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/product/v1/category/v1/PropertyServiceGrpc.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/cart/v1/DeleteCartRequest.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/cart/v1/CartServiceGrpc.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/OrderItemDetailsOrBuilder.java
@@ -57,6 +56,7 @@
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/ListAllPermissionsResponse.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/FailedReservationVariantOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/product/v1/variant/v1/CreateVariantResponseOrBuilder.java
+/home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/product/v1/category/v1/CategoryServiceGrpc.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/cart/v1/UpdateQuantityRequestOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/UserServiceGrpc.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/returns/v1/GetReturnRequestOrBuilder.java

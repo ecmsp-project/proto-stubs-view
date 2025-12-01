@@ -25,8 +25,8 @@ public final class CategoryServiceProto {
     java.lang.String[] descriptorData = {
       "\n-product/v1/category/v1/category_servic" +
       "e.proto\022\026product.v1.category.v1\032%product" +
-      "/v1/category/v1/category.proto2\367\001\n\017Prope" +
-      "rtyService\022q\n\016CreateCategory\022-.product.v" +
+      "/v1/category/v1/category.proto2\367\001\n\017Categ" +
+      "oryService\022q\n\016CreateCategory\022-.product.v" +
       "1.category.v1.CreateCategoryRequest\032..pr" +
       "oduct.v1.category.v1.CreateCategoryRespo" +
       "nse\"\000\022q\n\016DeleteCategory\022-.product.v1.cat" +

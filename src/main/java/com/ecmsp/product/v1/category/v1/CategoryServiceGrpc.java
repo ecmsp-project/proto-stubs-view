@@ -8,11 +8,11 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
     value = "by gRPC proto compiler (version 1.71.0)",
     comments = "Source: product/v1/category/v1/category_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
-public final class PropertyServiceGrpc {
+public final class CategoryServiceGrpc {
 
-  private PropertyServiceGrpc() {}
+  private CategoryServiceGrpc() {}
 
-  public static final java.lang.String SERVICE_NAME = "product.v1.category.v1.PropertyService";
+  public static final java.lang.String SERVICE_NAME = "product.v1.category.v1.CategoryService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<com.ecmsp.product.v1.category.v1.CreateCategoryRequest,
@@ -26,10 +26,10 @@ public final class PropertyServiceGrpc {
   public static io.grpc.MethodDescriptor<com.ecmsp.product.v1.category.v1.CreateCategoryRequest,
       com.ecmsp.product.v1.category.v1.CreateCategoryResponse> getCreateCategoryMethod() {
     io.grpc.MethodDescriptor<com.ecmsp.product.v1.category.v1.CreateCategoryRequest, com.ecmsp.product.v1.category.v1.CreateCategoryResponse> getCreateCategoryMethod;
-    if ((getCreateCategoryMethod = PropertyServiceGrpc.getCreateCategoryMethod) == null) {
-      synchronized (PropertyServiceGrpc.class) {
-        if ((getCreateCategoryMethod = PropertyServiceGrpc.getCreateCategoryMethod) == null) {
-          PropertyServiceGrpc.getCreateCategoryMethod = getCreateCategoryMethod =
+    if ((getCreateCategoryMethod = CategoryServiceGrpc.getCreateCategoryMethod) == null) {
+      synchronized (CategoryServiceGrpc.class) {
+        if ((getCreateCategoryMethod = CategoryServiceGrpc.getCreateCategoryMethod) == null) {
+          CategoryServiceGrpc.getCreateCategoryMethod = getCreateCategoryMethod =
               io.grpc.MethodDescriptor.<com.ecmsp.product.v1.category.v1.CreateCategoryRequest, com.ecmsp.product.v1.category.v1.CreateCategoryResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateCategory"))
@@ -38,7 +38,7 @@ public final class PropertyServiceGrpc {
                   com.ecmsp.product.v1.category.v1.CreateCategoryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.ecmsp.product.v1.category.v1.CreateCategoryResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new PropertyServiceMethodDescriptorSupplier("CreateCategory"))
+              .setSchemaDescriptor(new CategoryServiceMethodDescriptorSupplier("CreateCategory"))
               .build();
         }
       }
@@ -57,10 +57,10 @@ public final class PropertyServiceGrpc {
   public static io.grpc.MethodDescriptor<com.ecmsp.product.v1.category.v1.DeleteCategoryRequest,
       com.ecmsp.product.v1.category.v1.DeleteCategoryResponse> getDeleteCategoryMethod() {
     io.grpc.MethodDescriptor<com.ecmsp.product.v1.category.v1.DeleteCategoryRequest, com.ecmsp.product.v1.category.v1.DeleteCategoryResponse> getDeleteCategoryMethod;
-    if ((getDeleteCategoryMethod = PropertyServiceGrpc.getDeleteCategoryMethod) == null) {
-      synchronized (PropertyServiceGrpc.class) {
-        if ((getDeleteCategoryMethod = PropertyServiceGrpc.getDeleteCategoryMethod) == null) {
-          PropertyServiceGrpc.getDeleteCategoryMethod = getDeleteCategoryMethod =
+    if ((getDeleteCategoryMethod = CategoryServiceGrpc.getDeleteCategoryMethod) == null) {
+      synchronized (CategoryServiceGrpc.class) {
+        if ((getDeleteCategoryMethod = CategoryServiceGrpc.getDeleteCategoryMethod) == null) {
+          CategoryServiceGrpc.getDeleteCategoryMethod = getDeleteCategoryMethod =
               io.grpc.MethodDescriptor.<com.ecmsp.product.v1.category.v1.DeleteCategoryRequest, com.ecmsp.product.v1.category.v1.DeleteCategoryResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteCategory"))
@@ -69,7 +69,7 @@ public final class PropertyServiceGrpc {
                   com.ecmsp.product.v1.category.v1.DeleteCategoryRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.ecmsp.product.v1.category.v1.DeleteCategoryResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new PropertyServiceMethodDescriptorSupplier("DeleteCategory"))
+              .setSchemaDescriptor(new CategoryServiceMethodDescriptorSupplier("DeleteCategory"))
               .build();
         }
       }
@@ -80,60 +80,60 @@ public final class PropertyServiceGrpc {
   /**
    * Creates a new async stub that supports all call types for the service
    */
-  public static PropertyServiceStub newStub(io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<PropertyServiceStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<PropertyServiceStub>() {
+  public static CategoryServiceStub newStub(io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<CategoryServiceStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CategoryServiceStub>() {
         @java.lang.Override
-        public PropertyServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new PropertyServiceStub(channel, callOptions);
+        public CategoryServiceStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CategoryServiceStub(channel, callOptions);
         }
       };
-    return PropertyServiceStub.newStub(factory, channel);
+    return CategoryServiceStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports all types of calls on the service
    */
-  public static PropertyServiceBlockingV2Stub newBlockingV2Stub(
+  public static CategoryServiceBlockingV2Stub newBlockingV2Stub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<PropertyServiceBlockingV2Stub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<PropertyServiceBlockingV2Stub>() {
+    io.grpc.stub.AbstractStub.StubFactory<CategoryServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CategoryServiceBlockingV2Stub>() {
         @java.lang.Override
-        public PropertyServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new PropertyServiceBlockingV2Stub(channel, callOptions);
+        public CategoryServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CategoryServiceBlockingV2Stub(channel, callOptions);
         }
       };
-    return PropertyServiceBlockingV2Stub.newStub(factory, channel);
+    return CategoryServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
-  public static PropertyServiceBlockingStub newBlockingStub(
+  public static CategoryServiceBlockingStub newBlockingStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<PropertyServiceBlockingStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<PropertyServiceBlockingStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<CategoryServiceBlockingStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CategoryServiceBlockingStub>() {
         @java.lang.Override
-        public PropertyServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new PropertyServiceBlockingStub(channel, callOptions);
+        public CategoryServiceBlockingStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CategoryServiceBlockingStub(channel, callOptions);
         }
       };
-    return PropertyServiceBlockingStub.newStub(factory, channel);
+    return CategoryServiceBlockingStub.newStub(factory, channel);
   }
 
   /**
    * Creates a new ListenableFuture-style stub that supports unary calls on the service
    */
-  public static PropertyServiceFutureStub newFutureStub(
+  public static CategoryServiceFutureStub newFutureStub(
       io.grpc.Channel channel) {
-    io.grpc.stub.AbstractStub.StubFactory<PropertyServiceFutureStub> factory =
-      new io.grpc.stub.AbstractStub.StubFactory<PropertyServiceFutureStub>() {
+    io.grpc.stub.AbstractStub.StubFactory<CategoryServiceFutureStub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<CategoryServiceFutureStub>() {
         @java.lang.Override
-        public PropertyServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-          return new PropertyServiceFutureStub(channel, callOptions);
+        public CategoryServiceFutureStub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new CategoryServiceFutureStub(channel, callOptions);
         }
       };
-    return PropertyServiceFutureStub.newStub(factory, channel);
+    return CategoryServiceFutureStub.newStub(factory, channel);
   }
 
   /**
@@ -156,30 +156,30 @@ public final class PropertyServiceGrpc {
   }
 
   /**
-   * Base class for the server implementation of the service PropertyService.
+   * Base class for the server implementation of the service CategoryService.
    */
-  public static abstract class PropertyServiceImplBase
+  public static abstract class CategoryServiceImplBase
       implements io.grpc.BindableService, AsyncService {
 
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return PropertyServiceGrpc.bindService(this);
+      return CategoryServiceGrpc.bindService(this);
     }
   }
 
   /**
-   * A stub to allow clients to do asynchronous rpc calls to service PropertyService.
+   * A stub to allow clients to do asynchronous rpc calls to service CategoryService.
    */
-  public static final class PropertyServiceStub
-      extends io.grpc.stub.AbstractAsyncStub<PropertyServiceStub> {
-    private PropertyServiceStub(
+  public static final class CategoryServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<CategoryServiceStub> {
+    private CategoryServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PropertyServiceStub build(
+    protected CategoryServiceStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new PropertyServiceStub(channel, callOptions);
+      return new CategoryServiceStub(channel, callOptions);
     }
 
     /**
@@ -200,19 +200,19 @@ public final class PropertyServiceGrpc {
   }
 
   /**
-   * A stub to allow clients to do synchronous rpc calls to service PropertyService.
+   * A stub to allow clients to do synchronous rpc calls to service CategoryService.
    */
-  public static final class PropertyServiceBlockingV2Stub
-      extends io.grpc.stub.AbstractBlockingStub<PropertyServiceBlockingV2Stub> {
-    private PropertyServiceBlockingV2Stub(
+  public static final class CategoryServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<CategoryServiceBlockingV2Stub> {
+    private CategoryServiceBlockingV2Stub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PropertyServiceBlockingV2Stub build(
+    protected CategoryServiceBlockingV2Stub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new PropertyServiceBlockingV2Stub(channel, callOptions);
+      return new CategoryServiceBlockingV2Stub(channel, callOptions);
     }
 
     /**
@@ -231,19 +231,19 @@ public final class PropertyServiceGrpc {
   }
 
   /**
-   * A stub to allow clients to do limited synchronous rpc calls to service PropertyService.
+   * A stub to allow clients to do limited synchronous rpc calls to service CategoryService.
    */
-  public static final class PropertyServiceBlockingStub
-      extends io.grpc.stub.AbstractBlockingStub<PropertyServiceBlockingStub> {
-    private PropertyServiceBlockingStub(
+  public static final class CategoryServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<CategoryServiceBlockingStub> {
+    private CategoryServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PropertyServiceBlockingStub build(
+    protected CategoryServiceBlockingStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new PropertyServiceBlockingStub(channel, callOptions);
+      return new CategoryServiceBlockingStub(channel, callOptions);
     }
 
     /**
@@ -262,19 +262,19 @@ public final class PropertyServiceGrpc {
   }
 
   /**
-   * A stub to allow clients to do ListenableFuture-style rpc calls to service PropertyService.
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service CategoryService.
    */
-  public static final class PropertyServiceFutureStub
-      extends io.grpc.stub.AbstractFutureStub<PropertyServiceFutureStub> {
-    private PropertyServiceFutureStub(
+  public static final class CategoryServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<CategoryServiceFutureStub> {
+    private CategoryServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
     }
 
     @java.lang.Override
-    protected PropertyServiceFutureStub build(
+    protected CategoryServiceFutureStub build(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
-      return new PropertyServiceFutureStub(channel, callOptions);
+      return new CategoryServiceFutureStub(channel, callOptions);
     }
 
     /**
@@ -357,9 +357,9 @@ public final class PropertyServiceGrpc {
         .build();
   }
 
-  private static abstract class PropertyServiceBaseDescriptorSupplier
+  private static abstract class CategoryServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoFileDescriptorSupplier, io.grpc.protobuf.ProtoServiceDescriptorSupplier {
-    PropertyServiceBaseDescriptorSupplier() {}
+    CategoryServiceBaseDescriptorSupplier() {}
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
@@ -368,21 +368,21 @@ public final class PropertyServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.ServiceDescriptor getServiceDescriptor() {
-      return getFileDescriptor().findServiceByName("PropertyService");
+      return getFileDescriptor().findServiceByName("CategoryService");
     }
   }
 
-  private static final class PropertyServiceFileDescriptorSupplier
-      extends PropertyServiceBaseDescriptorSupplier {
-    PropertyServiceFileDescriptorSupplier() {}
+  private static final class CategoryServiceFileDescriptorSupplier
+      extends CategoryServiceBaseDescriptorSupplier {
+    CategoryServiceFileDescriptorSupplier() {}
   }
 
-  private static final class PropertyServiceMethodDescriptorSupplier
-      extends PropertyServiceBaseDescriptorSupplier
+  private static final class CategoryServiceMethodDescriptorSupplier
+      extends CategoryServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
     private final java.lang.String methodName;
 
-    PropertyServiceMethodDescriptorSupplier(java.lang.String methodName) {
+    CategoryServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 
@@ -397,11 +397,11 @@ public final class PropertyServiceGrpc {
   public static io.grpc.ServiceDescriptor getServiceDescriptor() {
     io.grpc.ServiceDescriptor result = serviceDescriptor;
     if (result == null) {
-      synchronized (PropertyServiceGrpc.class) {
+      synchronized (CategoryServiceGrpc.class) {
         result = serviceDescriptor;
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
-              .setSchemaDescriptor(new PropertyServiceFileDescriptorSupplier())
+              .setSchemaDescriptor(new CategoryServiceFileDescriptorSupplier())
               .addMethod(getCreateCategoryMethod())
               .addMethod(getDeleteCategoryMethod())
               .build();
