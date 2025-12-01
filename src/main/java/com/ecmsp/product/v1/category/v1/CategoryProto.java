@@ -44,13 +44,19 @@ public final class CategoryProto {
   static {
     java.lang.String[] descriptorData = {
       "\n%product/v1/category/v1/category.proto\022" +
-      "\026product.v1.category.v1\"A\n\025CreateCategor" +
-      "yRequest\022\014\n\004name\030\001 \001(\t\022\032\n\022parent_categor" +
-      "y_id\030\002 \001(\t\"$\n\026CreateCategoryResponse\022\n\n\002" +
-      "id\030\001 \001(\t\"#\n\025DeleteCategoryRequest\022\n\n\002id\030" +
-      "\001 \001(\t\"\030\n\026DeleteCategoryResponseB3\n com.e" +
-      "cmsp.product.v1.category.v1B\rCategoryPro" +
-      "toP\001b\006proto3"
+      "\026product.v1.category.v1\"\246\001\n\025CreateCatego" +
+      "ryRequest\022\014\n\004name\030\001 \001(\t\022\032\n\022parent_catego" +
+      "ry_id\030\002 \001(\t\022\031\n\021child_category_id\030\003 \001(\t\022H" +
+      "\n\024create_category_type\030\004 \001(\0162*.product.v" +
+      "1.category.v1.CreateCategoryType\"$\n\026Crea" +
+      "teCategoryResponse\022\n\n\002id\030\001 \001(\t\"#\n\025Delete" +
+      "CategoryRequest\022\n\n\002id\030\001 \001(\t\"\030\n\026DeleteCat" +
+      "egoryResponse*\203\001\n\022CreateCategoryType\022)\n%" +
+      "CREATE_CATEGORY_TYPE_LEAF_UNSPECIFIED\020\000\022" +
+      "\036\n\032CREATE_CATEGORY_TYPE_SPLIT\020\001\022\"\n\036CREAT" +
+      "E_CATEGORY_TYPE_ALL_SPLIT\020\002B3\n com.ecmsp" +
+      ".product.v1.category.v1B\rCategoryProtoP\001" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -61,7 +67,7 @@ public final class CategoryProto {
     internal_static_product_v1_category_v1_CreateCategoryRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_product_v1_category_v1_CreateCategoryRequest_descriptor,
-        new java.lang.String[] { "Name", "ParentCategoryId", });
+        new java.lang.String[] { "Name", "ParentCategoryId", "ChildCategoryId", "CreateCategoryType", });
     internal_static_product_v1_category_v1_CreateCategoryResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_product_v1_category_v1_CreateCategoryResponse_fieldAccessorTable = new

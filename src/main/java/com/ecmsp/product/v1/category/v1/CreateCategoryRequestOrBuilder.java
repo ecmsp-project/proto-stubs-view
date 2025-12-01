@@ -30,4 +30,27 @@ public interface CreateCategoryRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getParentCategoryIdBytes();
+
+  /**
+   * <code>string child_category_id = 3;</code>
+   * @return The childCategoryId.
+   */
+  java.lang.String getChildCategoryId();
+  /**
+   * <code>string child_category_id = 3;</code>
+   * @return The bytes for childCategoryId.
+   */
+  com.google.protobuf.ByteString
+      getChildCategoryIdBytes();
+
+  /**
+   * <code>.product.v1.category.v1.CreateCategoryType create_category_type = 4;</code>
+   * @return The enum numeric value on the wire for createCategoryType.
+   */
+  int getCreateCategoryTypeValue();
+  /**
+   * <code>.product.v1.category.v1.CreateCategoryType create_category_type = 4;</code>
+   * @return The createCategoryType.
+   */
+  com.ecmsp.product.v1.category.v1.CreateCategoryType getCreateCategoryType();
 }

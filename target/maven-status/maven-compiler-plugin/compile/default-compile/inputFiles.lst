@@ -42,6 +42,7 @@
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/returns/v1/CreateReturnResponse.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/product/v1/reservation/v1/VariantReservationServiceGrpc.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/ListAllPermissionsRequest.java
+/home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/product/v1/category/v1/CreateCategoryType.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/order/v1/returns/v1/CreateReturnRequestOrBuilder.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/product/v1/reservation/v1/CreateVariantsReservationRequest.java
 /home/runner/work/schema-definitions/schema-definitions/generated/src/main/java/com/ecmsp/user/v1/DeleteUserRequest.java

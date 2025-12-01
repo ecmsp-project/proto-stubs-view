@@ -496,6 +496,7 @@ com/ecmsp/cart/v1/DeleteCartRequestOrBuilder.class
 com/ecmsp/product/v1/category/v1/DeleteCategoryRequest$Builder.class
 com/ecmsp/product/v1/category/v1/CategoryServiceGrpc$CategoryServiceBlockingStub.class
 com/ecmsp/product/v1/property/v1/CreatePropertyResponse$Builder.class
+com/ecmsp/product/v1/category/v1/CreateCategoryType$1.class
 com/ecmsp/product/v1/property/v1/DeletePropertyResponse$1.class
 com/ecmsp/cart/v1/Cart$Builder.class
 com/ecmsp/product/v1/property/v1/CreatePropertyRequest$Builder.class
@@ -526,6 +527,7 @@ com/ecmsp/user/v1/UserServiceGrpc$UserServiceBlockingV2Stub.class
 com/ecmsp/user/v1/UserId.class
 com/ecmsp/cart/v1/GetCartRequest$1.class
 com/ecmsp/user/v1/ListUsersResponse$1.class
+com/ecmsp/product/v1/category/v1/CreateCategoryType.class
 com/ecmsp/cart/v1/DeleteProductRequestOrBuilder.class
 com/ecmsp/order/v1/OrderServiceGrpc$OrderServiceStub.class
 com/ecmsp/cart/v1/SubtractProductRequest.class

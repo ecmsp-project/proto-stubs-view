@@ -18,6 +18,8 @@ private static final long serialVersionUID = 0L;
   private CreateCategoryRequest() {
     name_ = "";
     parentCategoryId_ = "";
+    childCategoryId_ = "";
+    createCategoryType_ = 0;
   }
 
   @java.lang.Override
@@ -118,6 +120,63 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int CHILD_CATEGORY_ID_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object childCategoryId_ = "";
+  /**
+   * <code>string child_category_id = 3;</code>
+   * @return The childCategoryId.
+   */
+  @java.lang.Override
+  public java.lang.String getChildCategoryId() {
+    java.lang.Object ref = childCategoryId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      childCategoryId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string child_category_id = 3;</code>
+   * @return The bytes for childCategoryId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getChildCategoryIdBytes() {
+    java.lang.Object ref = childCategoryId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      childCategoryId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CREATE_CATEGORY_TYPE_FIELD_NUMBER = 4;
+  private int createCategoryType_ = 0;
+  /**
+   * <code>.product.v1.category.v1.CreateCategoryType create_category_type = 4;</code>
+   * @return The enum numeric value on the wire for createCategoryType.
+   */
+  @java.lang.Override public int getCreateCategoryTypeValue() {
+    return createCategoryType_;
+  }
+  /**
+   * <code>.product.v1.category.v1.CreateCategoryType create_category_type = 4;</code>
+   * @return The createCategoryType.
+   */
+  @java.lang.Override public com.ecmsp.product.v1.category.v1.CreateCategoryType getCreateCategoryType() {
+    com.ecmsp.product.v1.category.v1.CreateCategoryType result = com.ecmsp.product.v1.category.v1.CreateCategoryType.forNumber(createCategoryType_);
+    return result == null ? com.ecmsp.product.v1.category.v1.CreateCategoryType.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -138,6 +197,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentCategoryId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, parentCategoryId_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(childCategoryId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, childCategoryId_);
+    }
+    if (createCategoryType_ != com.ecmsp.product.v1.category.v1.CreateCategoryType.CREATE_CATEGORY_TYPE_LEAF_UNSPECIFIED.getNumber()) {
+      output.writeEnum(4, createCategoryType_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -152,6 +217,13 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentCategoryId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, parentCategoryId_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(childCategoryId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, childCategoryId_);
+    }
+    if (createCategoryType_ != com.ecmsp.product.v1.category.v1.CreateCategoryType.CREATE_CATEGORY_TYPE_LEAF_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(4, createCategoryType_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -172,6 +244,9 @@ private static final long serialVersionUID = 0L;
         .equals(other.getName())) return false;
     if (!getParentCategoryId()
         .equals(other.getParentCategoryId())) return false;
+    if (!getChildCategoryId()
+        .equals(other.getChildCategoryId())) return false;
+    if (createCategoryType_ != other.createCategoryType_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -187,6 +262,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getName().hashCode();
     hash = (37 * hash) + PARENT_CATEGORY_ID_FIELD_NUMBER;
     hash = (53 * hash) + getParentCategoryId().hashCode();
+    hash = (37 * hash) + CHILD_CATEGORY_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getChildCategoryId().hashCode();
+    hash = (37 * hash) + CREATE_CATEGORY_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + createCategoryType_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -320,6 +399,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       name_ = "";
       parentCategoryId_ = "";
+      childCategoryId_ = "";
+      createCategoryType_ = 0;
       return this;
     }
 
@@ -358,6 +439,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.parentCategoryId_ = parentCategoryId_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.childCategoryId_ = childCategoryId_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.createCategoryType_ = createCategoryType_;
       }
     }
 
@@ -415,6 +502,14 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
+      if (!other.getChildCategoryId().isEmpty()) {
+        childCategoryId_ = other.childCategoryId_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      if (other.createCategoryType_ != 0) {
+        setCreateCategoryTypeValue(other.getCreateCategoryTypeValue());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -451,6 +546,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              childCategoryId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
+            case 32: {
+              createCategoryType_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -608,6 +713,131 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       parentCategoryId_ = value;
       bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object childCategoryId_ = "";
+    /**
+     * <code>string child_category_id = 3;</code>
+     * @return The childCategoryId.
+     */
+    public java.lang.String getChildCategoryId() {
+      java.lang.Object ref = childCategoryId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        childCategoryId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string child_category_id = 3;</code>
+     * @return The bytes for childCategoryId.
+     */
+    public com.google.protobuf.ByteString
+        getChildCategoryIdBytes() {
+      java.lang.Object ref = childCategoryId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        childCategoryId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string child_category_id = 3;</code>
+     * @param value The childCategoryId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setChildCategoryId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      childCategoryId_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string child_category_id = 3;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearChildCategoryId() {
+      childCategoryId_ = getDefaultInstance().getChildCategoryId();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string child_category_id = 3;</code>
+     * @param value The bytes for childCategoryId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setChildCategoryIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      childCategoryId_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private int createCategoryType_ = 0;
+    /**
+     * <code>.product.v1.category.v1.CreateCategoryType create_category_type = 4;</code>
+     * @return The enum numeric value on the wire for createCategoryType.
+     */
+    @java.lang.Override public int getCreateCategoryTypeValue() {
+      return createCategoryType_;
+    }
+    /**
+     * <code>.product.v1.category.v1.CreateCategoryType create_category_type = 4;</code>
+     * @param value The enum numeric value on the wire for createCategoryType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCreateCategoryTypeValue(int value) {
+      createCategoryType_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.product.v1.category.v1.CreateCategoryType create_category_type = 4;</code>
+     * @return The createCategoryType.
+     */
+    @java.lang.Override
+    public com.ecmsp.product.v1.category.v1.CreateCategoryType getCreateCategoryType() {
+      com.ecmsp.product.v1.category.v1.CreateCategoryType result = com.ecmsp.product.v1.category.v1.CreateCategoryType.forNumber(createCategoryType_);
+      return result == null ? com.ecmsp.product.v1.category.v1.CreateCategoryType.UNRECOGNIZED : result;
+    }
+    /**
+     * <code>.product.v1.category.v1.CreateCategoryType create_category_type = 4;</code>
+     * @param value The createCategoryType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCreateCategoryType(com.ecmsp.product.v1.category.v1.CreateCategoryType value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000008;
+      createCategoryType_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.product.v1.category.v1.CreateCategoryType create_category_type = 4;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCreateCategoryType() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      createCategoryType_ = 0;
       onChanged();
       return this;
     }
