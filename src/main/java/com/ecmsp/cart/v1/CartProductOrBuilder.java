@@ -14,10 +14,16 @@ public interface CartProductOrBuilder extends
   int getCartId();
 
   /**
-   * <code>int32 product_id = 2;</code>
+   * <code>string product_id = 2;</code>
    * @return The productId.
    */
-  int getProductId();
+  java.lang.String getProductId();
+  /**
+   * <code>string product_id = 2;</code>
+   * @return The bytes for productId.
+   */
+  com.google.protobuf.ByteString
+      getProductIdBytes();
 
   /**
    * <code>int32 quantity = 3;</code>

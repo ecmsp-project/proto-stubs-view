@@ -53,10 +53,10 @@ public final class CartProto {
       "d\030\001 \001(\005\022.\n\ncreated_at\030\002 \001(\0132\032.google.pro" +
       "tobuf.Timestamp\022+\n\rcart_products\030\003 \003(\0132\024" +
       ".cart.v1.CartProduct\"D\n\013CartProduct\022\017\n\007c" +
-      "art_id\030\001 \001(\005\022\022\n\nproduct_id\030\002 \001(\005\022\020\n\010quan" +
+      "art_id\030\001 \001(\005\022\022\n\nproduct_id\030\002 \001(\t\022\020\n\010quan" +
       "tity\030\003 \001(\005\"6\n\016ProductRequest\022\022\n\nproduct_" +
       "id\030\001 \001(\005\022\020\n\010quantity\030\002 \001(\005\"*\n\024DeleteProd" +
-      "uctRequest\022\022\n\nproduct_id\030\001 \001(\005\"m\n\023Reserv" +
+      "uctRequest\022\022\n\nproduct_id\030\001 \001(\t\"m\n\023Reserv" +
       "ationResponse\022\017\n\007success\030\001 \001(\010\022\026\n\016reserv" +
       "ation_id\030\002 \001(\005\022\017\n\007message\030\003 \001(\t\022\034\n\024reser" +
       "ved_variant_ids\030\004 \003(\tB \n\021com.ecmsp.cart." +

@@ -8,8 +8,14 @@ public interface DeleteProductRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>int32 product_id = 1;</code>
+   * <code>string product_id = 1;</code>
    * @return The productId.
    */
-  int getProductId();
+  java.lang.String getProductId();
+  /**
+   * <code>string product_id = 1;</code>
+   * @return The bytes for productId.
+   */
+  com.google.protobuf.ByteString
+      getProductIdBytes();
 }
