@@ -55,7 +55,7 @@ public final class CartProto {
       ".cart.v1.CartProduct\"D\n\013CartProduct\022\017\n\007c" +
       "art_id\030\001 \001(\005\022\022\n\nproduct_id\030\002 \001(\t\022\020\n\010quan" +
       "tity\030\003 \001(\005\"6\n\016ProductRequest\022\022\n\nproduct_" +
-      "id\030\001 \001(\005\022\020\n\010quantity\030\002 \001(\005\"*\n\024DeleteProd" +
+      "id\030\001 \001(\t\022\020\n\010quantity\030\002 \001(\005\"*\n\024DeleteProd" +
       "uctRequest\022\022\n\nproduct_id\030\001 \001(\t\"m\n\023Reserv" +
       "ationResponse\022\017\n\007success\030\001 \001(\010\022\026\n\016reserv" +
       "ation_id\030\002 \001(\005\022\017\n\007message\030\003 \001(\t\022\034\n\024reser" +
